@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/idb-keyval@6/dist/umd.js"></script>
+
+    <script src="./libs/jsonTree/jsonTree.js"></script>
+    <script src="./libs/JSON-Patch/fast-json-patch.min.js"></script>
+
+    <script src="./scripts/templates.js"></script>
+    <script src="./scripts/enums.js"></script>
+    <script src="./scripts/typeMapping.js"></script>
+
+    <script src="./index.js"></script>
+    <script src="./scripts/htmlHelpers.js"></script>
+    <script src="./scripts/jsonTreeAdditions.js"></script>
+    <script src="./scripts/fileManager.js"></script>
+    <script src="./scripts/modFileManager.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="./libs/jsonTree/jsonTree.css" rel="stylesheet" />
+    <link href="./libs/reset.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="editor">
+        <div class="controls">
+            <select id="select-loaded-mod" onchange="updateSelectedMod()">
+            </select>
+            <button id="new-mod-button" onclick="newMod()">New mod folder</button>
+            <button onclick="loadFromGUI()">Load</button>
+            <button id="new-file-button" onclick="newFile()">New tree</button>
+            <button id="saving-enabled-button" onclick="setSaving(!window.savingEnabled)">Disable Saving</button>
+            <button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>
+            <button onclick="showFavs()">Show Favourites</button>
+            <button onclick="document.getElementById('help-modal').classList.toggle('hidden')">Help</button>
+        </div>
+        <div id="trees"></div>
+    </div>
+    <div id="help-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="close-button" onclick="document.getElementById('help-modal').classList.toggle('hidden')">
+                ❌
+            </div>
+            <h2>Help</h2>
+            <div>
+                This is a basic tool to help view and create (WIP) new text content for Shadows of Doubt, using the DDS
+                system. All content in SoD is comprised of 4 parts (Trees, Messages, Blocks, Strings, in that order).
+            </div>
+            <br />
+            <ul>
+                <li><b>Trees:</b> The top level objects, and contain things like the conversation name, participate info
+                    and a list of <b>messages</b></li>
+                <li><b>Messages:</b> Mid level objects containing a list of <b>blocks</b>, each of which and can be set
+                    to always appear, or choose one of multiple in a group (Random, or based on traits)</li>
+                <li><b>Blocks:</b> The lowest level, and generally act as a direct reference to a line in the
+                    <b>strings</b> file. However, simple random substitutions can also be made on this level
+                </li>
+                <li><b>Strings:</b> Where the actual text comes from, stored in one large CSV. Generally, each block ID
+                    has a equivalent line in the CSV. Presented here merged into <b>blocks</b> for clarity</li>
+            </ul>
+            <br />
+            <h2>How to use:</h2>
+            <p>Instructions for use can now be found on the <a
+                    href="https://shadowsofdoubtmodding.miraheze.org/wiki/DDS_System">wiki</a>.</p>
+            <br />
+            <h2>Community content project</h2>
+            <div>I've opened a community content project (<a
+                    href="https://github.com/piepieonline/ShadowsOfDoubtContent">https://github.com/piepieonline/ShadowsOfDoubtContent</a>)
+                in the hopes that we can create a bunch more flavour text as a brains trust.</div>
+        </div>
+    </div>
+    <div id="fav-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="close-button" onclick="document.getElementById('fav-modal').classList.toggle('hidden')">
+                ❌
+            </div>
+            <h2>Favourites</h2>
+            <ul id="fav-list">
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        if (localStorage.getItem('favs') == null) localStorage.setItem('favs', '[]');
+        updateFavButton();
+
+        async function loadFromGUI() {
+            if (window.dirHandleModDir == null) {
+                try {
+                    await getModDir();
+                    window.loadedMods = await refreshModList();
+                    window.selectedMod = null;
+
+                    updateSelect('select-loaded-mod', ['None', ...window.loadedMods.map(mod => mod.modName)]);
+                }
+                catch { }
+            }
+
+            if(window.selectedMod != null) {
+                await initAndLoad('murdermanifest');
+            }
+
+            updateFavButton();
+        }
+
+        async function updateSelectedMod() {
+            window.selectedMod = window.loadedMods.find(mod => mod.modName == document.getElementById('select-loaded-mod').value);
+
+            if(window.selectedMod != null) {
+                await initAndLoad('murdermanifest');
+            }
+        }
+
+        async function newMod() {
+            if (window.dirHandleStreamingAssets == null || window.dirHandleModDir == null) {
+                alert('Please load StreamingAssets and a parent mod folder first');
+                throw 'Please load StreamingAssets and a parent mod folder first';
+            }
+
+            let modName = prompt('Enter a new mod name');
+
+            if (modName == null)
+                return;
+
+            await openModFolder(modName, true);
+
+            window.loadedMods = await refreshModList();
+            updateSelect('select-loaded-mod', ['None', ...window.loadedMods.map(mod => mod.modName)]);
+            window.selectedMod = window.loadedMods.filter(mod => mod.modName == modName)[0];
+            document.getElementById('select-loaded-mod').value = modName;
+            updateSelectedMod();
+        }
+
+        async function newFile() {
+            if (window.selectedMod == null) {
+                alert('Please select a mod to edit first');
+                throw 'Please select a mod to edit first';
+            }
+
+            let newGUID = await createNewFile(document.getElementById('select-guid-type').value)
+
+            document.getElementById('path-to-read').value = newGUID;
+
+            await loadFromGUI();
+
+            updateFavButton();
+        }
+
+        function setSaving(saving) {
+            window.savingEnabled = saving;
+
+            let ele = document.getElementById('saving-enabled-button');
+            ele.classList.toggle('saving-disabled');
+            ele.innerText = saving ? 'Disable Saving' : 'Enable Saving';
+        }
+        setSaving(true);
+
+        function showFavs() {
+            document.getElementById('fav-list').innerHTML = JSON.parse(localStorage.getItem('favs')).map(fav =>
+                `<li>${fav.name} - <span class="link-element" onclick="document.getElementById('path-to-read').value = '${fav.guid}'; loadFromGUI(); showFavs();">${fav.guid}</span></li>`
+            ).join('');
+            document.getElementById('fav-modal').classList.toggle('hidden')
+        }
+
+        function toggleFav() {
+            let guid = document.getElementById('path-to-read').value;
+            let favs = JSON.parse(localStorage.getItem('favs'));
+
+            let currentFav = favs.find(ele => ele.guid === guid);
+
+            if (currentFav) {
+                favs.splice(favs.indexOf(currentFav), 1);
+            } else {
+                let name = prompt('Enter name for this GUID');
+                if (name) {
+                    favs.push({
+                        mod: window.selectedMod,
+                        type: 'tree',
+                        guid,
+                        name
+                    });
+                }
+            }
+
+            localStorage.setItem('favs', JSON.stringify(favs));
+
+            updateFavButton();
+        }
+
+        function updateFavButton() {
+            let currentFav = JSON.parse(localStorage.getItem('favs')).find(ele => ele.guid === document.getElementById('path-to-read').value);
+            document.getElementById('toggle-favs-button').innerText = currentFav ? 'Unfavourite' : 'Favourite';
+        }
+    </script>
+</body>
+
+</html>
