@@ -84,10 +84,19 @@ async function loadFile(path, thisTreeCount, parentData) {
         }, item => {
             var ele = item.el.querySelector('.jsontree_value');
 
+            // TODO: Convert this into the if branch below
             if (window.enums[item.label]?.length > 0) {
                 createEnumSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.enums[item.label],
+                    ele.innerText
+                ).addEventListener('change', async (e) => {
+                    await modifyTreeElement(getJSONPointer(item), parseInt(e.target.value));
+                });
+            } else if (window.enums[window.pathToTypeMap[item.pathToItem]]?.length > 0) {
+                createEnumSelectElement(
+                    item.el.querySelector('.jsontree_value'),
+                    window.enums[window.pathToTypeMap[item.pathToItem]],
                     ele.innerText
                 ).addEventListener('change', async (e) => {
                     await modifyTreeElement(getJSONPointer(item), parseInt(e.target.value));
@@ -242,7 +251,7 @@ async function loadFile(path, thisTreeCount, parentData) {
 }
 
 async function getTemplateForItem(item) {
-    switch (item.label) {
+    switch (item.label.toLowerCase()) {
         case 'messages':
             let message = cloneTemplate('treeMessage');
             message.msgID = prompt(`Existing GUID (Or cancel to create a new file)`) || await createNewFile('message');
@@ -272,6 +281,11 @@ async function getTemplateForItem(item) {
             return replacement;
         case 'triggers':
             return prompt(`Trigger index`) || null;
+        case 'moleads':
+            let molead = cloneTemplate('molead');
+            molead.name = prompt(`Name`);
+            molead.spawnItem = prompt(`Spawn Item Reference`, 'REF:InteractablePreset|');
+            return molead;
         default:
             return 'PLACEHOLDER';
     }

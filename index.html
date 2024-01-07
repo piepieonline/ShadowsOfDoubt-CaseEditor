@@ -114,9 +114,9 @@
         }
 
         async function newMod() {
-            if (window.dirHandleStreamingAssets == null || window.dirHandleModDir == null) {
-                alert('Please load StreamingAssets and a parent mod folder first');
-                throw 'Please load StreamingAssets and a parent mod folder first';
+            if (window.dirHandleModDir == null) {
+                alert('Please load a parent mod folder first');
+                throw 'Please load a parent mod folder first';
             }
 
             let modName = prompt('Enter a new mod name');

@@ -120,12 +120,12 @@ window.enums.connection = [
 ];
 
 window.enums.traitConditions = [
-  'IfAnyOfThese',
-  'IfAllOfThese',
-  'IfNoneOfThese',
-  'otherAnyOfThese',
-  'otherAllOfThese',
-  'otherNoneOfThese',
+    'IfAnyOfThese',
+    'IfAllOfThese',
+    'IfNoneOfThese',
+    'otherAnyOfThese',
+    'otherAllOfThese',
+    'otherNoneOfThese',
 ];
 
 window.enums.traitCondition = window.enums.traitConditions;
@@ -145,4 +145,26 @@ window.enums.context = [
     'randomCitizen',
     'randomCriminal',
     'randomGroup'
+]
+
+window.enums.Boolean = [
+    'false',
+    'true'
+]
+
+window.enums.LeadCitizen = [
+    'nobody',
+    'victim',
+    'killer',
+    'victimsClosest',
+    'killersClosest',
+    'victimsDoctor',
+    'killersDoctor'
+]
+
+window.enums.LeadSpawnWhere = [
+    'victimHome',
+    'victimWork',
+    'killerHome',
+    'killerWork'
 ]

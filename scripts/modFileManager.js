@@ -1,7 +1,7 @@
 async function refreshModList() {
     let mods = [];
     for await (const entry of window.dirHandleModDir.values()) {
-        if (entry.kind === "directory") {
+        if (entry.kind === "directory" && entry.name !== '.git') {
             mods.push(await openModFolder(entry.name, false));
         }
     }
@@ -15,7 +15,7 @@ async function openModFolder(modName, create) {
 
     if(create)
     {
-        createFileIfNotExisting('murdermanifest');
+        await createFileIfNotExisting('murdermanifest', modFolders.baseFolder);
     }
 
     return modFolders;
@@ -49,20 +49,13 @@ async function createNewFile(type) {
     }
 }
 
-async function createFileIfNotExisting(type) {
-    let handle, filename, contentType;
+async function createFileIfNotExisting(type, handle) {
+    let filename, contentType;
 
-    switch(type) {
-        case 'newspaper':
-            handle = window.selectedMod.messages;
-            filename = [`${guid}.newspaper`];
-            contentType = 'newspaper';
-            break;
-        default:
-            throw 'Not implemented'
-    }
+    filename = [`${type}.sodso.json`];
+    contentType = type;
 
-    let file = await tryGetFile(window.selectedMod.baseFolder, type)
+    let file = await tryGetFile(handle, type)
     if(!file)
     {
         file = await getFile(handle, filename, true);

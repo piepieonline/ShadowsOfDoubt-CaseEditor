@@ -1,13 +1,27 @@
 window.pathToTypeMap = {
-    'compatibleWith/-': 'MurderPreset',
+    'allowAnywhere': 'Boolean',
+    'allowHome': 'Boolean',
+    'allowPublic': 'Boolean',
+    'allowStreets': 'Boolean',
+    'allowWork': 'Boolean',
+    'disabled': 'Boolean',
+    'useHexaco': 'Boolean',
     'callingCardPool/-/item': 'InteractablePreset',
-    'victimCompanyModifiers/-/companies/-': 'CompanyPreset',
+    'callingCardPool/-/traitModifiers/-/traitList/-': 'CharacterTrait',
+    'compatibleWith/-': 'MurderPreset',
+    'MOleads/-/belongsTo': 'LeadCitizen',
+    'MOleads/-/receiver': 'LeadCitizen',
+    'MOleads/-/where': 'LeadSpawnWhere',
+    'MOleads/-/traitModifiers/-/mustPassForApplication': 'Boolean',
+    'MOleads/-/traitModifiers/-/traitList/-': 'CharacterTrait',
+    'MOleads/-/writer': 'LeadCitizen',
     'murdererCompanyModifiers/-/companies/-': 'CompanyPreset',
-    'victimJobModifiers/-/jobs/-': 'OccupationPreset',
     'murdererJobModifiers/-/jobs/-': 'OccupationPreset',
-    'victimTraitModifiers/-/traitList/-': 'CharacterTrait',
     'murdererTraitModifiers/-/traitList/-': 'CharacterTrait',
-    'weaponsPool/-': 'MurderWeaponsPool'
+    'victimCompanyModifiers/-/companies/-': 'CompanyPreset',
+    'victimJobModifiers/-/jobs/-': 'OccupationPreset',
+    'victimTraitModifiers/-/traitList/-': 'CharacterTrait',
+    'weaponsPool/-': 'MurderWeaponsPool',
 };
 
 window.typeMap = {
