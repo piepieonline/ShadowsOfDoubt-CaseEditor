@@ -15,7 +15,15 @@ async function openModFolder(modName, create) {
 
     if(create)
     {
-        await createFileIfNotExisting('murdermanifest', modFolders.baseFolder);
+        await createFileIfNotExisting(modName, 'murdermo', modFolders.baseFolder, (content) => {
+            content.name = modName;
+            content.notes = modName;
+            return content;
+        });
+        await createFileIfNotExisting('murdermanifest', 'murdermanifest', modFolders.baseFolder, (content) => {
+            content.fileOrder.push(`REF:${modName.toLowerCase()}`);
+            return content;
+        });
     }
 
     return modFolders;
@@ -25,41 +33,18 @@ function cloneTemplate(template) {
     return JSON.parse(JSON.stringify(window.templates[template]))
 }
 
-async function createNewFile(type) {
-    async function createNewFileImpl(folderHandle, callback) {
-        let guid = crypto.randomUUID();
-        let newHandle = await getFile(folderHandle, [guid + ".sodso.json"], true);
+async function createFileIfNotExisting(fileName, type, handle, newFileContentCallback) {
+    let contentType;
 
-        let newContent = cloneTemplate(type);
-
-        newContent.id = guid;
-
-        await callback(newContent);
-
-        await writeFile(newHandle, JSON.stringify(newContent));
-
-        return guid;
-    }
-
-    switch (type) {
-        case 'murdermanifest':
-            return createNewFileImpl(window.selectedMod.baseFolder, async newContent => {
-
-            });
-    }
-}
-
-async function createFileIfNotExisting(type, handle) {
-    let filename, contentType;
-
-    filename = [`${type}.sodso.json`];
+    filename = [`${fileName}.sodso.json`];
     contentType = type;
 
     let file = await tryGetFile(handle, type)
     if(!file)
     {
         file = await getFile(handle, filename, true);
-        await writeFile(file, JSON.stringify(cloneTemplate(contentType)));
+        let newContent = newFileContentCallback(cloneTemplate(contentType));
+        await writeFile(file, JSON.stringify(newContent));
     }
 }
 

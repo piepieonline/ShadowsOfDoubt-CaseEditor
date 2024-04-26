@@ -251,42 +251,25 @@ async function loadFile(path, thisTreeCount, parentData) {
 }
 
 async function getTemplateForItem(item) {
+    let newTemplate = 'PLACEHOLDER';
     switch (item.label.toLowerCase()) {
-        case 'messages':
-            let message = cloneTemplate('treeMessage');
-            message.msgID = prompt(`Existing GUID (Or cancel to create a new file)`) || await createNewFile('message');
-            message.instanceID = crypto.randomUUID();
-            return message;
-        case 'links':
-            let treeMessageLinks = cloneTemplate('treeMessageLinks');
-            treeMessageLinks.to = prompt(`Existing instanceID`) || '';
-            treeMessageLinks.from = item.parent.childNodes.find(node => node.label == 'instanceID').el.querySelector('.jsontree_value').innerText.replaceAll('"', '');
-            return treeMessageLinks;
-        case 'traits':
-            return prompt(`Trait name`) || null;
-        case 'blocks':
-            let block = cloneTemplate('messageBlock');
-            block.blockID = prompt(`Existing GUID (Or cancel to create a new file)`) || await createNewFile('block');
-            block.instanceID = crypto.randomUUID();
-            return block;
-        case 'replacements':
-            let replacement = cloneTemplate('blockReplacement');
-            let guid = prompt(`Existing GUID (Or cancel to create a new file)`);
-            if (guid) {
-                replacement.replaceWithID = guid;
-            } else {
-                replacement.replaceWithID = crypto.randomUUID();
-                await addToStrings(replacement.replaceWithID, prompt(`English Line`));
-            }
-            return replacement;
-        case 'triggers':
-            return prompt(`Trigger index`) || null;
         case 'moleads':
-            let molead = cloneTemplate('molead');
-            molead.name = prompt(`Name`);
-            molead.spawnItem = prompt(`Spawn Item Reference`, 'REF:InteractablePreset|');
-            return molead;
+            newTemplate = cloneTemplate(item.label.toLowerCase());
+            newTemplate.name = prompt(`Name`);
+            return newTemplate;
+        case 'graffiti':
+            newTemplate = cloneTemplate(item.label.toLowerCase());
+            newTemplate.ddsMessageTextList = prompt(`DDS Message ID`);
+            return newTemplate;
+        case 'callingcardpool':
+            newTemplate = cloneTemplate(item.label.toLowerCase());
+            return newTemplate;
+        case 'traitmodifiers':
+        case 'murderertraitmodifiers':
+        case 'victimtraitmodifiers':
+            newTemplate = cloneTemplate('murderermodifierrule');
+            return newTemplate;
         default:
-            return 'PLACEHOLDER';
+            return newTemplate;
     }
 }

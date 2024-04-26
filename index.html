@@ -28,9 +28,8 @@
         <div class="controls">
             <select id="select-loaded-mod" onchange="updateSelectedMod()">
             </select>
-            <button id="new-mod-button" onclick="newMod()">New mod folder</button>
+            <button id="new-mod-button" onclick="newMod()">New MurderMO</button>
             <button onclick="loadFromGUI()">Load</button>
-            <button id="new-file-button" onclick="newFile()">New tree</button>
             <button id="saving-enabled-button" onclick="setSaving(!window.savingEnabled)">Disable Saving</button>
             <button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>
             <button onclick="showFavs()">Show Favourites</button>
@@ -131,21 +130,6 @@
             window.selectedMod = window.loadedMods.filter(mod => mod.modName == modName)[0];
             document.getElementById('select-loaded-mod').value = modName;
             updateSelectedMod();
-        }
-
-        async function newFile() {
-            if (window.selectedMod == null) {
-                alert('Please select a mod to edit first');
-                throw 'Please select a mod to edit first';
-            }
-
-            let newGUID = await createNewFile(document.getElementById('select-guid-type').value)
-
-            document.getElementById('path-to-read').value = newGUID;
-
-            await loadFromGUI();
-
-            updateFavButton();
         }
 
         function setSaving(saving) {
