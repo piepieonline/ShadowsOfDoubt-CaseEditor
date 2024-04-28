@@ -76,8 +76,8 @@
 .page-version-info {
     position: absolute;
     bottom: 0;
-    left: calc(50vw - 50px);
-    width: 100px;
+    left: calc(50vw - 100px);
+    width: 200px;
     text-align: center;
     color: #777;
 }
