@@ -37,6 +37,7 @@
             <button onclick="showFavs()">Show Favourites</button>-->
             <button onclick="document.getElementById('help-modal').classList.toggle('hidden')">Help</button>
             <button onclick="toggleDefaultValues()">Show/Hide default values</button>
+            <button onclick="document.getElementById('asset-explorer-model').classList.toggle('hidden')">Asset Explorer</button>
         </div>
         <div id="trees"></div>
     </div>
@@ -68,6 +69,20 @@
             </div>
             <h2>Favourites</h2>
             <ul id="fav-list">
+
+            </ul>
+        </div>
+    </div>
+    <div id="asset-explorer-model" class="modal hidden">
+        <div class="modal-content">
+            <div class="close-button" onclick="document.getElementById('asset-explorer-model').classList.toggle('hidden')">
+                ❌
+            </div>
+            <h2>Shadows Of Doubt: ScriptableObjects</h2>
+            <select id="asset-model-type-list" onchange="updateAssetModel()">
+
+            </select>
+            <ul id="asset-model-asset-list">
 
             </ul>
         </div>
@@ -144,6 +159,32 @@
         function toggleDefaultValues() {
             document.querySelectorAll('.default-value-node').forEach(ele => {
                 ele.classList.toggle('hidden-default-value-node');
+            });
+        }
+
+        function updateAssetModel(firstRun)
+        {
+            let typeList = document.getElementById('asset-model-type-list');
+
+            if(firstRun)
+            {
+                Object.keys(window.typeMap).sort().forEach(type => {
+                    if(type.includes("Preset"))
+                    {
+                        var option = document.createElement("option");
+                        option.text = type;
+                        typeList.appendChild(option);
+                    }
+                });
+            }
+
+            let assetList = document.getElementById('asset-model-asset-list');
+            assetList.innerHTML = '';
+
+            window.typeMap[typeList.value]?.sort().forEach(SO => {
+                var option = document.createElement("ul");
+                option.innerText = SO;
+                assetList.appendChild(option);
             });
         }
 

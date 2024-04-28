@@ -41,3 +41,5 @@ window.basicTypes = {
     Vector2: { x: 0, y: 0 },
     Vector3: { x: 0, y: 0, z: 0 }
 };
+
+window.updateAssetModel(true);

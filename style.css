@@ -119,3 +119,8 @@
 .modal ul, .modal li {
     list-style: initial;
 }
+
+#asset-model-asset-list {
+    height: 100%;
+    overflow-y: scroll;
+}
