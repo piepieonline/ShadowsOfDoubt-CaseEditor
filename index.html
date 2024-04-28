@@ -7,10 +7,6 @@
     <script src="./libs/jsonTree/jsonTree.js"></script>
     <script src="./libs/JSON-Patch/fast-json-patch.min.js"></script>
 
-    <!--<script src="./scripts/templates.js"></script>-->
-    <!--<script src="./scripts/enums.js"></script>-->
-    <!--<script src="./scripts/typeMapping.js"></script>-->
-
     <script type="module" src="./scripts/loadRefs.js"></script>
 
     <script src="./index.js"></script>
@@ -40,6 +36,9 @@
             <button onclick="document.getElementById('asset-explorer-model').classList.toggle('hidden')">Asset Explorer</button>
         </div>
         <div id="trees"></div>
+    </div>
+    <div class="page-version-info">
+        {{ site.github.build_revision }}
     </div>
     <div id="help-modal" class="modal hidden">
         <div class="modal-content">

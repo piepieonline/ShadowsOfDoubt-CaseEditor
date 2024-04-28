@@ -314,8 +314,7 @@ async function loadFile(path, thisTreeCount, parentData) {
         }, item => {
             if(fileType in window.templates && item.label in window.templates[fileType] && JSON.stringify(data[item.label]) === JSON.stringify(window.templates[fileType][item.label]))
             {
-                item.el.classList.add('default-value-node')
-                console.log(item);
+                item.el.classList.add('default-value-node');
             }
         });
     }

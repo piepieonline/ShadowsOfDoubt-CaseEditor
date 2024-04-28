@@ -3,7 +3,7 @@
 }
 
 #trees {
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
     white-space: pre;
@@ -71,6 +71,15 @@
 
 .hidden-default-value-node {
     display: none;
+}
+
+.page-version-info {
+    position: absolute;
+    bottom: 0;
+    left: calc(50vw - 50px);
+    width: 100px;
+    text-align: center;
+    color: #777;
 }
 
 /* Modal */
