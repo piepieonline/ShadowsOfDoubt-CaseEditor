@@ -2,7 +2,14 @@ import templates from './ref/templates.json' with { type: 'json' };
 import soChildTypes from './ref/soChildTypes.json' with { type: 'json' };
 import soMap from './ref/soMap.json' with { type: 'json' };
 
-window.templates = templates;
+window.templates = {
+    MurderManifest: {
+        enabled: true,
+        fileOrder: [],
+        version: 1
+    },
+    ...templates
+};
 
 window.typeMap = {
     ...soMap["ScriptableObject"]

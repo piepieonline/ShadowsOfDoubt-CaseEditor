@@ -61,6 +61,14 @@
     position: absolute;
 }
 
+.default-value-node {
+    
+}
+
+.default-value-node .jsontree_label-wrapper .jsontree_label {
+    color: #888;
+}
+
 .hidden-default-value-node {
     display: none;
 }

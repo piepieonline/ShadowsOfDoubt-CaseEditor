@@ -36,6 +36,7 @@
             <!--<button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>
             <button onclick="showFavs()">Show Favourites</button>-->
             <button onclick="document.getElementById('help-modal').classList.toggle('hidden')">Help</button>
+            <button onclick="toggleDefaultValues()">Show/Hide default values</button>
         </div>
         <div id="trees"></div>
     </div>
@@ -139,6 +140,12 @@
             }
         }
         setSaving(JSON.parse(localStorage.getItem('SOD_MurderCaseBuilder_Autosave')) ?? true);
+
+        function toggleDefaultValues() {
+            document.querySelectorAll('.default-value-node').forEach(ele => {
+                ele.classList.toggle('hidden-default-value-node');
+            });
+        }
 
         /*
         function showFavs() {

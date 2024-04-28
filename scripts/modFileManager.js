@@ -15,12 +15,14 @@ async function openModFolder(modName, create) {
 
     if(create)
     {
-        await createFileIfNotExisting(modName, 'murdermo', modFolders.baseFolder, (content) => {
+        await createFileIfNotExisting(modName, 'MurderMO', modFolders.baseFolder, (content) => {
             content.name = modName;
+            content.presetName = modName;
             content.notes = modName;
+            content.copyFrom = null;
             return content;
         });
-        await createFileIfNotExisting('murdermanifest', 'murdermanifest', modFolders.baseFolder, (content) => {
+        await createFileIfNotExisting('murdermanifest', 'MurderManifest', modFolders.baseFolder, (content) => {
             content.fileOrder.push(`REF:${modName.toLowerCase()}`);
             return content;
         });

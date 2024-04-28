@@ -21,7 +21,7 @@ async function loadFile(path, thisTreeCount, parentData) {
     // Create json-tree
     var tree = jsonTree.create(data, treeEle);
     runTreeSetup();
-
+    markDefaultValues();
 
     function createDummyKeys(data) {
         return data;
@@ -51,16 +51,6 @@ async function loadFile(path, thisTreeCount, parentData) {
             typeList.splice(0, 1);
             return mapSplitPath(typeList);
         }
-    }
-
-    async function modifyTreeElement(jsonPointer, newValue) {
-        [
-            {
-                op: 'replace',
-                path: jsonPointer,
-                value: newValue
-            }
-        ]
     }
 
     async function runTreeSetup() {
@@ -124,7 +114,7 @@ async function loadFile(path, thisTreeCount, parentData) {
                         ]);
                     }
                 );
-            } else if (window.typeMap[mappedType]) {
+            } else if (window.typeMap[mappedType] && splitPath[splitPath.length - 1] != "copyFrom") {
                 createSOSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.typeMap[mappedType],
@@ -280,6 +270,8 @@ async function loadFile(path, thisTreeCount, parentData) {
             }, item => {
                 item.expand();
             });
+
+            markDefaultValues();
         }
     }
 
@@ -314,6 +306,19 @@ async function loadFile(path, thisTreeCount, parentData) {
     function getSaveSafeJSON() {
         return JSON.stringify(data, (key, value) => (Object.keys(DUMMY_KEYS).includes(key) ? undefined : value), 2);
     }
+
+    function markDefaultValues()
+    {
+        tree.findAndHandle(item => {
+            return item.parent.isRoot;
+        }, item => {
+            if(fileType in window.templates && item.label in window.templates[fileType] && JSON.stringify(data[item.label]) === JSON.stringify(window.templates[fileType][item.label]))
+            {
+                item.el.classList.add('default-value-node')
+                console.log(item);
+            }
+        });
+    }
 }
 
 async function getTemplateForItem(templateName) {
@@ -336,14 +341,6 @@ async function getTemplateForItem(templateName) {
     }
 
     newTemplate = cloneTemplate(templateName);
-    switch (templateName) {
-        case 'MOLeads':
-            newTemplate.name = prompt(`Name`);
-            return newTemplate;
-        case 'Graffiti':
-            newTemplate.ddsMessageTextList = prompt(`DDS Message ID`);
-            return newTemplate;
-        default:
-            return newTemplate;
-    }
+    newTemplate.copyFrom = null;
+    return newTemplate;
 }
