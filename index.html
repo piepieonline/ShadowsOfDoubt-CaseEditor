@@ -33,8 +33,8 @@
             <button id="new-mod-button" onclick="newMod()">New MurderMO</button>
             <button onclick="loadFromGUI()">Load</button>
             <button id="saving-enabled-button" onclick="setSaving(!window.savingEnabled)">Disable Saving</button>
-            <button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>
-            <button onclick="showFavs()">Show Favourites</button>
+            <!--<button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>
+            <button onclick="showFavs()">Show Favourites</button>-->
             <button onclick="document.getElementById('help-modal').classList.toggle('hidden')">Help</button>
         </div>
         <div id="trees"></div>
@@ -143,6 +143,7 @@
         }
         setSaving(true);
 
+        /*
         function showFavs() {
             document.getElementById('fav-list').innerHTML = JSON.parse(localStorage.getItem('favs')).map(fav =>
                 `<li>${fav.name} - <span class="link-element" onclick="document.getElementById('path-to-read').value = '${fav.guid}'; loadFromGUI(); showFavs();">${fav.guid}</span></li>`
@@ -179,6 +180,7 @@
             let currentFav = JSON.parse(localStorage.getItem('favs')).find(ele => ele.guid === document.getElementById('path-to-read').value);
             document.getElementById('toggle-favs-button').innerText = currentFav ? 'Unfavourite' : 'Favourite';
         }
+        */
     </script>
 </body>
 

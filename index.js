@@ -40,7 +40,9 @@ async function loadFile(path, thisTreeCount, parentData) {
         
         if(typeList.length == 2)
         {
-            if(typeList[0] !== fileType && window.typeMap[typeList[0]]) {
+            if(typeList[0] === fileType && typeList[1] === "type") {
+                return "FileType";
+            } else if(typeList[0] !== fileType && window.typeMap[typeList[0]]) {
                 return window.typeMap[typeList[0]];
             } else {
                 return window.typeLayout[typeList[0]][typeList[1]]?.Item1;
@@ -136,20 +138,17 @@ async function loadFile(path, thisTreeCount, parentData) {
                         }
                         else
                         {
-                            replacementValue = customValue;
+                            replacementValue = `REF:${mappedType}|${customValue}`;
                         }
                         await modifyTreeElement(getJSONPointer(item), replacementValue);
                     }
                 );
+            } else if (mappedType === "FileType") {
+                // Do nothing, not editable
             } else {
                 ele.addEventListener('contextmenu', async (e) => {
                     e.preventDefault();
-
-                    // TODO:
-                    if(window.pathToTypeMap[item.pathToItem]) {
-                        console.log(window.pathToTypeMap[item.pathToItem])
-                    }
-
+                    
                     if (!window.selectedMod) {
                         alert('Please select a mod to save in first');
                         throw 'Please select a mod to save in first';
@@ -283,6 +282,22 @@ async function loadFile(path, thisTreeCount, parentData) {
 
 async function getTemplateForItem(templateName) {
     let newTemplate = 'PLACEHOLDER';
+
+    if(templateName === "FileType")
+    {
+        let newFileName = prompt(`Name`);
+        let newFileType = prompt(`Type`);
+
+        await createFileIfNotExisting(newFileName, newFileType, window.selectedMod.baseFolder, (content) => {
+            content.name = newFileName;
+            content.presetName = newFileName;
+            content.type = newFileType;
+            content.copyFrom = null;
+            return content;
+        });
+
+        return `REF:${newFileName}`;
+    }
 
     newTemplate = cloneTemplate(templateName);
     switch (templateName) {

@@ -17,6 +17,12 @@ window.enums = {
 };
 
 window.typeLayout = {
-    Manifest: {},
+    Manifest: {
+        fileOrder: {
+            "Item1": "FileType",
+            "Item2": true
+          }
+    },
+    String: "",
     ...soChildTypes
 };

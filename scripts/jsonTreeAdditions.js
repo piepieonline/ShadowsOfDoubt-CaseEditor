@@ -110,7 +110,7 @@ function createEnumSelectElement(domNode, options, selectedIndex, allowCustom, o
         let newCustomValue;
         if(e.target.value == -2)
         {
-            let res = prompt('Enter filename', '');
+            let res = prompt('Enter prefab name', '');
 
             if (res === null) {
                 return;
