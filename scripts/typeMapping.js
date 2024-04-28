@@ -1,3 +1,4 @@
+/*
 window.pathToTypeMap = {
     'allowAnywhere': 'Boolean',
     'allowHome': 'Boolean',
@@ -23,7 +24,8 @@ window.pathToTypeMap = {
     'victimTraitModifiers/-/traitList/-': 'CharacterTrait',
     'weaponsPool/-': 'MurderWeaponsPool',
 };
-
+*/
+/*
 window.typeMap = {
     CharacterTrait: [
         'Affliction-Acne',
@@ -509,3 +511,4 @@ window.typeMap = {
         'WeaponsDealer'
     ]
 }
+*/

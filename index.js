@@ -13,6 +13,8 @@ async function loadFile(path, thisTreeCount, parentData) {
 
     var data = JSON.parse(await (await (await tryGetFile(window.selectedMod.baseFolder, (path + '.sodso.json').split('/')))?.getFile())?.text());
 
+    var fileType = data.type || "Manifest";
+
     // Show actual text
     // createDummyKeys(data);
 
@@ -27,6 +29,29 @@ async function loadFile(path, thisTreeCount, parentData) {
 
     function createDummyKeys(data) {
         return data;
+    }
+
+    function mapSplitPath(typeList)
+    {
+        if(typeList.length == 1)
+        {
+            typeList = [fileType, ...typeList];
+        }
+        
+        if(typeList.length == 2)
+        {
+            if(typeList[0] !== fileType && window.typeMap[typeList[0]]) {
+                return window.typeMap[typeList[0]];
+            } else {
+                return window.typeLayout[typeList[0]][typeList[1]]?.Item1;
+            }
+        }
+        else
+        {
+            typeList[1] = window.typeLayout[typeList[0]][typeList[1]]?.Item1;
+            typeList.splice(0, 1);
+            return mapSplitPath(typeList);
+        }
     }
 
     async function modifyTreeElement(jsonPointer, newValue) {
@@ -83,36 +108,39 @@ async function loadFile(path, thisTreeCount, parentData) {
             return !item.isComplex;
         }, item => {
             var ele = item.el.querySelector('.jsontree_value');
+            var splitPath = [fileType, ...item.pathToItem.replace(/\/-$/, '').split('/-/')];
+
+            var mappedType = mapSplitPath(splitPath);
 
             // TODO: Convert this into the if branch below
-            if (window.enums[item.label]?.length > 0) {
+            if (mappedType && window.enums[mappedType]?.length > 0) {
                 createEnumSelectElement(
                     item.el.querySelector('.jsontree_value'),
-                    window.enums[item.label],
-                    ele.innerText
-                ).addEventListener('change', async (e) => {
-                    await modifyTreeElement(getJSONPointer(item), parseInt(e.target.value));
-                });
-            } else if (window.enums[window.pathToTypeMap[item.pathToItem]]?.length > 0) {
-                createEnumSelectElement(
-                    item.el.querySelector('.jsontree_value'),
-                    window.enums[window.pathToTypeMap[item.pathToItem]],
-                    ele.innerText
-                ).addEventListener('change', async (e) => {
-                    await modifyTreeElement(getJSONPointer(item), parseInt(e.target.value));
-                });
-            } else if (window.pathToTypeMap[item.pathToItem] && window.typeMap[window.pathToTypeMap[item.pathToItem]]) {
+                    window.enums[mappedType],
+                    ele.innerText,
+                    false,
+                    async (selectedIndex) => {
+                        await modifyTreeElement(getJSONPointer(item), parseInt(selectedIndex));
+                    }
+                );
+            } else if (window.typeMap[mappedType]) {
                 createSOSelectElement(
                     item.el.querySelector('.jsontree_value'),
-                    window.typeMap[window.pathToTypeMap[item.pathToItem]],
-                    ele.innerText
-                ).addEventListener('change', async (e) => {
-                    let replacementValue = 'PLACEHOLDER';
-                    if(e.target.value >= 0) {
-                        replacementValue = `REF:${window.pathToTypeMap[item.pathToItem]}|${window.typeMap[window.pathToTypeMap[item.pathToItem]][e.target.value]}`;
+                    window.typeMap[mappedType],
+                    ele.innerText,
+                    async (selectedIndex, customValue) => {
+                        let replacementValue = item.el.querySelector('.jsontree_value');
+                        if(selectedIndex >= 0)
+                        {
+                            replacementValue = `REF:${mappedType}|${window.typeMap[mappedType][selectedIndex]}`;
+                        }
+                        else
+                        {
+                            replacementValue = customValue;
+                        }
+                        await modifyTreeElement(getJSONPointer(item), replacementValue);
                     }
-                    await modifyTreeElement(getJSONPointer(item), replacementValue);
-                });
+                );
             } else {
                 ele.addEventListener('contextmenu', async (e) => {
                     e.preventDefault();
@@ -199,7 +227,10 @@ async function loadFile(path, thisTreeCount, parentData) {
                 }
 
                 if (confirm('Add Element?')) {
-                    let newContent = await getTemplateForItem(item);
+                    let splitPath = [fileType, ...item.pathToItem.replace(/\/-$/, '').split('/-/')];
+                    let mappedType = mapSplitPath(splitPath);
+
+                    let newContent = await getTemplateForItem(mappedType);
 
                     if (newContent === null) return;
 
@@ -250,24 +281,16 @@ async function loadFile(path, thisTreeCount, parentData) {
     }
 }
 
-async function getTemplateForItem(item) {
+async function getTemplateForItem(templateName) {
     let newTemplate = 'PLACEHOLDER';
-    switch (item.label.toLowerCase()) {
-        case 'moleads':
-            newTemplate = cloneTemplate(item.label.toLowerCase());
+
+    newTemplate = cloneTemplate(templateName);
+    switch (templateName) {
+        case 'MOLeads':
             newTemplate.name = prompt(`Name`);
             return newTemplate;
-        case 'graffiti':
-            newTemplate = cloneTemplate(item.label.toLowerCase());
+        case 'Graffiti':
             newTemplate.ddsMessageTextList = prompt(`DDS Message ID`);
-            return newTemplate;
-        case 'callingcardpool':
-            newTemplate = cloneTemplate(item.label.toLowerCase());
-            return newTemplate;
-        case 'traitmodifiers':
-        case 'murderertraitmodifiers':
-        case 'victimtraitmodifiers':
-            newTemplate = cloneTemplate('murderermodifierrule');
             return newTemplate;
         default:
             return newTemplate;

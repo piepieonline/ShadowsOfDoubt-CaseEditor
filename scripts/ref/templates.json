@@ -1,0 +1,5036 @@
+{
+  "ItemHolstered": {},
+  "AddressPreset": {
+    "presetName": "",
+    "debug": false,
+    "fitsUnitSizeMin": 0,
+    "fitsUnitSizeMax": 225,
+    "hardSizeLimits": false,
+    "minMaxFloors": {
+      "x": -1.0,
+      "y": 999.0
+    },
+    "important": false,
+    "maxInstances": 9999,
+    "baseScore": 3,
+    "baseScoreFrequencyPenalty": 1,
+    "idealFootfall": 0.0,
+    "footfallMultiplier": 3.0,
+    "addressRules": [],
+    "limitToBuildings": [],
+    "forcePick": false,
+    "ethnicityMatters": false,
+    "ethnicity": 15,
+    "compatible": [],
+    "roomConfig": [],
+    "access": 0,
+    "canPassThrough": false,
+    "openHoursDicatedByAdjoiningCompany": false,
+    "needsPassword": false,
+    "dictionaryPasswordSources": [],
+    "company": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "residence": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "playerKnowsPurpose": true,
+    "evidenceIconLarge": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "chanceOfNameSignHorizontal": 1.0,
+    "horizontalSignOffset": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "signCharacterSet": [],
+    "chanceOfNameSignVertical": 1.0,
+    "possibleSigns": [],
+    "specialItems": [],
+    "chanceOfExternalSpareKey": 0.0,
+    "airVentRange": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "useOwnSecuritySystem": false,
+    "useOwnBreakerBox": false,
+    "alarmLocksDownFloor": false,
+    "overrideBuildingEnvironment": false,
+    "sceneProfile": 1,
+    "entrancesLockedByDefault": true,
+    "leaveLightsOn": false,
+    "disableLockingUp": false,
+    "disableLocationInformationDisplay": false,
+    "forceCityDirectoryInclusion": false,
+    "nameFeaturesBuildingReference": false,
+    "overrideBuildingName": false,
+    "sameBuildingEmployeesAuthority": false,
+    "sameBuildingResidentsAuthority": false,
+    "canFeatureLostAndFound": false,
+    "minimumLandValue": 0.0,
+    "maximumLandValue": 1.0,
+    "allowSniperVantagePoint": false,
+    "vantagePointBoost": 0.0,
+    "disableSniperTargetSite": false,
+    "disableThis": false
+  },
+  "AIActionPreset": {
+    "presetName": "",
+    "defaultKey": 0,
+    "debug": false,
+    "inputPriority": 0,
+    "unavailableWhenItemSelected": false,
+    "unavailableWhenItemsSelected": [],
+    "onlyAvailableWhenItemSelected": false,
+    "availableWhenItemsSelected": [],
+    "holsterCurrentItemOnAction": false,
+    "disableUIDisplay": false,
+    "actionLocation": 0,
+    "confirmActionLocation": true,
+    "useRandomNodeSublocation": false,
+    "onUnableToFindLocation": 1,
+    "searchSetting": 0,
+    "onUsePointBusy": 0,
+    "usageSlot": 0,
+    "useCloseEnoughSetting": false,
+    "robberyPriorityMultiplier": 0.0,
+    "avoidRepeatingInteractables": false,
+    "filterSearchUsingRoomType": false,
+    "searchRoomType": [],
+    "limitSearchToGoalLocation": false,
+    "findOverrideWithHome": true,
+    "requiresTelephone": false,
+    "requiresTelephoneNoCall": false,
+    "activationRequiresConsumable": false,
+    "bannedRooms": 0,
+    "completableAction": true,
+    "minutesTakenRange": {
+      "x": 1.0,
+      "y": 10.0
+    },
+    "completeOnSeeIllegal": false,
+    "repeatOnComplete": false,
+    "repeatWhileHavingConsumables": false,
+    "requiresForcedUpdate": false,
+    "dontUpdateGoalPriorityWhileActive": false,
+    "dontUpdateGoalPriorityFor": 0,
+    "limitTickRate": false,
+    "minimumTickRate": 0,
+    "maximumTickRate": 2,
+    "dontRemoveOnRefresh": false,
+    "nonRefreshable": false,
+    "useLOSCheck": false,
+    "cancelIfNonValidMugging": false,
+    "cancelIfPlayerNotLoitering": false,
+    "skipIfAIIsInState": false,
+    "skipIfReaction": 0,
+    "skipIfGuestPass": false,
+    "facing": 7,
+    "lookAround": false,
+    "cancelIfPersuitTargetNotInRange": false,
+    "facePlayerWhileTalkingTo": true,
+    "changeIdleOnActivate": true,
+    "idleAnimationOnActivate": 0,
+    "changeIdleOnArrival": false,
+    "idleAnimationOnArrival": 0,
+    "changeIdleOnDeactivate": false,
+    "idleAnimationOnDeactivate": 0,
+    "changeIdleOnComplete": false,
+    "idleAnimationOnComplete": 0,
+    "changeArmsOnActivate": true,
+    "armsAnimationOnActivate": 0,
+    "changeArmsOnArrival": false,
+    "armsAnimationOnArrival": 0,
+    "changeArmsOnDeactivate": false,
+    "armsAnimationOnDeactivate": 0,
+    "changeArmsOnComplete": false,
+    "armsAnimationOnComplete": 0,
+    "lying": false,
+    "useCurrentConsumable": false,
+    "progressNourishment": 0.0,
+    "progressHydration": 0.0,
+    "progressAlertness": 0.0,
+    "progressEnergy": 0.0,
+    "progressExcitement": 0.0,
+    "progressChores": 0.0,
+    "progressHygeiene": 0.0,
+    "progressBladder": 0.0,
+    "progressHeat": 0.0,
+    "progressDrunk": 0.0,
+    "progressBreath": 0.0,
+    "progressPoisoned": 0.0,
+    "overtimeNourishment": 0.0,
+    "overtimeHydration": 0.0,
+    "overtimeAlertness": 0.0,
+    "overtimeEnergy": 0.0,
+    "overtimeExcitement": 0.0,
+    "overtimeChores": 0.0,
+    "overtimeHygiene": 0.0,
+    "overtimeBladder": 0.0,
+    "overtimeHeat": 0.0,
+    "overtimeDrunk": 0.0,
+    "overtimeBreath": 0.0,
+    "overtimePoison": 0.0,
+    "useInvestigationUrgency": false,
+    "forceRun": false,
+    "runIfSeesPlayer": false,
+    "socialRules": false,
+    "spookAction": false,
+    "disableSightingUpdates": false,
+    "attackPersuitTargetOnProximity": false,
+    "throwObjectsAtTarget": true,
+    "useCombatPose": 2,
+    "onlyUseCombatPoseWithEscalationOne": true,
+    "sleepOnArrival": false,
+    "uninteruptableWhileAtLocation": false,
+    "progressVmailThreads": false,
+    "disableConversationTriggers": false,
+    "exitConversationOnActivate": false,
+    "forcedActive": [],
+    "forcedActionsOnArrival": [],
+    "forcedActionsOnComplete": [],
+    "forcedActionsSearchLevel": 3,
+    "executeCompleteActionsOnEnd": false,
+    "executeCompleteActionsOnEndIfArrived": true,
+    "executeThisOnComplete": true,
+    "switchStatesOnEnd": [],
+    "tamperAction": false,
+    "tamperResetAction": false,
+    "canFallAsleep": false,
+    "fallAsleepAfterMinimum": 20,
+    "allowSniperShot": false,
+    "checkActionAgainstState": [],
+    "forceReactionState": false,
+    "setReactionState": 0,
+    "ignoreLockedDoors": false,
+    "breakDownDoors": false,
+    "doorsAllowed": true,
+    "deactivateAllowed": true,
+    "repeatDelayOnActionFail": 0.0,
+    "repeatDelayOnActionSuccess": 0.0,
+    "turnAllGamelocationLightsOff": false,
+    "overrideGoalLightRule": false,
+    "onlyOverrideIfAtGamelocation": true,
+    "lightingBehaviour": [],
+    "overrideGoalDoorRule": false,
+    "doorRule": 0,
+    "spawnTauntOnSuccess": false,
+    "onArrivalSound": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "isLoop": false,
+    "soundDelay": 0.0,
+    "outdoorClothingCheck": true,
+    "specificOutfitOnActivate": false,
+    "allowedOutfitOnActivate": 0,
+    "makeClothedOnActivate": true,
+    "specificOutfitOnArrive": false,
+    "allowedOutfitOnArrive": 0,
+    "makeClothedOnArrive": true,
+    "specificOutfitOnDeactivate": false,
+    "allowedOutfitOnDeactivate": 0,
+    "makeClothedOnDeactivate": true,
+    "specificOutfitOnComplete": false,
+    "allowedOutfitOnComplete": 0,
+    "makeClothedOnComplete": true,
+    "setExpressionOnActivate": false,
+    "activateExpression": 0,
+    "setExpressionOnArrive": false,
+    "arriveExpression": 0,
+    "setExpressionOnDeactivate": false,
+    "deactivateExpression": 0,
+    "setExpressionOnComplete": false,
+    "completeExpression": 0,
+    "allowItems": true,
+    "enableCustomItem": false,
+    "itemRight": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "itemRightLocalPos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "itemRightLocalEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "itemLeft": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "itemLeftLocalPos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "itemLeftLocalEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "spawnCustomItemOn": 0,
+    "destroyCustomItemOn": 3,
+    "requiresCarryAnimation": false,
+    "overrideCarryAnimation": 1,
+    "dropItemOnEnd": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "chanceOfOnTrigger": 0.5,
+    "onTriggerBark": [],
+    "chanceOfWhileJourney": 0.5,
+    "whileJourneyBark": [],
+    "chanceOfOnArrival": 0.5,
+    "onArrivalBark": [],
+    "chanceOfWhileArrived": 0.5,
+    "mustSeeOtherCitizen": false,
+    "whileArrivedBark": [],
+    "chanceOfOnComplete": 0.5,
+    "onCompleteBark": []
+  },
+  "AIGoalPreset": {
+    "presetName": "",
+    "startingGoal": false,
+    "appliesTo": 0,
+    "appliedToTheseJobs": [],
+    "onlyIfFeaturesItemsAtHome": [],
+    "disableSave": false,
+    "category": 0,
+    "basePriority": 5,
+    "randomVariance": 1,
+    "minMaxPriority": {
+      "x": 0.0,
+      "y": 10.0
+    },
+    "multiplyUsingTrashCarried": false,
+    "useLateDebtPriority": false,
+    "onlyImportantBetweenHours": false,
+    "validBetweenHours": {
+      "x": 9.0,
+      "y": 20.5
+    },
+    "dontUpdateGoalPriorityWhileActive": false,
+    "forcePriorityUpdateOnCreation": false,
+    "rainFactor": 0,
+    "useMusic": false,
+    "useTrespassing": false,
+    "affectPriorityOverTime": false,
+    "multiplierModifierOverOneHour": -0.10000000149011612,
+    "sniperVictimBoost": false,
+    "goalModifiers": [],
+    "ifGoalsPresent": [],
+    "otherGoalPriorityModifier": 0.0,
+    "useTiming": false,
+    "timingImportance": 3,
+    "earlyTimingWindow": 0.5,
+    "cancelIfLate": false,
+    "cancelIfThisLate": 1.0,
+    "cancelAfterTime": false,
+    "cancelAfter": 1.0,
+    "runIfLate": false,
+    "nourishmentImportance": 0,
+    "hydrationImportance": 0,
+    "alertnessImportance": 0,
+    "energyImportance": 0,
+    "excitementImportance": 0,
+    "choresImportance": 0,
+    "hygieneImportance": 0,
+    "bladderImportance": 0,
+    "heatImportance": 0,
+    "drunkImportance": 0,
+    "breathImportance": 0,
+    "poisonImportance": 0,
+    "blindedImportance": 0,
+    "completable": false,
+    "loopingActions": false,
+    "interuptable": true,
+    "unteruptableByFollowingCategories": false,
+    "uninteruptableByCategories": [],
+    "useInteruptionThreshold": false,
+    "interuptionThreshold": 1,
+    "repeatDelayOnBusy": 0.10000000149011612,
+    "repeatDelayOnInterupt": 0.10000000149011612,
+    "repeatDelayOnFinishActions": 0.10000000149011612,
+    "allowEnforcersEverywhere": false,
+    "locationOption": 0,
+    "desireCategory": 0,
+    "roomOption": 0,
+    "furnitureOption": 0,
+    "actionFoundRoomBecomesPassedRoom": false,
+    "passedGamelocationIsImportant": false,
+    "actionSource": 0,
+    "actionsSetup": [],
+    "raiseAlarm": false,
+    "allowTrespass": false,
+    "disableActionInsertions": false,
+    "trashConsumablesOnActivate": true,
+    "disableThrowing": false,
+    "diabledMugging": false,
+    "allowPottering": false,
+    "potterSource": 0,
+    "potterFrequency": {
+      "x": 0.5,
+      "y": 1.0
+    },
+    "potterActions": [],
+    "overrideLightingBehaviour": false,
+    "onlyOverrideIfAtGamelocation": true,
+    "lightingBehaviour": [],
+    "doorRule": 0,
+    "chanceOfOnTrigger": 0.5,
+    "onTriggerBark": []
+  },
+  "AmbientZone": {
+    "presetName": "",
+    "mainEvent": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "useOcclusion": true,
+    "maxRange": 10.0,
+    "canPenetrateClosedDoors": true,
+    "overrideOcclusionModifier": false,
+    "occlusionUnitVolumeModifier": -0.10000000149011612,
+    "isAirDuctAmbience": false,
+    "passTimeOfDay": false,
+    "passWalla": false,
+    "passPlayerInVent": true,
+    "passPlayerVentExtInt": false,
+    "passDistanceToVent": false,
+    "passRain": false,
+    "passBasement": false,
+    "passHeightWindSpeed": false,
+    "passEdgeDistance": false,
+    "maxWallaRange": 10.0,
+    "maxWallaCrowd": 10.0
+  },
+  "ArtPreset": {
+    "presetName": "",
+    "disable": false,
+    "texturePreview": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "material": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "orientationCompatibility": [],
+    "pixelScaleMultiplier": 0.02500000037252903,
+    "allowInResidential": true,
+    "allowInCommerical": true,
+    "allowInLobby": true,
+    "allowOnStreet": false,
+    "basePriority": 1,
+    "colourMatching": [],
+    "colourMatchingScale": 5,
+    "minimumWealth": 0.0,
+    "maximumWealth": 1.0,
+    "roomMatchingScale": 5,
+    "modernity": 5,
+    "cleanness": 5,
+    "loudness": 5,
+    "emotive": 5,
+    "mustRequireTraitFromBelow": false,
+    "traitModifiers": [],
+    "useDynamicText": false,
+    "dynamicTextSource": 0,
+    "textFont": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "textColour": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "textSize": 24.0
+  },
+  "AudioEvent": {
+    "presetName": "",
+    "guid": "",
+    "disableOcclusion": false,
+    "debug": false,
+    "isDummyEvent": false,
+    "isLicensed": false,
+    "pauseWhenGameIsPaused": true,
+    "disabled": false,
+    "canPenetrateWalls": false,
+    "canPenetrateFloors": false,
+    "canPenetrateCeilings": false,
+    "overrideMaximumLoops": false,
+    "overriddenMaxLoops": 80,
+    "overrideOcclusionModifier": false,
+    "occlusionUnitVolumeModifier": -0.10000000149011612,
+    "overrideOpenDoorOcclusion": false,
+    "openDoorOcclusionUnits": 1,
+    "overrideClosedDoorOcclusion": false,
+    "closedDoorOcclusionUnits": 5,
+    "overrideWindowOcclusion": false,
+    "windowOcclusionUnits": 4,
+    "overrideWallOcclusion": false,
+    "wallOcclusionUnits": 7,
+    "overrideCeilingOcclusion": false,
+    "ceilingOcclusionUnits": 8,
+    "overrideFloorOcclusion": false,
+    "floorOcclusionUnits": 8,
+    "forceVolumeLevelFadeTime": false,
+    "volumeLevelFadeTime": 0.5,
+    "canBeSuspicious": false,
+    "alwaysSuspicious": false,
+    "suspiciousIfTresspassing": false,
+    "onlySuspiciousIfEmptyAddress": false,
+    "onlySuspiciousIfNotEnforcer": true,
+    "suspiciousIfCitizenCount": 2,
+    "urgentResponse": false,
+    "audioFocus": 1.0,
+    "forceOutlineForLoopIfPlayerTrespassing": false,
+    "citizenMemoryTag": 0,
+    "spookValue": 0.0,
+    "noSpookIfEnforcer": true,
+    "awakenChance": 0.5,
+    "actualSoundRange": 0.0,
+    "hearingRange": 20.0,
+    "stealthModeModifier": 0.0,
+    "runModifier": 0.0,
+    "canDanceTo": false,
+    "masterVolumeScale": 1.0,
+    "modifyBasedOnSurface": false,
+    "concreteHearingRangeModifier": 0.0,
+    "woodHearingRangeModifier": 0.0,
+    "carpetHearingRangeModifier": 0.0,
+    "tileHearingRangeModifier": 0.0,
+    "plasterHearingRangeModifier": 0.0,
+    "fabricHearingRangeModifier": 0.0,
+    "metalHearingRangeModifier": 0.0,
+    "glassHearingRangeModifier": 0.0
+  },
+  "BookPreset": {
+    "presetName": "",
+    "bookName": "",
+    "author": "",
+    "genre": [],
+    "isSeries": false,
+    "seriesTag": 0,
+    "seriesNumber": 1,
+    "common": 0.75,
+    "baseChance": 0.0,
+    "pickRules": [],
+    "spawnRule": 0,
+    "bookMesh": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "bookMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "ddsMessage": ""
+  },
+  "BroadcastPreset": {
+    "presetName": "",
+    "audioEvent": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "changeImageEvery": 2.0,
+    "order": 0,
+    "endOfShowTrigger": 0,
+    "spriteSheet": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "spriteResolution": {
+      "x": 32.0,
+      "y": 32.0
+    },
+    "indexWidth": 5,
+    "indexHeight": 1,
+    "totalSpriteCount": 5,
+    "useDynamicClips": false,
+    "dynamicClips": []
+  },
+  "BroadcastSchedule": {
+    "presetName": "",
+    "broadcasts": []
+  },
+  "BuildingPreset": {
+    "presetName": "",
+    "disable": false,
+    "prefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "emissionMapUnlit": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "emissionMapLit": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "buildingHeight": 0.0,
+    "lightningRodLocalPos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "defaultExteriorWallMaterial": [],
+    "exteriorKey": {
+      "baseMaterial": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "mainColour": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "colour1": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "colour2": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "colour3": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "grubiness": 0.0
+    },
+    "enableAlleywayWalls": true,
+    "enableExteriorQuoins": true,
+    "overrideEvidencePhotoSettings": false,
+    "relativeCamPhotoPos": {
+      "x": 0.0,
+      "y": 2.25,
+      "z": 23.0
+    },
+    "relativeCamPhotoEuler": {
+      "x": -45.0,
+      "y": 180.0,
+      "z": 0.0
+    },
+    "overrideDistrictEnvironment": true,
+    "sceneProfile": 1,
+    "maxLostAndFound": 0,
+    "floorLayouts": [],
+    "basementLayouts": [],
+    "controlRoomRange": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "forceBuildingDesignStyles": [],
+    "stairwellRegular": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "stairwellLarge": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "buildingFeaturesEchelonFloors": false,
+    "echelonFloorStart": 10,
+    "overrideGrubiness": false,
+    "grubinessOverride": 0.0,
+    "displayedZone": 5,
+    "allowedInAllDistricts": true,
+    "allowedInDistricts": [],
+    "densityMinimum": 0,
+    "densityMaximum": 3,
+    "landValueMinimum": 0,
+    "landValueMaximum": 4,
+    "minimum": 1,
+    "featureImportance": 4,
+    "hardLimit": 99,
+    "desiredRatio": 0.05000000074505806,
+    "modernity": 5,
+    "lobbyPreset": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "nonEnterable": false,
+    "boundary": false,
+    "boundaryCorner": false,
+    "overrideNaming": false,
+    "possibleNames": [],
+    "customDrawOnMap": false,
+    "tex": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "captureMesh": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "windowMap": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "addonMap": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "sortedWindows": [],
+    "floorCount": 1,
+    "meshHeight": 0.0,
+    "cableLinkPoints": [],
+    "cableSpawnChanceOverHeight": {
+      "serializedVersion": "2",
+      "m_Curve": [
+        {
+          "serializedVersion": "3",
+          "time": 0.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": -0.6000000238418579,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        },
+        {
+          "serializedVersion": "3",
+          "time": 1.0,
+          "value": 0.4000000059604645,
+          "inSlope": -0.6000000238418579,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        }
+      ],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "sideSignPoints": [],
+    "possibleNeonSigns": [],
+    "signsPerBuildingRange": {
+      "x": 0.0,
+      "y": 3.0
+    },
+    "horizontalSignOffset": {
+      "x": 0.0,
+      "y": 4.046000003814697,
+      "z": 0.0
+    },
+    "featuresSmokestack": false,
+    "spawnInterval": {
+      "x": 0.10000000149011612,
+      "y": 0.33000001311302185
+    },
+    "spritePrefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "spawnOffset": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  "ChapterPreset": {
+    "presetName": "",
+    "chapterNumber": 0,
+    "scriptObject": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "dictionary": "chapter.1",
+    "askToEnableTutorial": false,
+    "startingHour": 2.559999942779541,
+    "startingDate": 2,
+    "startingMonth": 0,
+    "startingYear": 1,
+    "yearZeroLeapYearCycle": 0,
+    "dayZero": 0,
+    "rainAmount": 0.0,
+    "windAmount": 0.0,
+    "snowAmount": 0.0,
+    "fogAmount": 0.75,
+    "lightningAmount": 0.0,
+    "transitionSpeed": 0.10000000149011612,
+    "usePreSimulation": true,
+    "minimumPreSimLength": 23.5,
+    "audioEvents": [],
+    "dialogEvents": [],
+    "crimePool": [],
+    "MOPool": [],
+    "partNames": [],
+    "startingPart": 0
+  },
+  "CharacterTrait": {
+    "presetName": "",
+    "isTrait": true,
+    "needsReson": false,
+    "requiresPartner": false,
+    "requiresSingle": false,
+    "requiresHome": false,
+    "requiresEmployment": false,
+    "needsDate": false,
+    "featureInInterestPool": false,
+    "featureInAfflictionPool": false,
+    "ageDateRange": {
+      "x": 5.0,
+      "y": 10.0
+    },
+    "useCouplesAnniversary": false,
+    "isPassword": false,
+    "disabled": false,
+    "postiveNegative": 1,
+    "pickStage": 0,
+    "primeBaseChance": 0.0,
+    "pickRules": [],
+    "matchChance": 0.0,
+    "useHumilityMatch": false,
+    "matchHumility": 0.0,
+    "useEmotionalityMatch": false,
+    "matchEmotionality": 0.0,
+    "useExtraversionMatch": false,
+    "matchExtraversion": 0.0,
+    "useAgreeablenessMatch": false,
+    "matchAgreeableness": 0.0,
+    "useConscientiousnessMatch": false,
+    "matchConscientiousness": 0.0,
+    "useCreativityMatch": false,
+    "matchCreativity": 0.0,
+    "useSocietalClassMatch": false,
+    "matchSocietalClass": 0.0,
+    "effectHumility": 0.0,
+    "effectEmotionality": 0.0,
+    "effectExtraversion": 0.0,
+    "effectAgreeableness": 0.0,
+    "effectConscientiousness": 0.0,
+    "effectCreativity": 0.0,
+    "maxHealthModifier": 0.0,
+    "recoveryRateModifier": 0.0,
+    "combatSkillModifier": 0.0,
+    "combatHeftModifier": 0.0,
+    "maxNerveModifier": 0.0,
+    "breathRecoveryModifier": 0.0,
+    "limitHumility": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "limitEmotionality": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "limitExtraversion": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "limitAgreeableness": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "limitConscientiousness": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "limitCreativity": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "slangUsageModifier": 0.0,
+    "slangGreetingDefault": [],
+    "slangGreetingMale": [],
+    "slangGreetingFemale": [],
+    "slangGreetingLover": [],
+    "slangCurse": [],
+    "slangCurseNoun": [],
+    "slangPraiseNoun": [],
+    "preferredBookCountModifier": 0,
+    "sightingLimitMemoryModifier": 0
+  },
+  "ClothesPreset": {
+    "presetName": "",
+    "covers": [],
+    "outfitCategories": [],
+    "suitableForGenders": [],
+    "suitableForBuilds": [],
+    "tags": [],
+    "enableFacialFeatureSetup": false,
+    "suitableForHairstyle": [],
+    "isHead": false,
+    "pupilsOffset": {
+      "x": 0.0,
+      "y": 0.15000000596046448,
+      "z": 0.12049999833106995
+    },
+    "eyebrowsOffset": {
+      "x": 0.0,
+      "y": 0.17190000414848328,
+      "z": 0.13300000131130219
+    },
+    "mouthOffset": {
+      "x": 0.0,
+      "y": 0.04500000178813934,
+      "z": 0.1509999930858612
+    },
+    "hatRenderCompatible": false,
+    "excludeHats": [],
+    "hairRenderMode": 0,
+    "setFootwear": false,
+    "footwear": 3,
+    "priority": 2,
+    "onlyChooseIfAllModelPartsAreAvailable": false,
+    "incompatibility": [],
+    "useWealthValues": false,
+    "minimumWealth": 0.0,
+    "maximumWealth": 1.0,
+    "baseColourSource": 3,
+    "colourBase": [],
+    "colour1Source": 0,
+    "colour1": [],
+    "colour2Source": 0,
+    "colour2": [],
+    "colour3Source": 0,
+    "colour3": [],
+    "includeInPersonalityMatching": true,
+    "baseChance": 1,
+    "useHEXACO": false,
+    "hexaco": {
+      "outputMin": 1,
+      "outputMax": 10,
+      "enableFeminineMasculine": false,
+      "feminineMasculine": 0,
+      "enableHumility": false,
+      "humility": 0,
+      "enableEmotionality": false,
+      "emotionality": 0,
+      "enableExtraversion": false,
+      "extraversion": 0,
+      "enableAgreeableness": false,
+      "agreeableness": 0,
+      "enableConscientiousness": false,
+      "conscientiousness": 0,
+      "enableCreativity": false,
+      "creativity": 0
+    },
+    "useTraits": false,
+    "characterTraits": [],
+    "models": []
+  },
+  "CloudSaveData": {
+    "presetName": "",
+    "path": ""
+  },
+  "ColourPalettePreset": {
+    "presetName": "",
+    "colours": [],
+    "hexaco": {
+      "outputMin": 1,
+      "outputMax": 10,
+      "enableFeminineMasculine": false,
+      "feminineMasculine": 0,
+      "enableHumility": false,
+      "humility": 0,
+      "enableEmotionality": false,
+      "emotionality": 0,
+      "enableExtraversion": false,
+      "extraversion": 0,
+      "enableAgreeableness": false,
+      "agreeableness": 0,
+      "enableConscientiousness": false,
+      "conscientiousness": 0,
+      "enableCreativity": false,
+      "creativity": 0
+    }
+  },
+  "ColourSchemePreset": {
+    "presetName": "",
+    "primary1": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "secondary1": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "neutral": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "secondary2": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "primary2": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "modernity": 5,
+    "cleanness": 5,
+    "loudness": 5,
+    "emotive": 5
+  },
+  "CompanyOpenHoursPreset": {
+    "presetName": "",
+    "retailOpenHours": {
+      "x": 8.0,
+      "y": 17.0
+    },
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": true,
+    "friday": true,
+    "saturday": true,
+    "sunday": false,
+    "shifts": []
+  },
+  "CompanyPreset": {
+    "presetName": "",
+    "companyCategories": [],
+    "isIllegal": false,
+    "useBuildingName": false,
+    "useBuildingOverrideName": false,
+    "overrideSuffixList": [],
+    "useStreetNameChance": 0.05000000074505806,
+    "useDistrictNameChance": 0.05000000074505806,
+    "useOwnerFirstNameChance": 0.02500000037252903,
+    "useOwnerSurNameChance": 0.02500000037252903,
+    "useCompanyNameListChance": 1.0,
+    "aliterationWeight": 1,
+    "prefixChance": 0.5,
+    "prefixList": [],
+    "mainChance": 1.0,
+    "mainNamingList": [],
+    "suffixList": [],
+    "theRules": [],
+    "minimumSalary": 1,
+    "topSalary": 6,
+    "payGradeCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [
+        {
+          "serializedVersion": "3",
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 1.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        },
+        {
+          "serializedVersion": "3",
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 1.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        }
+      ],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "publicFacing": true,
+    "isSelfEmployed": false,
+    "autoCreate": false,
+    "priority": 5,
+    "cityPopRatio": 0.029999999329447746,
+    "minimumNumber": 2,
+    "maximumNumber": 10,
+    "enableLoiteringBehaviour": false,
+    "menus": [],
+    "recordSalesData": false,
+    "previousFakeSalesRecords": 5,
+    "requiredTraits": [],
+    "enableSelling": false,
+    "enableSellingOfIllegalItems": false,
+    "sellValueMultiplier": 0.5,
+    "possibleUniformColours": [],
+    "workHours": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "structure": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "controlsBuildingSurveillance": false,
+    "isHotel": false
+  },
+  "CompanyStructurePreset": {
+    "presetName": "",
+    "companyStructure": {
+      "occupation": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "positionsMinimum": 1,
+      "positionsMaximum": 1,
+      "payGrade": 0.5,
+      "subordinates": []
+    }
+  },
+  "CriminalPreset": {
+    "presetName": "",
+    "type": 0,
+    "canBeAgent": false,
+    "canHaveJob": true,
+    "suggestedRank": 0,
+    "boss": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "positionsMin": 1,
+    "positionsMax": 1,
+    "desiredCrimePerDay": 1.5
+  },
+  "CruncherAppPreset": {
+    "presetName": "",
+    "loadBackground": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "loadedBackground": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "useCursor": true,
+    "cursorSprite": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "useTimer": false,
+    "timerLength": 3.0,
+    "loadTime": 1.0,
+    "loadDemand": 0.33000001311302185,
+    "alwaysLoad": false,
+    "alwaysLoadDemand": 0.33000001311302185,
+    "desktopIcon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "screenLightColourOnLoad": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "screenLightColourOnFinishLoad": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "alwaysInstalled": false,
+    "onlyIfCorporateSabotageSkill": false,
+    "companyOnly": false,
+    "salesRecordsOnly": false,
+    "onlyIfOwner": false,
+    "installationConditions": [],
+    "onlyInAddresses": [],
+    "onlyIfResidential": false,
+    "appContent": [],
+    "onStartSound": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "onExitSound": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "onFinishedLoadingSound": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "openOnEnd": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "CutScenePreset": {
+    "presetName": "",
+    "elementList": [],
+    "fadeIn": true,
+    "fadeInTime": 2.0,
+    "fadeOut": true,
+    "fadeOutTime": 2.0,
+    "displayImage": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "imageFadeIn": 0.0,
+    "imageFadeInSpeed": 1.0,
+    "imageFadeOut": 0.0,
+    "imageFadeOutSpeed": 0.0,
+    "disableAISpeech": true,
+    "onEnd": 0
+  },
+  "DDSScope": {
+    "presetName": "",
+    "colour": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "isGlobal": false,
+    "specialCase": 0,
+    "containedScopes": [],
+    "containedValues": []
+  },
+  "DesignStylePreset": {
+    "presetName": "",
+    "includeInPersonalityMatching": true,
+    "compatibleAddressTypes": [],
+    "minimumWealth": 0.0,
+    "humility": 5,
+    "emotionality": 5,
+    "extraversion": 5,
+    "agreeableness": 5,
+    "conscientiousness": 5,
+    "creativity": 5,
+    "modernity": 5,
+    "allowCoving": true,
+    "isBasement": false
+  },
+  "DialogPreset": {
+    "presetName": "",
+    "msgID": "",
+    "defaultOption": false,
+    "telephoneCallOption": false,
+    "hospitalDecisionOption": false,
+    "tiedToKey": 1,
+    "ranking": 0,
+    "removeAfterSaying": true,
+    "dailyReplenish": false,
+    "isJobDetails": false,
+    "ignoreActiveJobRequirement": false,
+    "specialCase": 0,
+    "cost": 0,
+    "usePercentageCost": false,
+    "useAllWealthIfNotEnough": false,
+    "displayIfPasswordUnknown": false,
+    "inputBox": 0,
+    "displayAsIllegal": false,
+    "preceedingSyntax": "",
+    "followingSyntax": "",
+    "useSuccessTest": false,
+    "requiresPassword": false,
+    "baseChance": 0.0,
+    "affectChanceIfRestrained": 0.0,
+    "modifySuccessChanceTraits": [],
+    "responses": [],
+    "followUpDialogSuccess": [],
+    "followUpDialogFail": [],
+    "removeDialog": [],
+    "removeDialogOnSuccess": [],
+    "removeDialogOnFail": []
+  },
+  "DistrictPreset": {
+    "presetName": "",
+    "generationPriority": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "limitToOne": true,
+    "cityRatio": 0.20000000298023224,
+    "minimumSize": 1,
+    "maximumSize": 6,
+    "mustBeOnCoast": false,
+    "centreWeighting": 0.0,
+    "aliterationWeight": 1,
+    "prefixOrSuffixChance": 0.800000011920929,
+    "prefixList": [],
+    "mainChance": 1.0,
+    "mainNamingList": [],
+    "suffixList": [],
+    "minimumDensity": 0,
+    "maximumDensity": 3,
+    "minimumLandValue": 0,
+    "maximumLandValue": 4,
+    "affectEthnicity": false,
+    "ethnicityFrequencyModifiers": [],
+    "sceneProfile": 0,
+    "alterStreetAreaLighting": true,
+    "possibleColours": [],
+    "lightOperation": 0,
+    "lightAmount": 1.0,
+    "brightnessModifier": 0.0,
+    "copyFrom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "DoorMovementPreset": {
+    "presetName": "",
+    "closedRelativePos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "openRelativePos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "closedRelativeEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "openRelativeEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "closedRelativeScale": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "openRelativeScale": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "doorOpenSpeed": 1.0,
+    "doorCloseSpeed": 1.0,
+    "animationCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "collisionBehaviour": 0,
+    "behaviourAppliesWhenOpening": true,
+    "behaviourAppliesWhenClosing": true,
+    "openAction": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "closeAction": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "openFinished": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "closeFinished": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "objectImpact": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "ignoreOcclusion": false,
+    "switchState1AnimationSync": false
+  },
+  "DoorPairPreset": {
+    "id": "",
+    "parentWallsLong": [],
+    "childWallsLong": [],
+    "parentWallsShort": [],
+    "childWallsShort": [],
+    "corners": [],
+    "quoins": [],
+    "optimizeSections": false,
+    "appearInEditor": false,
+    "supportsWallProps": true,
+    "isFence": false,
+    "divider": false,
+    "dividerLeft": false,
+    "dividerRight": false,
+    "canFeatureDoor": false,
+    "doorOffset": {
+      "x": 0.699999988079071,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "sectionClass": 0,
+    "ignoreCullingRaycasts": false,
+    "raisedFloorOverride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "materialOverride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "mapOverride": [],
+    "overrideWallNormal": false,
+    "wallNormalOverrride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "overrideDuctLower": false,
+    "ductLowerOverrride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "overrideDuctUpper": false,
+    "ductUpperOverrride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "DoorPreset": {
+    "presetName": "",
+    "doorModel": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "objectPreset": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "handleModel": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "handlePreset": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "handleOffset": {
+      "x": -1.25,
+      "y": 1.0499999523162842,
+      "z": -0.05000000074505806
+    },
+    "isTransparent": false,
+    "doorSignOffset": {
+      "x": -0.6800000071525574,
+      "y": 1.7999999523162842,
+      "z": -0.10000000149011612
+    },
+    "doorSigns": [],
+    "inheritColouringFromDecor": false,
+    "shareColours": 0,
+    "variations": [],
+    "doorOpenSpeed": 1.4700000286102295,
+    "openAngle": 89.9000015258789,
+    "canPeakUnderneath": false,
+    "closeBehaviour": 0,
+    "lockType": 1,
+    "lockInteractable": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "lockOffsetFront": {
+      "x": -1.25,
+      "y": 1.5,
+      "z": 0.0
+    },
+    "lockOffsetRear": {
+      "x": -1.25,
+      "y": 1.5,
+      "z": -0.10000000149011612
+    },
+    "armLockOnClose": true,
+    "doorStrengthRange": {
+      "x": 0.10000000149011612,
+      "y": 0.20000000298023224
+    },
+    "lockStrengthRange": {
+      "x": 0.10000000149011612,
+      "y": 0.20000000298023224
+    },
+    "audioOpen": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "audioClose": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "audioCloseAction": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "audioLock": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "audioUnlock": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "audioLockedEntryAttempt": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "audioKnockLight": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "audioKnockMed": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "audioKnockHeavy": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "doorBargeContact": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "doorBargeBreak": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "EffectPreset": {
+    "presetName": "",
+    "firstValueIsPercentageIncrease": false,
+    "runActivationOnUpdate": false
+  },
+  "ElevatorPreset": {
+    "presetName": "",
+    "stairWellPrefabs": [],
+    "stairsPrefabs": [],
+    "rotationOffset": 0.0,
+    "bottomMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "topMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "EvidencePreset": {
+    "presetName": "",
+    "subClass": "",
+    "windowStyle": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "useDataKeys": false,
+    "validKeys": [],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": true,
+    "markAsDiscoveredOnAnyInteraction": false,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "defaultNullImage": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "useInGamePhoto": false,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "relativeCamPhotoEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "captureRules": 0,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 12.0,
+    "useCaptureLight": true,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [],
+    "addFactLinks": [],
+    "discoverOnCreate": false,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "715b743b-ee3e-4d93-99c5-fc5b1882b2f0",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    }
+  },
+  "FactPreset": {
+    "presetName": "",
+    "iconSpriteLarge": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "subClass": "",
+    "allowDuplicates": true,
+    "allowReverseDuplicates": true,
+    "fromDataKeys": [],
+    "toDataKeys": [],
+    "discoverOnCreate": false,
+    "countsAsNewInformationOnDiscovery": true,
+    "applyFromKeysOnDiscovery": [],
+    "applyToKeysOnDiscovery": [],
+    "discoveryTriggers": [],
+    "factRank": 5
+  },
+  "FirstPersonItem": {
+    "presetName": "",
+    "slotPriority": 0,
+    "modelActive": true,
+    "idleClip": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "selectionIcon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "summaryMsgID": "",
+    "triggerTutorial": "",
+    "disableBracketDisplayName": false,
+    "drawSpeed": 2.0,
+    "holsterSpeed": 2.5,
+    "leftHandObject": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "rightHandObject": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "spawnScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "useFoodSlotItem": false,
+    "useAlternateTrashObjects": false,
+    "leftHandObjectTrash": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "rightHandObjectTrash": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "actions": [],
+    "drawnNerveModifier": 0.0,
+    "barkTriggerChance": 0.0,
+    "bark": 34,
+    "compatibleWithLockedIn": true,
+    "compatibleWithHidden": true,
+    "equipSoundDelay": 0.0,
+    "equipEvent": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "holsterSoundDelay": 0.0,
+    "holsterEvent": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "activeLoop": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "passRainParamsToActiveLoop": false
+  },
+  "FogPreset": {
+    "presetName": "",
+    "sunRiseHour": 6.5,
+    "sunSetHour": 19.5,
+    "daytimeSunIntensityCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [
+        {
+          "serializedVersion": "3",
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        },
+        {
+          "serializedVersion": "3",
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        }
+      ],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "sunIntensityBooster": 2.200000047683716,
+    "morningSunColour": {
+      "r": 1.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    },
+    "middaySunColour": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "eveningSunColour": {
+      "r": 1.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    },
+    "sunShadowStrengthCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [
+        {
+          "serializedVersion": "3",
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        },
+        {
+          "serializedVersion": "3",
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        }
+      ],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "sunVolumetricDimmer": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "sunVolumetricShadowDimmer": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "exteriorAmbientIntensityCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [
+        {
+          "serializedVersion": "3",
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        },
+        {
+          "serializedVersion": "3",
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        }
+      ],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "ambientExteriorBooster": 2.200000047683716,
+    "interiorAmbientIntensityCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [
+        {
+          "serializedVersion": "3",
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        },
+        {
+          "serializedVersion": "3",
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        }
+      ],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "ambientInteriorBooster": 2.200000047683716,
+    "skyboxGradientGrading": [],
+    "skyColourMultiplier": 1.0,
+    "fogColourMultiplier": 1.0,
+    "ambientLightMultiplier": 1.0,
+    "globalLightIntensityMultiplier": 1.0,
+    "fogDistanceRange": {
+      "x": 10.0,
+      "y": 85.0
+    },
+    "fogDistanceCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [
+        {
+          "serializedVersion": "3",
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        },
+        {
+          "serializedVersion": "3",
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        }
+      ],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "maxFogDistanceRange": {
+      "x": 10.0,
+      "y": 85.0
+    },
+    "maxFogDistanceCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [
+        {
+          "serializedVersion": "3",
+          "time": 0.0,
+          "value": 0.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        },
+        {
+          "serializedVersion": "3",
+          "time": 1.0,
+          "value": 1.0,
+          "inSlope": 0.0,
+          "outSlope": 0.0,
+          "weightedMode": 0,
+          "inWeight": 0.0,
+          "outWeight": 0.0
+        }
+      ],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "fogAttenuationCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "volumetricFogDistanceCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "skylineEmissionCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "skylineEmissionColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "monthSnowChanceCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "weatherExtremityCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "thunderDelay": 8.0,
+    "monthTempCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "dayTempCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "NoRainModifier": 0.800000011920929,
+    "NoWindModifier": 0.699999988079071,
+    "NoSnowModifier": 0.30000001192092896
+  },
+  "FurnitureClass": {
+    "presetName": "",
+    "wallRules": [],
+    "nodeRules": [],
+    "blockedAccess": [],
+    "customNodeWeights": [],
+    "updatePreCalculated": false,
+    "minimumZeroNodeWallCount": 0,
+    "maximumZeroNodeWallCount": 4,
+    "canFaceDiagonally": false,
+    "limitPerRoom": true,
+    "maximumNumberPerRoom": 8,
+    "limitPerAddress": true,
+    "maximumNumberPerAddress": 8,
+    "limitToFloor": false,
+    "allowedOnFloor": 0,
+    "limitToFloorRange": false,
+    "allowedOnFloorRange": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "limitPerBuildingResidence": false,
+    "perBuildingResidences": 30,
+    "limitPerJobs": false,
+    "perJobs": 6,
+    "awayFromClasses": [],
+    "minimumNodeDistance": 0.0,
+    "objectSize": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "tall": false,
+    "wallPiece": false,
+    "useWallSnappingInDecorMode": false,
+    "windowPiece": false,
+    "occupiesTile": true,
+    "allowedOnStairwell": false,
+    "onlyOnStairwell": false,
+    "allowIfNoFloor": false,
+    "ceilingPiece": false,
+    "requiresCeiling": false,
+    "blocksCeiling": false,
+    "allowLightswitch": true,
+    "raiseLightswitch": false,
+    "lightswitchYOffset": 1.5,
+    "noBlocking": false,
+    "noPassThrough": false,
+    "noAccessNeeded": false,
+    "blockDefaultSublocations": false,
+    "ignoreGeometryInPhysicsCheck": false,
+    "sublocations": [],
+    "aiRobberyPriority": 3,
+    "isSecurityCamera": false,
+    "ownershipClass": 0,
+    "ownershipSource": 0,
+    "assignBelongsToOwners": 0,
+    "preferCouples": false,
+    "copyFromPreviouslyPlacedInCluster": false,
+    "onlyPickFromRoomOwners": false,
+    "skipIfNoAddressInhabitants": false,
+    "assignHomelessOwners": false,
+    "assignMailbox": false,
+    "discourageMissionPhotos": false,
+    "copyFrom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "FurnitureCluster": {
+    "presetName": "",
+    "disable": false,
+    "clusterElements": [],
+    "placementChance": 1.0,
+    "roomPriority": 5.0,
+    "modifyPriorityTraits": [],
+    "modifyPlacementChanceTraits": [],
+    "essentialFurniture": false,
+    "updatePreCalculated": false,
+    "calculatedMinRoomSize": 1,
+    "minimumZeroNodeWallCount": 0,
+    "maximumZeroNodeWallCount": 4,
+    "zeroNodeClasses": [],
+    "minimumRoomSize": 1,
+    "useMaximumRoomSize": true,
+    "maximumRoomSize": 99,
+    "useCustomZeroNodeMinWallCount": false,
+    "customZeroNodeMinWallCount": 0,
+    "useCustomZeroNodeMaxWallCount": false,
+    "customZeroNodeMaxWallCount": 0,
+    "zeroNodeWallRules": [],
+    "allowedInOpenPlan": 0,
+    "allowInResidential": true,
+    "allowInCompanies": true,
+    "allowOnStreets": true,
+    "coastalOnly": false,
+    "limitToDistricts": false,
+    "allowedInDistricts": [],
+    "banFromDistricts": false,
+    "notAllowedInDistricts": [],
+    "skipIfNoAddressInhabitants": false,
+    "onlySkipNoInhabitantsIfResidenceOrCompany": true,
+    "dontSkipNoInhabitantsIfIn": [],
+    "allowedRoomFilters": [],
+    "limitPerRoom": true,
+    "maximumPerRoom": 2,
+    "limitPerAddress": false,
+    "maximumPerAddress": 1,
+    "limitToFloor": false,
+    "allowedOnFloor": 0,
+    "limitToFloorRange": false,
+    "allowedOnFloorRange": {
+      "x": -2,
+      "y": 99
+    },
+    "wealthLimit": false,
+    "minimumWealth": 0.0,
+    "maximumWealth": 1.0,
+    "useRoomGrub": false,
+    "minimumGrub": 0.0,
+    "maximumGrub": 1.0,
+    "useBuildingResidences": false,
+    "minimumResidences": 0,
+    "maximumResidences": 40,
+    "addClustersOnSuccess": [],
+    "removeClustersOnSuccess": [],
+    "removeClustersOnFail": [],
+    "securityDoor": false,
+    "isBreakerBox": false,
+    "enableDebug": false
+  },
+  "FurniturePreset": {
+    "presetName": "",
+    "classes": [],
+    "prefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "allowStaticBatching": false,
+    "spawnRange": 3,
+    "allowWeatherAffectedMaterials": false,
+    "integratedInteractables": [],
+    "universalDesignStyle": false,
+    "designStyles": [],
+    "inheritColouringFromDecor": false,
+    "shareColours": 0,
+    "inheritGrubFromDecor": true,
+    "variations": [],
+    "furnitureGroup": 0,
+    "groupID": 0,
+    "concrete": 1.0,
+    "plaster": 0.0,
+    "wood": 0.0,
+    "carpet": 0.0,
+    "tile": 0.0,
+    "metal": 0.0,
+    "glass": 0.0,
+    "fabric": 0.0,
+    "minimumRoomSize": 99,
+    "allowedInOpenPlan": 0,
+    "onlyAllowInFollowing": false,
+    "allowedInAddressesOfType": [],
+    "banInFollowing": false,
+    "bannedInAddressesOfType": [],
+    "OnlyAllowInBuildings": false,
+    "allowedInBuildings": [],
+    "banFromBuildings": false,
+    "notAllowedInBuildings": [],
+    "OnlyAllowInDistricts": false,
+    "allowedInDistricts": [],
+    "banFromDistricts": false,
+    "notAllowedInDistricts": [],
+    "requiresGenderedInhabitants": false,
+    "enableIfGenderPresent": [],
+    "allowedRoomFilters": [],
+    "minimumWealth": 0.0,
+    "usePersonalityWeighting": false,
+    "modernity": 5,
+    "cleanness": 5,
+    "loudness": 5,
+    "emotive": 5,
+    "subObjects": [],
+    "testForModifiers": 0,
+    "forcePublicIllegal": false,
+    "hidingEnterTransition": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "hidingExitTransition": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "hidingEnterTransition2": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "hidingExitTransition2": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "map": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "drawUnderWalls": false,
+    "ignoreDirection": false,
+    "fingerprintsEnabled": true,
+    "printsSource": 1,
+    "fingerprintDensity": 1.0,
+    "alterAreaLighting": false,
+    "possibleColours": [],
+    "lightOperation": 0,
+    "lightAmount": 0.11999999731779099,
+    "brightnessModifier": 10.0,
+    "purchasable": true,
+    "cost": 100,
+    "decorClass": 6,
+    "staticImage": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "imagePos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "imageRot": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "imageScale": 1.0,
+    "imagePrefabOverride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "isJobBoard": false,
+    "isWorkPosition": false,
+    "isPlant": false,
+    "isArt": false,
+    "isSecurityCamera": false,
+    "onLoadAdjacentPlayerTeleport": false,
+    "artOrientation": 0,
+    "createSelfEmployed": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "workPositionID": 0,
+    "spawnObjectOnChance": 1.0,
+    "spawnObjectsOnPlacement": []
+  },
+  "GroupPreset": {
+    "presetName": "",
+    "groupType": 0,
+    "chance": 1.0,
+    "minMembers": 2,
+    "maxMembers": 2,
+    "requiredTraits": [],
+    "minimumExtraversion": 0.0,
+    "enableMeetUps": true,
+    "daysPerWeek": 2,
+    "timeRange": {
+      "x": 18.0,
+      "y": 20.5
+    },
+    "meetUpLength": 1.5,
+    "meetUpLocations": [],
+    "meetUpGoal": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "reserveSeats": true,
+    "useDistanceMultiplierModifier": 0.0,
+    "clues": [],
+    "vmails": []
+  },
+  "HandwritingPreset": {
+    "presetName": "",
+    "fontAsset": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "baseChance": 0.10000000149011612,
+    "characterTraits": []
+  },
+  "HelpContentPage": {
+    "presetName": "",
+    "disabled": false,
+    "messageID": "",
+    "contentDisplay": []
+  },
+  "InteractableActionsPreset": {
+    "presetName": "",
+    "actions": [],
+    "disableCollider": false,
+    "lockedInActions1": [],
+    "lockedInActions2": [],
+    "physicsActions": []
+  },
+  "InteractablePreset": {
+    "presetName": "",
+    "spawnable": true,
+    "prefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "prefabLocalEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "prefabLocalScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "dontSaveWithSaveGames": false,
+    "onlySaveWithSaveGamesIfWorldObject": false,
+    "excludeFromObjectPooling": false,
+    "excludeFromVisibilityRangeChecks": false,
+    "spawnRange": 2,
+    "showWorldObjectInSceneCapture": false,
+    "captureStateInSceneCapture": false,
+    "createProxy": false,
+    "onlyCreateProxyInDetailedCapture": true,
+    "createProxyAtRange": 0,
+    "inheritColouringFromDecor": false,
+    "shareColoursWithFurniture": 0,
+    "useOwnColourSettings": false,
+    "mainColour": 0,
+    "customColour1": 0,
+    "customColour2": 0,
+    "customColour3": 0,
+    "inheritGrubValue": false,
+    "autoName": true,
+    "includeBelongsTo": false,
+    "useNameShorthand": false,
+    "useApartmentName": false,
+    "isLight": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "lightswitch": 0,
+    "allowUnscrewed": true,
+    "isMainLight": false,
+    "forceIncludeOnStreetLightLayer": false,
+    "staticImage": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "imagePos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "imageRot": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "imageScale": 1.0,
+    "imagePrefabOverride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "iconOverride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "itemClass": 4,
+    "allowInApartmentStorage": true,
+    "allowInApartmentShop": false,
+    "disableMoveToStorage": false,
+    "apartmentPlacementMode": 0,
+    "mustTouchFurniture": [],
+    "useMaterialOverride": false,
+    "materialOverride": {
+      "concrete": 0.0,
+      "wood": 0.0,
+      "carpet": 0.0,
+      "tile": 0.0,
+      "plaster": 0.0,
+      "fabric": 0.0,
+      "metal": 0.0,
+      "glass": 0.0
+    },
+    "actionsPreset": [],
+    "onlyIllegalIfInNonPublic": true,
+    "rangeModifier": 0.0,
+    "physicsProfile": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "overrideMass": false,
+    "forcePhysicsAlwaysOn": false,
+    "reactWithExternalStimuli": false,
+    "mass": 1.0,
+    "breakable": false,
+    "particleProfile": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "overrideShatterSettings": false,
+    "shardSize": {
+      "x": 0.02500000037252903,
+      "y": 0.02500000037252903,
+      "z": 0.02500000037252903
+    },
+    "shardEveryXPixels": 64,
+    "overrideSpatterSettings": false,
+    "spatterSimulation": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "spatterCountMultiplier": 1.0,
+    "overrideFurnitureSetting": false,
+    "enterTransition": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "exitTransition": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "enterTransition2": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "exitTransition2": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "switchSFX": [],
+    "startingSwitchState": false,
+    "startingCustomState1": false,
+    "startingCustomState2": false,
+    "startingCustomState3": false,
+    "startingLockState": false,
+    "value": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "AIPriority": 5,
+    "disableForSocialGroups": false,
+    "pickDistanceMultiplier": 1.0,
+    "perActionPrioritySettings": [],
+    "tamperEnabled": true,
+    "resetBehaviour": [],
+    "useSetting": {
+      "usageOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.3499999940395355
+      },
+      "facingOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "useNodeFloorPosition": true,
+      "useDoorBehaviour": false,
+      "useSittingOffset": false,
+      "useArmsStandingOffset": false
+    },
+    "readingEnabled": false,
+    "readyingEnabledOnlyWithSwitchIsTue": false,
+    "readingEnabledOnlyWithKaizenSkill": false,
+    "readingSource": 6,
+    "discoverOnRead": false,
+    "pageTurnReadingDelay": 0.0,
+    "distanceRecognitionEnabled": false,
+    "distanceRecognitionOnly": false,
+    "recognitionRange": 5.0,
+    "subObjectClasses": [],
+    "backupClasses": [],
+    "autoPlacement": 0,
+    "alwaysPlaceAtGameLocation": false,
+    "frequencyPerGamelocationMin": 0,
+    "frequencyPerGameLocationMax": 0,
+    "perGameLocationObjectPriority": 0,
+    "placeIfFiltersPresentInOwner": false,
+    "placeAtHome": true,
+    "placeAtWork": false,
+    "traitModifiers": [],
+    "frequencyPerOwnerMin": 0,
+    "frequencyPerOwnerMax": 0,
+    "multiplyByMessiness": false,
+    "perOwnerObjectPriority": 0,
+    "writerIs": 0,
+    "receiverIs": 0,
+    "canBeFromSelf": false,
+    "limitPerObject": false,
+    "perObjectLimit": 1,
+    "limitPerRoom": false,
+    "perRoomLimit": 99,
+    "limitPerAddress": false,
+    "perAddressLimit": 99,
+    "limitInResidential": false,
+    "perResidentialLimit": 1,
+    "limitInCommercial": false,
+    "perCommercialLimit": 1,
+    "banFromRooms": [],
+    "limitToCertainRooms": false,
+    "onlyInRooms": [],
+    "limitToCertainBuildings": false,
+    "onlyInBuildings": [],
+    "attemptToStoreInFolder": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "folderPlacementChance": 1.0,
+    "dontPlaceIfNoFolder": false,
+    "folderOwnershipMustMatch": false,
+    "useSubSpawning": false,
+    "securityLevel": 0,
+    "ownedRule": 4,
+    "overrideWithOnlyOwnedSpawnAtWork": false,
+    "subSpawnClass": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "subSpawnPositions": [],
+    "relocationAuthority": 0,
+    "relocateIfPlacedInPlayersHome": true,
+    "AIWillCorrectPosition": true,
+    "useEvidence": false,
+    "useSingleton": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "findEvidence": 0,
+    "spawnEvidence": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "locationIsParent": true,
+    "summaryMessageSource": "",
+    "overrideEvidencePhotoSettings": false,
+    "relativeCamPhotoPos": {
+      "x": -0.07500000298023224,
+      "y": 0.25,
+      "z": 0.20000000298023224
+    },
+    "relativeCamPhotoEuler": {
+      "x": 45.0,
+      "y": 155.0,
+      "z": 0.0
+    },
+    "includeLock": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "lockOffset": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "passwordSource": 0,
+    "attemptedOpenSound": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "armLockOnClose": true,
+    "lockStrength": {
+      "x": 0.10000000149011612,
+      "y": 0.4000000059604645
+    },
+    "isSelfLock": false,
+    "useMaterialChanges": false,
+    "lockOffMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "lockOnMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "isComputer": false,
+    "bootApp": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "logInApp": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "desktopApp": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "additionalApps": [],
+    "fingerprintsEnabled": true,
+    "printsSource": 11,
+    "fingerprintDensity": 3.0,
+    "enableDynamicFingerprints": true,
+    "overrideMaxDynamicFingerprints": false,
+    "maxDynamicFingerprints": 8,
+    "fpsItem": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "isInventoryItem": false,
+    "fpsItemOffset": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "fpsItemRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "consumableAmount": 0.0,
+    "destroyWhenAllConsumed": false,
+    "useSameModelAsTrash": true,
+    "trashItem": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "playerConsumeLoop": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "takeOneEvent": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "disposal": 0,
+    "chanceOfDroppedAngle": 0.0,
+    "droppedAngleHeightBoost": 0.10000000149011612,
+    "weapon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "inventoryCarryItem": false,
+    "requiredCarryAnimation": true,
+    "aiCarryAnimation": 1,
+    "aiHeldObjectPosition": {
+      "x": -0.05000000074505806,
+      "y": -0.10000000149011612,
+      "z": -0.019999999552965164
+    },
+    "aiHeldObjectRotation": {
+      "x": 90.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "putDownAtHome": false,
+    "takeWith": false,
+    "putDownPositions": [],
+    "backupPutDownPositions": [],
+    "specialCaseFlag": 0,
+    "affectRoomSteamLevel": false,
+    "isPayphone": false,
+    "isClock": false,
+    "isMoney": false,
+    "entertainmentSource": false,
+    "isHeatSource": false,
+    "markAsTrashOnCreate": false,
+    "isLitter": false,
+    "isDecal": false,
+    "resetSwitchStates": false,
+    "resetTimer": 0.009999999776482582,
+    "dontSaveSwitchStates": false,
+    "dontLoadSwitchStates": false,
+    "recordCreationTime": false,
+    "musicTracks": [],
+    "retailItem": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "menuOverride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "hourlyChime": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "chimeEqualToHour": false,
+    "chimeDelay": 1.5,
+    "searchLoop": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "copyFrom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "JobPreset": {
+    "presetName": "",
+    "disabled": false,
+    "caseName": "",
+    "jobPosting": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "subClass": "",
+    "allowSyncDiskRewards": true,
+    "allowBlackMarketSyncDiskRewards": true,
+    "physicalRewardLocation": 1,
+    "generateHidingLocation": false,
+    "socialCreditLevelMinSpawnFrequency": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "activePerCitizen": 0.009999999776482582,
+    "maxJobs": 8,
+    "immediatePostCountThreshold": 2,
+    "difficultyTag": 0,
+    "changePosterDialogCompliancy": 0,
+    "changePerpDialogCompliancy": 2,
+    "purpetratorMotives": [],
+    "penaltyForPurpAndPosterSameBuilding": 5,
+    "startingScenarios": [],
+    "compatibleIntros": [],
+    "leadPoolData": 0,
+    "createFactsOnInformationAcquisition": [],
+    "informationAcquisitionLeads": [],
+    "revengeObjectives": [],
+    "spawnItems": [],
+    "resolveQuestions": [],
+    "additional": [],
+    "compatibleHandIns": [],
+    "dialogReferences": [],
+    "debugCopyFrom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "LayoutConfiguration": {
+    "presetName": "",
+    "assignPurpose": true,
+    "addressPreset": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "publicFacing": true,
+    "isOutside": false,
+    "isLobby": false,
+    "roomLayout": [],
+    "requiresHallway": true,
+    "hallway": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "hallwayDistanceThreshold": 6,
+    "useBuildingDesignStyle": false,
+    "overrideEvidencePhotoSettings": false,
+    "relativeCamPhotoPos": {
+      "x": 0.0,
+      "y": 2.25,
+      "z": 23.0
+    },
+    "relativeCamPhotoEuler": {
+      "x": -45.0,
+      "y": 180.0,
+      "z": 0.0
+    },
+    "doorwaysNormal": [],
+    "doorwaysFlat": [],
+    "roomDividersLeft": [],
+    "roomDividersCentre": [],
+    "roomDividersRight": []
+  },
+  "LightingPreset": {
+    "presetName": "",
+    "coolColours": [],
+    "warmColours": [],
+    "defaultIntensity": 550.0,
+    "defaultRange": 9.0,
+    "intensityRoomSizeMultiplier": 1.0,
+    "intensityRange": {
+      "x": 100.0,
+      "y": 1600.0
+    },
+    "fadeOnOff": true,
+    "fadeSpeed": 10.0,
+    "onByDefault": true,
+    "fadeDistance": 40.0,
+    "useBroadcastMaterial": false,
+    "useOnMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "useInstancedEmissive": false,
+    "emissionMultiplier": 1.0,
+    "isAtriumLight": false,
+    "minimumFloors": 2,
+    "cablePrefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "bulbPrefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "endBulbPrefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "heightInterval": 8.0,
+    "allowCeilingFans": false,
+    "enableVolumetrics": true,
+    "atmosphereMultiplier": 1.0,
+    "enableShadows": true,
+    "shadowMode": 0,
+    "resolution": 1,
+    "shadowFadeDistance": 40.0,
+    "chanceOfFlicker": 0.0,
+    "flickerMultiplierRange": {
+      "x": 0.0,
+      "y": 0.20000000298023224
+    },
+    "flickerPulseRange": {
+      "x": 1.0,
+      "y": 1.100000023841858
+    },
+    "flickerIntervalRange": {
+      "x": 0.25,
+      "y": 2.0
+    },
+    "flickerNormalityIntervalRange": {
+      "x": 0.10000000149011612,
+      "y": 10.0
+    }
+  },
+  "MatchPreset": {
+    "presetName": "",
+    "canOnlyBeMatchedWith": false,
+    "matchConditions": [],
+    "onlyMatchWithMatchParents": false,
+    "canMatchWithItself": false,
+    "onlyMatchWithThis": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "linkFromKeys": [],
+    "linkToKeys": []
+  },
+  "MaterialGroupPreset": {
+    "presetName": "",
+    "material": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "variations": [],
+    "concrete": 1.0,
+    "plaster": 0.0,
+    "wood": 0.0,
+    "carpet": 0.0,
+    "tile": 0.0,
+    "metal": 0.0,
+    "glass": 0.0,
+    "fabric": 0.0,
+    "noFloorReplacement": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "allowFootprints": false,
+    "affectFootprintDirt": 0.0,
+    "grubFootprintDirtMultiplier": 0.05000000074505806,
+    "materialType": 1,
+    "minimumWealth": 0.0,
+    "designStyles": [],
+    "allowedRoomFilters": [],
+    "purchasable": true,
+    "price": 10,
+    "decorSprite": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "MenuPreset": {
+    "presetName": "",
+    "itemsSold": [],
+    "createReceipt": true,
+    "purchaseAudio": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "syncDiskSlots": 0,
+    "fromManufacturers": [],
+    "syncDisks": []
+  },
+  "MotivePreset": {
+    "presetName": "",
+    "allowHomelessPurps": false,
+    "allowJoblessPurps": true,
+    "purpMustLiveAtDifferentAddressToPoster": true,
+    "allowEnforcers": true,
+    "purpTraitModifiers": [],
+    "usePurpJobs": false,
+    "purpJobs": [],
+    "allowHomelessPosters": false,
+    "allowJoblessPosters": true,
+    "usePosterConnections": true,
+    "acceptableConnections": [],
+    "usePosterTraits": false,
+    "posterTraitModifiers": [],
+    "purpIsExemptFromPostingOtherJobs": true,
+    "purpIsExemptFromPurpingOtherJobs": false,
+    "posterIsExemptFromPostingOtherJobs": true,
+    "posterIsExemptFromPurpingOtherJobs": true
+  },
+  "MurderMO": {
+    "presetName": "",
+    "notes": "",
+    "disabled": false,
+    "compatibleWith": [],
+    "baseDifficulty": 0,
+    "maximumPotentialScore": 0.0,
+    "updateThis": false,
+    "pickRandomScoreRange": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "murdererTraitModifiers": [],
+    "murdererJobModifiers": [],
+    "murdererCompanyModifiers": [],
+    "useMurdererSocialClassRange": false,
+    "murdererClassRange": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "murdererClassRangeBoost": 0,
+    "useHexaco": false,
+    "hexaco": {
+      "outputMin": 1,
+      "outputMax": 10,
+      "enableFeminineMasculine": false,
+      "feminineMasculine": 0,
+      "enableHumility": false,
+      "humility": 0,
+      "enableEmotionality": false,
+      "emotionality": 0,
+      "enableExtraversion": false,
+      "extraversion": 0,
+      "enableAgreeableness": false,
+      "agreeableness": 0,
+      "enableConscientiousness": false,
+      "conscientiousness": 0,
+      "enableCreativity": false,
+      "creativity": 0
+    },
+    "requiresSniperVantageAtHome": false,
+    "weaponsPool": [],
+    "blockDroppingWeapons": false,
+    "allowAnywhere": false,
+    "allowHome": true,
+    "allowWork": false,
+    "allowPublic": false,
+    "allowStreets": false,
+    "allowDen": false,
+    "acquaintedSuitabilityBoost": 0,
+    "attractedToSuitabilityBoost": 0,
+    "likeSuitabilityBoost": 0,
+    "sameWorkplaceBoost": 0,
+    "murdererIsTenantBoost": 0,
+    "victimRandomScoreRange": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "victimTraitModifiers": [],
+    "victimJobModifiers": [],
+    "victimCompanyModifiers": [],
+    "useVictimSocialClassRange": false,
+    "victimClassRange": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "victimClassRangeBoost": 0,
+    "monkierDDSMessageList": "",
+    "confessionalDDSResponses": [],
+    "MOleads": [],
+    "graffiti": [],
+    "callingCardPool": [],
+    "playerTaunts": []
+  },
+  "MurderPreset": {
+    "presetName": "",
+    "caseType": 0,
+    "disabled": false,
+    "frequency": 3,
+    "murdererRandomScoreRange": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "murdererTraitModifiers": [],
+    "useHexaco": false,
+    "hexaco": {
+      "outputMin": 1,
+      "outputMax": 10,
+      "enableFeminineMasculine": false,
+      "feminineMasculine": 0,
+      "enableHumility": false,
+      "humility": 0,
+      "enableEmotionality": false,
+      "emotionality": 0,
+      "enableExtraversion": false,
+      "extraversion": 0,
+      "enableAgreeableness": false,
+      "agreeableness": 0,
+      "enableConscientiousness": false,
+      "conscientiousness": 0,
+      "enableCreativity": false,
+      "creativity": 0
+    },
+    "pickDen": false,
+    "kidnapperTimeUntilKill": 5.0,
+    "minimumTimeBetweenMurders": 5.0,
+    "nonHomeMaximumOccupantsTrigger": 2,
+    "nonHomeMaximumOccupantsCancel": 4,
+    "requiresAcquirePhase": true,
+    "acquirePassInteractable": false,
+    "acquirePassRoom": true,
+    "acquireActionSetup": [],
+    "requiresResearchPhase": false,
+    "killerMeetsVicim": false,
+    "researchPassInteractable": true,
+    "researchPassRoom": true,
+    "researchActionSetup": [],
+    "blockVictimFromLeavingLocation": true,
+    "travelSuccessTrigger": 0,
+    "travelPassInteractable": true,
+    "travelPassRoom": true,
+    "travelActionSetup": [],
+    "executePassInteractable": true,
+    "executePassRoom": true,
+    "executionActionSetup": [],
+    "postPassInteractable": true,
+    "postPassRoom": true,
+    "postActionSetup": [],
+    "escapePassInteractable": true,
+    "escapePassRoom": true,
+    "escapeActionSetup": [],
+    "leads": [],
+    "useCustomResolveQuestions": false,
+    "customResolveQuestions": [],
+    "copyFrom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "MurderWeaponPreset": {
+    "presetName": "",
+    "type": 0,
+    "ammunition": [],
+    "murderDifficultyModifier": 0,
+    "muzzleOffset": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "brassEjectOffset": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "itemRightOverride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "itemRightLocalPos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "itemRightLocalEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "itemLeftOverride": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "itemLeftLocalPos": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "itemLeftLocalEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "overideUsesCarryAnimation": false,
+    "overrideCarryAnimation": 1,
+    "usedInPersonalDefence": false,
+    "disabled": false,
+    "basePriority": 3,
+    "socialClassRange": {
+      "x": 0.0,
+      "y": 1.0
+    },
+    "citizenSpawningWithScore": 0,
+    "personalDefenceTraitModifiers": [],
+    "jobModifierList": [],
+    "jobScoreModifier": 0,
+    "drawnNerveModifier": -0.10000000149011612,
+    "barkTriggerChance": 0.0,
+    "bark": 34,
+    "incomingNerveDamageMultiplier": 1.0,
+    "attackTriggerPoint": 0.5,
+    "attackRemovePoint": 0.699999988079071,
+    "shots": 1,
+    "weaponMaxRange": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "minimumRange": 1.0,
+    "maximumBulletRange": 25.0,
+    "weaponRangeLerpSource": 1,
+    "fireDelay": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "fireDelayLerpSource": 1,
+    "attackAccuracy": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "attackAccuracyLerpSource": 1,
+    "attackDamage": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "attackDamageLerpSource": 1,
+    "applyPoison": 0.0,
+    "shellCasing": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "ejectBrassSetting": 1,
+    "bulletHole": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "glassBulletHole": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "entryWound": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "bulletRicochet": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "bulletImpactSpray": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "muzzleFlash": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "bloodPoolAmount": 0.0,
+    "forwardSpatter": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "backSpatter": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "fireEvent": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "impactEvent": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "impactEventBody": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "impactEventPlayer": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "MurderWeaponsPool": {
+    "presetName": "",
+    "murderWeaponPool": []
+  },
+  "MusicCue": {
+    "presetName": "",
+    "fmodGUID": "",
+    "disabled": false,
+    "debug": false,
+    "playOnce": false,
+    "interrupt": false,
+    "stopOnIncompatibleStateSwitch": false,
+    "avoidRepetition": true,
+    "ambientPriority": 2,
+    "triggers": []
+  },
+  "NeonSignCharacters": {
+    "presetName": "",
+    "characterList": []
+  },
+  "NewspaperArticle": {
+    "presetName": "",
+    "disabled": false,
+    "ddsReference": "",
+    "category": 0,
+    "followupStories": [],
+    "context": 0
+  },
+  "OccupationPreset": {
+    "presetName": "",
+    "collar": 0,
+    "work": 0,
+    "tags": [],
+    "jobFillPriority": 2,
+    "workOutfit": [],
+    "selfEmployed": false,
+    "receptionist": false,
+    "canAskAboutJob": true,
+    "janitor": false,
+    "security": false,
+    "isCriminal": false,
+    "isPublicFacing": false,
+    "minimumPerCity": 0,
+    "societalClass": 0.5,
+    "skewPersonalityTowardsJobFit": 0.4000000059604645,
+    "skewHumility": false,
+    "humility": 0.0,
+    "skewEmotionality": false,
+    "emotionality": 0.0,
+    "skewExtraversion": false,
+    "extraversion": 0.0,
+    "skewAgreeableness": false,
+    "agreeableness": 0.0,
+    "skewConscientiousness": false,
+    "conscientiousness": 0.0,
+    "skewCreativity": false,
+    "creativity": 0.0,
+    "shiftTimeIsImportant": false,
+    "shiftType": 1,
+    "countsTowardsOpenHoursCoverage": true,
+    "lunchBreakAllowed": true,
+    "jobAIPosition": 0,
+    "bannedRooms": [],
+    "actionSetup": [],
+    "jobPostion": 2,
+    "ownsWorkPosition": false,
+    "preferredRooms": [],
+    "potterFrequency": {
+      "x": 0.5,
+      "y": 1.0
+    },
+    "onlyPotterIfSomebodyElseWorking": false,
+    "potterActions": [],
+    "canPickUpLitter": false,
+    "namePlacard": true,
+    "employeePhoto": true,
+    "businessCards": true,
+    "workRota": true,
+    "employmentContract": true,
+    "jobItems": [],
+    "inventoryItems": [],
+    "joinGroups": [],
+    "addDialog": [],
+    "selectedPreset": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "ParticleEffect": {
+    "presetName": "",
+    "damageBreakPoint": 0.10000000149011612,
+    "deleteObject": true,
+    "effectPrefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "shatter": true,
+    "shardSize": {
+      "x": 0.02500000037252903,
+      "y": 0.02500000037252903,
+      "z": 0.02500000037252903
+    },
+    "shardEveryXPixels": 64,
+    "shatterForceMultiplier": 2.4000000953674316,
+    "isGlass": false,
+    "spatterTrigger": 0,
+    "spatter": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "countMultiplier": 1.0,
+    "stickToActors": true,
+    "spatterIsVandalism": false,
+    "vandalismFine": 20,
+    "creationTrigger": 0,
+    "objectPool": [],
+    "instances": 1,
+    "useRandomRotation": false,
+    "localEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "impactEvents": [],
+    "breakEvents": []
+  },
+  "PhysicsProfile": {
+    "presetName": "",
+    "mass": 1.0,
+    "drag": 0.0,
+    "angularDrag": 0.05000000074505806,
+    "heldEuler": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "tamperDistanceModifier": 0.0,
+    "throwForceMultiplier": 1.0,
+    "throwDamageMultiplier": 1.0,
+    "treatAsCausedByPlayer": false,
+    "collisionMode": 0,
+    "removeOnReset": false,
+    "physicsCollisionAudio": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "useDifferentSoundForWallImpacts": false,
+    "wallCollisionAudio": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "PlayerTransitionPreset": {
+    "presetName": "",
+    "transitionTime": 1.0,
+    "retainMovementControl": false,
+    "controlCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "mouseLookControlCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "playerHeightMP": 1.0,
+    "CamHeightMP": 1.0,
+    "factorInCrouching": false,
+    "heightCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "camHeightCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "useXMovement": true,
+    "playerXCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "useYMovement": true,
+    "playerYCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "useZMovement": true,
+    "playerZCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "transitionRelativity": 0,
+    "disableWriteReturnPosition": false,
+    "transitionToSavedReturnPosition": false,
+    "transitionFromExistingPosition": true,
+    "positionTransitionCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "invertXPositionBasedOnRelativePlayerX": false,
+    "invertYPositionBasedOnRelativePlayerY": false,
+    "invertZPositionBasedOnRelativePlayerZ": false,
+    "raycastCheck": false,
+    "onFailUse": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "allowMovementOnEnd": false,
+    "restoreNormalMovementSpeed": false,
+    "customMovementSpeed": 1.0,
+    "disableGravity": false,
+    "disableHeadBob": false,
+    "useXLook": true,
+    "playerXLookCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "useYLook": true,
+    "playerYLookCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "useZLook": true,
+    "playerZLookCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "lookRelativity": 0,
+    "forwardPositionModifier": 2.0,
+    "lookMovementMultiplier": 1.0,
+    "applyCameraRoll": false,
+    "cameraRoll": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "rollMultiplier": 27.5,
+    "resetCameraRoll": true,
+    "transitionFromExistingMouse": true,
+    "mouseTransitionCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "useChromaticAberration": false,
+    "chromaticAberrationCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "useGain": false,
+    "gainCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "sfx": [],
+    "forceHolsterOnTransition": true,
+    "restoreHolsterOnTransitionEnd": false,
+    "allowWeaponSwitchingAfterTransition": false,
+    "playerXRecoilLookCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "playerYRecoilLookCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "playerZRecoilLookCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "useCustomReturnPosition": false,
+    "returnPostion": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  "ResidencePreset": {
+    "presetName": "",
+    "habitable": true,
+    "enableForSale": true,
+    "furnitureIfUnihabited": false,
+    "isHotelRoom": false
+  },
+  "RetailItemPreset": {
+    "presetName": "",
+    "itemPreset": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "canBeFavourite": true,
+    "isHot": false,
+    "isConsumable": true,
+    "brandName": "",
+    "tags": [],
+    "desireCategory": 1,
+    "menuCategory": 0,
+    "ethnicity": [],
+    "minimumWealth": 0.0,
+    "mustFeatureTraits": [],
+    "cantFeatureTrait": [],
+    "preferredTraits": [],
+    "nourishment": 0.0,
+    "hydration": 0.0,
+    "alertness": 0.0,
+    "energy": 0.0,
+    "excitement": 0.0,
+    "chores": 0.0,
+    "hygiene": 0.0,
+    "bladder": 0.0,
+    "heat": 0.0,
+    "drunk": 0.0,
+    "sick": 0.0,
+    "headache": 0.0,
+    "wet": 0.0,
+    "brokenLeg": 0.0,
+    "bruised": 0.0,
+    "blackEye": 0.0,
+    "blackedOut": 0.0,
+    "numb": 0.0,
+    "bleeding": 0.0,
+    "wellRested": 0.0,
+    "breath": 0.0,
+    "starchAddiction": 0.0,
+    "poisoned": 0.0,
+    "health": 0.0
+  },
+  "RevengeObjective": {
+    "presetName": "",
+    "disabled": false,
+    "baseChance": 1,
+    "useHEXACO": false,
+    "feminineMasculine": 5,
+    "humility": 5,
+    "emotionality": 5,
+    "extraversion": 5,
+    "agreeableness": 5,
+    "conscientiousness": 5,
+    "creativity": 5,
+    "useTraits": false,
+    "characterTraitsPoster": [],
+    "characterTraitsPurp": [],
+    "specialConditions": [],
+    "d0Name": "",
+    "d1Name": "",
+    "idTargetName": "",
+    "tag": 0,
+    "icon": 26,
+    "passedNumberRange": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "rewardMultiplier": {
+      "x": 1.0,
+      "y": 1.5
+    },
+    "resolveQuestionName": "",
+    "resolveQuestionNameAlternate": "",
+    "answerMethod": "Vandalism"
+  },
+  "RoomClassPreset": {
+    "presetName": ""
+  },
+  "RoomConfiguration": {
+    "presetName": "",
+    "roomType": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "roomClass": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "canBeOpenPlan": false,
+    "openPlanRoom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "securityDoors": 0,
+    "limitSecurityCameras": false,
+    "securityCameraLimit": 1,
+    "useMainLights": true,
+    "useLightSwitches": true,
+    "lightsOnAtStart": true,
+    "wellLit": false,
+    "autoDisableLightsOutOfVicinity": true,
+    "onlyAutoDisableInNonStairwell": false,
+    "useAdditionalAreaLights": false,
+    "useDistrictSettingsAsBase": false,
+    "minimumLightZoneSizeForAreaLights": 4,
+    "areaLightOffset": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "areaLightBrightness": 1000.0,
+    "areaLightColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "areaLightRange": 10.0,
+    "areaLightCoverageMultiplier": 1.0,
+    "boostCeilingEmission": false,
+    "ceilingEmissionBoost": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    },
+    "chanceOfCeilingFans": 0.0,
+    "baseLightingShadowTint": true,
+    "baseLightingShadowTintIntensity": 0.05000000074505806,
+    "areaLightingShadowTint": true,
+    "areaLightingShadowTintIntensity": 0.30000001192092896,
+    "overrideAreaLightShadowTint": false,
+    "areaLightShadowTintOverride": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "areaLightShadowDimmer": 1.0,
+    "lightingBehaviour": [],
+    "cleanness": 1,
+    "forceColourSchemes": [],
+    "minimumGrubiness": 0.0,
+    "maximumGrubiness": 1.0,
+    "decorSetting": 0,
+    "excludeFromOthersCopyingDecorStyle": false,
+    "chanceOfOverrideMatIfGroundFloor": 0.0,
+    "chanceOfOverrideMatIfBasement": 0.0,
+    "chanceOfOverrideMatIfStairwell": 0.0,
+    "floorOverrides": [],
+    "wallOverrides": [],
+    "ceilingOverrides": [],
+    "decorationPriority": 5,
+    "useOwnership": false,
+    "assignBelongsToOwners": 0,
+    "preferCouples": false,
+    "belongsToJob": [],
+    "exteriorDoor": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "addressDoor": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "internalDoor": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "passwordPriority": 1,
+    "preferredPassword": 1,
+    "placeKey": [],
+    "keyOwnershipPlacement": 4,
+    "steps": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "replaceWindows": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "replaceWalls": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "replaceEntrance": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "replaceInsideAlso": false,
+    "replaceOnlyIfOtherIs": false,
+    "onlyReplaceIf": [],
+    "forceStreetLightLayer": false,
+    "drawBuildingModel": false,
+    "wallFrontage": [],
+    "oneFrontagePerNode": false,
+    "maximumVents": 1,
+    "chanceOfRoofVent": 0,
+    "chanceOfWallVentUpper": 0,
+    "chanceOfWallVentLower": 0,
+    "allowUpperWallLevelDucts": false,
+    "onlyAllowUpperIfFloorLevelIsZero": true,
+    "limitUpperLevelDucts": 99,
+    "allowLowerWallLevelDucts": false,
+    "overrideAddressEnvironment": false,
+    "sceneClean": 1,
+    "sceneDirty": 2,
+    "baseRoomAtmosphere": 0.5,
+    "forceOutside": 0,
+    "ambientZone": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "fingerprintsEnabled": true,
+    "footprintsEnabled": true,
+    "printsSource": 1,
+    "fingerprintWallDensity": 1.0,
+    "allowCoving": false,
+    "allowBugs": false,
+    "bugAmountMultiplier": 0.75,
+    "forbidden": 0,
+    "allowedIfGivenCorrectPassword": true,
+    "AIknowPassword": true,
+    "escalationLevelNormal": 0,
+    "escalationLevelAfterHours": 0,
+    "securityLevel": 0,
+    "allowPersonalAffects": true,
+    "overrideMaxFurnitureClusters": false,
+    "overridenMaxFurniture": 42,
+    "overrideAttemptsPerNodeMultiplier": false,
+    "overridenAttemptsPerNode": 1.75,
+    "shadinessValue": 0,
+    "allowMuggings": false,
+    "muggingAwakenRoom": false,
+    "debugRoom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "RoomLightingPreset": {
+    "presetName": "",
+    "disable": false,
+    "lightObjects": [],
+    "lightingPreset": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "roomCompatibility": [],
+    "minimumRoomSize": 1,
+    "maximumRoomSize": 9999,
+    "onlyAllowInBuildings": [],
+    "banFromBuildings": [],
+    "stairwellRule": 0,
+    "designStyleCompatibility": [],
+    "ceilingFans": [],
+    "frequency": 1
+  },
+  "RoomTypeFilter": {
+    "presetName": "",
+    "roomClasses": []
+  },
+  "RoomTypePreset": {
+    "presetName": "",
+    "forceConfiguration": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "chance": 1.0,
+    "minimumAddressSize": 18,
+    "maximumRoomTypesPerAddress": 1,
+    "cyclePriority": 5,
+    "minimumRoomAreaShape": {
+      "x": 2.0,
+      "y": 2.0
+    },
+    "maximumRoomAreaShape": {
+      "x": 10.0,
+      "y": 10.0
+    },
+    "tesselationShape": {
+      "x": 2.0,
+      "y": 2.0
+    },
+    "floorSpaceWeight": 1,
+    "exteriorWallWeight": 1,
+    "exteriorWindowWeight": 1,
+    "entranceWeight": 0,
+    "mustAdjoinRooms": [],
+    "doorPriority": 1,
+    "chanceOfNoDoor": 0.0,
+    "maxDoors": 99,
+    "forceNoDoors": false,
+    "doorSetting": 0,
+    "allowRoomDividers": false,
+    "maxDividers": 99,
+    "onlyAllowDividersAdjoining": [],
+    "allowMainAddressEntrance": false,
+    "allowSecondaryAddressEntrance": false,
+    "preferMainAddressEntrance": true,
+    "mustConnectWithEntrance": false,
+    "overridable": false,
+    "overwriteWithPriorityUpTo": 10,
+    "blockOverridesFromType": [],
+    "overwriteLimit": 999,
+    "expandIntoNull": false,
+    "expandIntoNullAdjacencyMinimum": 2,
+    "shareFeaturesWithCommonAdjacent": false,
+    "allowCorridorReplacement": false,
+    "overrideFloorHeight": false,
+    "floorHeight": 0,
+    "copyFrom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "ScriptableObjectIDSystem": {
+    "id": ""
+  },
+  "SideMissionHandInPreset": {
+    "presetName": "",
+    "rewardModifier": 0,
+    "postersDoor": false,
+    "cityHall": false,
+    "blocks": []
+  },
+  "SideMissionIntroPreset": {
+    "presetName": "",
+    "rewardModifier": 0,
+    "blocks": []
+  },
+  "SoCustomComparison": {
+    "presetName": ""
+  },
+  "SpatterPatternPreset": {
+    "presetName": "",
+    "spatterCount": 2000,
+    "maxAngleX": 1.0,
+    "maxAngleY": 1.0,
+    "rayLength": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "spreadCurve": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "heavyMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "mediumMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "lightMaterial": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "StairwellPreset": {
+    "presetName": "",
+    "spawnObject": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "objectTop": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "centralSteps": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "featuresElevator": true,
+    "elevatorObject": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "elevatorMaxSpeed": 2.0,
+    "elevatorAcceleration": 0.25,
+    "accelerateWhileThisFarAway": 10.0,
+    "liftDelay": 3.0,
+    "movementDelay": 1.0
+  },
+  "StatusPreset": {
+    "presetName": "",
+    "color": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "alternateColour": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "icon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "alternateIcon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "minimizeToIcon": true,
+    "pulseBackground": false,
+    "pulseIcon": true,
+    "pulseIconAdditiveColour": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "includeDescription": true,
+    "instancingType": 0,
+    "autoNotificationMessage": false,
+    "priority": 4,
+    "fadeToWhite": false,
+    "enableProgressBar": true,
+    "barTracking": 0,
+    "useCustomMethod": false,
+    "onAcquire": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "onRemove": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "countType": 0,
+    "overrrideColorWithCount": false,
+    "displayCountCountsInMainText": true,
+    "replaceDescriptionBasedOnCounts": false,
+    "displayAddressInDetailText": false,
+    "displayBuildingInDetailText": false,
+    "listCountsInDetailText": false,
+    "displayFineTotalInMainText": false,
+    "alertWhenNewCountIsAdded": false,
+    "displayTotalFineWhenMinimized": false,
+    "countConfig": [],
+    "stopsRecovery": false,
+    "stopsSprint": false,
+    "stopsJump": false,
+    "recoveryRatePlusMP": 0.0,
+    "maxHealthPlusMP": 0.0,
+    "movementSpeedPlusMP": 0.0,
+    "temperatureGainPlusMP": 0.0,
+    "damageIncomingPlusMP": 0.0,
+    "damageOutgoingPlusMP": 0.0,
+    "drunkControls": 0.0,
+    "tripChanceWet": 0.0,
+    "tripChanceDrunk": 0.0,
+    "affectHeadBob": 0.0,
+    "headBob": {
+      "serializedVersion": "2",
+      "m_Curve": [],
+      "m_PreInfinity": 2,
+      "m_PostInfinity": 2,
+      "m_RotationOrder": 4
+    },
+    "drunkVision": 0.0,
+    "shiverVision": 0.0,
+    "drunkLensDistort": 0.0,
+    "headacheVision": 0.0,
+    "bloomIntensityPlusMP": 0.0,
+    "motionBlurPlusMP": 0.0,
+    "chromaticAbberationAmount": 0.0,
+    "vignetteAmount": 0.0,
+    "expsosure": 0.0,
+    "useChannelMixer": false,
+    "redR": 0,
+    "redG": 0,
+    "redB": 0,
+    "greenR": 0,
+    "greenG": 0,
+    "greenB": 0,
+    "blueR": 0,
+    "blueG": 0,
+    "blueB": 0
+  },
+  "StreetTilePreset": {
+    "presetName": "",
+    "sectionType": 0,
+    "prefabList": []
+  },
+  "SubObjectClassPreset": {
+    "presetName": "",
+    "limitCountPerObject": false,
+    "maxPerObject": 1,
+    "perObjectSpawnChance": 1.0,
+    "perInstanceSpawnChance": 1.0,
+    "perInstanceModifiers": [],
+    "typeLimit": 0
+  },
+  "SyncDiskPreset": {
+    "presetName": "",
+    "disabled": false,
+    "syncDiskNumber": 1,
+    "interactable": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "rarity": 1,
+    "manufacturer": 0,
+    "canBeSideJobReward": true,
+    "mainEffect1Name": "",
+    "mainEffect1Description": "",
+    "mainEffect1": 0,
+    "mainEffect1Value": 0.20000000298023224,
+    "mainEffect1Icon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "mainEffect2Name": "",
+    "mainEffect2Description": "",
+    "mainEffect2": 0,
+    "mainEffect2Value": 0.20000000298023224,
+    "mainEffect2Icon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "mainEffect3Name": "",
+    "mainEffect3Description": "",
+    "mainEffect3": 0,
+    "mainEffect3Value": 0.20000000298023224,
+    "mainEffect3Icon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "option1UpgradeNameReferences": [],
+    "option1UpgradeEffects": [],
+    "option1UpgradeValues": [],
+    "option2UpgradeNameReferences": [],
+    "option2UpgradeEffects": [],
+    "option2UpgradeValues": [],
+    "option3UpgradeNameReferences": [],
+    "option3UpgradeEffects": [],
+    "option3UpgradeValues": [],
+    "sideEffectDescription": "",
+    "sideEffect": 0,
+    "sideEffectValue": 0.0,
+    "price": 500,
+    "uninstallCost": 0,
+    "minimumWealthLevel": 0.0,
+    "traitWeight": 1,
+    "traits": [],
+    "occupationWeight": 0,
+    "occupation": [],
+    "copyFrom": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    }
+  },
+  "WallFrontageClass": {
+    "presetName": ""
+  },
+  "WallFrontagePreset": {
+    "presetName": "",
+    "gameObject": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "allowStaticBatching": true,
+    "isRainyWindow": false,
+    "regularGlass": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "rainyGlass": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "universalDesignStyle": false,
+    "designStyles": [],
+    "inheritColouringFromDecor": false,
+    "shareColours": 0,
+    "variations": [],
+    "integratedInteractables": [],
+    "classes": []
+  },
+  "WindowStylePreset": {
+    "presetName": "",
+    "closable": true,
+    "pinnable": true,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "resizable": true,
+    "defaultSize": {
+      "x": 514.0,
+      "y": 658.0
+    },
+    "minSize": {
+      "x": 514.0,
+      "y": 514.0
+    },
+    "maxSize": {
+      "x": 1000.0,
+      "y": 1000.0
+    },
+    "DDSadditionalSize": {
+      "x": 172.0,
+      "y": 176.0
+    },
+    "overrideIcon": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "tabs": []
+  },
+  "WindowTabPreset": {
+    "presetName": "",
+    "tabName": "New Tab",
+    "colour": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "contentPrefab": {
+      "m_FileID": 0,
+      "m_PathID": 0
+    },
+    "contentType": 0,
+    "scalableContent": true,
+    "fitToScaleX": true,
+    "fitToScaleY": true,
+    "zoomWithMouseWheel": true,
+    "scrollBars": true,
+    "scrollRestrcition": 0,
+    "displayContentWithTag": ""
+  },
+  "LanguageData": {
+    "_yes": "Yes",
+    "_no": "No",
+    "_add": "Add",
+    "_replace": "Replace",
+    "_remove": "Remove",
+    "_swap": "Swap",
+    "_cancel": "Cancel",
+    "_none": "None",
+    "_okay": "Okay",
+    "_done": "Done",
+    "_default": "Default",
+    "_assignControllerWindowTitle": "Choose Controller",
+    "_assignControllerWindowMessage": "Press any button or move an axis on the controller you would like to use.",
+    "_controllerAssignmentConflictWindowTitle": "Controller Assignment",
+    "_controllerAssignmentConflictWindowMessage": "{0} is already assigned to {1}. Do you want to assign this controller to {2} instead?",
+    "_elementAssignmentPrePollingWindowMessage": "First center or zero all sticks and axes and press any button or wait for the timer to finish.",
+    "_joystickElementAssignmentPollingWindowMessage": "Now press a button or move an axis to assign it to {0}.",
+    "_joystickElementAssignmentPollingWindowMessage_fullAxisFieldOnly": "Now move an axis to assign it to {0}.",
+    "_keyboardElementAssignmentPollingWindowMessage": "Press a key to assign it to {0}. Modifier keys may also be used. To assign a modifier key alone, hold it down for 1 second.",
+    "_mouseElementAssignmentPollingWindowMessage": "Press a mouse button or move an axis to assign it to {0}.",
+    "_mouseElementAssignmentPollingWindowMessage_fullAxisFieldOnly": "Move an axis to assign it to {0}.",
+    "_elementAssignmentConflictWindowMessage": "Assignment Conflict",
+    "_elementAlreadyInUseBlocked": "{0} is already in use cannot be replaced.",
+    "_elementAlreadyInUseCanReplace": "{0} is already in use. Do you want to replace it?",
+    "_elementAlreadyInUseCanReplace_conflictAllowed": "{0} is already in use. Do you want to replace it? You may also choose to add the assignment anyway.",
+    "_mouseAssignmentConflictWindowTitle": "Mouse Assignment",
+    "_mouseAssignmentConflictWindowMessage": "The mouse is already assigned to {0}. Do you want to assign the mouse to {1} instead?",
+    "_calibrateControllerWindowTitle": "Calibrate Controller",
+    "_calibrateAxisStep1WindowTitle": "Calibrate Zero",
+    "_calibrateAxisStep1WindowMessage": "Center or zero {0} and press any button or wait for the timer to finish.",
+    "_calibrateAxisStep2WindowTitle": "Calibrate Range",
+    "_calibrateAxisStep2WindowMessage": "Move {0} through its entire range then press any button or wait for the timer to finish.",
+    "_inputBehaviorSettingsWindowTitle": "Sensitivity Settings",
+    "_restoreDefaultsWindowTitle": "Restore Defaults",
+    "_restoreDefaultsWindowMessage_onePlayer": "This will restore the default input configuration. Are you sure you want to do this?",
+    "_restoreDefaultsWindowMessage_multiPlayer": "This will restore the default input configuration for all players. Are you sure you want to do this?",
+    "_actionColumnLabel": "Actions",
+    "_keyboardColumnLabel": "Keyboard",
+    "_mouseColumnLabel": "Mouse",
+    "_controllerColumnLabel": "Controller",
+    "_removeControllerButtonLabel": "Remove",
+    "_calibrateControllerButtonLabel": "Calibrate",
+    "_assignControllerButtonLabel": "Assign Controller",
+    "_inputBehaviorSettingsButtonLabel": "Sensitivity",
+    "_doneButtonLabel": "Done",
+    "_restoreDefaultsButtonLabel": "Restore Defaults",
+    "_playersGroupLabel": "Players:",
+    "_controllerSettingsGroupLabel": "Controller:",
+    "_assignedControllersGroupLabel": "Assigned Controllers:",
+    "_settingsGroupLabel": "Settings:",
+    "_mapCategoriesGroupLabel": "Categories:",
+    "_calibrateWindow_deadZoneSliderLabel": "Dead Zone:",
+    "_calibrateWindow_zeroSliderLabel": "Zero:",
+    "_calibrateWindow_sensitivitySliderLabel": "Sensitivity:",
+    "_calibrateWindow_invertToggleLabel": "Invert",
+    "_calibrateWindow_calibrateButtonLabel": "Calibrate",
+    "_modifierKeys": {
+      "control": "Control",
+      "alt": "Alt",
+      "shift": "Shift",
+      "command": "Command",
+      "separator": " + "
+    },
+    "_customEntries": []
+  },
+  "ThemeSettings": {
+    "_mainWindowBackground": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_popupWindowBackground": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_areaBackground": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_selectableSettings": {
+      "_transition": 0,
+      "_colors": {
+        "m_ColorMultiplier": 0.0,
+        "m_DisabledColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_FadeDuration": 0.0,
+        "m_HighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_NormalColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_PressedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_SelectedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_DisabledHighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        }
+      },
+      "_spriteState": {
+        "m_DisabledSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_HighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_PressedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_SelectedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_DisabledHighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        }
+      },
+      "_animationTriggers": {
+        "m_DisabledTrigger": "",
+        "m_HighlightedTrigger": "",
+        "m_NormalTrigger": "",
+        "m_PressedTrigger": "",
+        "m_SelectedTrigger": "",
+        "m_DisabledHighlightedTrigger": ""
+      },
+      "_imageSettings": {
+        "_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_sprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_materal": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_type": 0,
+        "_preserveAspect": false,
+        "_fillCenter": false,
+        "_fillMethod": 0,
+        "_fillAmout": 0.0,
+        "_fillClockwise": false,
+        "_fillOrigin": 0
+      }
+    },
+    "_buttonSettings": {
+      "_transition": 0,
+      "_colors": {
+        "m_ColorMultiplier": 0.0,
+        "m_DisabledColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_FadeDuration": 0.0,
+        "m_HighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_NormalColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_PressedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_SelectedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_DisabledHighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        }
+      },
+      "_spriteState": {
+        "m_DisabledSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_HighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_PressedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_SelectedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_DisabledHighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        }
+      },
+      "_animationTriggers": {
+        "m_DisabledTrigger": "",
+        "m_HighlightedTrigger": "",
+        "m_NormalTrigger": "",
+        "m_PressedTrigger": "",
+        "m_SelectedTrigger": "",
+        "m_DisabledHighlightedTrigger": ""
+      },
+      "_imageSettings": {
+        "_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_sprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_materal": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_type": 0,
+        "_preserveAspect": false,
+        "_fillCenter": false,
+        "_fillMethod": 0,
+        "_fillAmout": 0.0,
+        "_fillClockwise": false,
+        "_fillOrigin": 0
+      }
+    },
+    "_inputGridFieldSettings": {
+      "_transition": 0,
+      "_colors": {
+        "m_ColorMultiplier": 0.0,
+        "m_DisabledColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_FadeDuration": 0.0,
+        "m_HighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_NormalColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_PressedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_SelectedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_DisabledHighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        }
+      },
+      "_spriteState": {
+        "m_DisabledSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_HighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_PressedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_SelectedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_DisabledHighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        }
+      },
+      "_animationTriggers": {
+        "m_DisabledTrigger": "",
+        "m_HighlightedTrigger": "",
+        "m_NormalTrigger": "",
+        "m_PressedTrigger": "",
+        "m_SelectedTrigger": "",
+        "m_DisabledHighlightedTrigger": ""
+      },
+      "_imageSettings": {
+        "_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_sprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_materal": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_type": 0,
+        "_preserveAspect": false,
+        "_fillCenter": false,
+        "_fillMethod": 0,
+        "_fillAmout": 0.0,
+        "_fillClockwise": false,
+        "_fillOrigin": 0
+      }
+    },
+    "_scrollbarSettings": {
+      "_transition": 0,
+      "_colors": {
+        "m_ColorMultiplier": 0.0,
+        "m_DisabledColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_FadeDuration": 0.0,
+        "m_HighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_NormalColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_PressedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_SelectedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_DisabledHighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        }
+      },
+      "_spriteState": {
+        "m_DisabledSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_HighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_PressedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_SelectedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_DisabledHighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        }
+      },
+      "_animationTriggers": {
+        "m_DisabledTrigger": "",
+        "m_HighlightedTrigger": "",
+        "m_NormalTrigger": "",
+        "m_PressedTrigger": "",
+        "m_SelectedTrigger": "",
+        "m_DisabledHighlightedTrigger": ""
+      },
+      "_handleImageSettings": {
+        "_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_sprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_materal": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_type": 0,
+        "_preserveAspect": false,
+        "_fillCenter": false,
+        "_fillMethod": 0,
+        "_fillAmout": 0.0,
+        "_fillClockwise": false,
+        "_fillOrigin": 0
+      },
+      "_backgroundImageSettings": {
+        "_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_sprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_materal": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_type": 0,
+        "_preserveAspect": false,
+        "_fillCenter": false,
+        "_fillMethod": 0,
+        "_fillAmout": 0.0,
+        "_fillClockwise": false,
+        "_fillOrigin": 0
+      }
+    },
+    "_sliderSettings": {
+      "_transition": 0,
+      "_colors": {
+        "m_ColorMultiplier": 0.0,
+        "m_DisabledColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_FadeDuration": 0.0,
+        "m_HighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_NormalColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_PressedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_SelectedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "m_DisabledHighlightedColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        }
+      },
+      "_spriteState": {
+        "m_DisabledSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_HighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_PressedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_SelectedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_DisabledHighlightedSprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        }
+      },
+      "_animationTriggers": {
+        "m_DisabledTrigger": "",
+        "m_HighlightedTrigger": "",
+        "m_NormalTrigger": "",
+        "m_PressedTrigger": "",
+        "m_SelectedTrigger": "",
+        "m_DisabledHighlightedTrigger": ""
+      },
+      "_handleImageSettings": {
+        "_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_sprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_materal": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_type": 0,
+        "_preserveAspect": false,
+        "_fillCenter": false,
+        "_fillMethod": 0,
+        "_fillAmout": 0.0,
+        "_fillClockwise": false,
+        "_fillOrigin": 0
+      },
+      "_fillImageSettings": {
+        "_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_sprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_materal": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_type": 0,
+        "_preserveAspect": false,
+        "_fillCenter": false,
+        "_fillMethod": 0,
+        "_fillAmout": 0.0,
+        "_fillClockwise": false,
+        "_fillOrigin": 0
+      },
+      "_backgroundImageSettings": {
+        "_color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_sprite": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_materal": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "_type": 0,
+        "_preserveAspect": false,
+        "_fillCenter": false,
+        "_fillMethod": 0,
+        "_fillAmout": 0.0,
+        "_fillClockwise": false,
+        "_fillOrigin": 0
+      }
+    },
+    "_invertToggle": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_invertToggleDisabledColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "_calibrationBackground": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_calibrationValueMarker": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_calibrationRawValueMarker": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_calibrationZeroMarker": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_calibrationCalibratedZeroMarker": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_calibrationDeadzone": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_sprite": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_materal": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_type": 0,
+      "_preserveAspect": false,
+      "_fillCenter": false,
+      "_fillMethod": 0,
+      "_fillAmout": 0.0,
+      "_fillClockwise": false,
+      "_fillOrigin": 0
+    },
+    "_textSettings": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_font": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_style": 0,
+      "_sizeMultiplier": 1.0,
+      "_lineSpacing": 1.0,
+      "_characterSpacing": 1.0,
+      "_wordSpacing": 1.0
+    },
+    "_buttonTextSettings": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_font": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_style": 0,
+      "_sizeMultiplier": 1.0,
+      "_lineSpacing": 1.0,
+      "_characterSpacing": 1.0,
+      "_wordSpacing": 1.0
+    },
+    "_inputGridFieldTextSettings": {
+      "_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_font": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "_style": 0,
+      "_sizeMultiplier": 1.0,
+      "_lineSpacing": 1.0,
+      "_characterSpacing": 1.0,
+      "_wordSpacing": 1.0
+    }
+  },
+  "ToleranceSphere": {
+    "worldPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "diameter": 0.0,
+    "color": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "preservationStrength": 0.0,
+    "isHidden": false
+  }
+}

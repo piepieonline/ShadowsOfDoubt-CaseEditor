@@ -60,25 +60,39 @@ function getJSONPointer(node) {
     return getJSONPointer(node.parent) + "/" + node.label;
 }
 
-function createSOSelectElement(domNode, options, selectedSO) {
+function createSOSelectElement(domNode, options, selectedSO, onUpdateCallback) {
     var selectedOptionMatch = selectedSO.match(/REF.*\|([\w-]+).*/);
     var selectedOption = selectedOptionMatch ? options.indexOf(selectedOptionMatch[1]) : -1;
-    return createEnumSelectElement(domNode, options, selectedOption, true);
+
+    var createdNodes = createEnumSelectElement(domNode, options, selectedOption, true, onUpdateCallback);
+
+    createdNodes.selectedCustomOption.text = `Custom: ${selectedSO}`;
+
+    return createdNodes;
 }
 
-function createEnumSelectElement(domNode, options, selectedIndex, hasBlank) {
+function createEnumSelectElement(domNode, options, selectedIndex, allowCustom, onUpdateCallback) {
     //Create and append select list
-    var selectList = document.createElement("select");
+    let selectList = document.createElement("select");
     domNode.replaceChildren(selectList);
 
-    if(hasBlank) {
+    let selectedCustomOption;
+
+    if(allowCustom) {
         var option = document.createElement("option");
         
-        option.value = -1;
-        option.text = "<PLACEHOLDER>";
-        option.selected = -1 == selectedIndex;
+        option.value = -2;
+        option.text = "Custom...";
+        option.selected = -2 == selectedIndex;
+
+        selectedCustomOption = document.createElement("option");
+        selectedCustomOption.value = -1;
+        selectedCustomOption.text = "Custom:";
+        selectedCustomOption.selected = -1 == selectedIndex;
+        selectedCustomOption.style.display = -1 == selectedIndex ? "block" : "none";
 
         selectList.appendChild(option);
+        selectList.appendChild(selectedCustomOption);
     }
     
     //Create and append the options
@@ -92,5 +106,25 @@ function createEnumSelectElement(domNode, options, selectedIndex, hasBlank) {
         selectList.appendChild(option);
     }
 
-    return selectList;
+    selectList.addEventListener('change', async (e) => {
+        let newCustomValue;
+        if(e.target.value == -2)
+        {
+            let res = prompt('Enter filename', '');
+
+            if (res === null) {
+                return;
+            }
+
+            if ((res != 'null' && res !== null)) {
+                res = makeCSVSafe(res);
+            }
+
+            newCustomValue = JSON.parse(res);
+        }
+
+        onUpdateCallback(e.target.value, newCustomValue);
+    });
+    
+    return { list: selectList, selectedCustomOption };
 }

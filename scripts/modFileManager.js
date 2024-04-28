@@ -30,7 +30,47 @@ async function openModFolder(modName, create) {
 }
 
 function cloneTemplate(template) {
-    return JSON.parse(JSON.stringify(window.templates[template]))
+    var templateToClone = window.templates[template];
+    if(!templateToClone)
+    {
+        function remapTemplate(obj)
+        {
+            let keys = Object.keys(obj);
+            for(let i = 0; i < keys.length; i++)
+            {
+                let childType = obj[keys[i]].Item1;
+                let isArray = obj[keys[i]].Item2;
+
+                let newVal = childType;
+                switch(childType)
+                {
+                    case "Int32":
+                    case "Single":
+                        newVal = 0;
+                        break;
+                    case "Boolean":
+                        newVal = false;
+                        break;
+                    case "String":
+                        newVal = "";
+                        break;
+                    // default:
+                    //     obj[keys[i]] = null;
+                }
+
+                if(isArray) {
+                    newVal = [newVal];
+                }
+
+                obj[keys[i]] = newVal;
+            }
+
+            return obj;
+        }
+
+        templateToClone = remapTemplate(JSON.parse(JSON.stringify(window.typeLayout[template])));
+    }
+    return JSON.parse(JSON.stringify(templateToClone));
 }
 
 async function createFileIfNotExisting(fileName, type, handle, newFileContentCallback) {
