@@ -22,10 +22,6 @@ async function loadFile(path, thisTreeCount, parentData) {
     var tree = jsonTree.create(data, treeEle);
     runTreeSetup();
 
-    let fileName = path.split('/').at(-1);
-    if (['tree', 'msg', 'block'].includes(fileName.split('.')[1]) && fileName.split('.')[0] != data.id) {
-        alert('Filename doesn\'t match id! File will not work in game!');
-    }
 
     function createDummyKeys(data) {
         return data;
@@ -57,6 +53,15 @@ async function loadFile(path, thisTreeCount, parentData) {
     }
 
     async function modifyTreeElement(jsonPointer, newValue) {
+        // Store open paths
+        let openPaths = [];
+        tree.findAndHandle(item => {
+            return item.el.classList.contains('jsontree_node_expanded');
+        }, item => {
+            openPaths.push(item.pathToItem);
+        });
+
+        // Patch the data
         data = jsonpatch.applyPatch(data, [
             {
                 op: 'replace',
@@ -66,11 +71,28 @@ async function loadFile(path, thisTreeCount, parentData) {
         ]).newDocument;
         data = createDummyKeys(data);
         tree.loadData(data);
+
+        // Recreate the tree
         runTreeSetup();
+        // Save the new data
         await save();
+
+        // Reopen previously opened paths
+        tree.findAndHandle(item => {
+            return openPaths.includes(item.pathToItem);
+        }, item => {
+            item.expand();
+        });
     }
 
     async function runTreeSetup() {
+        // Set paths
+        tree.findAndHandle(item => {
+            return true;
+        }, item => {
+            calculatePathToItem(item);
+        });
+
         // Auto-expand the useful keys
         let expandedNodes = ['fileOrder', 'blocks', 'replacements']
         tree.expand(function (node) {
@@ -78,13 +100,6 @@ async function loadFile(path, thisTreeCount, parentData) {
                 node.childNodes.forEach(child => child.expand !== undefined && child.expand());
                 return true;
             }
-        });
-
-        // Set paths
-        tree.findAndHandle(item => {
-            return true;
-        }, item => {
-            calculatePathToItem(item);
         });
 
         // Links for trees and blocks

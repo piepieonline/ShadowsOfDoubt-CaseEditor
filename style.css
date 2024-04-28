@@ -61,6 +61,10 @@
     position: absolute;
 }
 
+.hidden-default-value-node {
+    display: none;
+}
+
 /* Modal */
 .hidden {
     display: none !important;

@@ -32,7 +32,7 @@
             </select>
             <button id="new-mod-button" onclick="newMod()">New MurderMO</button>
             <button onclick="loadFromGUI()">Load</button>
-            <button id="saving-enabled-button" onclick="setSaving(!window.savingEnabled)">Disable Saving</button>
+            <button id="saving-enabled-button" onclick="setSaving(!window.savingEnabled)">Disable Auto-Saving</button>
             <!--<button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>
             <button onclick="showFavs()">Show Favourites</button>-->
             <button onclick="document.getElementById('help-modal').classList.toggle('hidden')">Help</button>
@@ -46,30 +46,18 @@
             </div>
             <h2>Help</h2>
             <div>
-                This is a basic tool to help view and create (WIP) new text content for Shadows of Doubt, using the DDS
-                system. All content in SoD is comprised of 4 parts (Trees, Messages, Blocks, Strings, in that order).
+                This is a basic tool to help view and create new ScriptableObjects for Shadows of Doubt, with a specific focus on creating new murder cases.
             </div>
             <br />
             <ul>
-                <li><b>Trees:</b> The top level objects, and contain things like the conversation name, participate info
-                    and a list of <b>messages</b></li>
-                <li><b>Messages:</b> Mid level objects containing a list of <b>blocks</b>, each of which and can be set
-                    to always appear, or choose one of multiple in a group (Random, or based on traits)</li>
-                <li><b>Blocks:</b> The lowest level, and generally act as a direct reference to a line in the
-                    <b>strings</b> file. However, simple random substitutions can also be made on this level
-                </li>
-                <li><b>Strings:</b> Where the actual text comes from, stored in one large CSV. Generally, each block ID
-                    has a equivalent line in the CSV. Presented here merged into <b>blocks</b> for clarity</li>
+                <li><b>murdermanifest:</b> Tells the mod which files need to be loaded and which order</li>
+                <li><b>MurderMO:</b> Contains the meat of a Murder, at minimum every new murder case type will have one</li>
             </ul>
             <br />
             <h2>How to use:</h2>
             <p>Instructions for use can now be found on the <a
                     href="https://shadowsofdoubtmodding.miraheze.org/wiki/DDS_System">wiki</a>.</p>
             <br />
-            <h2>Community content project</h2>
-            <div>I've opened a community content project (<a
-                    href="https://github.com/piepieonline/ShadowsOfDoubtContent">https://github.com/piepieonline/ShadowsOfDoubtContent</a>)
-                in the hopes that we can create a bunch more flavour text as a brains trust.</div>
         </div>
     </div>
     <div id="fav-modal" class="modal hidden">
@@ -84,8 +72,8 @@
         </div>
     </div>
     <script>
-        if (localStorage.getItem('favs') == null) localStorage.setItem('favs', '[]');
-        updateFavButton();
+        // if (localStorage.getItem('favs') == null) localStorage.setItem('favs', '[]');
+        //updateFavButton();
 
         async function loadFromGUI() {
             if (window.dirHandleModDir == null) {
@@ -139,7 +127,7 @@
 
             let ele = document.getElementById('saving-enabled-button');
             ele.classList.toggle('saving-disabled');
-            ele.innerText = saving ? 'Disable Saving' : 'Enable Saving';
+            ele.innerText = saving ? 'Disable Auto-Saving' : 'Enable Auto-Saving';
         }
         setSaving(true);
 
