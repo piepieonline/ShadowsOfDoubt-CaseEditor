@@ -41,25 +41,19 @@ function cloneTemplate(template) {
                 let childType = obj[keys[i]].Item1;
                 let isArray = obj[keys[i]].Item2;
 
-                let newVal = childType;
-                switch(childType)
+                let newVal = JSON.parse(JSON.stringify(window.basicTypes[childType] ?? childType));
+                
+                if(newVal === childType && !(childType in window.typeMap) && !(childType in window.enums))
                 {
-                    case "Int32":
-                    case "Single":
-                        newVal = 0;
-                        break;
-                    case "Boolean":
-                        newVal = false;
-                        break;
-                    case "String":
-                        newVal = "";
-                        break;
-                    // default:
-                    //     obj[keys[i]] = null;
+                    console.warn(`TypeMap is missing: ${childType}`);
                 }
 
                 if(isArray) {
-                    newVal = [newVal];
+                    newVal = [];
+                }
+                else if(childType in window.typeMap)
+                {
+                    newVal = `REF:${childType}|${window.typeMap[childType][0]}`;
                 }
 
                 obj[keys[i]] = newVal;

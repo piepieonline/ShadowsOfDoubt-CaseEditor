@@ -41,7 +41,8 @@ async function loadFile(path, thisTreeCount, parentData) {
             } else if(typeList[0] !== fileType && window.typeMap[typeList[0]]) {
                 return window.typeMap[typeList[0]];
             } else {
-                return window.typeLayout[typeList[0]][typeList[1]]?.Item1;
+                var soType = window.typeLayout[typeList[0]][typeList[1]]?.Item1;
+                return soType;
             }
         }
         else
@@ -53,36 +54,13 @@ async function loadFile(path, thisTreeCount, parentData) {
     }
 
     async function modifyTreeElement(jsonPointer, newValue) {
-        // Store open paths
-        let openPaths = [];
-        tree.findAndHandle(item => {
-            return item.el.classList.contains('jsontree_node_expanded');
-        }, item => {
-            openPaths.push(item.pathToItem);
-        });
-
-        // Patch the data
-        data = jsonpatch.applyPatch(data, [
+        [
             {
                 op: 'replace',
                 path: jsonPointer,
                 value: newValue
             }
-        ]).newDocument;
-        data = createDummyKeys(data);
-        tree.loadData(data);
-
-        // Recreate the tree
-        runTreeSetup();
-        // Save the new data
-        await save();
-
-        // Reopen previously opened paths
-        tree.findAndHandle(item => {
-            return openPaths.includes(item.pathToItem);
-        }, item => {
-            item.expand();
-        });
+        ]
     }
 
     async function runTreeSetup() {
@@ -90,11 +68,11 @@ async function loadFile(path, thisTreeCount, parentData) {
         tree.findAndHandle(item => {
             return true;
         }, item => {
-            calculatePathToItem(item);
+            calculatepathToItemGeneric(item);
         });
 
         // Auto-expand the useful keys
-        let expandedNodes = ['fileOrder', 'blocks', 'replacements']
+        let expandedNodes = ['fileOrder', 'blocks', 'replacements'];
         tree.expand(function (node) {
             if (expandedNodes.includes(node.label)) {
                 node.childNodes.forEach(child => child.expand !== undefined && child.expand());
@@ -125,7 +103,7 @@ async function loadFile(path, thisTreeCount, parentData) {
             return !item.isComplex;
         }, item => {
             var ele = item.el.querySelector('.jsontree_value');
-            var splitPath = [fileType, ...item.pathToItem.replace(/\/-$/, '').split('/-/')];
+            var splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
 
             var mappedType = mapSplitPath(splitPath);
 
@@ -137,7 +115,13 @@ async function loadFile(path, thisTreeCount, parentData) {
                     ele.innerText,
                     false,
                     async (selectedIndex) => {
-                        await modifyTreeElement(getJSONPointer(item), parseInt(selectedIndex));
+                        await updateTree([
+                            {
+                                op: 'replace',
+                                path: getJSONPointer(item),
+                                value: parseInt(selectedIndex)
+                            }
+                        ]);
                     }
                 );
             } else if (window.typeMap[mappedType]) {
@@ -155,7 +139,13 @@ async function loadFile(path, thisTreeCount, parentData) {
                         {
                             replacementValue = `REF:${mappedType}|${customValue}`;
                         }
-                        await modifyTreeElement(getJSONPointer(item), replacementValue);
+                        await updateTree([
+                            {
+                                op: 'replace',
+                                path: getJSONPointer(item),
+                                value: replacementValue
+                            }
+                        ]);
                     }
                 );
             } else if (mappedType === "FileType") {
@@ -193,7 +183,13 @@ async function loadFile(path, thisTreeCount, parentData) {
 
                     let parsed = JSON.parse(res);
                     if (parsed || parsed === false || parsed === 0 || parsed === '' || res === 'null') {
-                        await modifyTreeElement(getJSONPointer(item), parsed);
+                        await updateTree([
+                            {
+                                op: 'replace',
+                                path: getJSONPointer(item),
+                                value: parsed
+                            }
+                        ]);
                     }
                 });
             }
@@ -213,16 +209,12 @@ async function loadFile(path, thisTreeCount, parentData) {
                 }
 
                 if (confirm('Remove Element?')) {
-                    data = jsonpatch.applyPatch(data, [
+                    updateTree([
                         {
                             op: 'remove',
                             path: getJSONPointer(item)
                         }
-                    ]).newDocument;
-                    data = createDummyKeys(data);
-                    tree.loadData(data);
-                    runTreeSetup();
-                    await save();
+                    ]);
                 }
             });
         });
@@ -241,35 +233,64 @@ async function loadFile(path, thisTreeCount, parentData) {
                 }
 
                 if (confirm('Add Element?')) {
-                    let splitPath = [fileType, ...item.pathToItem.replace(/\/-$/, '').split('/-/')];
+                    let splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
                     let mappedType = mapSplitPath(splitPath);
 
-                    let newContent = await getTemplateForItem(mappedType);
+                    let newContent;
+                    if(window.typeMap[mappedType])
+                        newContent = `REF:${mappedType}|${window.typeMap[mappedType][0]}`;
+                    else
+                        newContent = await getTemplateForItem(mappedType);
 
                     if (newContent === null) return;
 
-                    data = jsonpatch.applyPatch(data, [
+                    updateTree([
                         {
                             op: 'add',
                             path: getJSONPointer(item) + '/-',
                             value: newContent
                         }
-                    ]).newDocument;
-                    data = createDummyKeys(data);
-                    tree.loadData(data);
-                    runTreeSetup();
-                    await save();
+                    ]);
                 }
             });
         });
+
+        async function updateTree(patch)
+        {
+            let openPaths = [];
+            tree.findAndHandle(item => {
+                return item.el.classList.contains('jsontree_node_expanded');
+            }, item => {
+                openPaths.push(item.pathToItem);
+            });
+
+            // Patch the data
+            data = jsonpatch.applyPatch(data, patch).newDocument;
+            data = createDummyKeys(data);
+            tree.loadData(data);
+
+            // Recreate the tree
+            runTreeSetup();
+            // Save the new data
+            await save();
+
+            // Reopen previously opened paths
+            tree.findAndHandle(item => {
+                return openPaths.includes(item.pathToItem);
+            }, item => {
+                item.expand();
+            });
+        }
     }
 
-    function calculatePathToItem(actualItem) {
-        if(actualItem.pathToItem === undefined) {
-            actualItem.pathToItem = actualItem.label.toString().replace(/\d+/, '-');
+    function calculatepathToItemGeneric(actualItem) {
+        if(actualItem.pathToItemGeneric === undefined) {
+            actualItem.pathToItem = actualItem.label.toString();
+            actualItem.pathToItemGeneric = actualItem.label.toString().replace(/\d+/, '-');
             let item = actualItem.parent;
             while(item.label != null) {
-                actualItem.pathToItem = item.label.toString().replace(/\d+/, '-') + '/' + actualItem.pathToItem;
+                actualItem.pathToItem = item.label.toString() + '/' + actualItem.pathToItem;
+                actualItem.pathToItemGeneric = item.label.toString().replace(/\d+/, '-') + '/' + actualItem.pathToItemGeneric;
                 item = item.parent;
             }
         }

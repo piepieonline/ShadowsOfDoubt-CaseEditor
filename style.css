@@ -31,11 +31,11 @@
 }
 
 #saving-enabled-button {
-    background-color: lightcoral;
+    background-color: lightgreen;
 }
 
 #saving-enabled-button.saving-disabled { 
-    background-color: lightgreen;
+    background-color: lightcoral;
 }
 
 .doc-title {

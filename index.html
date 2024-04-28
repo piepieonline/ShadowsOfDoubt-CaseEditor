@@ -91,7 +91,7 @@
                 await initAndLoad('murdermanifest');
             }
 
-            updateFavButton();
+            // updateFavButton();
         }
 
         async function updateSelectedMod() {
@@ -124,12 +124,21 @@
 
         function setSaving(saving) {
             window.savingEnabled = saving;
+            localStorage.setItem('SOD_MurderCaseBuilder_Autosave', saving)
 
             let ele = document.getElementById('saving-enabled-button');
-            ele.classList.toggle('saving-disabled');
-            ele.innerText = saving ? 'Disable Auto-Saving' : 'Enable Auto-Saving';
+            if(saving)
+            {
+                ele.innerText = 'Auto-Saving Enabled';
+                ele.classList.remove('saving-disabled');
+            }
+            else
+            {
+                ele.innerText = 'Auto-Saving Disabled';
+                ele.classList.add('saving-disabled');
+            }
         }
-        setSaving(true);
+        setSaving(JSON.parse(localStorage.getItem('SOD_MurderCaseBuilder_Autosave')) ?? true);
 
         /*
         function showFavs() {

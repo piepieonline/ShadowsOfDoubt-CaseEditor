@@ -1,6 +1,6 @@
-import templates from './ref/templates.json' assert { type: 'json' };
-import soChildTypes from './ref/soChildTypes.json' assert { type: 'json' };
-import soMap from './ref/soMap.json' assert { type: 'json' };
+import templates from './ref/templates.json' with { type: 'json' };
+import soChildTypes from './ref/soChildTypes.json' with { type: 'json' };
+import soMap from './ref/soMap.json' with { type: 'json' };
 
 window.templates = templates;
 
@@ -23,6 +23,14 @@ window.typeLayout = {
             "Item2": true
           }
     },
-    String: "",
     ...soChildTypes
+};
+
+window.basicTypes = {
+    Int32: 0,
+    Single: 0,
+    Boolean: false,
+    String: "",
+    Vector2: { x: 0, y: 0 },
+    Vector3: { x: 0, y: 0, z: 0 }
 };
