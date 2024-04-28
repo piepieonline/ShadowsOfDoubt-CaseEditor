@@ -4,3 +4,6 @@ repository: piepieonline/ShadowsOfDoubt-CaseEditor
 
 plugins:
   - "jekyll-github-metadata"
+
+include:
+  - "index.html"
