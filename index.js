@@ -93,9 +93,15 @@ async function loadFile(path, thisTreeCount, parentData) {
             return !item.isComplex;
         }, item => {
             var ele = item.el.querySelector('.jsontree_value');
+            var labelEle = item.el.querySelector('.jsontree_label');
             var splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
 
             var mappedType = mapSplitPath(splitPath);
+            
+            try
+            {
+                labelEle.title = window.typeLayout[splitPath[splitPath.length - 2]][item.label].Item3;
+            } catch {}
 
             // TODO: Convert this into the if branch below
             if (mappedType && window.enums[mappedType]?.length > 0) {
