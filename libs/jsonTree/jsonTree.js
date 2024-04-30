@@ -77,7 +77,7 @@ var jsonTree = (function() {
                     break;
                 
                 case 'object':
-                    var keys = Object.keys(obj).sort();
+                    var keys = Object.keys(obj); // .sort();
                     
                     isLast = keys.length - 1;
                     
@@ -231,7 +231,7 @@ var jsonTree = (function() {
                         <span class="jsontree_value jsontree_value_' + self.type + '">' +
                             val +
                         '</span>' +
-                        (!isLast ? ',' : '') + 
+                        (!isLast ? '&nbsp;' : '') + 
                     '</span>';
     
                 return str;
@@ -441,7 +441,7 @@ var jsonTree = (function() {
         var self = this,
             el = document.createElement('li'),
             template = function(label, sym) {
-                var comma = (!isLast) ? ',' : '',
+                var comma = (!isLast) ? '&nbsp;' : '',
                     str = '\
                         <div class="jsontree_value-wrapper">\
                             <div class="jsontree_value jsontree_value_' + self.type + '">\

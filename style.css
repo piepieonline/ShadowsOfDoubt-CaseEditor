@@ -83,6 +83,11 @@
     pointer-events: none;
 }
 
+input {
+    padding: 0 5px;
+    border: 0;
+}
+
 /* Modal */
 .hidden {
     display: none !important;

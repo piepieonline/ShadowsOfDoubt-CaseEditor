@@ -151,38 +151,22 @@ async function loadFile(path) {
             } else if (mappedType === "FileType") {
                 // Do nothing, not editable
             } else {
-                ele.addEventListener('contextmenu', async (e) => {
-                    e.preventDefault();
-                    
+                createInputElement(item.el.querySelector('.jsontree_value'), async (newValue) => {
                     if (!window.selectedMod) {
                         alert('Please select a mod to save in first');
                         throw 'Please select a mod to save in first';
                     }
 
-                    let previousValue = item.el.querySelector('.jsontree_value').innerText;
-
-                    // If it's a string, auto-handle quotes
-                    if (item.type == 'string') {
-                        previousValue = previousValue.substring(1, previousValue.length - 1);
-
-                        // Double quotes
-                        if (previousValue.startsWith('"')) {
-                            previousValue = previousValue.substring(1, previousValue.length - 1);
-                        }
-                    }
-
-                    let res = prompt('Enter new value', previousValue);
-
-                    if (res === null) {
+                    if (newValue === null) {
                         return;
                     }
 
-                    if ((item.type == 'string' && res != 'null' && res !== null)) {
-                        res = makeCSVSafe(res);
+                    if ((item.type == 'string' && newValue != 'null' && newValue !== null)) {
+                        newValue = makeCSVSafe(newValue);
                     }
 
-                    let parsed = JSON.parse(res);
-                    if (parsed || parsed === false || parsed === 0 || parsed === '' || res === 'null') {
+                    let parsed = JSON.parse(newValue);
+                    if (parsed || parsed === false || parsed === 0 || parsed === '' || newValue === 'null') {
                         await updateTree([
                             {
                                 op: 'replace',
@@ -322,7 +306,8 @@ async function loadFile(path) {
         tree.findAndHandle(item => {
             return item.parent.isRoot;
         }, item => {
-            if(fileType in window.templates && item.label in window.templates[fileType] && JSON.stringify(data[item.label]) === JSON.stringify(window.templates[fileType][item.label]))
+            let itemLabel = item.label;
+            if(fileType in window.templates && itemLabel in window.templates[fileType] && JSON.stringify(data[itemLabel]) === JSON.stringify(window.templates[fileType][itemLabel]))
             {
                 item.el.classList.add('default-value-node');
             }

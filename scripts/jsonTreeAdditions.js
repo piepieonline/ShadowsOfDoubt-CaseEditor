@@ -60,6 +60,24 @@ function getJSONPointer(node) {
     return getJSONPointer(node.parent) + "/" + node.label;
 }
 
+function createInputElement(domNode, onUpdateCallback) {
+    let inputElement = document.createElement("input");
+    let initialValue = domNode.innerText.replace(/"/g, '');
+    inputElement.value = initialValue;
+    inputElement.setAttribute('size', Math.max(initialValue.length, 5));
+    inputElement.addEventListener('input', (e) => {
+        e.target.setAttribute('size', Math.max(e.target.value.length, 5));
+    });
+    domNode.replaceChildren(inputElement);
+
+    inputElement.addEventListener('blur', async (e) => {
+        if(initialValue != e.target.value)
+        {
+            onUpdateCallback(e.target.value);
+        }
+    });
+}
+
 function createSOSelectElement(domNode, options, selectedSO, onUpdateCallback) {
     var selectedOptionMatch = selectedSO.match(/REF.*\|([\w-]+).*/);
     var selectedOption = selectedOptionMatch ? options.indexOf(selectedOptionMatch[1]) : -1;
