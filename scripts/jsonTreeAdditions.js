@@ -66,7 +66,7 @@ function createSOSelectElement(domNode, options, selectedSO, onUpdateCallback) {
 
     var createdNodes = createEnumSelectElement(domNode, options, selectedOption, true, onUpdateCallback);
 
-    createdNodes.selectedCustomOption.text = `Custom: ${selectedSO}`;
+    createdNodes.selectedCustomOption.text = `Custom: ${selectedSO.replace(/"/g, "").replace("REF:", "").replace(/\w+\|/, '').trim()}`;
 
     return createdNodes;
 }
@@ -93,6 +93,17 @@ function createEnumSelectElement(domNode, options, selectedIndex, allowCustom, o
 
         selectList.appendChild(option);
         selectList.appendChild(selectedCustomOption);
+
+        if(selectedIndex == -1)
+        {
+            var linkButton = document.createElement("span");
+            linkButton.innerText = "➥";
+            linkButton.addEventListener('click', () => {
+                const refPath = selectedCustomOption.text.replace("Custom:", "").trim();
+                loadFile(refPath);
+            });
+            domNode.appendChild(linkButton);
+        }
     }
     
     //Create and append the options

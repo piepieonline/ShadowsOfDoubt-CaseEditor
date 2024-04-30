@@ -80,6 +80,7 @@
     width: 200px;
     text-align: center;
     color: #777;
+    pointer-events: none;
 }
 
 /* Modal */

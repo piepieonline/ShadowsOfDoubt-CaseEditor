@@ -4,12 +4,13 @@ const DUMMY_KEYS = {
 };
 
 async function initAndLoad(path) {
-    await loadFile(path, 0);
     window.maxTreeCount = 0;
+    await loadFile(path);
 }
 
-async function loadFile(path, thisTreeCount, parentData) {
-    var treeEle = addTreeElement(thisTreeCount, path, document.getElementById('trees'), { copySource, save })
+async function loadFile(path) {
+    window.maxTreeCount++;
+    var treeEle = addTreeElement(window.maxTreeCount, path, document.getElementById('trees'), { copySource, save })
 
     var data = JSON.parse(await (await (await tryGetFile(window.selectedMod.baseFolder, (path + '.sodso.json').split('/')))?.getFile())?.text());
 
@@ -79,11 +80,14 @@ async function loadFile(path, thisTreeCount, parentData) {
             var ele = item.el.querySelector('.jsontree_value_string');
             const refPath = ele.innerText.replace(/"/g, "").replace("REF:", "").replace(/\w+\|/, '');
 
-            ele.classList.add('link-element')
-
-            ele.addEventListener('click', () => {
-                loadFile(refPath, thisTreeCount + 1, data);
-            });
+            if(!ele.classList.contains('link-element'))
+            {
+                ele.classList.add('link-element')
+    
+                ele.addEventListener('click', () => {
+                    loadFile(refPath);
+                }); 
+            }
         });
 
         // Editing operations
