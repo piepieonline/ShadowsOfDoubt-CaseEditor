@@ -86,6 +86,7 @@
             <ul id="asset-model-asset-list">
 
             </ul>
+            <button onclick="loadExportedSOs()">Load exported ScriptableObjects</button>
         </div>
     </div>
     <script>
@@ -170,12 +171,9 @@
             if(firstRun)
             {
                 Object.keys(window.typeMap).sort().forEach(type => {
-                    if(type.includes("Preset"))
-                    {
-                        var option = document.createElement("option");
-                        option.text = type;
-                        typeList.appendChild(option);
-                    }
+                    var option = document.createElement("option");
+                    option.text = type;
+                    typeList.appendChild(option);
                 });
             }
 
@@ -185,8 +183,25 @@
             window.typeMap[typeList.value]?.sort().forEach(SO => {
                 var option = document.createElement("ul");
                 option.innerText = SO;
+
+                if(window.dirHandleExportedSOPath) {
+                    option.classList.add('link-element');
+                    option.addEventListener('click', (e) => {
+                        loadFileFromFolder(typeList.value + '/' + SO + ".json", window.dirHandleExportedSOPath, true, typeList.value);
+                    });
+                }
+
                 assetList.appendChild(option);
             });
+        }
+
+        async function loadExportedSOs()
+        {
+            let exportedSOPath = await idbKeyval.get('ExportedSOPath');
+            let options = exportedSOPath ? { startIn: exportedSOPath, mode: 'read' } : { mode: 'read' };
+            window.dirHandleExportedSOPath = await window.showDirectoryPicker(options);
+            await idbKeyval.set('ExportedSOPath', window.dirHandleExportedSOPath);
+            updateAssetModel(false);
         }
 
         /*

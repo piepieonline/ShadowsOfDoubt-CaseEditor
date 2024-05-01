@@ -1,9 +1,11 @@
 function addTreeElement(path, parent, editorCallbacks) {
-    if(document.querySelector(`#file-window-${path}`) !== null) return false;
+    let selectorSafePath = path.replace(/\//g, '_').replace('.json', '');
+
+    if(document.querySelector(`#file-window-${selectorSafePath}`) !== null) return false;
 
     const div = document.createElement("div");
     div.className = "file-window";
-    div.id = `file-window-${path}`;
+    div.id = `file-window-${selectorSafePath}`;
     parent.appendChild(div);
 
     const jsontreeEle = document.createElement("div");
@@ -55,10 +57,12 @@ function getJSONPointer(node) {
     return getJSONPointer(node.parent) + "/" + node.label;
 }
 
-function createInputElement(domNode, onUpdateCallback) {
+function createInputElement(domNode, readOnly, onUpdateCallback) {
     let inputElement = document.createElement("input");
     let initialValue = domNode.innerText.replace(/"/g, '');
     inputElement.value = initialValue;
+    inputElement.readOnly = readOnly;
+    inputElement.disabled = readOnly;
     inputElement.setAttribute('size', Math.max(initialValue.length, 5));
     inputElement.addEventListener('input', (e) => {
         e.target.setAttribute('size', Math.max(e.target.value.length, 5));
@@ -73,23 +77,25 @@ function createInputElement(domNode, onUpdateCallback) {
     });
 }
 
-function createSOSelectElement(domNode, options, selectedSO, onUpdateCallback) {
+function createSOSelectElement(domNode, options, selectedSO, readOnly, onUpdateCallback) {
     var selectedOptionMatch = selectedSO.match(/REF.*\|([\w-]+).*/);
     var selectedOption = selectedOptionMatch ? options.indexOf(selectedOptionMatch[1]) : -1;
 
-    var createdNodes = createEnumSelectElement(domNode, options, selectedOption, true, onUpdateCallback);
+    var createdNodes = createEnumSelectElement(domNode, options, selectedOption, true, readOnly, onUpdateCallback);
 
     createdNodes.selectedCustomOption.text = `Custom: ${selectedSO.replace(/"/g, "").replace("REF:", "").replace(/\w+\|/, '').trim()}`;
 
     return createdNodes;
 }
 
-function createEnumSelectElement(domNode, options, selectedIndex, allowCustom, onUpdateCallback) {
+function createEnumSelectElement(domNode, options, selectedIndex, allowCustom, readOnly, onUpdateCallback) {
     //Create and append select list
     let selectList = document.createElement("select");
     domNode.replaceChildren(selectList);
 
     let selectedCustomOption;
+
+    selectList.disabled = readOnly;
 
     if(allowCustom) {
         var option = document.createElement("option");
@@ -113,7 +119,7 @@ function createEnumSelectElement(domNode, options, selectedIndex, allowCustom, o
             linkButton.innerText = "➥";
             linkButton.addEventListener('click', () => {
                 const refPath = selectedCustomOption.text.replace("Custom:", "").trim();
-                loadFile(refPath);
+                loadFile(refPath, false);
             });
             domNode.appendChild(linkButton);
         }

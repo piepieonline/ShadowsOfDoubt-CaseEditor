@@ -9,17 +9,21 @@ async function initAndLoad(path) {
     {
         deleteTree(openWindows[i]);
     }
-    await loadFile(path);
+    await loadFile(path, false);
 }
 
-async function loadFile(path) {
+async function loadFile(path, readOnly, type) {
+    loadFileFromFolder(path + '.sodso.json', window.selectedMod.baseFolder, readOnly, type);
+}
+
+async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     var treeEle = addTreeElement(path, document.getElementById('trees'), { copySource, save });
 
     if(!treeEle) return;
 
-    var data = JSON.parse(await (await (await tryGetFile(window.selectedMod.baseFolder, (path + '.sodso.json').split('/')))?.getFile())?.text());
+    var data = JSON.parse(await (await (await tryGetFile(folderHandle, path.split('/')))?.getFile())?.text());
 
-    var fileType = data.fileType || "Manifest";
+    var fileType = data.fileType || type || "Manifest";
 
     // Show actual text
     // createDummyKeys(data);
@@ -90,13 +94,12 @@ async function loadFile(path) {
                 ele.classList.add('link-element')
     
                 ele.addEventListener('click', () => {
-                    loadFile(refPath);
+                    loadFile(refPath, false);
                 }); 
             }
         });
 
         // Editing operations
-
         // Simple types, direct editing and enums
         tree.findAndHandle(item => {
             return !item.isComplex;
@@ -107,6 +110,10 @@ async function loadFile(path) {
 
             var mappedType = mapSplitPath(splitPath);
             
+            if(splitPath[splitPath.length - 1] === "copyFrom") {
+                mappedType = fileType;
+            }
+
             try
             {
                 labelEle.title = window.typeLayout[splitPath[splitPath.length - 2]][item.label].Item3;
@@ -119,6 +126,7 @@ async function loadFile(path) {
                     window.enums[mappedType],
                     ele.innerText,
                     false,
+                    readOnly,
                     async (selectedIndex) => {
                         await updateTree([
                             {
@@ -129,11 +137,12 @@ async function loadFile(path) {
                         ]);
                     }
                 );
-            } else if (window.typeMap[mappedType] && splitPath[splitPath.length - 1] != "copyFrom") {
+            } else if (window.typeMap[mappedType]) {
                 createSOSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.typeMap[mappedType],
                     ele.innerText,
+                    readOnly,
                     async (selectedIndex, customValue) => {
                         let replacementValue = item.el.querySelector('.jsontree_value');
                         if(selectedIndex >= 0)
@@ -156,7 +165,7 @@ async function loadFile(path) {
             } else if (mappedType === "FileType") {
                 // Do nothing, not editable
             } else {
-                createInputElement(item.el.querySelector('.jsontree_value'), async (newValue) => {
+                createInputElement(item.el.querySelector('.jsontree_value'), readOnly, async (newValue) => {
                     if (!window.selectedMod) {
                         alert('Please select a mod to save in first');
                         throw 'Please select a mod to save in first';
@@ -184,65 +193,67 @@ async function loadFile(path) {
             }
         });
 
-        // Removing element
-        tree.findAndHandle(item => {
-            return item.parent.type === 'array';
-        }, item => {
-            var ele = item.el.querySelector('.jsontree_label');
-            ele.addEventListener('contextmenu', async (e) => {
-                e.preventDefault();
+        if(!readOnly) {
+            // Removing element
+            tree.findAndHandle(item => {
+                return item.parent.type === 'array';
+            }, item => {
+                var ele = item.el.querySelector('.jsontree_label');
+                ele.addEventListener('contextmenu', async (e) => {
+                    e.preventDefault();
 
-                if (!window.selectedMod) {
-                    alert('Please select a mod to save in first');
-                    throw 'Please select a mod to save in first';
-                }
+                    if (!window.selectedMod) {
+                        alert('Please select a mod to save in first');
+                        throw 'Please select a mod to save in first';
+                    }
 
-                if (confirm('Remove Element?')) {
-                    updateTree([
-                        {
-                            op: 'remove',
-                            path: getJSONPointer(item)
-                        }
-                    ]);
-                }
+                    if (confirm('Remove Element?')) {
+                        updateTree([
+                            {
+                                op: 'remove',
+                                path: getJSONPointer(item)
+                            }
+                        ]);
+                    }
+                });
             });
-        });
 
-        // Adding element
-        tree.findAndHandle(item => {
-            return item.type === 'array';
-        }, item => {
-            var ele = item.el.querySelector('.jsontree_label');
-            ele.addEventListener('contextmenu', async (e) => {
-                e.preventDefault();
+            // Adding element
+            tree.findAndHandle(item => {
+                return item.type === 'array';
+            }, item => {
+                var ele = item.el.querySelector('.jsontree_label');
+                ele.addEventListener('contextmenu', async (e) => {
+                    e.preventDefault();
 
-                if (!window.selectedMod) {
-                    alert('Please select a mod to save in first');
-                    throw 'Please select a mod to save in first';
-                }
+                    if (!window.selectedMod) {
+                        alert('Please select a mod to save in first');
+                        throw 'Please select a mod to save in first';
+                    }
 
-                if (confirm('Add Element?')) {
-                    let splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
-                    let mappedType = mapSplitPath(splitPath);
+                    if (confirm('Add Element?')) {
+                        let splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
+                        let mappedType = mapSplitPath(splitPath);
 
-                    let newContent;
-                    if(window.typeMap[mappedType])
-                        newContent = `REF:${mappedType}|${window.typeMap[mappedType][0]}`;
-                    else
-                        newContent = await getTemplateForItem(mappedType);
+                        let newContent;
+                        if(window.typeMap[mappedType])
+                            newContent = `REF:${mappedType}|${window.typeMap[mappedType][0]}`;
+                        else
+                            newContent = await getTemplateForItem(mappedType);
 
-                    if (newContent === null) return;
+                        if (newContent === null) return;
 
-                    updateTree([
-                        {
-                            op: 'add',
-                            path: getJSONPointer(item) + '/-',
-                            value: newContent
-                        }
-                    ]);
-                }
+                        updateTree([
+                            {
+                                op: 'add',
+                                path: getJSONPointer(item) + '/-',
+                                value: newContent
+                            }
+                        ]);
+                    }
+                });
             });
-        });
+        }
 
         async function updateTree(patch)
         {
