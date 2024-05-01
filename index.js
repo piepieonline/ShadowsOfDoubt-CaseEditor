@@ -4,17 +4,22 @@ const DUMMY_KEYS = {
 };
 
 async function initAndLoad(path) {
-    window.maxTreeCount = 0;
+    let openWindows = document.querySelectorAll('.file-window');
+    for(let i = openWindows.length - 1; i >= 0; i--)
+    {
+        deleteTree(openWindows[i]);
+    }
     await loadFile(path);
 }
 
 async function loadFile(path) {
-    window.maxTreeCount++;
-    var treeEle = addTreeElement(window.maxTreeCount, path, document.getElementById('trees'), { copySource, save })
+    var treeEle = addTreeElement(path, document.getElementById('trees'), { copySource, save });
+
+    if(!treeEle) return;
 
     var data = JSON.parse(await (await (await tryGetFile(window.selectedMod.baseFolder, (path + '.sodso.json').split('/')))?.getFile())?.text());
 
-    var fileType = data.type || "Manifest";
+    var fileType = data.fileType || "Manifest";
 
     // Show actual text
     // createDummyKeys(data);

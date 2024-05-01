@@ -79,7 +79,11 @@ async function createFileIfNotExisting(fileName, type, handle, newFileContentCal
     if(!file)
     {
         file = await getFile(handle, filename, true);
-        let newContent = newFileContentCallback(cloneTemplate(contentType));
+        let newContentTemplate = cloneTemplate(contentType);
+        if(type !== 'MurderManifest') {
+            newContentTemplate.fileType = type;
+        }
+        let newContent = newFileContentCallback(newContentTemplate);
         await writeFile(file, JSON.stringify(newContent));
     }
 }

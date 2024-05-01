@@ -1,15 +1,12 @@
-function addTreeElement(thisTreeCount, path, parent, editorCallbacks) {
-    deleteTree(thisTreeCount);
-
-    window.maxTreeCount = thisTreeCount;
+function addTreeElement(path, parent, editorCallbacks) {
+    if(document.querySelector(`#file-window-${path}`) !== null) return false;
 
     const div = document.createElement("div");
-    div.id = "file-window-" + thisTreeCount;
     div.className = "file-window";
+    div.id = `file-window-${path}`;
     parent.appendChild(div);
 
     const jsontreeEle = document.createElement("div");
-    jsontreeEle.id = "jsontree-container_" + thisTreeCount;
     jsontreeEle.className = "jsontree-container";
     div.appendChild(jsontreeEle);
 
@@ -18,13 +15,15 @@ function addTreeElement(thisTreeCount, path, parent, editorCallbacks) {
     titleEle.innerText = path;
     div.appendChild(titleEle);
 
-    const closeCross = document.createElement("div");
-    closeCross.innerText = "❌";
-    closeCross.className = "close-button";
-    closeCross.addEventListener('click', () => {
-        deleteTree(thisTreeCount);
-    })
-    div.appendChild(closeCross);
+    if(path !== 'murdermanifest') {
+        const closeCross = document.createElement("div");
+        closeCross.innerText = "❌";
+        closeCross.className = "close-button";
+        closeCross.addEventListener('click', () => {
+            deleteTree(div);
+        })
+        div.appendChild(closeCross);
+    }
 
     // Editor bar
     const editorBar = document.createElement("div");
@@ -44,12 +43,8 @@ function addTreeElement(thisTreeCount, path, parent, editorCallbacks) {
     return jsontreeEle;
 }
 
-function deleteTree(thisTreeCount) {
-    for (var i = thisTreeCount; i <= window.maxTreeCount; i++) {
-        document.getElementById("file-window-" + i)?.remove()
-    }
-
-    window.maxTreeCount = thisTreeCount - 1;
+function deleteTree(treeEleToClose) {
+    treeEleToClose.remove();
 }
 
 function getJSONPointer(node) {

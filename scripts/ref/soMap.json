@@ -567,6 +567,7 @@
       "CrumpledPaperCorporateKiller",
       "CrumpledPaperDrawing",
       "CrumpledPaperNameCypher",
+      "CrumpledPaperStickupInteractable",
       "CrumpledPaperWriter",
       "Crutch",
       "CuckooClock",
@@ -1083,6 +1084,7 @@
       "CrumpledDrawing",
       "CrumpledNameCipher",
       "CrumpledPaper",
+      "CrumpledPaperStickupEvidence",
       "CrumpledWriting",
       "date",
       "DebtCollectionLetter",
@@ -5817,45 +5819,45 @@
       "K2048"
     ],
     "HumanDebug": [
+      "movement",
       "actions",
       "attacks",
+      "updates",
       "misc",
-      "movement",
-      "sight",
-      "updates"
+      "sight"
     ],
     "ShoeType": [
-      "barefoot",
+      "normal",
       "boots",
       "heel",
-      "normal"
+      "barefoot"
     ],
     "MovementSpeed": [
-      "running",
       "stopped",
-      "walking"
+      "walking",
+      "running"
     ],
     "Gender": [
-      "female",
       "male",
+      "female",
       "nonBinary"
     ],
     "BloodType": [
-      "ABneg",
-      "ABpos",
-      "Aneg",
+      "unassigned",
       "Apos",
-      "Bneg",
+      "Aneg",
       "Bpos",
-      "Oneg",
+      "Bneg",
       "Opos",
-      "unassigned"
+      "Oneg",
+      "ABpos",
+      "ABneg"
     ],
     "DisposalType": [
       "anywhere",
       "homeOnly",
-      "homeOrWork",
-      "workOnly"
+      "workOnly",
+      "homeOrWork"
     ],
     "anchor": [
       "ArmsParent",
@@ -5886,9 +5888,9 @@
       "visual"
     ],
     "ReportType": [
-      "audio",
+      "visual",
       "smell",
-      "visual"
+      "audio"
     ],
     "itemType": [
       "evidence",
@@ -5897,34 +5899,34 @@
       "nothing"
     ],
     "WalletItemType": [
-      "evidence",
-      "key",
+      "nothing",
       "money",
-      "nothing"
+      "evidence",
+      "key"
     ],
     "NoteObject": [
-      "letter",
       "note",
+      "letter",
       "travelReceipt",
       "vmailLetter"
     ],
     "InvestigationUrgency": [
-      "run",
-      "walk"
+      "walk",
+      "run"
     ],
     "ReactionState": [
+      "none",
       "investigatingSight",
       "investigatingSound",
-      "none",
       "persuing",
       "searching"
     ],
     "AITickRate": [
-      "high",
+      "veryLow",
       "low",
       "medium",
-      "veryHigh",
-      "veryLow"
+      "high",
+      "veryHigh"
     ],
     "lastCheckedForWorkingDay": [
       "friday",
@@ -5945,90 +5947,90 @@
       "wednesday"
     ],
     "DoorActionCheckResult": [
-      "beingUsed",
-      "duplicate",
+      "success",
       "noHandle",
-      "success"
+      "beingUsed",
+      "duplicate"
     ],
     "DoorSide": [
-      "forceCurrentOtherSide",
+      "mySide",
       "forceCurrentSide",
-      "mySide"
+      "forceCurrentOtherSide"
     ],
     "LoadState": [
+      "parsingFile",
+      "setupCityBoundary",
+      "generateDistricts",
+      "generateBlocks",
+      "generateDensity",
+      "generateBuildings",
+      "generatePathfinding",
+      "generateBlueprints",
+      "generateCompanies",
       "connectRooms",
-      "finalizing",
+      "generateCitizens",
+      "generateRelationships",
       "gatherData",
       "generateAirDucts",
-      "generateBlocks",
-      "generateBlueprints",
-      "generateBuildings",
-      "generateCitizens",
-      "generateCompanies",
-      "generateDensity",
-      "generateDistricts",
       "generateEvidence",
       "generateInteriors",
-      "generatePathfinding",
-      "generateRelationships",
-      "loadComplete",
-      "loadObjects",
-      "loadState",
-      "parsingFile",
       "prepareCitizens",
-      "preSim",
+      "loadObjects",
+      "finalizing",
       "savingData",
-      "setupCityBoundary"
+      "loadState",
+      "preSim",
+      "loadComplete"
     ],
     "BlockingDirection": [
-      "behind",
-      "behindLeft",
-      "behindRight",
-      "front",
-      "frontLeft",
-      "frontRight",
-      "left",
       "none",
-      "right"
+      "behindLeft",
+      "behind",
+      "behindRight",
+      "left",
+      "right",
+      "frontLeft",
+      "front",
+      "frontRight"
     ],
     "ConnectionType": [
-      "anyAcquaintance",
-      "anyone",
-      "anyoneNotPlayer",
-      "bookGrubs",
-      "boss",
-      "corpCandor",
-      "corpDove",
-      "corpElgen",
-      "corpIndigo",
-      "corpKaizen",
-      "corpStarch",
-      "familiarResidence",
-      "familiarWork",
-      "flairQuotes",
       "friend",
-      "friendOrWork",
-      "groupMember",
-      "housemate",
-      "knowsName",
-      "landlord",
-      "lover",
       "neighbor",
-      "noReplyVmail",
-      "paramour",
-      "pestControl",
-      "player",
-      "publicFigure",
-      "randomSpamVmail",
+      "housemate",
+      "lover",
+      "boss",
+      "workTeam",
+      "workOther",
       "regularCustomer",
       "regularStaff",
-      "relationshipMatch",
-      "spamVmail",
-      "storyPartner",
+      "familiarResidence",
+      "familiarWork",
+      "publicFigure",
       "stranger",
+      "paramour",
+      "player",
+      "anyoneNotPlayer",
+      "friendOrWork",
+      "knowsName",
+      "anyAcquaintance",
+      "anyone",
       "workNotBoss",
-      "workOther",
-      "workTeam"
+      "relationshipMatch",
+      "corpDove",
+      "spamVmail",
+      "corpStarch",
+      "corpIndigo",
+      "corpKaizen",
+      "corpElgen",
+      "corpCandor",
+      "flairQuotes",
+      "randomSpamVmail",
+      "noReplyVmail",
+      "bookGrubs",
+      "pestControl",
+      "landlord",
+      "groupMember",
+      "storyPartner"
     ],
     "build": [
       "average",
@@ -6074,41 +6076,41 @@
       "greyEyes"
     ],
     "Age": [
+      "youngAdult",
       "adult",
-      "old",
-      "youngAdult"
+      "old"
     ],
     "BuildType": [
+      "skinny",
       "average",
-      "muscular",
       "overweight",
-      "skinny"
+      "muscular"
     ],
     "Height": [
-      "hAverage",
-      "hShort",
-      "tall",
       "veryShort",
+      "hShort",
+      "hAverage",
+      "tall",
       "veryTall"
     ],
     "EthnicGroup": [
-      "african",
-      "africanAmerican",
-      "australian",
-      "chinese",
+      "westEuropean",
       "eastEuropean",
+      "scandinavian",
+      "mediterranean",
       "hispanic",
+      "african",
       "indian",
-      "islander",
+      "chinese",
       "japanese",
       "korean",
-      "mediterranean",
-      "middleEastern",
       "nativeAmerican",
+      "middleEastern",
+      "australian",
+      "africanAmerican",
+      "islander",
       "northAmerican",
-      "scandinavian",
-      "southAmerican",
-      "westEuropean"
+      "southAmerican"
     ],
     "group": [
       "african",
@@ -6131,21 +6133,21 @@
     ],
     "HairColour": [
       "black",
-      "blonde",
-      "blue",
       "brown",
+      "blonde",
       "ginger",
-      "green",
-      "grey",
-      "pink",
-      "purple",
       "red",
+      "blue",
+      "green",
+      "purple",
+      "pink",
+      "grey",
       "white"
     ],
     "HairStyle": [
       "bald",
-      "longHair",
-      "shortHair"
+      "shortHair",
+      "longHair"
     ],
     "EyeColour": [
       "blueEyes",
@@ -6154,19 +6156,19 @@
       "greyEyes"
     ],
     "FacialFeature": [
+      "scaring",
       "beard",
-      "glasses",
-      "mole",
       "moustache",
       "piercing",
-      "scaring",
-      "tattoo"
+      "tattoo",
+      "glasses",
+      "mole"
     ],
     "UnemployedType": [
-      "Prison",
-      "Retired",
       "Student",
-      "Unemployed"
+      "Retired",
+      "Unemployed",
+      "Prison"
     ],
     "ventType": [
       "ceiling",
@@ -6174,47 +6176,47 @@
       "wallUpper"
     ],
     "ArmsBoolSate": [
-      "armsConsuming",
-      "armsCuffed",
-      "armsFleeing",
-      "armsLocking",
-      "armsOneShotUse",
-      "armsReading",
+      "none",
       "armsResting",
-      "armsSmoking",
-      "armsSmokingPipe",
       "armsTyping",
       "armsUse",
-      "none"
+      "armsLocking",
+      "armsCuffed",
+      "armsConsuming",
+      "armsOneShotUse",
+      "armsSmoking",
+      "armsSmokingPipe",
+      "armsReading",
+      "armsFleeing"
     ],
     "IdleAnimationState": [
-      "bargingDoor",
-      "brushingTeeth",
-      "checkPulse",
+      "none",
+      "sitting",
+      "sweeping",
+      "warmingHands",
+      "telephone",
+      "washingHands",
       "cleaningBar",
+      "bargingDoor",
       "cookingChopping",
       "cookingFrying",
+      "sitAgainstWall",
+      "leanAgainstWall",
+      "showering",
+      "rubbingEyes",
       "cowering",
+      "checkPulse",
+      "brushingTeeth",
+      "pickUpFromFloor",
       "danceTwist",
       "danceWatusi",
-      "leanAgainstWall",
-      "none",
-      "pickUpFromFloor",
-      "rubbingEyes",
-      "showering",
-      "sitAgainstWall",
-      "sitting",
       "stackingObjects",
-      "stackingObjectsCrouching",
-      "sweeping",
-      "telephone",
-      "warmingHands",
-      "washingHands"
+      "stackingObjectsCrouching"
     ],
     "ForceSuccess": [
-      "fail",
       "none",
-      "success"
+      "success",
+      "fail"
     ],
     "type": [
       "Filled",
@@ -6223,24 +6225,24 @@
       "Tiled"
     ],
     "MurderState": [
-      "acquireEuipment",
-      "escaping",
-      "executing",
       "none",
-      "post",
+      "acquireEuipment",
       "research",
-      "solved",
+      "waitForLocation",
       "travellingTo",
+      "executing",
+      "post",
+      "escaping",
       "unsolved",
-      "waitForLocation"
+      "solved"
     ],
     "KidnapRansomPhase": [
-      "collectedRansom",
-      "finishedFailed",
-      "finishedSuccess",
-      "freeingVictim",
       "none",
-      "travellingToRansom"
+      "travellingToRansom",
+      "collectedRansom",
+      "freeingVictim",
+      "finishedFailed",
+      "finishedSuccess"
     ],
     "state": [
       "arrived",
@@ -6270,17 +6272,17 @@
       "streetShort"
     ],
     "CallState": [
-      "denied",
       "dialing",
-      "ended",
+      "denied",
       "ringing",
-      "started"
+      "started",
+      "ended"
     ],
     "CallType": [
-      "audioEvent",
       "dds",
-      "fakeOutbound",
-      "player"
+      "audioEvent",
+      "player",
+      "fakeOutbound"
     ],
     "callType": [
       "audioEvent",
@@ -6303,11 +6305,11 @@
       "started"
     ],
     "TimeSpeed": [
-      "fast",
-      "normal",
-      "simulation",
       "slow",
-      "veryFast"
+      "normal",
+      "fast",
+      "veryFast",
+      "simulation"
     ],
     "TimeOfDay": [
       "always",
@@ -6315,44 +6317,44 @@
       "evening"
     ],
     "WeekDay": [
-      "friday",
       "monday",
-      "saturday",
-      "sunday",
-      "thursday",
       "tuesday",
-      "wednesday"
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
     ],
     "Month": [
-      "apr",
-      "aug",
-      "dec",
-      "feb",
       "jan",
-      "jul",
-      "jun",
+      "feb",
       "mar",
+      "apr",
       "may",
-      "nov",
+      "jun",
+      "jul",
+      "aug",
+      "sep",
       "oct",
-      "sep"
+      "nov",
+      "dec"
     ],
     "SceneProfile": [
-      "cbd",
-      "chinatown",
+      "outdoors",
+      "indoors",
+      "grimey",
       "clean",
       "corporate",
-      "grimey",
-      "indoors",
+      "cbd",
+      "chinatown",
       "industrial",
-      "outdoors",
       "residential",
       "warm"
     ],
     "PhysicsSyncType": [
-      "both",
       "now",
-      "onPlayerMovement"
+      "onPlayerMovement",
+      "both"
     ],
     "CityEditorMode": [
       "Default",
@@ -6365,83 +6367,83 @@
       "RenameSelection"
     ],
     "TreeTriggers": [
-      "allLightsOff",
-      "asleep",
-      "atEatery",
-      "atHome",
-      "atWork",
       "awake",
-      "brokenSign",
-      "carrying",
       "dead",
-      "drunk",
-      "employee",
-      "enforcerOnDuty",
-      "hasJob",
-      "hasNoRoomAtHotel",
-      "hasRoomAtHotel",
-      "homeBrightSign",
-      "homeIntenseWallpaper",
-      "hotelPaymentDue",
-      "illegal",
-      "inCombat",
-      "indoors",
-      "investigating",
-      "investigatingSound",
-      "investigatingVisual",
-      "legal",
-      "lightOnAny",
-      "lightOnMain",
-      "locationOfAuthority",
-      "nonEmployee",
+      "asleep",
+      "unconscious",
       "noReactionState",
-      "notCarrying",
-      "notEnforcerOnDuty",
-      "notInCombat",
-      "notPresent",
-      "notSingle",
-      "onStreet",
+      "investigating",
+      "investigatingVisual",
+      "investigatingSound",
       "persuing",
+      "searching",
+      "notInCombat",
+      "inCombat",
+      "legal",
+      "illegal",
+      "travelling",
+      "sat",
+      "employee",
+      "nonEmployee",
+      "carrying",
+      "notCarrying",
       "privateLocation",
       "publicLocation",
+      "onStreet",
+      "atHome",
+      "atWork",
+      "lightOnAny",
+      "lightOnMain",
+      "allLightsOff",
       "rain",
-      "restrained",
-      "sat",
-      "searching",
-      "single",
-      "sober",
-      "travelling",
+      "indoors",
+      "brokenSign",
       "travellingToWork",
+      "notPresent",
+      "atEatery",
+      "hasJob",
+      "unemployed",
+      "homeIntenseWallpaper",
+      "homeBrightSign",
+      "enforcerOnDuty",
+      "notEnforcerOnDuty",
       "trespassing",
-      "unconscious",
-      "unemployed"
+      "locationOfAuthority",
+      "drunk",
+      "restrained",
+      "sober",
+      "hasRoomAtHotel",
+      "hotelPaymentDue",
+      "hasNoRoomAtHotel",
+      "single",
+      "notSingle"
     ],
     "RepeatSetting": [
-      "never",
-      "noLimit",
-      "oneDay",
       "oneHour",
-      "oneWeek",
       "sixHours",
-      "threeDays",
       "twelveHours",
-      "twoDays"
+      "oneDay",
+      "twoDays",
+      "threeDays",
+      "oneWeek",
+      "never",
+      "noLimit"
     ],
     "TriggerPoint": [
-      "never",
-      "newspaperArticle",
-      "onNewAction",
       "onNewTrackTarget",
-      "telephone",
+      "onNewAction",
+      "whileTickOnTrackTarget",
       "vmail",
-      "whileTickOnTrackTarget"
+      "telephone",
+      "never",
+      "newspaperArticle"
     ],
     "TraitConditionType": [
-      "IfAllOfThese",
       "IfAnyOfThese",
+      "IfAllOfThese",
       "IfNoneOfThese",
-      "otherAllOfThese",
       "otherAnyOfThese",
+      "otherAllOfThese",
       "otherNoneOfThese"
     ],
     "connection": [
@@ -6501,10 +6503,10 @@
     ],
     "TreeType": [
       "conversation",
+      "vmail",
       "document",
-      "misc",
       "newspaper",
-      "vmail"
+      "misc"
     ],
     "repeat": [
       "never",
@@ -6540,38 +6542,38 @@
       "Tiled"
     ],
     "ElementType": [
-      "ddsMessage",
-      "newShot"
+      "newShot",
+      "ddsMessage"
     ],
     "CullDebugType": [
-      "adjacent",
-      "atriumTop",
       "none",
       "succeededNew",
-      "succeededOvr"
+      "succeededOvr",
+      "adjacent",
+      "atriumTop"
     ],
     "EditorDisplayMode": [
+      "normal",
       "displayAddressDesignation",
-      "displayRoomSelection",
-      "normal"
+      "displayRoomSelection"
     ],
     "EditorSelectionMode": [
-      "node",
       "tile",
-      "wall"
+      "wall",
+      "node"
     ],
     "FloorEditTool": [
-      "addressDesignation",
-      "elevator",
-      "floorDesignation",
-      "forceRoom",
-      "mainEntrance",
       "none",
-      "roomDesignation",
+      "floorDesignation",
+      "addressDesignation",
+      "wallDesignation",
       "rotateFloor",
+      "mainEntrance",
       "secondaryEntrance",
       "stairwell",
-      "wallDesignation"
+      "elevator",
+      "forceRoom",
+      "roomDesignation"
     ],
     "f_t": [
       "CeilingOnly",
@@ -6581,8 +6583,8 @@
       "noneButIndoors"
     ],
     "SpecialCase": [
-      "cancelSideEffect",
-      "none"
+      "none",
+      "cancelSideEffect"
     ],
     "idle": [
       "bargingDoor",
@@ -6630,19 +6632,19 @@
       "SUSTAINING"
     ],
     "CitizenReaction": [
-      "alarm",
+      "investigate",
       "immediatePersue",
-      "investigate"
+      "alarm"
     ],
     "SurfaceType": [
-      "carpet",
       "concrete",
+      "woodenFloor",
       "tile",
-      "woodenFloor"
+      "carpet"
     ],
     "StopType": [
-      "fade",
       "immediate",
+      "fade",
       "triggerCue"
     ],
     "caseType": [
@@ -6667,24 +6669,24 @@
       "unSolved"
     ],
     "CaseStatus": [
-      "archived",
-      "closable",
-      "forced",
-      "handInCollected",
       "handInNotCollected",
-      "submitted"
+      "handInCollected",
+      "submitted",
+      "closable",
+      "archived",
+      "forced"
     ],
     "CaseType": [
-      "kidnap",
       "murder",
-      "sniper"
+      "sniper",
+      "kidnap"
     ],
     "CaseRank": [
+      "super",
       "A",
       "B",
       "C",
       "D",
-      "super",
       "unSolved"
     ],
     "color": [
@@ -6802,23 +6804,23 @@
     "AutoCorrectAnswer": [
       "none",
       "poster",
-      "posterHome",
-      "posterHomePhoto",
-      "posterPhoto",
-      "posterWork",
-      "posterWorkPhoto",
       "purp",
-      "purpHome",
-      "purpHomePhoto",
-      "purpPhoto",
       "purpsParamour",
+      "posterHome",
+      "purpHome",
       "purpsParamourHome",
-      "purpsParamourHomePhoto",
-      "purpsParamourPhoto",
-      "purpsParamourWork",
-      "purpsParamourWorkPhoto",
+      "posterWork",
       "purpWork",
+      "purpsParamourWork",
+      "posterPhoto",
+      "purpPhoto",
+      "purpsParamourPhoto",
+      "posterHomePhoto",
+      "purpHomePhoto",
+      "purpsParamourHomePhoto",
+      "posterWorkPhoto",
       "purpWorkPhoto",
+      "purpsParamourWorkPhoto",
       "spawnedItemA",
       "spawnedItemB",
       "spawnedItemC",
@@ -6828,12 +6830,12 @@
       "spawnedItemTag"
     ],
     "InputType": [
-      "arrestPurp",
       "citizen",
-      "item",
       "location",
-      "objective",
+      "item",
       "revengeObjective",
+      "objective",
+      "arrestPurp",
       "saveVictim"
     ],
     "dispPhase": [
@@ -6845,31 +6847,31 @@
       "waitForComplete"
     ],
     "DisplayPhase": [
-      "displayingList",
-      "displayMainText",
-      "fadeInMainText",
       "preDisplay",
+      "fadeInMainText",
+      "displayMainText",
       "removeText",
+      "displayingList",
       "waitForComplete"
     ],
     "OnCompleteAction": [
-      "completeCoverUp",
-      "coverUpTips",
-      "invokeFunction",
-      "kidnapperCollectedRansom",
-      "kidnapperVictimFreed",
       "nextChapterPart",
       "nextPartWhenAllCompleted",
-      "nextSideJobPhase",
-      "nothing",
       "specificChapterByString",
       "specificChapterWhenAllCompleted",
-      "submitSideJob",
-      "triggerKidnapperRansomCollection",
-      "triggerRansomCollection",
-      "triggerRansomDelivery",
+      "nothing",
+      "invokeFunction",
       "triggerSideJobFunction",
-      "triggerSideJobHandIn"
+      "triggerSideJobHandIn",
+      "nextSideJobPhase",
+      "submitSideJob",
+      "completeCoverUp",
+      "coverUpTips",
+      "triggerRansomDelivery",
+      "triggerRansomCollection",
+      "triggerKidnapperRansomCollection",
+      "kidnapperCollectedRansom",
+      "kidnapperVictimFreed"
     ],
     "triggerType": [
       "accessAnyCruncher",
@@ -6946,101 +6948,101 @@
       "waitForCaseProcessing"
     ],
     "ObjectiveTriggerType": [
-      "accessAnyCruncher",
-      "accessApp",
-      "accessCruncher",
-      "acquireLockpicks",
-      "answerLEMCall",
-      "answerPhone",
-      "answerPhoneAndEndCall",
-      "checkRecentCalls",
-      "collectHandIn",
-      "destroyItem",
-      "discoverEvidence",
-      "discoverParamour",
-      "disposeOfBody",
-      "escapeBuilding",
-      "escapeGameLocation",
-      "evidenceOpenAndDisplayed",
-      "evidencePinned",
-      "exploreCrimeScene",
-      "findFingerprints",
-      "findFingerprintsAtLocation",
-      "findFingerprintsOnObject",
-      "findSurveillanceWith",
-      "gamePaused",
-      "gameUnpaused",
-      "goToAddress",
-      "goToNode",
-      "goToPublicFacingAddress",
-      "goToRoom",
-      "hasFPSInventory",
-      "identifyFinerprints",
-      "ifNoValidRansomBriefcase",
-      "ifValidRansomBriefcase",
-      "inspectInteractable",
-      "interactableRemoved",
-      "itemInInventory",
-      "itemIsNear",
-      "itemIsPlacedAtSecretLocation",
-      "itemOfTypeIsNear",
-      "keyInventory",
-      "kidnapperHasValidBriefcase",
-      "knowDoorLockedStatus",
-      "linkImageWithName",
-      "makeCall",
-      "noMoreObjectives",
-      "notewriterWarned",
-      "nothing",
-      "onCompleteJob",
-      "onDialogSuccess",
-      "openEvidence",
       "playerAction",
-      "playerActionNobodyHome",
-      "playerHasApartment",
-      "playerHidden",
-      "plotRoute",
-      "plotRouteToCallInvolving",
-      "printVmail",
-      "raiseFirstPersonItem",
-      "roomLightOn",
-      "sideMissionMeetTriggered",
-      "submitCase",
-      "successsfulSolve",
-      "surveillanceFlagFootage",
-      "switchStateFalse",
       "switchStateTrue",
-      "switchStateTrueForType",
-      "syncDiskInstallTutorial",
+      "switchStateFalse",
+      "roomLightOn",
+      "inspectInteractable",
+      "evidencePinned",
+      "goToNode",
+      "keyInventory",
+      "knowDoorLockedStatus",
+      "goToAddress",
+      "goToRoom",
+      "playerHidden",
+      "escapeGameLocation",
+      "escapeBuilding",
+      "answerPhone",
+      "openEvidence",
+      "plotRoute",
+      "gameUnpaused",
       "unlockDoor",
-      "unlockInteractable",
-      "victimIsFreed",
-      "viewHandIn",
+      "goToPublicFacingAddress",
+      "answerPhoneAndEndCall",
+      "switchStateTrueForType",
+      "linkImageWithName",
       "viewInteractable",
-      "waitForCaseProcessing"
+      "noMoreObjectives",
+      "findFingerprints",
+      "findSurveillanceWith",
+      "findFingerprintsOnObject",
+      "accessCruncher",
+      "printVmail",
+      "successsfulSolve",
+      "makeCall",
+      "discoverParamour",
+      "onCompleteJob",
+      "identifyFinerprints",
+      "interactableRemoved",
+      "checkRecentCalls",
+      "acquireLockpicks",
+      "unlockInteractable",
+      "gamePaused",
+      "evidenceOpenAndDisplayed",
+      "collectHandIn",
+      "viewHandIn",
+      "submitCase",
+      "waitForCaseProcessing",
+      "surveillanceFlagFootage",
+      "findFingerprintsAtLocation",
+      "plotRouteToCallInvolving",
+      "notewriterWarned",
+      "exploreCrimeScene",
+      "nothing",
+      "playerHasApartment",
+      "answerLEMCall",
+      "discoverEvidence",
+      "accessApp",
+      "syncDiskInstallTutorial",
+      "onDialogSuccess",
+      "raiseFirstPersonItem",
+      "hasFPSInventory",
+      "sideMissionMeetTriggered",
+      "itemInInventory",
+      "itemIsPlacedAtSecretLocation",
+      "destroyItem",
+      "itemIsNear",
+      "playerActionNobodyHome",
+      "accessAnyCruncher",
+      "itemOfTypeIsNear",
+      "disposeOfBody",
+      "ifValidRansomBriefcase",
+      "ifNoValidRansomBriefcase",
+      "kidnapperHasValidBriefcase",
+      "victimIsFreed"
     ],
     "CharacterAnchor": [
-      "ArmsParent",
-      "beard",
-      "Glasses",
-      "Hair",
-      "HandLeft",
-      "HandRight",
-      "Hat",
-      "Head",
-      "LeftFoot",
-      "LowerArmLeft",
-      "LowerArmRight",
-      "LowerLegLeft",
-      "LowerLegRight",
       "lowerTorso",
+      "upperTorso",
+      "Head",
+      "Hat",
+      "UpperArmRight",
+      "UpperArmLeft",
+      "LowerArmRight",
+      "LowerArmLeft",
+      "HandRight",
+      "HandLeft",
+      "UpperLegRight",
+      "UpperLegLeft",
+      "LowerLegRight",
+      "LowerLegLeft",
       "Midriff",
       "RightFoot",
-      "UpperArmLeft",
-      "UpperArmRight",
-      "UpperLegLeft",
-      "UpperLegRight",
-      "upperTorso"
+      "LeftFoot",
+      "Hair",
+      "Glasses",
+      "ArmsParent",
+      "beard"
     ],
     "category": [
       "BlackMarket",
@@ -7051,21 +7053,21 @@
       "StarchKola"
     ],
     "ClothingCreatorDirectory": [
+      "Tops",
       "Bottoms",
       "Hats",
       "Heads",
       "Shoes",
-      "Tops",
       "Underwear",
       "Undressed"
     ],
     "Expression": [
-      "angry",
-      "asleep",
-      "happy",
       "neutral",
+      "angry",
       "sad",
-      "surprised"
+      "surprised",
+      "happy",
+      "asleep"
     ],
     "expression": [
       "angry",
@@ -7077,12 +7079,12 @@
     ],
     "CitizenPool": [
       "allCitizens",
-      "buildingOnly",
-      "companyOnly"
+      "companyOnly",
+      "buildingOnly"
     ],
     "DLSSQuality": [
-      "Balanced",
       "MaximumPerformance",
+      "Balanced",
       "MaximumQuality",
       "UltraPerformance"
     ],
@@ -7099,31 +7101,31 @@
       "watch"
     ],
     "StaticSlot": [
-      "coin",
-      "fists",
-      "holster",
       "nonStatic",
-      "printReader",
-      "watch"
+      "holster",
+      "watch",
+      "fists",
+      "coin",
+      "printReader"
     ],
     "ControlPositioning": [
+      "neutral",
+      "up",
       "down",
       "left",
-      "neutral",
-      "right",
-      "up"
+      "right"
     ],
     "ConversationType": [
-      "accuseMurderer",
-      "killerCleanUp",
-      "loanSharkVisit",
+      "normal",
       "mugging",
-      "normal"
+      "loanSharkVisit",
+      "accuseMurderer",
+      "killerCleanUp"
     ],
     "JobState": [
-      "ended",
       "generated",
-      "posted"
+      "posted",
+      "ended"
     ],
     "key": [
       "address",
@@ -7223,41 +7225,41 @@
     ],
     "AirVent": [
       "ceiling",
-      "wallLower",
-      "wallUpper"
+      "wallUpper",
+      "wallLower"
     ],
     "AlarmTargetMode": [
-      "everybody",
       "illegalActivities",
-      "nobody",
+      "notPlayer",
       "nonResidents",
-      "notPlayer"
+      "everybody",
+      "nobody"
     ],
     "Direction": [
-      "East",
       "North",
+      "East",
       "South",
       "West"
     ],
     "DoorSetting": [
-      "leaveClosed",
-      "leaveOpen"
+      "leaveOpen",
+      "leaveClosed"
     ],
     "LockSetting": [
-      "keepLocked",
-      "keepUnlocked"
+      "keepUnlocked",
+      "keepLocked"
     ],
     "CitizenPassResult": [
-      "isForbidden",
-      "isJammed",
+      "success",
       "isLocked",
-      "success"
+      "isJammed",
+      "isForbidden"
     ],
     "FloorTileType": [
-      "CeilingOnly",
+      "none",
       "floorAndCeiling",
       "floorOnly",
-      "none",
+      "CeilingOnly",
       "noneButIndoors"
     ],
     "NodeSpaceOccupancy": [
@@ -7276,10 +7278,10 @@
     ],
     "AccessType": [
       "allPublic",
+      "residents",
       "buildingInhabitants",
       "employees",
-      "none",
-      "residents"
+      "none"
     ],
     "source": [
       "buildingResidents",
@@ -7302,16 +7304,16 @@
     ],
     "RemoveInteractablesOption": [
       "keep",
-      "moveToStorage",
-      "remove"
+      "remove",
+      "moveToStorage"
     ],
     "life": [
       "manualRemoval",
       "timed"
     ],
     "PrintLife": [
-      "manualRemoval",
-      "timed"
+      "timed",
+      "manualRemoval"
     ],
     "UsePointSlot": [
       "defaultSlot",
@@ -7319,35 +7321,35 @@
       "slot2"
     ],
     "PassedVarType": [
-      "addressID",
-      "companyID",
-      "consumableAmount",
-      "creationTime",
-      "ddsOverride",
-      "decal",
-      "decalDynamicText",
-      "groupID",
-      "humanID",
-      "isTrash",
       "jobID",
-      "jobTag",
-      "lostItemBuilding",
-      "lostItemFloorX",
-      "lostItemFloorY",
-      "lostItemPreset",
-      "lostItemReward",
+      "humanID",
+      "noteID",
+      "roomID",
+      "addressID",
+      "time",
+      "savedSceneCapID",
       "menuIndex",
+      "vmailThreadID",
+      "consumableAmount",
+      "companyID",
+      "stringInteractablePreset",
+      "isTrash",
+      "jobTag",
+      "groupID",
+      "ddsOverride",
       "metaObjectID",
       "murderID",
-      "noteID",
+      "decal",
+      "decalDynamicText",
       "ownedByAddress",
+      "vmailThreadMsgIndex",
       "phoneNumber",
-      "roomID",
-      "savedSceneCapID",
-      "stringInteractablePreset",
-      "time",
-      "vmailThreadID",
-      "vmailThreadMsgIndex"
+      "lostItemPreset",
+      "lostItemBuilding",
+      "lostItemReward",
+      "lostItemFloorX",
+      "lostItemFloorY",
+      "creationTime"
     ],
     "varType": [
       "addressID",
@@ -7382,25 +7384,21 @@
     ],
     "InteractableID": [
       "A",
-      "AA",
       "B",
-      "BB",
       "C",
-      "CC",
       "D",
-      "DD",
       "E",
       "F",
       "G",
       "H",
-      "hidingPlace",
       "I",
       "J",
+      "hidingPlace",
+      "none",
       "K",
       "L",
       "M",
       "N",
-      "none",
       "O",
       "P",
       "Q",
@@ -7412,15 +7410,19 @@
       "W",
       "X",
       "Y",
-      "Z"
+      "Z",
+      "AA",
+      "BB",
+      "CC",
+      "DD"
     ],
     "ObjectLoadRange": [
-      "close",
-      "far",
-      "maximum",
-      "medium",
       "veryClose",
-      "veryFar"
+      "close",
+      "medium",
+      "far",
+      "veryFar",
+      "maximum"
     ],
     "range": [
       "close",
@@ -7454,55 +7456,55 @@
       "triggerSideJobHandIn"
     ],
     "Bark": [
-      "answerDoor",
-      "answeringDoor",
-      "attack",
-      "cold",
-      "confrontMessingAround",
-      "cower",
-      "dazed",
-      "discoverTamper",
-      "doorBlocked",
-      "drunkIdle",
-      "enforcerRadio",
-      "enforcersKnock",
-      "examineBody",
-      "exposedConfront",
-      "fallOffChair",
-      "frustration",
-      "giveUpSearch",
-      "hearsObject",
-      "hearsSuspicious",
-      "idleSounds",
-      "loiteringConfront",
-      "lostTarget",
-      "mourn",
-      "outOfBreath",
       "persuit",
+      "lostTarget",
+      "answeringDoor",
+      "answerDoor",
+      "giveUpSearch",
+      "hearsSuspicious",
+      "seesSuspicious",
+      "enforcerRadio",
+      "idleSounds",
+      "discoverTamper",
+      "fallOffChair",
+      "sleeping",
+      "yawn",
+      "hearsObject",
+      "stench",
+      "seeBody",
+      "examineBody",
+      "mourn",
+      "enforcersKnock",
+      "scared",
+      "cower",
+      "attack",
+      "confrontMessingAround",
       "pickUpMisplaced",
+      "takeDamage",
+      "frustration",
+      "outOfBreath",
+      "cold",
+      "drunkIdle",
+      "targetDown",
       "restrained",
       "restrainedIdle",
-      "scared",
-      "seeBody",
-      "seesSuspicious",
-      "sleeping",
-      "soundAlarm",
-      "spookConfront",
-      "spooked",
-      "stench",
-      "takeDamage",
-      "targetDown",
-      "threatenByCombat",
-      "threatenByItem",
+      "dazed",
       "trespass",
+      "threatenByItem",
+      "threatenByCombat",
+      "soundAlarm",
+      "doorBlocked",
+      "spooked",
+      "exposedConfront",
+      "spookConfront",
+      "loiteringConfront",
       "trespassClosed",
-      "trespassLoiter",
-      "yawn"
+      "trespassLoiter"
     ],
     "BasicBehaviour": [
-      "hideWhenOff",
+      "none",
       "hideWhenOn",
-      "none"
+      "hideWhenOff"
     ],
     "PipeType": [
       "wire",
@@ -7677,8 +7679,8 @@
       "sender"
     ],
     "CustomDataSource": [
-      "groupID",
-      "sender"
+      "sender",
+      "groupID"
     ],
     "eraseMode": [
       "neverOrManual",
@@ -7694,14 +7696,14 @@
     ],
     "EraseMode": [
       "neverOrManual",
-      "onceExecutedAndOutOfAddressPlusDespawnTime",
       "onceExecutedAndOutOfBuildingPlusDespawnTime",
+      "onceExecutedAndOutOfAddressPlusDespawnTime",
       "useDespawnTime",
       "useDespawnTimeOnceExecuted"
     ],
     "ForceType": [
-      "bulletBack",
       "bulletForward",
+      "bulletBack",
       "punch"
     ],
     "parentID": [
@@ -7717,27 +7719,27 @@
       "walls"
     ],
     "DecalMaterialType": [
-      "heavy",
       "light",
-      "medium"
+      "medium",
+      "heavy"
     ],
     "ParentID": [
-      "door",
+      "room",
       "human",
       "interactable",
-      "room"
+      "door"
     ],
     "LayerMaskMode": [
       "castAllExcept",
       "onlyCast"
     ],
     "PostProcessingProfile": [
-      "captureCCTV",
-      "captureNormal"
+      "captureNormal",
+      "captureCCTV"
     ],
     "ControllerSelectMode": [
-      "caseBoard",
       "topBar",
+      "caseBoard",
       "windows"
     ],
     "MenuFlag": [
@@ -7745,26 +7747,26 @@
       "pinnedSelected"
     ],
     "ControlGraphicType": [
-      "controller",
       "keyboard",
-      "mouse"
+      "mouse",
+      "controller"
     ],
     "PingOnComplete": [
+      "none",
       "lockpicks",
-      "money",
-      "none"
+      "money"
     ],
     "GameMessageType": [
-      "gameHeader",
-      "helpPointer",
-      "keyMerge",
       "notification",
+      "gameHeader",
+      "keyMerge",
+      "helpPointer",
       "socialCredit"
     ],
     "AwarenessType": [
       "actor",
-      "position",
-      "transform"
+      "transform",
+      "position"
     ],
     "AwarenessBehaviour": [
       "alwaysVisible",
@@ -7780,16 +7782,16 @@
       "invisibleInfront"
     ],
     "ScreenDisplayType": [
-      "apartmentPurchase",
-      "coverUpFailed",
-      "coverUpSuccess",
-      "displayResolve",
-      "gameOver",
       "missionComplete",
       "missionFailed",
       "newMurderCase",
       "socialCreditLevelUp",
-      "unsolved"
+      "unsolved",
+      "displayResolve",
+      "apartmentPurchase",
+      "gameOver",
+      "coverUpSuccess",
+      "coverUpFailed"
     ],
     "component": [
       "main",
@@ -7797,29 +7799,29 @@
       "suffix"
     ],
     "Component": [
-      "audioSettings",
-      "bugReport",
-      "charSetup",
+      "none",
+      "mainMenuButtons",
+      "settings",
+      "newGameSelect",
       "city",
       "citySelect",
-      "controlDetect",
-      "controlSettings",
-      "credits",
-      "devSettings",
-      "gameplaySettings",
       "generateCity",
-      "graphicsSettings",
+      "charSetup",
       "interfaceSettings",
-      "loadGame",
-      "loadingCity",
-      "mainMenuButtons",
-      "mods",
-      "newGameSelect",
-      "none",
+      "graphicsSettings",
+      "audioSettings",
+      "gameplaySettings",
+      "controlSettings",
+      "devSettings",
       "saveGame",
-      "settings",
+      "loadGame",
+      "credits",
+      "loadingCity",
       "splash",
-      "streamingSettings"
+      "controlDetect",
+      "streamingSettings",
+      "bugReport",
+      "mods"
     ],
     "evidenceColour": [
       "black",
@@ -7832,21 +7834,21 @@
     ],
     "NavRectPoint": [
       "center",
-      "max",
-      "min"
+      "min",
+      "max"
     ],
     "ButtonAudioType": [
-      "back",
-      "forward",
       "normal",
+      "forward",
+      "back",
       "tickBox"
     ],
     "RecallAccuracy": [
-      "high",
+      "veryLow",
       "low",
       "med",
-      "veryHigh",
-      "veryLow"
+      "high",
+      "veryHigh"
     ],
     "eventType": [
       "delayBegin",
@@ -7870,30 +7872,30 @@
       "wakeUp"
     ],
     "EventType": [
-      "delayBegin",
-      "delayEnd",
-      "forcedEntryInvestigate",
+      "sightingStreet",
+      "sightingWindow",
+      "sightingHere",
+      "sightingArrive",
+      "sightingDepart",
+      "selfArrive",
+      "selfDepart",
+      "wakeUp",
       "goToBed",
       "heardSound",
       "nonPersonSighting",
-      "questioned",
-      "selfArrive",
-      "selfDepart",
-      "sightingArrive",
-      "sightingDepart",
-      "sightingHere",
-      "sightingStreet",
-      "sightingWentToBed",
-      "sightingWindow",
-      "sightingWokeUp",
       "smell",
+      "questioned",
+      "delayBegin",
+      "delayEnd",
       "timeOfDeath",
-      "wakeUp"
+      "sightingWentToBed",
+      "sightingWokeUp",
+      "forcedEntryInvestigate"
     ],
     "AffectPauseState": [
       "automatic",
-      "no",
-      "yes"
+      "yes",
+      "no"
     ],
     "crime": [
       "assault",
@@ -7905,29 +7907,29 @@
     ],
     "CrimeType": [
       "assault",
-      "breakingAndEntering",
-      "tampering",
       "theft",
+      "breakingAndEntering",
       "trespassing",
+      "tampering",
       "vandalism"
     ],
     "TabState": [
       "inRoom",
-      "inShop",
-      "inStorage"
+      "inStorage",
+      "inShop"
     ],
     "SliderPickerType": [
-      "artDynamicClue",
-      "artGraffiti",
-      "artLandscape",
-      "artLitter",
-      "artPortrait",
-      "artPoster",
-      "artSquare",
-      "artWallGrimeBottom",
-      "artWallGrimeTop",
       "grub",
-      "plants"
+      "plants",
+      "artPortrait",
+      "artLandscape",
+      "artSquare",
+      "artPoster",
+      "artLitter",
+      "artWallGrimeTop",
+      "artWallGrimeBottom",
+      "artDynamicClue",
+      "artGraffiti"
     ],
     "effect": [
       "accidentCover",
@@ -8016,69 +8018,69 @@
       "knowVictim"
     ],
     "Discovery": [
-      "addressBookDiscovery",
-      "dateOfBirth",
-      "diaryDiscovery",
+      "livesAt",
+      "partnerDiscovery",
+      "jobDiscovery",
+      "purchasedAt",
+      "phoneLocation",
+      "paramourDiscovery",
+      "phonePersonal",
       "foundAt",
       "foundOn",
-      "jobDiscovery",
-      "jobDiscoveryPhoto",
-      "jobHours",
-      "livesAt",
-      "paramourDiscovery",
-      "partnerDiscovery",
-      "phoneLocation",
-      "phonePersonal",
-      "postedByDiscovery",
-      "purchasedAt",
-      "referenceDiscovery",
+      "addressBookDiscovery",
       "relationshipDiscovery",
-      "timeOfDeath"
+      "jobHours",
+      "diaryDiscovery",
+      "jobDiscoveryPhoto",
+      "dateOfBirth",
+      "timeOfDeath",
+      "referenceDiscovery",
+      "postedByDiscovery"
     ],
     "DataKey": [
-      "address",
-      "age",
-      "ageGroup",
-      "bloodType",
-      "blueprints",
-      "build",
-      "code",
-      "dateOfBirth",
-      "eyes",
-      "facialHair",
-      "fingerprints",
-      "firstName",
-      "firstNameInitial",
-      "glasses",
-      "hair",
-      "handwriting",
-      "height",
-      "heightEstimate",
-      "initialedName",
-      "initials",
-      "jobTitle",
-      "livesInBuilding",
-      "livesOnFloor",
-      "location",
       "name",
+      "photo",
+      "fingerprints",
+      "code",
+      "voice",
+      "height",
+      "build",
+      "age",
+      "sex",
+      "hair",
+      "eyes",
+      "bloodType",
+      "shoeSize",
+      "facialHair",
+      "address",
+      "work",
+      "workHours",
+      "jobTitle",
+      "shoeSizeEstimate",
+      "glasses",
+      "dateOfBirth",
+      "salary",
+      "randomInterest",
+      "randomSocialClub",
+      "ageGroup",
+      "firstNameInitial",
       "partnerFirstName",
       "partnerJobTitle",
       "partnerSocialClub",
-      "photo",
-      "purpose",
       "randomAffliction",
-      "randomInterest",
-      "randomSocialClub",
-      "salary",
-      "sex",
-      "shoeSize",
-      "shoeSizeEstimate",
-      "surname",
+      "heightEstimate",
+      "handwriting",
+      "livesOnFloor",
       "telephoneNumber",
-      "voice",
-      "work",
-      "workHours",
-      "worksInBuilding"
+      "livesInBuilding",
+      "worksInBuilding",
+      "location",
+      "blueprints",
+      "firstName",
+      "surname",
+      "initialedName",
+      "initials",
+      "purpose"
     ],
     "disc": [
       "addressBookDiscovery",
@@ -8101,16 +8103,16 @@
       "timeOfDeath"
     ],
     "PasscodeType": [
-      "address",
       "citizen",
-      "interactable",
-      "room"
+      "room",
+      "address",
+      "interactable"
     ],
     "EnforcerCallState": [
-      "arrived",
-      "completed",
       "logged",
-      "responding"
+      "responding",
+      "arrived",
+      "completed"
     ],
     "ethnicity": [
       "african",
@@ -8521,44 +8523,44 @@
       "onGoalDeactivation"
     ],
     "ActionLocation": [
-      "findNearest",
-      "flee",
       "interactable",
-      "interactableLOS",
-      "interactableSpawn",
+      "findNearest",
       "investigate",
-      "meetOther",
       "nearbyInvestigate",
-      "NearbyStreetRandomNode",
       "pause",
-      "pickUpInteractable",
-      "player",
-      "playerApartmentDoorOutside",
-      "proximityToMusic",
-      "putDownInteractable",
-      "randomNodeWithinDen",
-      "randomNodeWithinHome",
       "randomNodeWithinLocation",
-      "randomNodeWithinLocationPrioritiseWindows",
-      "sniperVantagePoint",
+      "flee",
+      "interactableLOS",
+      "meetOther",
+      "NearbyStreetRandomNode",
+      "putDownInteractable",
+      "pickUpInteractable",
+      "randomNodeWithinHome",
+      "interactableSpawn",
+      "proximityToMusic",
+      "player",
       "tailAndConfrontPlayer",
-      "victimApartmentDoor"
+      "sniperVantagePoint",
+      "randomNodeWithinLocationPrioritiseWindows",
+      "randomNodeWithinDen",
+      "victimApartmentDoor",
+      "playerApartmentDoorOutside"
     ],
     "ActionFacingDirection": [
-      "accessableDirection",
+      "towardsDestination",
       "awayFromDestination",
-      "awayFromSniperVantagePoint",
-      "door",
       "interactable",
-      "interactableSetting",
       "InverseInteractable",
-      "inverseInteractableSetting",
+      "accessableDirection",
       "investigate",
+      "door",
+      "interactableSetting",
       "none",
+      "inverseInteractableSetting",
       "player",
       "sniperVantagePoint",
-      "towardsDestination",
-      "victim"
+      "victim",
+      "awayFromSniperVantagePoint"
     ],
     "ActionFinding": [
       "doNothing",
@@ -8574,29 +8576,29 @@
       "standGuardIfEnforcerSkipGoalNot"
     ],
     "FindSetting": [
-      "allAreas",
-      "homeOnly",
       "nonTrespassing",
       "onlyPublic",
+      "allAreas",
+      "homeOnly",
       "workOnly"
     ],
     "SourceOfBannedRooms": [
-      "jobPreset",
-      "none"
+      "none",
+      "jobPreset"
     ],
     "CombatPose": [
+      "noChange",
       "always",
       "never",
-      "noChange",
-      "onlyWhenAtDestination",
-      "onlyWhenPreviouslyPersuing"
+      "onlyWhenPreviouslyPersuing",
+      "onlyWhenAtDestination"
     ],
     "ForcedActionsSearchLevel": [
-      "InteractablesOnNode",
+      "thisObjectOnly",
       "otherIntegratedInteractables",
-      "spawnedInteractablesAll",
       "spawnInteractablesChildren",
-      "thisObjectOnly"
+      "spawnedInteractablesAll",
+      "InteractablesOnNode"
     ],
     "switchState": [
       "carryPhysicsObject",
@@ -8620,23 +8622,23 @@
       "cancelGoal"
     ],
     "DoorRule": [
-      "dontClose",
-      "dontLock",
       "normal",
+      "dontLock",
+      "dontClose",
       "onlyCloseToLocation",
       "onlyLockToLocation"
     ],
     "LightRule": [
-      "dontSwitch",
       "normal",
+      "dontSwitch",
       "onlyWhenArrived"
     ],
     "ActionStateFlag": [
-      "none",
       "onActivation",
       "onArrival",
       "onDeactivation",
-      "onGoalDeactivation"
+      "onGoalDeactivation",
+      "none"
     ],
     "appliesTo": [
       "all",
@@ -8692,19 +8694,19 @@
       "thisConfiguration"
     ],
     "GoalCategory": [
-      "important",
       "trivial",
+      "important",
       "vital"
     ],
     "StartingGoal": [
       "all",
-      "homelessOnly",
-      "nonHomelessOnly"
+      "nonHomelessOnly",
+      "homelessOnly"
     ],
     "RainFactor": [
-      "dontDoWhenRaining",
       "none",
-      "onlyDoWhenRaining"
+      "onlyDoWhenRaining",
+      "dontDoWhenRaining"
     ],
     "rule": [
       "ifAllOfThese",
@@ -8713,27 +8715,27 @@
       "ifPartnerAnyOfThese"
     ],
     "LocationOption": [
-      "commercial",
-      "commercialDecision",
-      "home",
-      "investigate",
-      "murderLocation",
-      "nearestAvailable",
-      "passedGamelocation",
-      "passedInteractable",
-      "patrolLocation",
       "useCurrent",
-      "work"
+      "home",
+      "work",
+      "commercial",
+      "nearestAvailable",
+      "investigate",
+      "commercialDecision",
+      "patrolLocation",
+      "passedInteractable",
+      "passedGamelocation",
+      "murderLocation"
     ],
     "RoomOption": [
+      "none",
       "bedroom",
-      "job",
-      "none"
+      "job"
     ],
     "FurnitureOption": [
+      "none",
       "bed",
-      "job",
-      "none"
+      "job"
     ],
     "condition": [
       "IfParamDoesntEqual",
@@ -8761,62 +8763,62 @@
       "onDutyEnforcer"
     ],
     "StatusType": [
-      "alertness",
-      "bladder",
-      "breath",
-      "chores",
-      "energy",
-      "excitement",
       "health",
-      "heat",
-      "hydration",
-      "hygeine",
       "nerve",
       "nourishment",
+      "hydration",
+      "alertness",
+      "energy",
+      "excitement",
+      "chores",
+      "hygeine",
+      "bladder",
+      "heat",
+      "breath",
       "onDutyEnforcer"
     ],
     "StatusCondition": [
       "isEqualOrAbove",
       "isEqualOrBelow",
-      "isFalse",
-      "isTrue"
+      "isTrue",
+      "isFalse"
     ],
     "ActionCondition": [
       "always",
-      "atHomeNoGuestPass",
       "atHomeOnly",
-      "atWorkOnly",
       "inPublicOnly",
-      "kidnapOnly",
-      "killerTauntChance",
-      "noGuestPass",
-      "nonKidnapOnly",
+      "atWorkOnly",
+      "onlyIfEscalated",
       "onlyIfDead",
-      "onlyIfEscalated"
+      "atHomeNoGuestPass",
+      "noGuestPass",
+      "kidnapOnly",
+      "nonKidnapOnly",
+      "killerTauntChance"
     ],
     "GoalActionSource": [
+      "thisConfiguration",
       "jobPreset",
-      "murderPreset",
-      "thisConfiguration"
+      "murderPreset"
     ],
     "dynamicTextSource": [
       "blackMarketTraderPassword",
       "weaponsDealerPassword"
     ],
     "ArtOrientation": [
-      "dynamicClue",
-      "graffiti",
-      "landscape",
-      "litter",
       "portrait",
-      "poster",
+      "landscape",
       "square",
+      "poster",
+      "litter",
+      "wallGrimeTop",
       "wallGrimeBottom",
-      "wallGrimeTop"
+      "dynamicClue",
+      "graffiti"
     ],
     "DynamicTextSouce": [
-      "blackMarketTraderPassword",
-      "weaponsDealerPassword"
+      "weaponsDealerPassword",
+      "blackMarketTraderPassword"
     ],
     "citizenMemoryTag": [
       "gunshot",
@@ -8824,8 +8826,8 @@
       "scream"
     ],
     "MemoryTag": [
-      "gunshot",
       "none",
+      "gunshot",
       "scream"
     ],
     "seriesTag": [
@@ -8841,32 +8843,32 @@
       "secret"
     ],
     "BookGenre": [
-      "architecture",
-      "beauty",
       "crime",
-      "esoteric",
-      "food",
       "history",
-      "medical",
-      "memoir",
-      "nature",
-      "poetry",
-      "politics",
-      "propaganda",
+      "esoteric",
       "romance",
+      "medical",
       "science",
-      "sciFi"
+      "architecture",
+      "sciFi",
+      "memoir",
+      "propaganda",
+      "politics",
+      "beauty",
+      "food",
+      "nature",
+      "poetry"
     ],
     "BookSeries": [
-      "candorHistory",
-      "detectiveGill",
       "none",
-      "talesOfTheHeart"
+      "detectiveGill",
+      "talesOfTheHeart",
+      "candorHistory"
     ],
     "SpawnRules": [
-      "homeOrWork",
       "onlyAtHome",
       "onlyAtWork",
+      "homeOrWork",
       "secret"
     ],
     "order": [
@@ -8878,8 +8880,8 @@
       "onEndOfDynamicClips"
     ],
     "ImageOrder": [
-      "ordered",
-      "random"
+      "random",
+      "ordered"
     ],
     "EndOfShow": [
       "atEndOfAudioEvent",
@@ -8906,13 +8908,13 @@
       "none"
     ],
     "DynamicConditionType": [
-      "IfParamDoesntEqual",
-      "IfParamEquals",
       "IfParamIsPresent",
-      "isDraw",
+      "IfParamEquals",
+      "IfParamDoesntEqual",
       "team1TakesLeadWithCurrentScore",
-      "team1Wins",
       "team2TakesLeadWithCurrentScore",
+      "isDraw",
+      "team1Wins",
       "team2Wins"
     ],
     "paramType": [
@@ -8939,43 +8941,43 @@
       "set"
     ],
     "ShowParamType": [
-      "currentBalls",
-      "currentScore",
-      "currentTeam",
-      "innings",
-      "lastPlay",
-      "playerNameInterjection",
-      "playersPlayed",
-      "playersTeamOne1",
-      "playersTeamOne2",
-      "playersTeamOne3",
-      "playersTeamTwo1",
-      "playersTeamTwo2",
-      "playersTeamTwo3",
+      "team1",
+      "team2",
       "scoreTeam1",
       "scoreTeam2",
-      "team1",
-      "team2"
+      "playersTeamOne1",
+      "playersTeamTwo1",
+      "playersTeamOne2",
+      "playersTeamTwo2",
+      "playersTeamOne3",
+      "playersTeamTwo3",
+      "playerNameInterjection",
+      "lastPlay",
+      "currentBalls",
+      "playersPlayed",
+      "currentScore",
+      "currentTeam",
+      "innings"
     ],
     "ConditionMode": [
-      "AND",
-      "OR"
+      "OR",
+      "AND"
     ],
     "CrowdReaction": [
-      "boo",
-      "cheerLarge",
-      "cheerMedium",
+      "none",
       "cheerSmall",
-      "nearMiss",
-      "none"
+      "cheerMedium",
+      "cheerLarge",
+      "boo",
+      "nearMiss"
     ],
     "ParamApplicationMode": [
-      "add",
-      "set"
+      "set",
+      "add"
     ],
     "FollowingIndexMode": [
-      "goToIndex",
-      "next"
+      "next",
+      "goToIndex"
     ],
     "displayedZone": [
       "commercial",
@@ -9012,25 +9014,25 @@
       "veryLow"
     ],
     "Density": [
-      "high",
       "low",
       "medium",
+      "high",
       "veryHigh"
     ],
     "LandValue": [
-      "high",
+      "veryLow",
       "low",
       "medium",
-      "veryHigh",
-      "veryLow"
+      "high",
+      "veryHigh"
     ],
     "ZoneType": [
+      "residential",
       "commercial",
       "industrial",
       "municipal",
-      "privateProperty",
       "publicProperty",
-      "residential"
+      "privateProperty"
     ],
     "postiveNegative": [
       "negative",
@@ -9038,13 +9040,13 @@
       "postive"
     ],
     "PosNeg": [
-      "negative",
+      "postive",
       "neutral",
-      "postive"
+      "negative"
     ],
     "RuleType": [
-      "ifAllOfThese",
       "ifAnyOfThese",
+      "ifAllOfThese",
       "ifNoneOfThese",
       "ifPartnerAnyOfThese"
     ],
@@ -9098,25 +9100,25 @@
       "workUniformColour"
     ],
     "OutfitCategory": [
-      "bed",
       "casual",
-      "outdoorsCasual",
-      "outdoorsSmart",
-      "outdoorsWork",
+      "work",
       "smart",
-      "underwear",
+      "outdoorsCasual",
+      "outdoorsWork",
+      "outdoorsSmart",
       "undressed",
-      "work"
+      "bed",
+      "underwear"
     ],
     "ClothingColourSource": [
-      "garment",
-      "hair",
       "none",
+      "garment",
       "skin",
+      "white",
+      "hair",
       "underneathColour1",
       "underneathColour2",
       "underneathColour3",
-      "white",
       "workUniformColour"
     ],
     "ClothesTags": [
@@ -9124,9 +9126,9 @@
       "noLongGarments"
     ],
     "HairRenderSetting": [
-      "dontRenderAnyHair",
+      "renderHatCompatibleHair",
       "renderAllHair",
-      "renderHatCompatibleHair"
+      "dontRenderAnyHair"
     ],
     "Incompatibility": [
       "inAnyCategory",
@@ -9165,29 +9167,29 @@
       "veryHigh"
     ],
     "CompanyCategory": [
+      "meal",
+      "snack",
       "caffeine",
       "groceries",
-      "meal",
+      "washing",
       "medical",
       "recreational",
-      "retail",
-      "snack",
-      "washing"
+      "retail"
     ],
     "SalaryRange": [
-      "aboveAverage",
-      "average",
-      "extreme",
-      "high",
       "illegal",
-      "low",
-      "millionaire",
       "minimumWage",
-      "veryHigh"
+      "low",
+      "average",
+      "aboveAverage",
+      "high",
+      "veryHigh",
+      "extreme",
+      "millionaire"
     ],
     "NameComponent": [
-      "main",
       "prefix",
+      "main",
       "suffix"
     ],
     "CriminalType": [
@@ -9224,9 +9226,9 @@
       "telephoneSubmission"
     ],
     "OnEndScene": [
-      "endGame",
       "resumeGameplay",
-      "startGame"
+      "startGame",
+      "endGame"
     ],
     "AnchorType": [
       "blockCorner",
@@ -9308,8 +9310,8 @@
       "none"
     ],
     "InputSetting": [
-      "addressPassword",
-      "none"
+      "none",
+      "addressPassword"
     ],
     "minimumDensity": [
       "high",
@@ -9343,9 +9345,9 @@
       "multiply"
     ],
     "AffectStreetAreaLights": [
-      "add",
       "lerp",
-      "multiply"
+      "multiply",
+      "add"
     ],
     "collisionBehaviour": [
       "ignore",
@@ -9367,13 +9369,13 @@
       "windowLarge"
     ],
     "WallSectionClass": [
-      "entrance",
-      "ventLower",
-      "ventTop",
-      "ventUpper",
       "wall",
       "window",
-      "windowLarge"
+      "windowLarge",
+      "entrance",
+      "ventUpper",
+      "ventLower",
+      "ventTop"
     ],
     "shareColours": [
       "bins",
@@ -9400,14 +9402,14 @@
       "none"
     ],
     "LockType": [
+      "none",
       "key",
-      "keypad",
-      "none"
+      "keypad"
     ],
     "ClosingBehaviour": [
+      "nothing",
       "closeOnCull",
-      "closeOnDespawn",
-      "nothing"
+      "closeOnDespawn"
     ],
     "captureRules": [
       "building",
@@ -9445,25 +9447,25 @@
     ],
     "CaptureRules": [
       "building",
-      "citizen",
+      "location",
       "item",
-      "location"
+      "citizen"
     ],
     "BelongsToSetting": [
+      "self",
+      "partner",
+      "paramour",
       "boss",
       "doctor",
-      "landlord",
-      "paramour",
-      "partner",
-      "self"
+      "landlord"
     ],
     "Subject": [
-      "interactable",
-      "interactableLocation",
-      "parent",
-      "receiver",
       "self",
-      "writer"
+      "writer",
+      "receiver",
+      "parent",
+      "interactable",
+      "interactableLocation"
     ],
     "link": [
       "interactable",
@@ -9523,8 +9525,8 @@
       "worksInBuilding"
     ],
     "FactLinkSubject": [
-      "receiver",
-      "writer"
+      "writer",
+      "receiver"
     ],
     "applyDiscoveryTrigger": [
       "addressBookDiscovery",
@@ -9597,34 +9599,34 @@
       "yawn"
     ],
     "SpecialAction": [
-      "attack",
-      "block",
-      "camFlashOff",
-      "camFlashOn",
-      "cancelFurniture",
-      "consumeFalse",
-      "consumeTrue",
-      "give",
-      "handcuff",
       "none",
-      "openBriefcaseBomb",
+      "block",
+      "handcuff",
+      "takedown",
+      "punch",
+      "consumeTrue",
+      "consumeFalse",
+      "putDown",
+      "attack",
+      "raiseTrue",
+      "raiseFalse",
+      "takePicture",
       "placeCodebreaker",
       "placeDoorWedge",
-      "placeFlashbomb",
+      "takeOne",
       "placeFurniture",
-      "placeIncapacitator",
+      "cancelFurniture",
+      "give",
       "placeTracker",
-      "punch",
-      "putBriefcaseCash",
-      "putDown",
-      "raiseFalse",
-      "raiseTrue",
+      "placeFlashbomb",
+      "placeIncapacitator",
+      "takeBriefcaseCash",
+      "openBriefcaseBomb",
       "rotateFurnLeft",
       "rotateFurnRight",
-      "takeBriefcaseCash",
-      "takedown",
-      "takeOne",
-      "takePicture"
+      "putBriefcaseCash",
+      "camFlashOn",
+      "camFlashOff"
     ],
     "availability": [
       "always",
@@ -9677,24 +9679,24 @@
       "takePicture"
     ],
     "AttackAvailability": [
-      "always",
-      "behindCitizen",
-      "codebreaker",
-      "doorWedge",
-      "giveItem",
-      "handcuffs",
-      "nearPutDown",
       "never",
+      "always",
+      "handcuffs",
+      "behindCitizen",
       "onConsuming",
       "onNotConsuming",
       "onNotConsumingButLeftovers",
-      "onNotRaised",
+      "nearPutDown",
       "onRaised",
+      "onNotRaised",
+      "codebreaker",
+      "doorWedge",
+      "giveItem",
+      "tracker",
       "onRaisedButLeftovers",
       "onRaisedNotFull",
-      "tracker",
-      "whenCamFlashOff",
-      "whenCamFlashOn"
+      "whenCamFlashOn",
+      "whenCamFlashOff"
     ],
     "ownershipClass": [
       "bed",
@@ -9711,17 +9713,17 @@
       "buildingResidences"
     ],
     "FurnitureRuleOption": [
-      "canFeature",
+      "mustFeature",
       "cantFeature",
-      "mustFeature"
+      "canFeature"
     ],
     "WallRule": [
-      "bannister",
-      "door",
-      "doorway",
       "nothing",
-      "onlyWall",
       "wallNoDoor",
+      "onlyWall",
+      "doorway",
+      "door",
+      "bannister",
       "window"
     ],
     "option": [
@@ -9741,14 +9743,14 @@
       "right"
     ],
     "OwnershipClass": [
+      "none",
       "bed",
       "desk",
-      "drawers",
       "locker",
-      "mailboxes",
-      "none",
+      "drawers",
       "noticeBoard",
-      "safe"
+      "safe",
+      "mailboxes"
     ],
     "OwnershipSource": [
       "addressInhabitants",
@@ -9761,14 +9763,14 @@
     ],
     "FurnitureFacing": [
       "down",
+      "up",
       "left",
-      "right",
-      "up"
+      "right"
     ],
     "AllowedOpenPlan": [
+      "yes",
       "no",
-      "openPlanOnly",
-      "yes"
+      "openPlanOnly"
     ],
     "spawnRange": [
       "close",
@@ -9858,10 +9860,18 @@
       "Z"
     ],
     "SubObjectOwnership": [
-      "everybody",
       "nobody",
+      "everybody",
       "person0",
       "person1",
+      "person2",
+      "person3",
+      "person4",
+      "person5",
+      "person6",
+      "person7",
+      "person8",
+      "person9",
       "person10",
       "person11",
       "person12",
@@ -9872,7 +9882,6 @@
       "person17",
       "person18",
       "person19",
-      "person2",
       "person20",
       "person21",
       "person22",
@@ -9882,14 +9891,7 @@
       "person26",
       "person27",
       "person28",
-      "person29",
-      "person3",
-      "person4",
-      "person5",
-      "person6",
-      "person7",
-      "person8",
-      "person9"
+      "person29"
     ],
     "belongsTo": [
       "killer",
@@ -9936,18 +9938,18 @@
       "Z"
     ],
     "ShareColours": [
-      "bins",
-      "blinds",
+      "none",
+      "seating",
+      "wallFrontage",
       "cabinets",
       "cubicles",
       "curtains",
-      "doors",
-      "none",
-      "seating",
-      "shelving",
       "telephone",
-      "wallFrontage",
-      "wood"
+      "wood",
+      "doors",
+      "shelving",
+      "bins",
+      "blinds"
     ],
     "FurnitureGroup": [
       "none",
@@ -9956,17 +9958,17 @@
     ],
     "ModifierTest": [
       "none",
-      "testInhbitants",
-      "testOwner"
+      "testOwner",
+      "testInhbitants"
     ],
     "DecorClass": [
       "chairs",
-      "decoration",
-      "electronics",
-      "misc",
-      "structural",
       "tables",
-      "units"
+      "units",
+      "electronics",
+      "structural",
+      "decoration",
+      "misc"
     ],
     "groupType": [
       "cheaters",
@@ -9975,9 +9977,9 @@
       "work"
     ],
     "GroupType": [
-      "cheaters",
-      "couples",
       "interestGroup",
+      "couples",
+      "cheaters",
       "work"
     ],
     "sender": [
@@ -10000,15 +10002,15 @@
       "meetingPlace"
     ],
     "SpawnAt": [
-      "entireGroupsApartments",
+      "meetingPlace",
       "leadersApartment",
-      "meetingPlace"
+      "entireGroupsApartments"
     ],
     "MeetUpVmailSender": [
-      "entireGroup",
       "groupLeader",
       "groupRandom",
       "meetupPlace",
+      "entireGroup",
       "prioritiseFaithful"
     ],
     "helpDisplaySetting": [
@@ -10017,9 +10019,9 @@
       "dontDisplay"
     ],
     "DisplaySetting": [
-      "displayAfterText",
+      "dontDisplay",
       "displayBeforeText",
-      "dontDisplay"
+      "displayAfterText"
     ],
     "createProxyAtRange": [
       "close",
@@ -10233,50 +10235,50 @@
       "workKitchen"
     ],
     "InteractionKey": [
+      "none",
+      "primary",
+      "secondary",
       "alternative",
-      "caseBoard",
-      "CaseBoardZoomAxis",
-      "ContentMoveAxisX",
-      "ContentMoveAxisY",
-      "CreateString",
-      "crouch",
-      "flashlight",
+      "scrollAxisUp",
+      "scrollAxisDown",
       "jump",
-      "LeanLeft",
-      "LeanRight",
-      "lookHorizontal",
-      "lookVertical",
+      "crouch",
+      "sprint",
+      "flashlight",
+      "caseBoard",
       "map",
-      "MoveEvidenceAxisX",
-      "MoveEvidenceAxisY",
+      "notebook",
       "moveHorizontal",
       "moveVertical",
+      "lookHorizontal",
+      "lookVertical",
+      "WeaponSelect",
       "nearestInteractable",
-      "none",
-      "notebook",
-      "primary",
-      "scrollAxisDown",
-      "scrollAxisUp",
-      "secondary",
-      "SelectDown",
+      "CaseBoardZoomAxis",
+      "MoveEvidenceAxisX",
+      "MoveEvidenceAxisY",
+      "ContentMoveAxisX",
+      "ContentMoveAxisY",
       "SelectLeft",
       "SelectRight",
       "SelectUp",
-      "sprint",
-      "WeaponSelect"
+      "SelectDown",
+      "CreateString",
+      "LeanLeft",
+      "LeanRight"
     ],
     "Switch": [
-      "carryPhysicsObject",
+      "switchState",
       "custom1",
       "custom2",
       "custom3",
+      "lockState",
+      "lockedIn",
+      "sprinting",
       "enforcersInside",
       "ko",
-      "lockedIn",
-      "lockState",
       "securityGrid",
-      "sprinting",
-      "switchState"
+      "carryPhysicsObject"
     ],
     "stop": [
       "fade",
@@ -10325,16 +10327,16 @@
     ],
     "ItemClass": [
       "consumable",
-      "document",
-      "electronics",
-      "equipment",
       "medical",
-      "misc"
+      "equipment",
+      "document",
+      "misc",
+      "electronics"
     ],
     "ApartmentPlacementMode": [
-      "ceiling",
       "physics",
-      "vertical"
+      "vertical",
+      "ceiling"
     ],
     "ifSwitchState": [
       "carryPhysicsObject",
@@ -10360,70 +10362,70 @@
       "ifInSameRoom"
     ],
     "ObjectResetCondition": [
-      "goalActivated",
+      "leavingLocation",
       "goalActive",
-      "goalDeactivated",
-      "leavingLocation"
+      "goalActivated",
+      "goalDeactivated"
     ],
     "ObjectResetScope": [
-      "ifInSameLocation",
-      "ifInSameRoom"
+      "ifInSameRoom",
+      "ifInSameLocation"
     ],
     "ReadingModeSource": [
-      "bookPreset",
       "evidenceNote",
-      "kaizenSkillDisplay",
-      "mainEvidenceText",
       "multipageEvidence",
+      "time",
+      "bookPreset",
       "recordPreset",
       "syncDiskPreset",
-      "time"
+      "mainEvidenceText",
+      "kaizenSkillDisplay"
     ],
     "AutoPlacement": [
       "always",
-      "never",
       "onlyInCompany",
       "onlyInHomes",
-      "onlyOnStreet"
+      "onlyOnStreet",
+      "never"
     ],
     "OwnedPlacementRule": [
-      "both",
       "nonOwnedOnly",
       "ownedOnly",
       "prioritiseNonOwned",
-      "prioritiseOwned"
+      "prioritiseOwned",
+      "both"
     ],
     "RelocationAuthority": [
       "AIAndOwnersCanRelocate",
+      "ownerCanRelocate",
       "anyoneCanRelocate",
-      "nooneCanRelocate",
-      "ownerCanRelocate"
+      "nooneCanRelocate"
     ],
     "FindEvidence": [
-      "addressBook",
-      "addressKey",
-      "bankStatement",
-      "birthCertificate",
-      "businessCard",
-      "calendar",
-      "callLogs",
-      "companyRoster",
-      "diary",
-      "homeFile",
-      "hospitalBed",
-      "IDCard",
-      "medicalDetails",
-      "menu",
-      "namePlacard",
       "none",
-      "photo",
-      "residentRoster",
       "residentsContract",
-      "retailItem",
-      "salesRecords",
       "sideJob",
+      "companyRoster",
+      "addressKey",
+      "businessCard",
+      "namePlacard",
+      "photo",
+      "calendar",
+      "retailItem",
+      "workID",
+      "salesRecords",
+      "diary",
+      "menu",
+      "homeFile",
+      "birthCertificate",
+      "bankStatement",
+      "medicalDetails",
+      "IDCard",
+      "addressBook",
+      "residentRoster",
       "telephone",
-      "workID"
+      "callLogs",
+      "hospitalBed"
     ],
     "physicalRewardLocation": [
       "cityHallDesk",
@@ -10566,73 +10568,73 @@
       "purpsWorkplaceBuilding"
     ],
     "LeadEvidence": [
+      "none",
+      "poster",
+      "purp",
+      "purpsParamour",
+      "postersHome",
+      "purpsHome",
+      "purpsParamourHome",
+      "postersWorkplace",
+      "purpsWorkplace",
+      "purpsParamourWorkplace",
+      "postersBuilding",
+      "purpsBuilding",
+      "purpsParamourBuilding",
+      "post",
+      "posterTelephone",
+      "purpsTelephone",
+      "purpsParamourTelephone",
+      "postersWorkplaceBuilding",
+      "purpsWorkplaceBuilding",
+      "purpsParamourWorkplaceBuilding",
       "extraPerson1",
       "itemA",
       "itemB",
       "itemC",
       "itemD",
-      "itemE",
-      "none",
-      "post",
-      "poster",
-      "postersBuilding",
-      "postersHome",
-      "postersWorkplace",
-      "postersWorkplaceBuilding",
-      "posterTelephone",
-      "purp",
-      "purpsBuilding",
-      "purpsHome",
-      "purpsParamour",
-      "purpsParamourBuilding",
-      "purpsParamourHome",
-      "purpsParamourTelephone",
-      "purpsParamourWorkplace",
-      "purpsParamourWorkplaceBuilding",
-      "purpsTelephone",
-      "purpsWorkplace",
-      "purpsWorkplaceBuilding"
+      "itemE"
     ],
     "BasicLeadPool": [
-      "age",
-      "bloodType",
-      "build",
-      "eyeColour",
-      "fingerprint",
-      "firstNameInitial",
       "hair",
-      "handwriting",
+      "eyeColour",
+      "shoeSize",
+      "build",
       "height",
+      "fingerprint",
+      "age",
       "jobTitle",
-      "notableFeatures",
+      "randomInterest",
       "partnerFirstName",
       "partnerJobTitle",
+      "firstNameInitial",
+      "socialClub",
       "partnerSocialClub",
-      "randomAffliction",
-      "randomInterest",
+      "notableFeatures",
       "salary",
-      "shoeSize",
-      "socialClub"
+      "bloodType",
+      "randomAffliction",
+      "handwriting"
     ],
     "LeadCitizen": [
-      "killer",
-      "killersClosest",
-      "killersDoctor",
       "nobody",
-      "ransom",
       "victim",
+      "killer",
       "victimsClosest",
-      "victimsDoctor"
+      "killersClosest",
+      "victimsDoctor",
+      "killersDoctor",
+      "ransom"
     ],
     "JobSpawnWhere": [
-      "hiddenItemPlace",
-      "nearbyGooseChase",
       "posterHome",
       "posterWork",
       "purpHome",
+      "purpWork",
       "purpsParamourHome",
       "purpsParamourWork",
-      "purpWork"
+      "hiddenItemPlace",
+      "nearbyGooseChase"
     ],
     "DifficultyTag": [
       "D0",
@@ -10776,15 +10778,15 @@
       "prioritiseOwned"
     ],
     "RewardLocation": [
-      "cityHallDesk",
       "none",
-      "playersMailbox",
-      "postersMailbox"
+      "postersMailbox",
+      "cityHallDesk",
+      "playersMailbox"
     ],
     "ParticipantCompliancy": [
-      "alwaysFail",
+      "noChange",
       "alwaysSuccess",
-      "noChange"
+      "alwaysFail"
     ],
     "shadowMode": [
       "dynamicSystemSlowerUpdate",
@@ -10800,50 +10802,50 @@
       "ultra"
     ],
     "ShadowMode": [
-      "dynamicSystemSlowerUpdate",
-      "dynamicSystemStatic",
       "everyFrame",
+      "onEnable",
       "onDemand",
-      "onEnable"
+      "dynamicSystemStatic",
+      "dynamicSystemSlowerUpdate"
     ],
     "ShadowResolution": [
-      "high",
       "low",
       "medium",
+      "high",
       "ultra"
     ],
     "MatchCondition": [
       "bloodGroup",
       "fingerprint",
-      "murderWeapon",
-      "retailPresetMatch",
       "time",
-      "visualDescriptors"
+      "visualDescriptors",
+      "retailPresetMatch",
+      "murderWeapon"
     ],
     "MaterialType": [
-      "ceiling",
+      "walls",
       "floor",
-      "other",
-      "walls"
+      "ceiling",
+      "other"
     ],
     "MaterialColour": [
-      "any",
-      "any1",
-      "any1OrNeutral",
-      "any2",
-      "any2OrNeutral",
       "anyPrimary",
-      "anyPrimaryOrNeutral",
-      "anyPrimaryOrSecondary",
       "anySecondary",
+      "anyPrimaryOrNeutral",
       "anySecondaryOrNeutral",
-      "neutral",
-      "none",
+      "any1",
+      "any2",
+      "any1OrNeutral",
+      "any2OrNeutral",
+      "any",
       "primary1",
       "primary2",
       "secondary1",
       "secondary2",
-      "wood"
+      "neutral",
+      "wood",
+      "none",
+      "anyPrimaryOrSecondary"
     ],
     "main": [
       "any",
@@ -10934,8 +10936,8 @@
       "victim"
     ],
     "GraffitiPosition": [
-      "nearbyWall",
-      "victim"
+      "victim",
+      "nearbyWall"
     ],
     "travelSuccessTrigger": [
       "whenMurdererIsAtTheSameLocation",
@@ -10946,12 +10948,12 @@
       "whenMurdererIsAtVantagePoint"
     ],
     "LeadSpawnWhere": [
-      "killerDen",
+      "victimHome",
+      "victimWork",
       "killerHome",
       "killerWork",
       "ransom",
-      "victimHome",
-      "victimWork"
+      "killerDen"
     ],
     "spawnOnPhase": [
       "acquireEuipment",
@@ -11000,21 +11002,21 @@
       "revolver"
     ],
     "WeaponType": [
-      "blade",
-      "bluntObject",
-      "fists",
       "handgun",
-      "poison",
       "rifle",
       "shotgun",
-      "strangulation"
+      "blade",
+      "bluntObject",
+      "poison",
+      "strangulation",
+      "fists"
     ],
     "StatMultiplier": [
-      "combatHeft",
-      "combatSkill",
+      "zero",
       "one",
       "random",
-      "zero"
+      "combatSkill",
+      "combatHeft"
     ],
     "EjectBrass": [
       "none",
@@ -11023,40 +11025,40 @@
       "revolver"
     ],
     "AttackValue": [
-      "accuracy",
-      "damage",
+      "range",
       "fireDelay",
-      "range"
+      "accuracy",
+      "damage"
     ],
     "MusicTriggerGameState": [
       "any",
-      "inCutscene",
+      "menu",
       "inGame",
-      "menu"
+      "inCutscene"
     ],
     "MusicTriggerPlayerState": [
       "any",
-      "combat",
-      "passingTime",
       "safe",
-      "trespass"
+      "trespass",
+      "combat",
+      "passingTime"
     ],
     "MusicTriggerPlayerLocation": [
       "any",
-      "indoors",
       "outdoors",
+      "indoors",
       "playersApartment"
     ],
     "MusicTriggerEvent": [
-      "arriveAtCrimeScene",
+      "none",
+      "newMurderCase",
       "caseComplete",
       "caseFailed",
       "caseUnsolved",
-      "newMurderCase",
-      "none",
-      "passingTime",
+      "socialCreditLevelUp",
       "resolveScreen",
-      "socialCreditLevelUp"
+      "arriveAtCrimeScene",
+      "passingTime"
     ],
     "onGameState": [
       "any",
@@ -11097,15 +11099,15 @@
       "randomGroup"
     ],
     "Category": [
-      "ad",
-      "foreignAffairs",
       "general",
       "murder",
+      "ad",
+      "foreignAffairs",
       "murderSecond"
     ],
     "ContextSource": [
-      "lastMurder",
       "nothing",
+      "lastMurder",
       "player",
       "randomCitizen",
       "randomCriminal",
@@ -11170,66 +11172,66 @@
       "workKitchen"
     ],
     "workCollar": [
-      "blackCollar",
       "blueCollar",
-      "goldCollar",
-      "noCollar",
-      "orangeCollar",
+      "whiteCollar",
       "pinkCollar",
       "redCollar",
+      "goldCollar",
+      "orangeCollar",
       "scarletCollar",
-      "whiteCollar"
+      "blackCollar",
+      "noCollar"
     ],
     "workType": [
-      "Creative",
-      "Criminal",
-      "Driver",
-      "Enforcer",
-      "Illegal",
-      "Janitorial",
-      "Labourer",
-      "Management",
       "Office",
-      "Other",
-      "PublicSector",
+      "Management",
+      "Labourer",
+      "Janitorial",
       "Retail",
-      "Retired",
       "Service",
+      "Driver",
+      "PublicSector",
+      "Enforcer",
+      "Criminal",
+      "Creative",
+      "Other",
       "Student",
-      "Unemployed"
+      "Unemployed",
+      "Retired",
+      "Illegal"
     ],
     "ShiftType": [
+      "morningShift",
       "dayShift",
       "eveningShift",
-      "morningShift",
       "nightShift"
     ],
     "JobAI": [
-      "passedCompanyPosition",
+      "workPosition",
       "random",
       "randomBuilding",
-      "workPosition"
+      "passedCompanyPosition"
     ],
     "workTags": [
-      "ceo",
-      "cushy",
-      "dangerous",
+      "none",
       "dull",
       "exciting",
-      "intern",
-      "isolated",
+      "dangerous",
       "menial",
-      "none",
-      "professional",
-      "social",
+      "intern",
       "stressful",
-      "technical"
+      "cushy",
+      "technical",
+      "ceo",
+      "social",
+      "isolated",
+      "professional"
     ],
     "Overtime": [
-      "high",
+      "none",
       "low",
       "medium",
-      "none",
+      "high",
       "veryHigh"
     ],
     "spatterTrigger": [
@@ -11246,8 +11248,8 @@
     ],
     "SpatterTrigger": [
       "off",
-      "onAnyImpact",
       "onBreak",
+      "onAnyImpact",
       "whileInAirOrAnyImpact"
     ],
     "collisionMode": [
@@ -11278,10 +11280,10 @@
       "starchProduct"
     ],
     "MenuCategory": [
-      "drinks",
       "food",
-      "none",
-      "snacks"
+      "drinks",
+      "snacks",
+      "none"
     ],
     "SpecialConditions": [
       "mustHaveWindows",
@@ -11347,27 +11349,27 @@
       "alwaysForbidden"
     ],
     "DecorSetting": [
+      "ownStyle",
       "borrowFromAdjoining",
-      "borrowFromBelow",
       "borrowFromBuilding",
-      "ownStyle"
+      "borrowFromBelow"
     ],
     "RoomZoning": [
+      "lobby",
+      "residential",
       "commerical",
       "industrial",
-      "lobby",
       "municpial",
-      "park",
-      "residential"
+      "park"
     ],
     "Forbidden": [
-      "allowedDuringOpenHours",
       "alwaysAllowed",
-      "alwaysForbidden"
+      "alwaysForbidden",
+      "allowedDuringOpenHours"
     ],
     "SecurityDoorRule": [
-      "allAdjoining",
       "never",
+      "allAdjoining",
       "onlyToOtherAddress",
       "onlyToStairwell"
     ],
@@ -11421,45 +11423,45 @@
       "secondaryOn"
     ],
     "LightingPreference": [
-      "allOff",
+      "mainOn",
+      "secondaryOn",
       "eitherPriorityMain",
       "eitherPrioritySecondary",
+      "allOff",
       "mainOff",
-      "mainOn",
-      "mainOnSecondaryAny",
-      "none",
       "secondaryOff",
-      "secondaryOn"
+      "none",
+      "mainOnSecondaryAny"
     ],
     "RoomPasswordPreference": [
       "interactableBelongsTo",
-      "thisAddress",
-      "thisRoom"
+      "thisRoom",
+      "thisAddress"
     ],
     "KeyPlacement": [
+      "thisAddress",
       "belongsToHome",
-      "belongsToWork",
-      "thisAddress"
+      "belongsToWork"
     ],
     "OutsideSetting": [
       "dontChange",
-      "forceInside",
-      "forceOutside"
+      "forceOutside",
+      "forceInside"
     ],
     "PrintsSource": [
+      "owners",
+      "inhabitants",
       "buildingResidents",
       "customersAll",
-      "customersFemale",
       "customersMale",
-      "inhabitants",
+      "customersFemale",
+      "publicAll",
       "inhabitantsAndCustomers",
-      "killer",
-      "owners",
+      "writers",
+      "receivers",
       "ownersAndWriters",
       "ownersWritersReceivers",
-      "publicAll",
-      "receivers",
-      "writers"
+      "killer"
     ],
     "stairwellRule": [
       "either",
@@ -11467,38 +11469,38 @@
       "onlyStairwells"
     ],
     "StairwellLightRule": [
-      "either",
       "noStairwells",
-      "onlyStairwells"
+      "onlyStairwells",
+      "either"
     ],
     "doorSetting": [
       "leaveClosed",
       "leaveOpen"
     ],
     "SideMissionElementType": [
+      "playerCallsNumber",
       "acquireInformation",
       "askStaff",
-      "destroyItem",
-      "handDossier",
-      "leaveItemAtSecretLocation",
-      "openedBriefcase",
-      "photoOfItemLocation",
-      "placeItemInPosterMailbox",
-      "placeItemOfTypeInPosterMailbox",
-      "playerCallsNumber",
-      "playerHasCamera",
-      "playerHasHandcuffs",
-      "playerHasItemInPossession",
-      "postSubmission",
-      "setGooseChaseCall",
-      "setGooseChaseCallIndoorOnly",
-      "setHomeMeeting",
-      "setMeeting",
-      "setupHomeInvestigation",
       "spawnItems",
+      "photoOfItemLocation",
+      "openedBriefcase",
+      "postSubmission",
+      "playerHasCamera",
+      "setGooseChaseCall",
+      "setMeeting",
+      "handDossier",
+      "setupHomeInvestigation",
       "submitToPoster",
+      "setHomeMeeting",
+      "setGooseChaseCallIndoorOnly",
       "tailBriefcase",
-      "telephoneSubmission"
+      "playerHasItemInPossession",
+      "leaveItemAtSecretLocation",
+      "destroyItem",
+      "playerHasHandcuffs",
+      "telephoneSubmission",
+      "placeItemInPosterMailbox",
+      "placeItemOfTypeInPosterMailbox"
     ],
     "tagReference": [
       "A",
@@ -11545,20 +11547,20 @@
       "none"
     ],
     "Grouping": [
+      "perPresetType",
       "perCrimeLocation",
-      "perGuestPass",
-      "perPresetType"
+      "perGuestPass"
     ],
     "ProgressBarTrack": [
-      "alarmTime",
-      "guestPassTime",
       "none",
+      "witnesses",
       "wantedInBuilding",
-      "witnesses"
+      "alarmTime",
+      "guestPassTime"
     ],
     "StatusCountType": [
-      "crime",
-      "none"
+      "none",
+      "crime"
     ],
     "penaltyRule": [
       "fixedValue",
@@ -11567,8 +11569,8 @@
     ],
     "PenaltyRule": [
       "fixedValue",
-      "objectValueMultiplied",
-      "percentageValue"
+      "percentageValue",
+      "objectValueMultiplied"
     ],
     "sectionType": [
       "joinerLong",
@@ -11580,13 +11582,13 @@
       "streetShort"
     ],
     "StreetSection": [
-      "joinerLong",
-      "joinerShort",
+      "streetLong",
+      "streetShort",
       "streetInsideCorner",
       "streetJunctionCorner",
-      "streetLong",
       "streetOutsideCorner",
-      "streetShort"
+      "joinerLong",
+      "joinerShort"
     ],
     "typeLimit": [
       "all",
@@ -11911,143 +11913,143 @@
       "veryRare"
     ],
     "Manufacturer": [
-      "BlackMarket",
-      "CandorNews",
       "ElGen",
       "Kaizen",
       "KensingtonIndigo",
-      "StarchKola"
+      "StarchKola",
+      "CandorNews",
+      "BlackMarket"
     ],
     "Effect": [
-      "accidentCover",
-      "agePerception",
-      "allowApartmentPurchases",
-      "allowedAtCrimeScenes",
-      "allowedInEchelons",
-      "apartmentStatusReset",
-      "awakenAtHome",
-      "bathroomPhotos",
-      "blockIncoming",
-      "dialogChanceModifier",
-      "disableLoitering",
-      "doorBargeModifier",
-      "fallDamageModifier",
-      "fastTravelFromApartment",
-      "fastTravelToApartment",
-      "fastTravelUsingSignage",
-      "fistsThreatModifier",
-      "focusFromDamage",
-      "footSizePerception",
-      "guestPassIssueModifier",
-      "heightPerception",
-      "holdingBlocksBullets",
-      "illegalOpsPhotos",
-      "incomingDamageModifier",
-      "increaseHealth",
-      "increaseInventory",
-      "increaseRegeneration",
-      "installMalware",
-      "kitchenPhotos",
-      "KOTimeModifier",
-      "legalInsurance",
-      "lockpickingEfficiencyModifier",
-      "lockpickingSpeedModifier",
-      "malwareOwnerBonus",
-      "maxSpeedModifier",
-      "moneyForAddresses",
-      "moneyForDucts",
-      "moneyForLocations",
-      "moneyForPasscodes",
-      "noBleeding",
-      "noBrokenBones",
-      "noCold",
       "none",
-      "noSmelly",
-      "noTired",
-      "passiveIncome",
-      "payPhoneCostModifier",
-      "playerHeightModifier",
-      "priceModifier",
-      "punchPowerModifier",
-      "reachModifier",
+      "streetCleaningMoney",
       "readingMoney",
       "readingSeriesBonus",
-      "reduceMedicalCosts",
-      "removeSideEffect",
-      "salaryPerception",
-      "securityBreakerModifier",
-      "securityGraceTimeModifier",
-      "sideJobPayModifier",
-      "singlePerception",
-      "spookedMultiplier",
-      "starchAddiction",
-      "starchAmbassador",
-      "starchGive",
       "starchLoan",
-      "streetCleaningMoney",
-      "throwPowerModifier",
-      "trespassGraceModifier",
-      "triggerIllegalOnPick",
-      "wealthPerception"
-    ],
-    "UpgradeEffect": [
+      "starchAddiction",
+      "reduceMedicalCosts",
+      "legalInsurance",
       "accidentCover",
-      "agePerception",
       "awakenAtHome",
-      "bathroomPhotos",
-      "blockIncoming",
-      "bothConfigurations",
-      "dialogChanceModifier",
-      "doorBargeModifier",
-      "fallDamageModifier",
-      "fistsThreatModifier",
-      "focusFromDamage",
-      "footSizePerception",
-      "heightPerception",
-      "holdingBlocksBullets",
-      "illegalOpsPhotos",
-      "incomingDamageModifier",
       "increaseHealth",
       "increaseInventory",
       "increaseRegeneration",
-      "installMalware",
-      "kitchenPhotos",
-      "KOTimeModifier",
-      "legalInsurance",
-      "lockpickingEfficiencyModifier",
-      "lockpickingSpeedModifier",
-      "malwareOwnerBonus",
-      "maxSpeedModifier",
-      "modifyEffect",
-      "moneyForAddresses",
-      "moneyForDucts",
-      "moneyForLocations",
-      "moneyForPasscodes",
-      "noBleeding",
-      "noBrokenBones",
-      "noCold",
-      "none",
-      "noSmelly",
-      "noTired",
-      "passiveIncome",
-      "playerHeightModifier",
       "priceModifier",
-      "punchPowerModifier",
-      "reachModifier",
-      "readingSeriesBonus",
-      "reduceMedicalCosts",
-      "reduceUninstallCost",
-      "removeSideEffect",
-      "salaryPerception",
-      "securityBreakerModifier",
-      "securityGraceTimeModifier",
+      "dialogChanceModifier",
+      "doorBargeModifier",
+      "fallDamageModifier",
       "sideJobPayModifier",
+      "punchPowerModifier",
+      "throwPowerModifier",
+      "blockIncoming",
+      "focusFromDamage",
+      "noBrokenBones",
+      "reachModifier",
+      "holdingBlocksBullets",
+      "fistsThreatModifier",
+      "noBleeding",
+      "incomingDamageModifier",
+      "passiveIncome",
+      "installMalware",
+      "malwareOwnerBonus",
+      "footSizePerception",
+      "heightPerception",
+      "wealthPerception",
+      "salaryPerception",
       "singlePerception",
+      "agePerception",
       "starchAmbassador",
       "starchGive",
-      "throwPowerModifier",
+      "lockpickingSpeedModifier",
+      "lockpickingEfficiencyModifier",
       "triggerIllegalOnPick",
-      "wealthPerception"
+      "KOTimeModifier",
+      "securityBreakerModifier",
+      "securityGraceTimeModifier",
+      "noSmelly",
+      "noCold",
+      "noTired",
+      "kitchenPhotos",
+      "bathroomPhotos",
+      "illegalOpsPhotos",
+      "playerHeightModifier",
+      "removeSideEffect",
+      "moneyForLocations",
+      "moneyForDucts",
+      "moneyForAddresses",
+      "moneyForPasscodes",
+      "maxSpeedModifier",
+      "payPhoneCostModifier",
+      "allowApartmentPurchases",
+      "apartmentStatusReset",
+      "allowedAtCrimeScenes",
+      "spookedMultiplier",
+      "trespassGraceModifier",
+      "guestPassIssueModifier",
+      "fastTravelToApartment",
+      "fastTravelFromApartment",
+      "fastTravelUsingSignage",
+      "allowedInEchelons",
+      "disableLoitering"
+    ],
+    "UpgradeEffect": [
+      "none",
+      "modifyEffect",
+      "bothConfigurations",
+      "readingSeriesBonus",
+      "reduceUninstallCost",
+      "reduceMedicalCosts",
+      "accidentCover",
+      "legalInsurance",
+      "awakenAtHome",
+      "increaseHealth",
+      "increaseInventory",
+      "increaseRegeneration",
+      "priceModifier",
+      "dialogChanceModifier",
+      "doorBargeModifier",
+      "fallDamageModifier",
+      "sideJobPayModifier",
+      "punchPowerModifier",
+      "throwPowerModifier",
+      "blockIncoming",
+      "focusFromDamage",
+      "noBrokenBones",
+      "reachModifier",
+      "holdingBlocksBullets",
+      "fistsThreatModifier",
+      "noBleeding",
+      "incomingDamageModifier",
+      "passiveIncome",
+      "installMalware",
+      "malwareOwnerBonus",
+      "footSizePerception",
+      "heightPerception",
+      "wealthPerception",
+      "removeSideEffect",
+      "salaryPerception",
+      "singlePerception",
+      "agePerception",
+      "starchAmbassador",
+      "starchGive",
+      "lockpickingSpeedModifier",
+      "lockpickingEfficiencyModifier",
+      "triggerIllegalOnPick",
+      "KOTimeModifier",
+      "securityBreakerModifier",
+      "securityGraceTimeModifier",
+      "noSmelly",
+      "noCold",
+      "noTired",
+      "kitchenPhotos",
+      "bathroomPhotos",
+      "illegalOpsPhotos",
+      "playerHeightModifier",
+      "moneyForLocations",
+      "moneyForDucts",
+      "moneyForAddresses",
+      "moneyForPasscodes",
+      "maxSpeedModifier"
     ],
     "contentType": [
       "callLogsIncoming",
@@ -12080,29 +12082,29 @@
       "Unrestricted"
     ],
     "TabContentType": [
+      "generated",
+      "message",
+      "facts",
+      "history",
+      "help",
+      "photoSelect",
+      "shop",
+      "objectives",
       "callLogsIncoming",
       "callLogsOutgoing",
-      "caseOptions",
-      "ceiling",
-      "colourPicker",
-      "decor",
-      "facts",
-      "floors",
-      "furnishings",
-      "generated",
-      "help",
-      "history",
-      "items",
-      "itemSelect",
-      "materialKey",
-      "message",
-      "objectives",
       "passcodes",
       "phoneNumbers",
-      "photoSelect",
       "resolve",
       "results",
-      "shop"
+      "decor",
+      "furnishings",
+      "colourPicker",
+      "floors",
+      "ceiling",
+      "materialKey",
+      "caseOptions",
+      "items",
+      "itemSelect"
     ],
     "size": [
       "large",
@@ -12111,9 +12113,9 @@
       "veryLarge"
     ],
     "Size": [
-      "large",
-      "medium",
       "small",
+      "medium",
+      "large",
       "veryLarge"
     ],
     "profile": [
@@ -12137,44 +12139,44 @@
       "residential"
     ],
     "Icon": [
+      "lookingGlass",
+      "lightBulb",
+      "key",
       "agent",
-      "books",
-      "building",
-      "camera",
       "citizen",
-      "cross",
+      "pin",
+      "footprint",
       "document",
       "door",
-      "empty",
-      "eye",
-      "fist",
-      "food",
-      "footprint",
-      "hand",
-      "handcuffs",
-      "key",
-      "lightBulb",
       "location",
-      "lockpick",
-      "lookingGlass",
-      "message",
-      "money",
-      "notebook",
-      "passedOut",
-      "picture",
-      "pin",
-      "printScanner",
       "questionMark",
-      "resolve",
-      "robbery",
-      "run",
-      "skull",
+      "eye",
+      "books",
       "star",
+      "building",
+      "hand",
+      "run",
+      "money",
+      "message",
+      "lockpick",
+      "notebook",
+      "empty",
+      "skull",
+      "passedOut",
       "telephone",
-      "tick",
+      "printScanner",
+      "resolve",
       "time",
+      "tick",
+      "cross",
+      "camera",
+      "vandalism",
+      "robbery",
+      "picture",
+      "fist",
+      "handcuffs",
       "trash",
-      "vandalism"
+      "food"
     ],
     "iconType": [
       "agent",
@@ -12217,13 +12219,13 @@
       "vandalism"
     ],
     "EvidenceColours": [
-      "black",
+      "red",
       "blue",
+      "yellow",
       "green",
       "purple",
-      "red",
       "white",
-      "yellow"
+      "black"
     ],
     "colour": [
       "black",
@@ -12279,9 +12281,9 @@
     "Casing": [
       "asIs",
       "firstLetterCaptial",
-      "lowerCase",
       "pascalCase",
-      "upperCase"
+      "upperCase",
+      "lowerCase"
     ],
     "LinkSetting": [
       "automatic",
@@ -12619,9 +12621,9 @@
       "Touch"
     ],
     "ButtonIdentifier": [
+      "Done",
       "Cancel",
-      "Default",
-      "Done"
+      "Default"
     ],
     "_actionListMode": [
       "Action",
@@ -12632,25 +12634,25 @@
       "ActionCategory"
     ],
     "ActionListMode": [
-      "Action",
-      "ActionCategory"
+      "ActionCategory",
+      "Action"
     ],
     "LayoutElementSizeType": [
       "MinSize",
       "PreferredSize"
     ],
     "WindowType": [
-      "CalibrateStep1",
-      "CalibrateStep2",
-      "Calibration",
+      "None",
       "ChooseJoystick",
-      "ElementAssignment",
-      "ElementAssignmentConflict",
-      "ElementAssignmentPolling",
-      "ElementAssignmentPrePolling",
-      "ElementAssignmentResult",
       "JoystickAssignmentConflict",
-      "None"
+      "ElementAssignment",
+      "ElementAssignmentPrePolling",
+      "ElementAssignmentPolling",
+      "ElementAssignmentResult",
+      "ElementAssignmentConflict",
+      "Calibration",
+      "CalibrateStep1",
+      "CalibrateStep2"
     ],
     "PropertyType": [
       "JoystickAxisSensitivity",
@@ -12703,42 +12705,42 @@
       "Normal"
     ],
     "FontStyleOverride": [
-      "Bold",
-      "BoldAndItalic",
       "Default",
+      "Normal",
+      "Bold",
       "Italic",
-      "Normal"
+      "BoldAndItalic"
     ],
     "DialogType": [
-      "AssignElement",
-      "DeleteAssignmentConfirmation",
-      "ElementConflict",
+      "None",
       "JoystickConflict",
+      "ElementConflict",
       "KeyConflict",
-      "None"
+      "DeleteAssignmentConfirmation",
+      "AssignElement"
     ],
     "State": [
-      "Canceled",
+      "Waiting",
       "Confirmed",
-      "Waiting"
+      "Canceled"
     ],
     "QueueActionType": [
-      "Calibrate",
+      "None",
+      "JoystickAssignment",
       "ElementAssignment",
       "FallbackJoystickIdentification",
-      "JoystickAssignment",
-      "None"
+      "Calibrate"
     ],
     "ElementAssignmentChangeType": [
       "Add",
-      "ConflictCheck",
-      "ReassignOrRemove",
+      "Replace",
       "Remove",
-      "Replace"
+      "ReassignOrRemove",
+      "ConflictCheck"
     ],
     "UserResponse": [
-      "Cancel",
       "Confirm",
+      "Cancel",
       "Custom1",
       "Custom2"
     ],
@@ -12748,20 +12750,20 @@
       "Positive"
     ],
     "DiffuseColorSpace": [
-      "LINEAR",
-      "NON_LINEAR"
+      "NON_LINEAR",
+      "LINEAR"
     ],
     "CompressionType": [
-      "ASTC_RGB",
+      "UNCOMPRESSED",
       "DXT1",
       "ETC2_RGB",
       "PVRTC_RGB4",
-      "UNCOMPRESSED"
+      "ASTC_RGB"
     ],
     "CompressionQuality": [
-      "HIGH",
       "LOW",
-      "MEDIUM"
+      "MEDIUM",
+      "HIGH"
     ],
     "filteringMode": [
       "Bilinear",
@@ -12781,44 +12783,44 @@
       "MEDIUM"
     ],
     "HTTPMethods": [
-      "GET",
-      "POST"
+      "POST",
+      "GET"
     ],
     "ImageFormat": [
-      "EXR",
+      "PNG",
       "JPG",
-      "PNG"
+      "EXR"
     ],
     "MtlBlendMode": [
+      "OPAQUE",
       "CUTOUT",
       "FADE",
-      "OPAQUE",
       "TRANSPARENT"
     ],
     "ImportPhase": [
-      "AssetBuild",
-      "Done",
       "Idle",
+      "TextureImport",
       "ObjLoad",
-      "TextureImport"
+      "AssetBuild",
+      "Done"
     ],
     "RootPathEnum": [
-      "CurrentPath",
+      "Url",
       "DataPath",
       "DataPathParent",
       "PersistentDataPath",
-      "Url"
+      "CurrentPath"
     ],
     "MeshCombineTarget": [
       "SkinnedAndStatic",
-      "SkinnedOnly",
-      "StaticOnly"
+      "StaticOnly",
+      "SkinnedOnly"
     ],
     "LightningBoltAnimationMode": [
-      "Loop",
       "None",
-      "PingPong",
-      "Random"
+      "Random",
+      "Loop",
+      "PingPong"
     ]
   }
 }
