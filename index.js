@@ -310,7 +310,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 
         if (!window.savingEnabled && !force) return;
 
-        writeFile(await tryGetFile(window.selectedMod.baseFolder, (path + '.sodso.json').split('/'), true), getSaveSafeJSON(), false);
+        writeFile(await tryGetFile(window.selectedMod.baseFolder, (path).split('/'), true), getSaveSafeJSON(), false);
     }
 
     function getSaveSafeJSON() {
