@@ -26,10 +26,10 @@
 <body>
     <div class="editor">
         <div class="controls">
+            <button onclick="loadFromGUI()">Load</button>
             <select id="select-loaded-mod" onchange="updateSelectedMod()">
             </select>
             <button id="new-mod-button" onclick="newMod()">New MurderMO</button>
-            <button onclick="loadFromGUI()">Load</button>
             <button id="saving-enabled-button" onclick="setSaving(!window.savingEnabled)">Disable Auto-Saving</button>
             <!--<button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>
             <button onclick="showFavs()">Show Favourites</button>-->
@@ -47,7 +47,7 @@
             <div class="close-button" onclick="document.getElementById('help-modal').classList.toggle('hidden')">
                 ❌
             </div>
-            <h2>Help</h2>
+            <h1>Help</h1>
             <div>
                 This is a basic tool to help view and create new ScriptableObjects for Shadows of Doubt, with a specific focus on creating new murder cases.
             </div>
@@ -58,8 +58,8 @@
             </ul>
             <br />
             <h2>How to use:</h2>
-            <p>Instructions for use can now be found on the <a
-                    href="https://shadowsofdoubtmodding.miraheze.org/wiki/DDS_System">wiki</a>.</p>
+            <p>Instructions for use can be found on the <a
+                    href="https://github.com/piepieonline/ShadowsOfDoubt-CaseEditor/wiki">wiki</a>.</p>
             <br />
         </div>
     </div>
