@@ -17,13 +17,38 @@ async function loadFile(path, readOnly, type) {
 }
 
 async function loadFileFromFolder(path, folderHandle, readOnly, type) {
-    var treeEle = addTreeElement(path, document.getElementById('trees'), { copySource, save });
+    let loadedFile = await tryGetFile(folderHandle, path.split('/'));
+
+    if(!loadedFile) {
+        /*
+        if(confirm(`${path} (${type}) doesn't exist - do you wish to create it?`))
+        {
+            let newFileName = path.split('/').at(-1).replace('.sodso.json', '');
+            await createFileIfNotExisting(path, type, folderHandle, (content) => {
+                content.name = newFileName;
+                content.presetName = newFileName;
+                content.type = type;
+                content.copyFrom = null;
+                return content;
+            });
+        }
+        else
+        {
+            return;
+        }
+        */
+
+        alert(`${path} doesn't exist or is a vanilla asset - create it in the manifest first`);
+        return;
+    }
+    
+    let treeEle = addTreeElement(path, document.getElementById('trees'), { copySource, save });
 
     if(!treeEle) return;
 
-    var data = JSON.parse(await (await (await tryGetFile(folderHandle, path.split('/')))?.getFile())?.text());
+    var data = JSON.parse(await (await (loadedFile)?.getFile())?.text());
 
-    var fileType = data.fileType || type || "Manifest";
+    let fileType = data.fileType || type || "Manifest";
 
     // Show actual text
     // createDummyKeys(data);

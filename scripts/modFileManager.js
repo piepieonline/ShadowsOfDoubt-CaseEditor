@@ -69,10 +69,12 @@ function cloneTemplate(template) {
     return JSON.parse(JSON.stringify(templateToClone));
 }
 
-async function createFileIfNotExisting(fileName, type, handle, newFileContentCallback) {
+async function createFileIfNotExisting(filename, type, handle, newFileContentCallback) {
     let contentType;
 
-    filename = [`${fileName}.sodso.json`];
+    if(!Array.isArray(filename)) {
+        filename = [`${filename}.sodso.json`];
+    }
     contentType = type;
 
     let file = await tryGetFile(handle, type)
