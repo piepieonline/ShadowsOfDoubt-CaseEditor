@@ -89,11 +89,27 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     }
 
     async function runTreeSetup() {
-        // Set paths
+        // Set paths & titles
         tree.findAndHandle(item => {
             return true;
         }, item => {
             calculatepathToItemGeneric(item);
+
+            // Add tooltip text
+            var splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
+
+            var labelEle = item.el.querySelector('.jsontree_label');
+            try
+            {
+                labelEle.title = window.soCustomDescriptions[splitPath.at(-2)][splitPath.at(-1)] || "";
+            } catch {}
+            
+            try
+            {
+                let officialDescription = window.typeLayout[splitPath.at(-2)][item.label].Item3 || "";
+                if(labelEle.title != "" && officialDescription != "") labelEle.title += "\n\n";
+                if(officialDescription != "") labelEle.title += 'Official description: ' + officialDescription;
+            } catch {}
         });
 
         // Auto-expand the useful keys
@@ -130,7 +146,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
             return !item.isComplex;
         }, item => {
             var ele = item.el.querySelector('.jsontree_value');
-            var labelEle = item.el.querySelector('.jsontree_label');
+            
             var splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
 
             var mappedType = mapSplitPath(splitPath);
@@ -138,11 +154,6 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
             if(splitPath[splitPath.length - 1] === "copyFrom") {
                 mappedType = fileType;
             }
-
-            try
-            {
-                labelEle.title = window.typeLayout[splitPath[splitPath.length - 2]][item.label].Item3;
-            } catch {}
 
             // TODO: Convert this into the if branch below
             if (mappedType && window.enums[mappedType]?.length > 0) {
@@ -190,7 +201,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
             } else if (mappedType === "FileType") {
                 // Do nothing, not editable
             } else {
-                createInputElement(item.el.querySelector('.jsontree_value'), readOnly, async (newValue) => {
+                createInputElement(item.el.querySelector('.jsontree_value'), readOnly || splitPath.at(-1) === 'fileType', async (newValue) => {
                     if (!window.selectedMod) {
                         alert('Please select a mod to save in first');
                         throw 'Please select a mod to save in first';

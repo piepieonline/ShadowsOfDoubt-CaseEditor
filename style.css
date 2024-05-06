@@ -30,6 +30,10 @@
     margin-top: 25px;
 }
 
+span.jsontree_label[title]:not([title=""]) {
+    text-decoration: underline;
+}
+
 #saving-enabled-button {
     background-color: lightgreen;
 }

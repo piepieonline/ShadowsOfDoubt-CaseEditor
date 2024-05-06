@@ -2,6 +2,8 @@ import templates from './ref/templates.json' with { type: 'json' };
 import soChildTypes from './ref/soChildTypes.json' with { type: 'json' };
 import soMap from './ref/soMap.json' with { type: 'json' };
 
+import soCustomDescriptions from './soCustomDescriptions.json' with { type: 'json' };
+
 window.templates = {
     MurderManifest: {
         enabled: true,
@@ -41,5 +43,7 @@ window.basicTypes = {
     Vector2: { x: 0, y: 0 },
     Vector3: { x: 0, y: 0, z: 0 }
 };
+
+window.soCustomDescriptions = soCustomDescriptions;
 
 window.updateAssetModel(true);

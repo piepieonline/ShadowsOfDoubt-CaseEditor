@@ -1,0 +1,19 @@
+{
+    "MurderMO": {
+        "notes": "",
+        "disabled": "If true, this `MurderMO` won't be added to the selection pool. (Can be overriden by the loader)",
+        "fileType": "Used by the loader to setup this object in game. Don't touch this.",
+        "compatibleWith": "Which `MurderPreset`s this can be used with. Should generally only contain a single value, of `SerialKiller`",
+        "baseDifficulty": "",
+        "murdererTraitModifiers": "Contains a list of `MurdererModifierRule` rules, influencing which citizens are chosen to be this kind of murderer by `CharacterTrait`",
+        "victimTraitModifiers": "Contains a list of `MurdererModifierRule` rules, influencing which citizens chosen to be the victim of this murderer by `CharacterTrait`",
+        "murdererJobModifiers": "Contains a list of `JobModifier` rules, influencing which citizens are chosen to be this kind of murderer by `JobPreset`",
+        "victimJobModifiers": "Contains a list of `JobModifier` rules, influencing which citizens chosen to be the victim of this murderer by `JobPreset`",
+        "murdererCompanyModifiers": "Contains a list of `CompanyModifier` rules, influencing which citizens are chosen to be this kind of murderer by `CompanyPreset`",
+        "victimCompanyModifiers": "Contains a list of `CompanyModifier` rules, influencing which citizens chosen to be the victim of this murderer by `CompanyPreset`",
+        "useHexaco": "Uses the Hexaco (Personality) system to influence the chosen murderer",
+        "MOleads": "Objects or Vmails that spawn with the murderer to give clues as to why the murderer did it",
+        "graffiti": "Wall or floor decals spawned in after the murder occurs, at the crime scene",
+        "callingCardPool": "Objects spawned in after the murder occurs, normally at the crimescene"
+    }
+}
