@@ -17,6 +17,8 @@
         "callingCardPool": "Objects spawned in after the murder occurs, normally at the crimescene"
     },
     "MurderLeadItem": {
+        "compatibleWithMotives": "Leave this blank, and the mod will set it up for you",
+        "compatibleWithAllMotives": "Always have this set to true",
         "chance": "Chance that this item will spawn in (0 for never, 0.5 for half the time, 1 for all the time)"
     }
 }
