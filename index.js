@@ -98,6 +98,13 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
             // Add tooltip text
             var splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
 
+            try
+            {
+                if(splitPath.length > 2) {
+                    splitPath[splitPath.length - 2] = window.typeLayout[splitPath.at(-3)][splitPath.at(-2)].Item1;
+                }
+            } catch {} // Nothing found
+
             var labelEle = item.el.querySelector('.jsontree_label');
             try
             {

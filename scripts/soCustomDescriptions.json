@@ -15,5 +15,8 @@
         "MOleads": "Objects or Vmails that spawn with the murderer to give clues as to why the murderer did it",
         "graffiti": "Wall or floor decals spawned in after the murder occurs, at the crime scene",
         "callingCardPool": "Objects spawned in after the murder occurs, normally at the crimescene"
+    },
+    "MurderLeadItem": {
+        "chance": "Chance that this item will spawn in (0 for never, 0.5 for half the time, 1 for all the time)"
     }
 }
