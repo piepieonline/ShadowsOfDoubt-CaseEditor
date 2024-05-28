@@ -162,12 +162,16 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
                 mappedType = fileType;
             }
 
+            let currentValue = ele.innerText;
+            if(currentValue === "false") currentValue = 0;
+            if(currentValue === "true") currentValue = 1;
+
             // TODO: Convert this into the if branch below
             if (mappedType && window.enums[mappedType]?.length > 0) {
                 createEnumSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.enums[mappedType],
-                    ele.innerText,
+                    currentValue,
                     false,
                     readOnly,
                     async (selectedIndex) => {
@@ -184,7 +188,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
                 createSOSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.typeMap[mappedType],
-                    ele.innerText,
+                    currentValue,
                     readOnly,
                     async (selectedIndex, customValue) => {
                         let replacementValue = item.el.querySelector('.jsontree_value');
