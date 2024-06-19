@@ -85,6 +85,8 @@ function createSOSelectElement(domNode, options, selectedSO, readOnly, onUpdateC
 
     createdNodes.selectedCustomOption.text = `Custom: ${selectedSO.replace(/"/g, "").replace("REF:", "").replace(/\w+\|/, '').trim()}`;
 
+    $(domNode).find('select').select2(); //Search in Select
+
     return createdNodes;
 }
 
