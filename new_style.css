@@ -1,3 +1,9 @@
+/*01 Main Section*/
+main>article>section:first-of-type {
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
+}
+
 .hidden-default-value-node {
     display: none;
 }
@@ -10,6 +16,14 @@
 
 #trees .link-element {
     cursor: pointer;
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+}
+
+#trees .jsontree_label[title*=" "] {
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
 }
 
 #trees li {
