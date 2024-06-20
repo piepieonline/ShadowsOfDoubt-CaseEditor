@@ -152,7 +152,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 
             // TODO: Convert this into the if branch below
             if (mappedType && window.enums[mappedType]?.length > 0) {
-                console.log(item.el.querySelector('.jsontree_value'))
+                // console.log(item.el.querySelector('.jsontree_value'))
                 createEnumSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.enums[mappedType],
