@@ -1,9 +1,11 @@
----
----
 <!DOCTYPE html>
-<html>
-
+<html lang="eng">
 <head>
+    <title>SoD Case Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/idb-keyval@6/dist/umd.js"></script>
 
     <script src="./libs/jsonTree/jsonTree.js"></script>
@@ -17,82 +19,142 @@
     <script src="./scripts/fileManager.js"></script>
     <script src="./scripts/modFileManager.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">-->
     <link href="./libs/jsonTree/jsonTree.css" rel="stylesheet" />
-    <link href="./libs/reset.css" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet" />
+<!--    <link href="./libs/reset.css" rel="stylesheet" />-->
+
+<!--    <link href="./style.css" rel="stylesheet" />-->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css"
+    />
+    <link href="./new_style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="editor">
-        <div class="controls">
-            <button onclick="loadFromGUI()">Load</button>
-            <select id="select-loaded-mod" onchange="updateSelectedMod()">
-            </select>
-            <button id="new-mod-button" onclick="newMod()">New MurderMO</button>
-            <button id="saving-enabled-button" onclick="setSaving(!window.savingEnabled)">Disable Auto-Saving</button>
-            <!--<button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>
-            <button onclick="showFavs()">Show Favourites</button>-->
-            <button onclick="document.getElementById('help-modal').classList.toggle('hidden')">Help</button>
-            <button onclick="toggleDefaultValues()">Show/Hide default values</button>
-            <button onclick="document.getElementById('asset-explorer-model').classList.toggle('hidden')">Asset Explorer</button>
-        </div>
-        <div id="trees"></div>
-    </div>
-    <div class="page-version-info">
-        {{ site.github.build_revision }}
-    </div>
-    <div id="help-modal" class="modal hidden">
-        <div class="modal-content">
-            <div class="close-button" onclick="document.getElementById('help-modal').classList.toggle('hidden')">
-                ❌
-            </div>
-            <h1>Help</h1>
-            <div>
-                This is a basic tool to help view and create new ScriptableObjects for Shadows of Doubt, with a specific focus on creating new murder cases.
-            </div>
-            <br />
+    <main class="container">
+        <nav>
             <ul>
-                <li><b>murdermanifest:</b> Tells the mod which files need to be loaded and which order</li>
-                <li><b>MurderMO:</b> Contains the meat of a Murder, at minimum every new murder case type will have one</li>
+                <li>
+                    <hgroup>
+                        <h1><strong>SoD Case Editor</strong></h1>
+                        <ul>
+                            <li><a href="#" onclick="event.preventDefault();document.querySelector('#help-modal').toggleAttribute('open')">Help</a></li>
+                            <li><a href="#" onclick="event.preventDefault();document.querySelector('#asset-explorer-modal').toggleAttribute('open')">Asset Explorer</a></li>
+                        </ul>
+                    </hgroup>
+                </li>
             </ul>
-            <br />
-            <h2>How to use:</h2>
-            <p>Instructions for use can be found on the <a
-                    href="https://github.com/piepieonline/ShadowsOfDoubt-CaseEditor/wiki">wiki</a>.</p>
-            <br />
-        </div>
-    </div>
-    <div id="fav-modal" class="modal hidden">
-        <div class="modal-content">
-            <div class="close-button" onclick="document.getElementById('fav-modal').classList.toggle('hidden')">
-                ❌
-            </div>
-            <h2>Favourites</h2>
-            <ul id="fav-list">
-
+            <ul>
+                <li>
+                    <div role="group">
+                        <select id="select-loaded-mod" onchange="updateSelectedMod()"></select>
+                        <button id="new-mod-button" onclick="newMod()">New MurderMO</button>
+                    </div>
+                </li>
+                <li>
+                    <fieldset>
+                        <label>
+                            <input type="checkbox" role="switch" id="autosaving_switch" onclick="setSaving(!window.savingEnabled)"/>
+                            Autosaving
+                        </label>
+                        <label>
+                            <input type="checkbox" role="switch" onclick="toggleDefaultValues()"/>
+                            Hide default values
+                        </label>
+                    </fieldset>
+                </li>
             </ul>
-        </div>
-    </div>
-    <div id="asset-explorer-model" class="modal hidden">
-        <div class="modal-content">
-            <div class="close-button" onclick="document.getElementById('asset-explorer-model').classList.toggle('hidden')">
-                ❌
-            </div>
-            <h2>Shadows Of Doubt: ScriptableObjects</h2>
-            <select id="asset-model-type-list" onchange="updateAssetModel()">
+        </nav>
 
-            </select>
-            <ul id="asset-model-asset-list">
+        <article data-theme="light">
+            <div id="trees" class="grid"></div>
 
-            </ul>
-            <button onclick="loadExportedSOs()">Load exported ScriptableObjects</button>
-        </div>
-    </div>
+
+            <footer>
+                <center><small>
+                    <div class="page-version-info">
+                        {{ site.github.build_revision }}
+                    </div>
+                </small></center>
+            </footer>
+        </article>
+    </main>
+<!--    <div class="editor">-->
+
+<!--        <div class="controls">-->
+<!--            <select id="select-loaded-mod" onchange="updateSelectedMod()">-->
+<!--            </select>-->
+<!--            <button id="new-mod-button" onclick="newMod()">New MurderMO</button>-->
+<!--            <button id="saving-enabled-button" onclick="setSaving(!window.savingEnabled)">Disable Auto-Saving</button>-->
+<!--            &lt;!&ndash;<button id="toggle-favs-button" onclick="toggleFav()">Favourite</button>-->
+<!--            <button onclick="showFavs()">Show Favourites</button>&ndash;&gt;-->
+<!--            <button onclick="document.getElementById('help-modal').classList.toggle('hidden')">Help</button>-->
+<!--            <button onclick="toggleDefaultValues()">Show/Hide default values</button>-->
+<!--            <button onclick="document.getElementById('asset-explorer-model').classList.toggle('hidden')">Asset Explorer</button>-->
+<!--        </div>-->
+
+<!--    </div>-->
+    <dialog open id="load_popup">
+        <article>
+            <header>
+                <h5>
+                    <strong>Before we start</strong>
+                </h5>
+            </header>
+            <h6>Creating a new case from scratch</h6>
+            <small>
+                <ol>
+                    <li>Create your new mod folder under your BepInEx install directory.</li>
+                    <li>Select the created folder using the button below.</li>
+                    <li>Click 'New MurderMO', enter a name, and let the files be created.</li>
+                    <li>Once the murdermanifest file has opened, open the linked file (The MurderMO) with the same name as you have just created.</li>
+                </ol>
+            </small>
+            <button onclick="loadFromGUI()" style="width: 100%">Select folder for work</button>
+        </article>
+    </dialog>
+    <dialog id="help-modal">
+        <article>
+            <header>
+                <button aria-label="Close" rel="prev" onclick="document.querySelector('#help-modal').toggleAttribute('open')"></button>
+                <h5>
+                    <strong>Help</strong>
+                </h5>
+            </header>
+            <small>
+                <p>
+                    This is a basic tool to help view and create new ScriptableObjects for Shadows of Doubt, with a specific focus on creating new murder cases.
+                </p>
+                <ul>
+                    <li><b>murdermanifest:</b> Tells the mod which files need to be loaded and which order</li>
+                    <li><b>MurderMO:</b> Contains the meat of a Murder, at minimum every new murder case type will have one</li>
+                </ul>
+                <h6>How to use:</h6>
+                <p>Instructions for use can be found on the <a href="https://github.com/piepieonline/ShadowsOfDoubt-CaseEditor/wiki">wiki</a>.</p>
+            </small>
+        </article>
+    </dialog>
+    <dialog id="asset-explorer-modal">
+        <article>
+            <header>
+                <button aria-label="Close" rel="prev" onclick="document.querySelector('#asset-explorer-modal').toggleAttribute('open')"></button>
+                <h5>
+                    <strong>Shadows Of Doubt: ScriptableObjects</strong>
+                </h5>
+            </header>
+            <select id="asset-model-type-list" onchange="updateAssetModel()"></select>
+            <small style="overflow: auto; height: 50vh">
+                <table>
+                    <tbody id="asset-model-asset-list"></tbody>
+                </table>
+            </small>
+            <button onclick="loadExportedSOs()" style="width: 100%">Load exported ScriptableObjects</button>
+        </article>
+    </dialog>
+
+
     <script>
-        // if (localStorage.getItem('favs') == null) localStorage.setItem('favs', '[]');
-        //updateFavButton();
-
         async function loadFromGUI() {
             if (window.dirHandleModDir == null) {
                 try {
@@ -108,7 +170,7 @@
             if(window.selectedMod != null) {
                 await initAndLoad('murdermanifest');
             }
-
+            document.querySelector('#load_popup').removeAttribute("open")
             // updateFavButton();
         }
 
@@ -144,16 +206,14 @@
             window.savingEnabled = saving;
             localStorage.setItem('SOD_MurderCaseBuilder_Autosave', saving)
 
-            let ele = document.getElementById('saving-enabled-button');
+            let ele = document.getElementById('autosaving_switch');
             if(saving)
             {
-                ele.innerText = 'Auto-Saving Enabled';
-                ele.classList.remove('saving-disabled');
+                ele.toggleAttribute('checked');
             }
             else
             {
-                ele.innerText = 'Auto-Saving Disabled';
-                ele.classList.add('saving-disabled');
+				ele.removeAttribute('checked');
             }
         }
         setSaving(JSON.parse(localStorage.getItem('SOD_MurderCaseBuilder_Autosave')) ?? true);
@@ -181,7 +241,8 @@
             assetList.innerHTML = '';
 
             window.typeMap[typeList.value]?.sort().forEach(SO => {
-                var option = document.createElement("ul");
+                let tr = document.createElement('tr');
+				var option = document.createElement("td");
                 option.innerText = SO;
 
                 if(window.dirHandleExportedSOPath) {
@@ -190,8 +251,8 @@
                         loadFileFromFolder(typeList.value + '/' + SO + ".json", window.dirHandleExportedSOPath, true, typeList.value);
                     });
                 }
-
-                assetList.appendChild(option);
+                tr.appendChild(option)
+                assetList.appendChild(tr);
             });
         }
 
@@ -203,45 +264,6 @@
             await idbKeyval.set('ExportedSOPath', window.dirHandleExportedSOPath);
             updateAssetModel(false);
         }
-
-        /*
-        function showFavs() {
-            document.getElementById('fav-list').innerHTML = JSON.parse(localStorage.getItem('favs')).map(fav =>
-                `<li>${fav.name} - <span class="link-element" onclick="document.getElementById('path-to-read').value = '${fav.guid}'; loadFromGUI(); showFavs();">${fav.guid}</span></li>`
-            ).join('');
-            document.getElementById('fav-modal').classList.toggle('hidden')
-        }
-
-        function toggleFav() {
-            let guid = document.getElementById('path-to-read').value;
-            let favs = JSON.parse(localStorage.getItem('favs'));
-
-            let currentFav = favs.find(ele => ele.guid === guid);
-
-            if (currentFav) {
-                favs.splice(favs.indexOf(currentFav), 1);
-            } else {
-                let name = prompt('Enter name for this GUID');
-                if (name) {
-                    favs.push({
-                        mod: window.selectedMod,
-                        type: 'tree',
-                        guid,
-                        name
-                    });
-                }
-            }
-
-            localStorage.setItem('favs', JSON.stringify(favs));
-
-            updateFavButton();
-        }
-
-        function updateFavButton() {
-            let currentFav = JSON.parse(localStorage.getItem('favs')).find(ele => ele.guid === document.getElementById('path-to-read').value);
-            document.getElementById('toggle-favs-button').innerText = currentFav ? 'Unfavourite' : 'Favourite';
-        }
-        */
     </script>
 </body>
 

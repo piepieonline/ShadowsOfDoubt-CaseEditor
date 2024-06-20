@@ -20,24 +20,6 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     let loadedFile = await tryGetFile(folderHandle, path.split('/'));
 
     if(!loadedFile) {
-        /*
-        if(confirm(`${path} (${type}) doesn't exist - do you wish to create it?`))
-        {
-            let newFileName = path.split('/').at(-1).replace('.sodso.json', '');
-            await createFileIfNotExisting(path, type, folderHandle, (content) => {
-                content.name = newFileName;
-                content.presetName = newFileName;
-                content.type = type;
-                content.copyFrom = null;
-                return content;
-            });
-        }
-        else
-        {
-            return;
-        }
-        */
-
         alert(`${path} doesn't exist or is a vanilla asset - create it in the manifest first`);
         return;
     }
@@ -132,9 +114,11 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         tree.findAndHandle(item => {
             // return item.el.querySelector('.jsontree_value_string')?.innerText?.includes("REF:");
             var typeMatch = item.el.querySelector('.jsontree_value_string')?.innerText?.match(/REF:(\w+)/)
+            // console.log(typeMatch);
             return typeMatch && !window.typeMap[typeMatch[1]];
         }, async item => {
             var ele = item.el.querySelector('.jsontree_value_string');
+            // console.log(ele)
             const refPath = ele.innerText.replace(/"/g, "").replace("REF:", "").replace(/\w+\|/, '');
 
             if(!ele.classList.contains('link-element'))
@@ -168,6 +152,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 
             // TODO: Convert this into the if branch below
             if (mappedType && window.enums[mappedType]?.length > 0) {
+                // console.log(item.el.querySelector('.jsontree_value'))
                 createEnumSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.enums[mappedType],
@@ -355,8 +340,8 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
             throw 'Please select a mod to save in first';
         }
 
+        // console.log(getSaveSafeJSON());
         if (!window.savingEnabled && !force) return;
-
         writeFile(await tryGetFile(window.selectedMod.baseFolder, (path).split('/'), true), getSaveSafeJSON(), false);
     }
 
