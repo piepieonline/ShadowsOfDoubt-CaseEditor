@@ -1,0 +1,71 @@
+.hidden-default-value-node {
+    display: none;
+}
+
+#trees {
+    font-family:monospace;
+    font-size: 14px;
+    color: black;
+}
+
+#trees .link-element {
+    cursor: pointer;
+}
+
+#trees li {
+    list-style-type: none;
+}
+
+#trees .jsontree_label, #trees input, #trees select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.select2-dropdown input, #trees input, #trees select {
+    padding: 2px 10px;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+#trees > * {
+    padding: 10px;
+    background: #c52f2110;
+    border-radius: 5px;
+}
+
+#trees > .select2-container {
+    padding: 0;
+}
+
+.select2-dropdown {
+    font-family:monospace;
+    font-size: 14px;
+    color: black;
+}
+
+.select2 {
+    width: 90% !important;
+}
+
+#trees .select2-search__field {
+    width: 100%;
+}
+
+#trees .editor-bar {
+    margin-top: -65px;
+}
+
+#trees .editor-bar ul, #trees .editor-bar li {
+    display: block;
+    padding: 0 20px;
+}
+
+/*JSON tree's styles*/
+#trees .jsontree_tree {
+    margin-left: 0;
+}
+
+#trees .jsontree_child-nodes {
+    margin-left: 0;
+}
