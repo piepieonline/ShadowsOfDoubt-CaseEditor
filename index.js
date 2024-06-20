@@ -114,9 +114,11 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         tree.findAndHandle(item => {
             // return item.el.querySelector('.jsontree_value_string')?.innerText?.includes("REF:");
             var typeMatch = item.el.querySelector('.jsontree_value_string')?.innerText?.match(/REF:(\w+)/)
+            // console.log(typeMatch);
             return typeMatch && !window.typeMap[typeMatch[1]];
         }, async item => {
             var ele = item.el.querySelector('.jsontree_value_string');
+            // console.log(ele)
             const refPath = ele.innerText.replace(/"/g, "").replace("REF:", "").replace(/\w+\|/, '');
 
             if(!ele.classList.contains('link-element'))
@@ -150,6 +152,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 
             // TODO: Convert this into the if branch below
             if (mappedType && window.enums[mappedType]?.length > 0) {
+                console.log(item.el.querySelector('.jsontree_value'))
                 createEnumSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.enums[mappedType],
@@ -337,8 +340,8 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
             throw 'Please select a mod to save in first';
         }
 
+        // console.log(getSaveSafeJSON());
         if (!window.savingEnabled && !force) return;
-
         writeFile(await tryGetFile(window.selectedMod.baseFolder, (path).split('/'), true), getSaveSafeJSON(), false);
     }
 
