@@ -1,7 +1,59 @@
-/*01 Main Section*/
+/*1 MAIN*/
 main>article>section:first-of-type {
     display: grid;
     grid-template-columns:1fr 2fr 1fr;
+    grid-gap: 10px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+/*1.1 Manifest Panel*/
+
+/*2 JSON TREES*/
+.jsontree-container {
+    font-family:monospace;
+    font-size: 14px;
+    color: black;
+
+}
+.jsontree-container ul {
+    margin-bottom: -5px;
+    margin-top: 5px;
+}
+.jsontree-container .jsontree_tree {
+    padding: 0;
+}
+.jsontree-container .jsontree_child-nodes {
+    padding-left: 20px;
+    border-left: 1px dotted #c52f2180;
+}
+.jsontree-container .link-element {
+    cursor: pointer;
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+    color: #c52f21;
+}
+.jsontree-container .jsontree_label[title]:not([title=""]) {
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+}
+.jsontree-container .jsontree_label, .jsontree-container input, .jsontree-container select {
+    font-family: inherit;
+    font-size: inherit;
+}
+.select2-dropdown input, .jsontree-container input, .jsontree-container select {
+    padding: 2px 10px;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+/*X UTIL CLASSES*/
+.hidden {
+    display: none;
 }
 
 .hidden-default-value-node {
@@ -20,7 +72,7 @@ main>article>section:first-of-type {
     text-decoration-line: underline;
 }
 
-#trees .jsontree_label[title*=" "] {
+#trees .jsontree_label[title]:not([title=""]) {
     text-decoration-style: dotted;
     text-decoration-line: underline;
     text-decoration-thickness: 1px;

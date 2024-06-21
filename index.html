@@ -2,6 +2,7 @@
 <html lang="eng">
 <head>
     <title>SoD Case Editor</title>
+    <!-- Searching in select -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
@@ -18,12 +19,11 @@
     <script src="./scripts/jsonTreeAdditions.js"></script>
     <script src="./scripts/fileManager.js"></script>
     <script src="./scripts/modFileManager.js"></script>
+    <script src="./scripts/ui.js"></script>
 
-    <link href="./libs/jsonTree/jsonTree.css" rel="stylesheet" />
-    <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css"
-    />
+    <!-- Styles -->
+<!--    <link href="./libs/jsonTree/jsonTree.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css"/>
     <link href="./new_style.css" rel="stylesheet" />
 </head>
 
@@ -65,13 +65,21 @@
 
         <article data-theme="light">
             <section>
-                <div id="files_order"></div>
-                <div id="main_file_tree"></div>
-                <div id="preview_files"></div>
+                <article id="manifest_panel">
+                    <header>
+                        <label>
+                            <input name="terms" type="checkbox" role="switch" onclick="toggleManifestPanel()"/>
+                            Show full Manifest
+                        </label>
+                    </header>
+                    <!-- And here be panels for manifest and file list -->
+                </article>
+                <article id="main_file_tree"></article>
+                <article id="preview_files"></article>
             </section>
-            <section>
+            <!--<section>
                 <center><h3>Choose a Murder or create a new one.</h3></center>
-            </section>
+            </section>-->
 
             <footer>
                 <center><small>
@@ -172,119 +180,6 @@
             <button onclick="loadExportedSOs()" style="width: 100%">Create File</button>
         </article>
     </dialog>-->
-
-
-    <script>
-        async function loadFromGUI() {
-            if (window.dirHandleModDir == null) {
-                try {
-                    await getModDir();
-                    window.loadedMods = await refreshModList();
-                    window.selectedMod = null;
-
-                    updateSelect('select-loaded-mod', ['None', ...window.loadedMods.map(mod => mod.modName)]);
-                }
-                catch { }
-            }
-
-            if(window.selectedMod != null) {
-                await initAndLoad('murdermanifest');
-            }
-            document.querySelector('#load_popup').removeAttribute("open")
-            // updateFavButton();
-        }
-
-        async function updateSelectedMod() {
-            window.selectedMod = window.loadedMods.find(mod => mod.modName == document.getElementById('select-loaded-mod').value);
-
-            if(window.selectedMod != null) {
-                await initAndLoad('murdermanifest');
-            }
-        }
-
-        async function newMod() {
-            if (window.dirHandleModDir == null) {
-                alert('Please load a parent mod folder first');
-                throw 'Please load a parent mod folder first';
-            }
-
-            let modName = prompt('Enter a new mod name');
-
-            if (modName == null)
-                return;
-
-            await openModFolder(modName, true);
-
-            window.loadedMods = await refreshModList();
-            updateSelect('select-loaded-mod', ['None', ...window.loadedMods.map(mod => mod.modName)]);
-            window.selectedMod = window.loadedMods.filter(mod => mod.modName == modName)[0];
-            document.getElementById('select-loaded-mod').value = modName;
-            updateSelectedMod();
-        }
-
-        function setSaving(saving) {
-            window.savingEnabled = saving;
-            localStorage.setItem('SOD_MurderCaseBuilder_Autosave', saving)
-
-            let ele = document.getElementById('autosaving_switch');
-            if(saving)
-            {
-                ele.toggleAttribute('checked');
-            }
-            else
-            {
-				ele.removeAttribute('checked');
-            }
-        }
-        setSaving(JSON.parse(localStorage.getItem('SOD_MurderCaseBuilder_Autosave')) ?? true);
-
-        function toggleDefaultValues() {
-            document.querySelectorAll('.default-value-node').forEach(ele => {
-                ele.classList.toggle('hidden-default-value-node');
-            });
-        }
-
-        function updateAssetModel(firstRun)
-        {
-            let typeList = document.getElementById('asset-model-type-list');
-
-            if(firstRun)
-            {
-                Object.keys(window.typeMap).sort().forEach(type => {
-                    var option = document.createElement("option");
-                    option.text = type;
-                    typeList.appendChild(option);
-                });
-            }
-
-            let assetList = document.getElementById('asset-model-asset-list');
-            assetList.innerHTML = '';
-
-            window.typeMap[typeList.value]?.sort().forEach(SO => {
-                let tr = document.createElement('tr');
-				var option = document.createElement("td");
-                option.innerText = SO;
-
-                if(window.dirHandleExportedSOPath) {
-                    option.classList.add('link-element');
-                    option.addEventListener('click', (e) => {
-                        loadFileFromFolder(typeList.value + '/' + SO + ".json", window.dirHandleExportedSOPath, true, typeList.value);
-                    });
-                }
-                tr.appendChild(option)
-                assetList.appendChild(tr);
-            });
-        }
-
-        async function loadExportedSOs()
-        {
-            let exportedSOPath = await idbKeyval.get('ExportedSOPath');
-            let options = exportedSOPath ? { startIn: exportedSOPath, mode: 'read' } : { mode: 'read' };
-            window.dirHandleExportedSOPath = await window.showDirectoryPicker(options);
-            await idbKeyval.set('ExportedSOPath', window.dirHandleExportedSOPath);
-            updateAssetModel(false);
-        }
-    </script>
 </body>
 
 </html>

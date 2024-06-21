@@ -23,8 +23,11 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         alert(`${path} doesn't exist or is a vanilla asset - create it in the manifest first`);
         return;
     }
-    
-    let treeEle = addTreeElement(path, document.getElementById('trees'), { copySource, save });
+
+    // Manifest Frame
+    let DOMtarget = path === 'murdermanifest.sodso.json' ? document.querySelector('#manifest_panel') : document.getElementById('trees');
+
+    let treeEle = addTreeElement(path, DOMtarget, { copySource, save });
 
     if(!treeEle) return;
 
@@ -152,7 +155,6 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 
             // TODO: Convert this into the if branch below
             if (mappedType && window.enums[mappedType]?.length > 0) {
-                // console.log(item.el.querySelector('.jsontree_value'))
                 createEnumSelectElement(
                     item.el.querySelector('.jsontree_value'),
                     window.enums[mappedType],
