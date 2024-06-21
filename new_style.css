@@ -1,7 +1,12 @@
 /*1 MAIN*/
+html {
+    overflow-x: clip;
+}
 main>article>section:first-of-type {
     display: grid;
-    grid-template-columns:1fr 2fr 1fr;
+    /*Back when i do preview*/
+    /*grid-template-columns:300px 2fr 1fr;*/
+    grid-template-columns:300px 1fr;
     grid-gap: 10px;
 }
 ul {
@@ -32,6 +37,7 @@ ul li {
 }
 .jsontree-container .jsontree_child-nodes {
     padding-left: 20px;
+    margin-left: 0;
     border-left: 1px dotted #c52f2180;
 }
 .jsontree-container .link-element {
@@ -65,10 +71,20 @@ ul li {
     display: none;
 }
 
+.trees_wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+}
+
 #trees {
     font-family:monospace;
     font-size: 14px;
     color: black;
+    display: grid;
+    grid-auto-columns: minmax(400px, auto);
+    grid-auto-flow: column;
+    grid-gap: 10px;
 }
 
 #trees .link-element {
@@ -123,20 +139,29 @@ ul li {
     width: 100%;
 }
 
-#trees .editor-bar {
-    margin-top: -65px;
+#trees .editor-bar button {
+    padding: 0;
+    margin: 0;
+}
+
+#trees .editor-bar h5 {
+    padding: 0;
+    margin: 0;
+    margin-top: -15px;
+    font-size: 24px;
 }
 
 #trees .editor-bar ul, #trees .editor-bar li {
     display: block;
-    padding: 0 20px;
+    padding: 0 5px;
 }
 
 /*JSON tree's styles*/
-#trees .jsontree_tree {
+.jsontree_tree {
     margin-left: 0;
 }
 
 #trees .jsontree_child-nodes {
     margin-left: 0;
 }
+

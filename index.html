@@ -24,7 +24,7 @@
     <script src="./scripts/ui.js"></script>
 
     <!-- Styles -->
-<!--    <link href="./libs/jsonTree/jsonTree.css" rel="stylesheet" />-->
+    <link href="./libs/jsonTree/jsonTree.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css"/>
     <link href="./new_style.css" rel="stylesheet" />
 </head>
@@ -76,8 +76,12 @@
                     </header>
                     <!-- And here be panels for manifest and file list -->
                 </article>
-                <article id="main_file_tree"></article>
-                <article id="preview_files"></article>
+                <div class="trees_wrapper">
+                    <div id="trees"></div>
+                </div>
+                <!-- Back when done -->
+                <!--<article id="main_file_tree"></article>-->
+                <!--<article id="preview_files"></article>-->
             </section>
             <!--<section>
                 <center><h3>Choose a Murder or create a new one.</h3></center>
@@ -90,13 +94,6 @@
                     </div>
                 </small></center>
             </footer>
-        </article>
-
-        <article data-theme="light">
-            <div id="trees" class="grid"></div>
-
-
-
         </article>
     </main>
     <dialog open id="load_popup">
