@@ -117,20 +117,30 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         tree.findAndHandle(item => {
             // return item.el.querySelector('.jsontree_value_string')?.innerText?.includes("REF:");
             var typeMatch = item.el.querySelector('.jsontree_value_string')?.innerText?.match(/REF:(\w+)/)
-            // console.log(typeMatch);
             return typeMatch && !window.typeMap[typeMatch[1]];
         }, async item => {
             var ele = item.el.querySelector('.jsontree_value_string');
-            // console.log(ele)
             const refPath = ele.innerText.replace(/"/g, "").replace("REF:", "").replace(/\w+\|/, '');
 
-            if(!ele.classList.contains('link-element'))
-            {
+            if(!ele.classList.contains('link-element')) {
                 ele.classList.add('link-element')
     
                 ele.addEventListener('click', () => {
                     loadFile(refPath, false);
                 }); 
+            }
+
+            if (path === "murdermanifest.sodso.json" && !item.isComplex) {
+                let ul = document.querySelector('#manifest_panel .files-order ul');
+                let li = fastElement("li");
+                let file_link = fastElement("button", "secondary");
+                file_link.setAttribute('type', 'submit');
+                file_link.innerText = ele.innerText.replace(/REF:|"|'/g, '');
+                file_link.addEventListener('click', () => {
+                    loadFile(refPath, false);
+                });
+                li.appendChild(file_link);
+                ul.appendChild(li);
             }
         });
 

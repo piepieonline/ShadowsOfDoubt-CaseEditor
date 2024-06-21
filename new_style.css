@@ -4,12 +4,17 @@ main>article>section:first-of-type {
     grid-template-columns:1fr 2fr 1fr;
     grid-gap: 10px;
 }
-
+ul {
+    padding-left: 0;
+}
 ul li {
     list-style-type: none;
 }
 
 /*1.1 Manifest Panel*/
+#manifest_panel button {
+    padding: 3px;
+}
 
 /*2 JSON TREES*/
 .jsontree-container {
