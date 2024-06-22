@@ -31,6 +31,7 @@ async function loadFromGUI() {
 
 // Murder loading
 async function updateSelectedMod() {
+	document.querySelector('#manifest_panel>div').replaceChildren();
 	window.selectedMod = window.loadedMods.find(mod => mod.modName == document.getElementById('select-loaded-mod').value);
 
 	if(window.selectedMod != null) {

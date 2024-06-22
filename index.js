@@ -25,7 +25,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     }
 
     // Manifest Frame
-    let DOMtarget = path === 'murdermanifest.sodso.json' ? document.querySelector('#manifest_panel') : document.getElementById('trees');
+    let DOMtarget = path === 'murdermanifest.sodso.json' ? document.querySelector('#manifest_panel>div') : document.getElementById('trees');
 
     let treeEle = addTreeElement(path, DOMtarget, { copySource, save });
 
