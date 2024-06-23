@@ -5,8 +5,7 @@ const DUMMY_KEYS = {
 
 async function initAndLoad(path) {
     let openWindows = document.querySelectorAll('.file-window');
-    for(let i = openWindows.length - 1; i >= 0; i--)
-    {
+    for(let i = openWindows.length - 1; i >= 0; i--) {
         deleteTree(openWindows[i]);
     }
     await loadFile(path, false);
@@ -32,6 +31,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     if(!treeEle) return;
 
     var data = JSON.parse(await (await (loadedFile)?.getFile())?.text());
+    console.log(data);
 
     let fileType = data.fileType || type || "Manifest";
 

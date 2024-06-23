@@ -61,6 +61,15 @@ ul li {
     width: 90%;
     margin-bottom: 5px;
 }
+.jsontree-container .editor-bar ul {
+    width: 100%;
+}
+.jsontree-container .editor-bar h5 {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 /*X UTIL CLASSES*/
 .hidden {
