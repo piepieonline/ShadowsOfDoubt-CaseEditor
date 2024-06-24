@@ -280,7 +280,11 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
                         let mappedType = mapSplitPath(splitPath);
 
                         let newContent;
-                        if(window.typeMap[mappedType])
+                        if(mappedType == "String")
+                        {
+                            newContent = "";
+                        }
+                        else if(window.typeMap[mappedType])
                             newContent = `REF:${mappedType}|${window.typeMap[mappedType][0]}`;
                         else
                             newContent = await getTemplateForItem(mappedType);
