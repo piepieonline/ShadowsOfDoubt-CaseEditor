@@ -5,8 +5,7 @@ const DUMMY_KEYS = {
 
 async function initAndLoad(path) {
     let openWindows = document.querySelectorAll('.file-window');
-    for(let i = openWindows.length - 1; i >= 0; i--)
-    {
+    for(let i = openWindows.length - 1; i >= 0; i--) {
         deleteTree(openWindows[i]);
     }
     await loadFile(path, false);
@@ -20,33 +19,19 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     let loadedFile = await tryGetFile(folderHandle, path.split('/'));
 
     if(!loadedFile) {
-        /*
-        if(confirm(`${path} (${type}) doesn't exist - do you wish to create it?`))
-        {
-            let newFileName = path.split('/').at(-1).replace('.sodso.json', '');
-            await createFileIfNotExisting(path, type, folderHandle, (content) => {
-                content.name = newFileName;
-                content.presetName = newFileName;
-                content.type = type;
-                content.copyFrom = null;
-                return content;
-            });
-        }
-        else
-        {
-            return;
-        }
-        */
-
         alert(`${path} doesn't exist or is a vanilla asset - create it in the manifest first`);
         return;
     }
-    
-    let treeEle = addTreeElement(path, document.getElementById('trees'), { copySource, save });
+
+    // Manifest Frame
+    let DOMtarget = path === 'murdermanifest.sodso.json' ? document.querySelector('#manifest_panel>div') : document.getElementById('trees');
+
+    let treeEle = addTreeElement(path, DOMtarget, { copySource, save });
 
     if(!treeEle) return;
 
     var data = JSON.parse(await (await (loadedFile)?.getFile())?.text());
+    console.log(data);
 
     let fileType = data.fileType || type || "Manifest";
 
@@ -137,13 +122,25 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
             var ele = item.el.querySelector('.jsontree_value_string');
             const refPath = ele.innerText.replace(/"/g, "").replace("REF:", "").replace(/\w+\|/, '');
 
-            if(!ele.classList.contains('link-element'))
-            {
+            if(!ele.classList.contains('link-element')) {
                 ele.classList.add('link-element')
     
                 ele.addEventListener('click', () => {
                     loadFile(refPath, false);
                 }); 
+            }
+
+            if (path === "murdermanifest.sodso.json" && !item.isComplex) {
+                let ul = document.querySelector('#manifest_panel .files-order ul');
+                let li = fastElement("li");
+                let file_link = fastElement("button", "secondary");
+                file_link.setAttribute('type', 'submit');
+                file_link.innerText = ele.innerText.replace(/REF:|"|'/g, '');
+                file_link.addEventListener('click', () => {
+                    loadFile(refPath, false);
+                });
+                li.appendChild(file_link);
+                ul.appendChild(li);
             }
         });
 
@@ -355,8 +352,8 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
             throw 'Please select a mod to save in first';
         }
 
+        // console.log(getSaveSafeJSON());
         if (!window.savingEnabled && !force) return;
-
         writeFile(await tryGetFile(window.selectedMod.baseFolder, (path).split('/'), true), getSaveSafeJSON(), false);
     }
 

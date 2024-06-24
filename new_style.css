@@ -1,0 +1,176 @@
+/*1 MAIN*/
+html {
+    overflow-x: clip;
+}
+main>article>section:first-of-type {
+    display: grid;
+    /*Back when i do preview*/
+    /*grid-template-columns:300px 2fr 1fr;*/
+    grid-template-columns:300px 1fr;
+    grid-gap: 10px;
+}
+ul {
+    padding-left: 0;
+}
+ul li {
+    list-style-type: none;
+}
+
+/*1.1 Manifest Panel*/
+#manifest_panel button {
+    padding: 3px;
+}
+
+/*2 JSON TREES*/
+.jsontree-container {
+    font-family:monospace;
+    font-size: 14px;
+    color: black;
+
+}
+.jsontree-container ul {
+    margin-bottom: -5px;
+    margin-top: 5px;
+}
+.jsontree-container .jsontree_tree {
+    padding: 0;
+}
+.jsontree-container .jsontree_child-nodes {
+    padding-left: 20px;
+    margin-left: 0;
+    border-left: 1px dotted #c52f2180;
+}
+.jsontree-container .link-element {
+    cursor: pointer;
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+    color: #c52f21;
+}
+.jsontree-container .jsontree_label[title]:not([title=""]) {
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+}
+.jsontree-container .jsontree_label, .jsontree-container input, .jsontree-container select {
+    font-family: inherit;
+    font-size: inherit;
+}
+.select2-dropdown input, .jsontree-container input, .jsontree-container select {
+    padding: 2px 10px;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 5px;
+}
+.jsontree-container .editor-bar ul {
+    width: 100%;
+}
+.jsontree-container .editor-bar h5 {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*X UTIL CLASSES*/
+.hidden {
+    display: none;
+}
+
+.hidden-default-value-node {
+    display: none;
+}
+
+.trees_wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+#trees {
+    font-family:monospace;
+    font-size: 14px;
+    color: black;
+    display: grid;
+    grid-auto-columns: minmax(400px, auto);
+    grid-auto-flow: column;
+    grid-gap: 10px;
+}
+
+#trees .link-element {
+    cursor: pointer;
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+}
+
+#trees .jsontree_label[title]:not([title=""]) {
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+}
+
+#trees li {
+    list-style-type: none;
+}
+
+#trees .jsontree_label, #trees input, #trees select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.select2-dropdown input, #trees input, #trees select {
+    padding: 2px 10px;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+#trees > * {
+    padding: 10px;
+    background: #c52f2110;
+    border-radius: 5px;
+}
+
+#trees > .select2-container {
+    padding: 0;
+}
+
+.select2-dropdown {
+    font-family:monospace;
+    font-size: 14px;
+    color: black;
+}
+
+.select2 {
+    width: 90% !important;
+}
+
+#trees .select2-search__field {
+    width: 100%;
+}
+
+#trees .editor-bar button {
+    padding: 0;
+    margin: 0;
+}
+
+#trees .editor-bar h5 {
+    padding: 0;
+    margin: 0;
+    margin-top: -15px;
+    font-size: 24px;
+}
+
+#trees .editor-bar ul, #trees .editor-bar li {
+    display: block;
+    padding: 0 5px;
+}
+
+/*JSON tree's styles*/
+.jsontree_tree {
+    margin-left: 0;
+}
+
+#trees .jsontree_child-nodes {
+    margin-left: 0;
+}
+
