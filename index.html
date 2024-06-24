@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="container" id="main-container">
         <nav>
             <ul>
                 <li>
@@ -65,7 +65,8 @@
             </ul>
         </nav>
 
-        <article data-theme="light">
+        <article class="files-article-container" data-theme="light">
+            <div class="container-expand-button" onclick="document.getElementById('main-container').classList.toggle('container-expanded')"></div>
             <section>
                 <article id="manifest_panel">
                     <header>
