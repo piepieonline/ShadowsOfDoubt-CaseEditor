@@ -275,26 +275,24 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
                         throw 'Please select a mod to save in first';
                     }
 
-                    if (confirm('Add Element?')) {
-                        let splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
-                        let mappedType = mapSplitPath(splitPath);
+                    let splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
+                    let mappedType = mapSplitPath(splitPath);
 
-                        let newContent;
-                        if(window.typeMap[mappedType])
-                            newContent = `REF:${mappedType}|${window.typeMap[mappedType][0]}`;
-                        else
-                            newContent = await getTemplateForItem(mappedType);
+                    let newContent;
+                    if(window.typeMap[mappedType])
+                        newContent = `REF:${mappedType}|${window.typeMap[mappedType][0]}`;
+                    else
+                        newContent = await getTemplateForItem(mappedType);
 
-                        if (newContent === null) return;
+                    if (newContent === null) return;
 
-                        updateTree([
-                            {
-                                op: 'add',
-                                path: getJSONPointer(item) + '/-',
-                                value: newContent
-                            }
-                        ]);
-                    }
+                    updateTree([
+                        {
+                            op: 'add',
+                            path: getJSONPointer(item) + '/-',
+                            value: newContent
+                        }
+                    ]);
                 });
             });
         }
@@ -380,21 +378,40 @@ async function getTemplateForItem(templateName) {
 
     if(templateName === "FileType")
     {
-        let newFileName = prompt(`Name`);
-        let newFileType = prompt(`Type`);
+        let { name, type } = await showPopup();
 
-        await createFileIfNotExisting(newFileName, newFileType, window.selectedMod.baseFolder, (content) => {
-            content.name = newFileName;
-            content.presetName = newFileName;
-            content.type = newFileType;
+        document.querySelector('#new-file-modal').toggleAttribute('open', false);
+
+        if(name == null || type == null)
+        {
+            console.log("cancelled");
+            return null;
+        }
+
+        await createFileIfNotExisting(name, type, window.selectedMod.baseFolder, (content) => {
+            content.name = name;
+            content.presetName = name;
+            content.type = type;
             content.copyFrom = null;
             return content;
         });
 
-        return `REF:${newFileName}`;
+        return `REF:${name}`;
     }
 
     newTemplate = cloneTemplate(templateName);
     newTemplate.copyFrom = null;
     return newTemplate;
 }
+
+async function showPopup() {
+    let popupPromise = new Promise((resolve, reject) => {
+        window.newFilePromiseResolve = (name, type) => resolve({ name, type });
+        window.newFilePromiseReject = () => reject({ name: null, type: null });
+    });
+
+    document.querySelector('#new-file-modal').toggleAttribute('open', true);
+
+    return popupPromise;
+}
+
