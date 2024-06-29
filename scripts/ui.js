@@ -1,6 +1,7 @@
 // Autosaving INIT
 window.onload = () => {
 	setSaving(JSON.parse(localStorage.getItem('SOD_MurderCaseBuilder_Autosave')) ?? true);
+	document.querySelector('#fileType').innerHTML = document.querySelector('#asset-model-type-list').innerHTML;
 }
 
 //Manifest Panel
