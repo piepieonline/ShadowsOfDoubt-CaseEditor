@@ -1,6 +1,6 @@
 /*1 MAIN*/
 html {
-    overflow-x: clip;
+
 }
 main>article>section:first-of-type {
     display: grid;
@@ -34,11 +34,11 @@ ul li {
 }
 
 .container-expand-button:before {
-	content: '>>';
+    content: '>>';
 }
 
 .container-expanded .container-expand-button:before {
-	content: '<<';
+    content: '<<';
 }
 
 /*1.1 Manifest Panel*/
@@ -96,6 +96,24 @@ ul li {
     text-overflow: ellipsis;
 }
 
+/*3 SCROLLS*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #c52f21;
+}
+.jsontree_tree::-webkit-scrollbar{
+    width: 5px;
+}
+.jsontree_tree::-webkit-scrollbar-thumb {
+    background-color: #525f7a;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
 /*X UTIL CLASSES*/
 .hidden {
     display: none;
@@ -109,8 +127,11 @@ ul li {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
+    position: relative;
 }
 
+
+/*I don't sort this sry*/
 #trees {
     font-family:monospace;
     font-size: 14px;
