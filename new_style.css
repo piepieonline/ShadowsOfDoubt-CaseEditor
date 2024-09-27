@@ -170,6 +170,10 @@ ul li {
     margin-bottom: 5px;
 }
 
+#trees input:read-only {
+    opacity: var(--pico-form-element-disabled-opacity);
+}
+
 #trees > * {
     padding: 10px 0 10px 10px;
     background: #c52f2110;
