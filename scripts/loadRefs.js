@@ -44,6 +44,11 @@ window.basicTypes = {
     Vector3: { x: 0, y: 0, z: 0 }
 };
 
+window.pathIdMap = Object.keys(soMap["IDMap"]).reduce((map, val) => {
+    map[val] = soMap["IDMap"][val][0];
+    return map;
+}, {});
+
 window.soCustomDescriptions = soCustomDescriptions;
 
 window.updateAssetModel(true);

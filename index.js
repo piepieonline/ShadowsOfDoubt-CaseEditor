@@ -30,8 +30,16 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 
     if(!treeEle) return;
 
-    var data = JSON.parse(await (await (loadedFile)?.getFile())?.text());
-    console.log(data);
+    var rawTextData = await (await (loadedFile)?.getFile())?.text();
+    
+    // Strip whitespace
+    var data = JSON.parse(rawTextData);
+    // Replace Unity references with string refs
+    rawTextData = JSON.stringify(data).replaceAll(/({"m_FileID.*?(\d+).*?})/g, (rawMatch, fullMatch, id) => {
+        return `"${window.pathIdMap[id]}"`;
+    });
+    
+    data = JSON.parse(rawTextData);
 
     let fileType = data.fileType || type || "Manifest";
 
@@ -415,3 +423,22 @@ async function showPopup() {
     return popupPromise;
 }
 
+function deepReplace (obj, keyName, replacer) {
+    if(obj.hasOwnProperty(keyName)) {
+        return replacer(obj[keyName]);
+    } else {
+        let keys = Object.keys(obj);
+        for (ki = 0; ki < keys.length; ki++) {
+            let key = keys[ki];
+            if (Array.isArray(obj[keys[ki]])) {
+                for(i = 0; i < obj[key].length; i++) {
+                    obj[key][i] = deepReplace(obj[key][i], keyName, replacer)
+                }
+            } else if (typeof obj[key] === "object") {
+                obj[key] = deepReplace(obj[key], keyName, replacer);
+            }
+        }
+    }
+
+    return obj;
+}
