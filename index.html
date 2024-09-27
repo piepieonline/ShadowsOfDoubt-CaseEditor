@@ -39,6 +39,7 @@
                         <ul>
                             <li><a href="#" onclick="event.preventDefault();document.querySelector('#help-modal').toggleAttribute('open')">Help</a></li>
                             <li><a href="#" onclick="event.preventDefault();document.querySelector('#asset-explorer-modal').toggleAttribute('open')">Asset Explorer</a></li>
+                            <li><a href="https://www.piepieonline.com/ShadowsOfDoubt-DDSViewer/" target="_blank">DDS Viewer</a></li>
                         </ul>
                     </hgroup>
                 </li>
@@ -159,7 +160,7 @@
 
     <!--NEW FILE FORM-->
     <!--Use `document.querySelector('#new-file-modal').toggleAttribute('open')` for open it-->
-    <!--<dialog open id="new-file-modal">
+    <dialog id="new-file-modal">
         <article>
             <header>
                 <button aria-label="Close" rel="prev" onclick="document.querySelector('#new-file-modal').toggleAttribute('open')"></button>
@@ -167,21 +168,23 @@
                     <strong>New File</strong>
                 </h5>
             </header>
-            <label>
-                File Type
-                <select id="new-file-type">
-                    <option value="MurderMO">File for new Murder Case</option>
-                    <option value="InteractablePreset">File for new Interactable</option>
-                    <option value="EvidencePreset">File for new Evidence</option>
-                </select>
-            </label>
-            <label>
-                File Name
-                <input id="new-file-title">
-            </label>
-            <button onclick="loadExportedSOs()" style="width: 100%">Create File</button>
+            <form onsubmit="event.preventDefault();newFilePromiseResolve(this.fileName.value,this.fileType.value)">
+                <label>
+                    File Type
+                    <select id="fileType">
+                        <option value="MurderMO">File for new Murder Case</option>
+                        <option value="InteractablePreset">File for new Interactable</option>
+                        <option value="EvidencePreset">File for new Evidence</option>
+                    </select>
+                </label>
+                <label>
+                    File Name
+                    <input id="fileName">
+                </label>
+                <button type="submit" style="width: 100%">Create File</button>
+            </form>
         </article>
-    </dialog>-->
+    </dialog>
 </body>
 
 </html>
