@@ -67,6 +67,7 @@
     "disableLocationInformationDisplay": false,
     "forceCityDirectoryInclusion": false,
     "nameFeaturesBuildingReference": false,
+    "nameFeaturesTypeCount": false,
     "overrideBuildingName": false,
     "sameBuildingEmployeesAuthority": false,
     "sameBuildingResidentsAuthority": false,
@@ -76,6 +77,7 @@
     "allowSniperVantagePoint": false,
     "vantagePointBoost": 0.0,
     "disableSniperTargetSite": false,
+    "allowPublicToiletUse": false,
     "disableThis": false
   },
   "AIActionPreset": {
@@ -89,6 +91,7 @@
     "availableWhenItemsSelected": [],
     "holsterCurrentItemOnAction": false,
     "disableUIDisplay": false,
+    "allowInteractionAtRecognitionRange": false,
     "actionLocation": 0,
     "confirmActionLocation": true,
     "useRandomNodeSublocation": false,
@@ -116,6 +119,7 @@
     "repeatOnComplete": false,
     "repeatWhileHavingConsumables": false,
     "requiresForcedUpdate": false,
+    "enableImmediateCompletionWhenFarAway": false,
     "dontUpdateGoalPriorityWhileActive": false,
     "dontUpdateGoalPriorityFor": 0,
     "limitTickRate": false,
@@ -150,6 +154,7 @@
     "changeArmsOnComplete": false,
     "armsAnimationOnComplete": 0,
     "lying": false,
+    "lyingOnFloor": false,
     "useCurrentConsumable": false,
     "progressNourishment": 0.0,
     "progressHydration": 0.0,
@@ -200,7 +205,6 @@
     "switchStatesOnEnd": [],
     "tamperAction": false,
     "tamperResetAction": false,
-    "canFallAsleep": false,
     "fallAsleepAfterMinimum": 20,
     "allowSniperShot": false,
     "checkActionAgainstState": [],
@@ -361,6 +365,7 @@
     "repeatDelayOnFinishActions": 0.10000000149011612,
     "allowEnforcersEverywhere": false,
     "locationOption": 0,
+    "useToiletSettings": false,
     "desireCategory": 0,
     "roomOption": 0,
     "furnitureOption": 0,
@@ -488,6 +493,7 @@
     "canBeSuspicious": false,
     "alwaysSuspicious": false,
     "suspiciousIfTresspassing": false,
+    "suspiciousIfCantSeeSoundMaker": false,
     "onlySuspiciousIfEmptyAddress": false,
     "onlySuspiciousIfNotEnforcer": true,
     "suspiciousIfCitizenCount": 2,
@@ -512,7 +518,35 @@
     "plasterHearingRangeModifier": 0.0,
     "fabricHearingRangeModifier": 0.0,
     "metalHearingRangeModifier": 0.0,
-    "glassHearingRangeModifier": 0.0
+    "glassHearingRangeModifier": 0.0,
+    "enableVibrationOnPlay": false,
+    "disableForPS5": false,
+    "vibrationSetup": []
+  },
+  "BasebouleGameAdvert": {
+    "adText": ""
+  },
+  "BasebouleGameIntro": {
+    "introductionText": ""
+  },
+  "BasebouleGameIntroClosingStatement": {
+    "closingText": ""
+  },
+  "BasebouleGameLineUpFollowUp": {
+    "followUpText": ""
+  },
+  "BasebouleInning": {},
+  "BaseboulePlayer": {
+    "firstName": "",
+    "surName": "",
+    "playerSkill": 0,
+    "funFact": ""
+  },
+  "BasebouleTeam": {
+    "teamName": "",
+    "teamIntroductionWhenFirstInLineUp": "",
+    "teamIntroductionWhenSecondInLineUp": "",
+    "roster": []
   },
   "BookPreset": {
     "presetName": "",
@@ -2128,11 +2162,6 @@
     "enableIfGenderPresent": [],
     "allowedRoomFilters": [],
     "minimumWealth": 0.0,
-    "usePersonalityWeighting": false,
-    "modernity": 5,
-    "cleanness": 5,
-    "loudness": 5,
-    "emotive": 5,
     "subObjects": [],
     "testForModifiers": 0,
     "forcePublicIllegal": false,
@@ -2167,6 +2196,7 @@
     "lightAmount": 0.11999999731779099,
     "brightnessModifier": 10.0,
     "purchasable": true,
+    "disableFromDecorMenu": false,
     "cost": 100,
     "decorClass": 6,
     "staticImage": {
@@ -2547,6 +2577,7 @@
     "printsSource": 11,
     "fingerprintDensity": 3.0,
     "enableDynamicFingerprints": true,
+    "disableDynamicFingerprintsFromStaticPrintsSources": false,
     "overrideMaxDynamicFingerprints": false,
     "maxDynamicFingerprints": 8,
     "fpsItem": {
@@ -2560,6 +2591,11 @@
       "z": 0.0
     },
     "fpsItemRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "fpsItemScaleModifier": {
       "x": 0.0,
       "y": 0.0,
       "z": 0.0
@@ -2613,6 +2649,8 @@
     "markAsTrashOnCreate": false,
     "isLitter": false,
     "isDecal": false,
+    "isMovableChair": false,
+    "bedRightSide": false,
     "resetSwitchStates": false,
     "resetTimer": 0.009999999776482582,
     "dontSaveSwitchStates": false,
@@ -2847,6 +2885,7 @@
     "allowJoblessPurps": true,
     "purpMustLiveAtDifferentAddressToPoster": true,
     "allowEnforcers": true,
+    "disallowEchelonHome": false,
     "purpTraitModifiers": [],
     "usePurpJobs": false,
     "purpJobs": [],
@@ -2910,6 +2949,9 @@
     "allowPublic": false,
     "allowStreets": false,
     "allowDen": false,
+    "denFurniture": [],
+    "denStyleOverride": [],
+    "denItems": [],
     "acquaintedSuitabilityBoost": 0,
     "attractedToSuitabilityBoost": 0,
     "likeSuitabilityBoost": 0,
@@ -3171,7 +3213,6 @@
   },
   "OccupationPreset": {
     "presetName": "",
-    "collar": 0,
     "work": 0,
     "tags": [],
     "jobFillPriority": 2,

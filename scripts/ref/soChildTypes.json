@@ -937,12 +937,12 @@
       "Item3": ""
     },
     "lastCheckedForWorkingDay": {
-      "Item1": "WeekDay",
+      "Item1": "Single",
       "Item2": false,
       "Item3": ""
     },
     "lastCheckedForGroupDay": {
-      "Item1": "WeekDay",
+      "Item1": "Single",
       "Item2": false,
       "Item3": ""
     },
@@ -1456,6 +1456,11 @@
       "Item3": ""
     },
     "meetTimeTotal": {
+      "Item1": "Single",
+      "Item2": false,
+      "Item3": ""
+    },
+    "meetTime": {
       "Item1": "Single",
       "Item2": false,
       "Item3": ""
@@ -3860,6 +3865,11 @@
       "Item1": "SaveableBecause",
       "Item2": true,
       "Item3": ""
+    },
+    "contents": {
+      "Item1": "Interactable",
+      "Item2": true,
+      "Item3": ""
     }
   },
   "SaveableBecause": {
@@ -3897,6 +3907,11 @@
     },
     "salesRecord": {
       "Item1": "SalesRecord",
+      "Item2": false,
+      "Item3": ""
+    },
+    "iconSprite": {
+      "Item1": "Sprite",
       "Item2": false,
       "Item3": ""
     }
@@ -3937,6 +3952,7 @@
     }
   },
   "StaticSlot": {},
+  "BuildConfig": {},
   "DebugCitizenWeapons": {
     "weapon": {
       "Item1": "MurderWeaponPreset",
@@ -4070,6 +4086,28 @@
     },
     "creativity": {
       "Item1": "Int32",
+      "Item2": false,
+      "Item3": ""
+    }
+  },
+  "ControllerVibration": {
+    "motorIndex": {
+      "Item1": "Int32",
+      "Item2": false,
+      "Item3": ""
+    },
+    "fullMotorSpeed": {
+      "Item1": "Single",
+      "Item2": false,
+      "Item3": ""
+    },
+    "matchSoundDuration": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "duration": {
+      "Item1": "Single",
       "Item2": false,
       "Item3": ""
     }
@@ -5283,6 +5321,7 @@
       "Item3": ""
     }
   },
+  "CrushType": {},
   "Print": {
     "worldPos": {
       "Item1": "Vector3",
@@ -5650,11 +5689,6 @@
     }
   },
   "Interactable": {
-    "name": {
-      "Item1": "String",
-      "Item2": false,
-      "Item3": ""
-    },
     "id": {
       "Item1": "Int32",
       "Item2": false,
@@ -5692,16 +5726,6 @@
     },
     "spWEuler": {
       "Item1": "Vector3",
-      "Item2": false,
-      "Item3": ""
-    },
-    "spNode": {
-      "Item1": "Vector3Int",
-      "Item2": false,
-      "Item3": ""
-    },
-    "spR": {
-      "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
     },
@@ -5745,23 +5769,8 @@
       "Item2": false,
       "Item3": ""
     },
-    "bp": {
-      "Item1": "String",
-      "Item2": false,
-      "Item3": ""
-    },
-    "sdp": {
-      "Item1": "String",
-      "Item2": false,
-      "Item3": ""
-    },
     "dds": {
       "Item1": "String",
-      "Item2": false,
-      "Item3": ""
-    },
-    "pt": {
-      "Item1": "Int32",
       "Item2": false,
       "Item3": ""
     },
@@ -5790,16 +5799,6 @@
       "Item2": false,
       "Item3": ""
     },
-    "ins": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "lma": {
-      "Item1": "Single",
-      "Item2": false,
-      "Item3": ""
-    },
     "cs": {
       "Item1": "Single",
       "Item2": false,
@@ -5807,11 +5806,6 @@
     },
     "wo": {
       "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "opp": {
-      "Item1": "Int32",
       "Item2": false,
       "Item3": ""
     },
@@ -5850,16 +5844,6 @@
       "Item2": false,
       "Item3": ""
     },
-    "phy": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "drm": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
     "lzs": {
       "Item1": "Int32",
       "Item2": false,
@@ -5867,11 +5851,6 @@
     },
     "ml": {
       "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "pto": {
-      "Item1": "Int32",
       "Item2": false,
       "Item3": ""
     },
@@ -5935,11 +5914,6 @@
       "Item2": false,
       "Item3": ""
     },
-    "lhc": {
-      "Item1": "Single",
-      "Item2": false,
-      "Item3": ""
-    },
     "ft": {
       "Item1": "Boolean",
       "Item2": false,
@@ -5950,7 +5924,27 @@
       "Item2": false,
       "Item3": ""
     },
+    "name": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    },
+    "spNode": {
+      "Item1": "Vector3Int",
+      "Item2": false,
+      "Item3": ""
+    },
+    "pt": {
+      "Item1": "Int32",
+      "Item2": false,
+      "Item3": ""
+    },
     "mov": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "phy": {
       "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
@@ -6235,6 +6229,11 @@
       "Item2": false,
       "Item3": ""
     },
+    "mainSetupRun": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
     "printDebug": {
       "Item1": "Boolean",
       "Item2": false,
@@ -6430,6 +6429,11 @@
       "Item1": "Mesh",
       "Item2": false,
       "Item3": ""
+    },
+    "lastAccessed": {
+      "Item1": "Single",
+      "Item2": false,
+      "Item3": ""
     }
   },
   "MetaObject": {
@@ -6519,6 +6523,11 @@
       "Item3": ""
     },
     "l": {
+      "Item1": "Int32",
+      "Item2": false,
+      "Item3": ""
+    },
+    "a": {
       "Item1": "Int32",
       "Item2": false,
       "Item3": ""
@@ -7026,6 +7035,43 @@
     },
     "useDropdownInt": {
       "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "platformSpecificDefaults": {
+      "Item1": "PlatformSpecificDefault",
+      "Item2": true,
+      "Item3": ""
+    },
+    "onlyDisplayInDevMode": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "dontDisplayOnPlatforms": {
+      "Item1": "BuildConfig",
+      "Item2": true,
+      "Item3": ""
+    }
+  },
+  "PlatformSpecificDefault": {
+    "lowEndHardware": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "platform": {
+      "Item1": "BuildConfig",
+      "Item2": false,
+      "Item3": ""
+    },
+    "intDefault": {
+      "Item1": "Int32",
+      "Item2": false,
+      "Item3": ""
+    },
+    "strDefault": {
+      "Item1": "String",
       "Item2": false,
       "Item3": ""
     }
@@ -7546,16 +7592,6 @@
       "Item2": false,
       "Item3": ""
     },
-    "isOutside": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "isObstacle": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
     "isEdge": {
       "Item1": "Boolean",
       "Item2": false,
@@ -7610,26 +7646,6 @@
   "StreetCitySave": {
     "name": {
       "Item1": "String",
-      "Item2": false,
-      "Item3": ""
-    },
-    "residenceNumber": {
-      "Item1": "Int32",
-      "Item2": false,
-      "Item3": ""
-    },
-    "isLobby": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "isMainLobby": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "isOutside": {
-      "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
     },
@@ -7805,11 +7821,6 @@
       "Item2": false,
       "Item3": ""
     },
-    "hkey": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
     "breakerSec": {
       "Item1": "Int32",
       "Item2": false,
@@ -7854,21 +7865,6 @@
       "Item2": true,
       "Item3": ""
     },
-    "topSalary": {
-      "Item1": "Single",
-      "Item2": false,
-      "Item3": ""
-    },
-    "minimumSalary": {
-      "Item1": "Single",
-      "Item2": false,
-      "Item3": ""
-    },
-    "publicFacing": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
     "shortName": {
       "Item1": "String",
       "Item2": false,
@@ -7877,46 +7873,6 @@
     "nameAltTags": {
       "Item1": "String",
       "Item2": true,
-      "Item3": ""
-    },
-    "monday": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "tuesday": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "wednesday": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "thursday": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "friday": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "saturday": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "sunday": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "retailOpenHours": {
-      "Item1": "Vector2",
-      "Item2": false,
       "Item3": ""
     },
     "passedWorkLocation": {
@@ -7973,11 +7929,6 @@
     },
     "isOwner": {
       "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "collar": {
-      "Item1": "workCollar",
       "Item2": false,
       "Item3": ""
     },
@@ -8224,16 +8175,6 @@
     }
   },
   "NodeCitySave": {
-    "fc": {
-      "Item1": "Vector2Int",
-      "Item2": false,
-      "Item3": ""
-    },
-    "ltc": {
-      "Item1": "Vector2Int",
-      "Item2": false,
-      "Item3": ""
-    },
     "nc": {
       "Item1": "Vector3Int",
       "Item2": false,
@@ -8244,33 +8185,8 @@
       "Item2": true,
       "Item3": ""
     },
-    "fh": {
-      "Item1": "Int32",
-      "Item2": false,
-      "Item3": ""
-    },
     "ft": {
       "Item1": "FloorTileType",
-      "Item2": false,
-      "Item3": ""
-    },
-    "io": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "ios": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "sll": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "sul": {
-      "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
     },
@@ -8281,21 +8197,6 @@
     },
     "frr": {
       "Item1": "String",
-      "Item2": false,
-      "Item3": ""
-    },
-    "anf": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "cav": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "fav": {
-      "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
     }
@@ -8337,16 +8238,6 @@
       "Item3": ""
     },
     "oa": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "nos": {
-      "Item1": "Int32",
-      "Item2": false,
-      "Item3": ""
-    },
-    "isw": {
       "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
@@ -8420,11 +8311,6 @@
       "Item2": false,
       "Item3": ""
     },
-    "ranking": {
-      "Item1": "Single",
-      "Item2": false,
-      "Item3": ""
-    },
     "objs": {
       "Item1": "FurnitureClusterObjectCitySave",
       "Item2": true,
@@ -8472,21 +8358,6 @@
       "Item2": false,
       "Item3": ""
     },
-    "useFOVBLock": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "fovDirection": {
-      "Item1": "Vector2",
-      "Item2": false,
-      "Item3": ""
-    },
-    "fovMaxDistance": {
-      "Item1": "Int32",
-      "Item2": false,
-      "Item3": ""
-    },
     "up": {
       "Item1": "Boolean",
       "Item2": false,
@@ -8521,11 +8392,6 @@
     },
     "home": {
       "Item1": "Int32",
-      "Item2": false,
-      "Item3": ""
-    },
-    "debugHome": {
-      "Item1": "String",
       "Item2": false,
       "Item3": ""
     },
@@ -9622,6 +9488,11 @@
       "Item2": true,
       "Item3": ""
     },
+    "airDuctExploration": {
+      "Item1": "AirDuctExplorationSave",
+      "Item2": true,
+      "Item3": ""
+    },
     "freeHealthCareFlag": {
       "Item1": "Boolean",
       "Item2": false,
@@ -9972,6 +9843,11 @@
     },
     "decorOverride": {
       "Item1": "RoomCitySave",
+      "Item2": true,
+      "Item3": ""
+    },
+    "ls": {
+      "Item1": "ChangedLightswitch",
       "Item2": true,
       "Item3": ""
     }
@@ -10512,6 +10388,11 @@
       "Item2": true,
       "Item3": ""
     },
+    "time": {
+      "Item1": "Single",
+      "Item2": false,
+      "Item3": ""
+    },
     "ds": {
       "Item1": "CustomDataSource",
       "Item2": false,
@@ -10524,6 +10405,40 @@
     }
   },
   "CustomDataSource": {},
+  "AirDuctExplorationSave": {
+    "grpID": {
+      "Item1": "Int32",
+      "Item2": false,
+      "Item3": ""
+    },
+    "vents": {
+      "Item1": "Int32",
+      "Item2": true,
+      "Item3": ""
+    },
+    "ducts": {
+      "Item1": "Vector3Int",
+      "Item2": true,
+      "Item3": ""
+    }
+  },
+  "ChangedLightswitch": {
+    "locPos": {
+      "Item1": "Vector3",
+      "Item2": false,
+      "Item3": ""
+    },
+    "locEuler": {
+      "Item1": "Vector3",
+      "Item2": false,
+      "Item3": ""
+    },
+    "added": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    }
+  },
   "SpatterSimulation": {
     "worldOrigin": {
       "Item1": "Vector3",
@@ -10602,6 +10517,11 @@
     },
     "preset": {
       "Item1": "SpatterPatternPreset",
+      "Item2": false,
+      "Item3": ""
+    },
+    "spawnedProjectorsCount": {
+      "Item1": "Int32",
       "Item2": false,
       "Item3": ""
     }
@@ -11542,6 +11462,7 @@
       "Item3": ""
     }
   },
+  "StartingMousePosition": {},
   "ZoomPivot": {},
   "StatementType": {},
   "Discovery": {},
@@ -11833,6 +11754,11 @@
     },
     "guard": {
       "Item1": "Int32",
+      "Item2": false,
+      "Item3": ""
+    },
+    "delay": {
+      "Item1": "Single",
       "Item2": false,
       "Item3": ""
     }
@@ -12138,6 +12064,11 @@
       "Item2": false,
       "Item3": "The name of this also contains the building name"
     },
+    "nameFeaturesTypeCount": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
     "overrideBuildingName": {
       "Item1": "Boolean",
       "Item2": false,
@@ -12179,6 +12110,11 @@
       "Item3": "Add weight to this being chosen as a sniper vantage point"
     },
     "disableSniperTargetSite": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "allowPublicToiletUse": {
       "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
@@ -12246,6 +12182,11 @@
       "Item1": "Boolean",
       "Item2": false,
       "Item3": "Disable display on UI"
+    },
+    "allowInteractionAtRecognitionRange": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
     },
     "actionLocation": {
       "Item1": "ActionLocation",
@@ -12366,6 +12307,11 @@
       "Item1": "Boolean",
       "Item2": false,
       "Item3": "AI controller will not be diabled on idle while this action is active if true"
+    },
+    "enableImmediateCompletionWhenFarAway": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
     },
     "dontUpdateGoalPriorityWhileActive": {
       "Item1": "Boolean",
@@ -12536,6 +12482,11 @@
       "Item1": "Boolean",
       "Item2": false,
       "Item3": "Once destination is reached, tell the AI to lie down"
+    },
+    "lyingOnFloor": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
     },
     "useCurrentConsumable": {
       "Item1": "Boolean",
@@ -12786,11 +12737,6 @@
       "Item1": "Boolean",
       "Item2": false,
       "Item3": "This action will close/deactivate an illegally activated object (eg. turn off tv)"
-    },
-    "canFallAsleep": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": "If true then this citizen can fall asleep while doing this if they are tired enough"
     },
     "fallAsleepAfterMinimum": {
       "Item1": "Int32",
@@ -13557,6 +13503,11 @@
       "Item2": false,
       "Item3": ""
     },
+    "useToiletSettings": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
     "desireCategory": {
       "Item1": "CompanyCategory",
       "Item2": false,
@@ -14148,6 +14099,11 @@
       "Item2": false,
       "Item3": "This event will only trigger an AI reaction if 1) The actor is trespassing and 2) The listener is allowed to go there without trespassing."
     },
+    "suspiciousIfCantSeeSoundMaker": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
     "onlySuspiciousIfEmptyAddress": {
       "Item1": "Boolean",
       "Item2": false,
@@ -14272,9 +14228,99 @@
       "Item1": "Single",
       "Item2": false,
       "Item3": ""
+    },
+    "enableVibrationOnPlay": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "disableForPS5": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "vibrationSetup": {
+      "Item1": "ControllerVibration",
+      "Item2": true,
+      "Item3": ""
     }
   },
   "MemoryTag": {},
+  "BasebouleGameAdvert": {
+    "adText": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    }
+  },
+  "BasebouleGameIntro": {
+    "introductionText": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    }
+  },
+  "BasebouleGameIntroClosingStatement": {
+    "closingText": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    }
+  },
+  "BasebouleGameLineUpFollowUp": {
+    "followUpText": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    }
+  },
+  "BasebouleInning": {},
+  "BaseboulePlayer": {
+    "firstName": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    },
+    "surName": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    },
+    "playerSkill": {
+      "Item1": "Int32",
+      "Item2": false,
+      "Item3": ""
+    },
+    "funFact": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    }
+  },
+  "Experience": {},
+  "Position": {},
+  "BasebouleTeam": {
+    "teamName": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    },
+    "teamIntroductionWhenFirstInLineUp": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    },
+    "teamIntroductionWhenSecondInLineUp": {
+      "Item1": "String",
+      "Item2": false,
+      "Item3": ""
+    },
+    "roster": {
+      "Item1": "BaseboulePlayer",
+      "Item2": true,
+      "Item3": ""
+    }
+  },
   "BookPreset": {
     "bookName": {
       "Item1": "String",
@@ -19062,31 +19108,6 @@
       "Item2": false,
       "Item3": ""
     },
-    "usePersonalityWeighting": {
-      "Item1": "Boolean",
-      "Item2": false,
-      "Item3": ""
-    },
-    "modernity": {
-      "Item1": "Int32",
-      "Item2": false,
-      "Item3": "0 = old fashioned/conservative, 1 = modern/liberal: Driven by the design style"
-    },
-    "cleanness": {
-      "Item1": "Int32",
-      "Item2": false,
-      "Item3": "0 = informal/cosy, 1 = clean/souless: Driven by the room type."
-    },
-    "loudness": {
-      "Item1": "Int32",
-      "Item2": false,
-      "Item3": "0 = understated/quiet, 1 = loud/bold: Driven by the owner's personality"
-    },
-    "emotive": {
-      "Item1": "Int32",
-      "Item2": false,
-      "Item3": "0 = cold/hard, 1 = warm/sensitive: Driven by the owner's personality"
-    },
     "subObjects": {
       "Item1": "SubObject",
       "Item2": true,
@@ -19178,6 +19199,11 @@
       "Item3": "This is added to brightness"
     },
     "purchasable": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "disableFromDecorMenu": {
       "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
@@ -20314,6 +20340,11 @@
       "Item2": false,
       "Item3": "Dynamic fingerprints will be left when an AI uses this"
     },
+    "disableDynamicFingerprintsFromStaticPrintsSources": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
     "overrideMaxDynamicFingerprints": {
       "Item1": "Boolean",
       "Item2": false,
@@ -20340,6 +20371,11 @@
       "Item3": "Offset of held item"
     },
     "fpsItemRotation": {
+      "Item1": "Vector3",
+      "Item2": false,
+      "Item3": ""
+    },
+    "fpsItemScaleModifier": {
       "Item1": "Vector3",
       "Item2": false,
       "Item3": ""
@@ -20488,6 +20524,16 @@
       "Item1": "Boolean",
       "Item2": false,
       "Item3": "Will require an art asset sent to a decal projector"
+    },
+    "isMovableChair": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
+    "bedRightSide": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
     },
     "resetSwitchStates": {
       "Item1": "Boolean",
@@ -21836,6 +21882,11 @@
       "Item2": false,
       "Item3": ""
     },
+    "disallowEchelonHome": {
+      "Item1": "Boolean",
+      "Item2": false,
+      "Item3": ""
+    },
     "purpTraitModifiers": {
       "Item1": "ModifierRule",
       "Item2": true,
@@ -22044,6 +22095,21 @@
       "Item1": "Boolean",
       "Item2": false,
       "Item3": "The murder can happen at the killers den"
+    },
+    "denFurniture": {
+      "Item1": "FurnitureCluster",
+      "Item2": true,
+      "Item3": ""
+    },
+    "denStyleOverride": {
+      "Item1": "DesignStylePreset",
+      "Item2": true,
+      "Item3": ""
+    },
+    "denItems": {
+      "Item1": "InteractablePreset",
+      "Item2": true,
+      "Item3": ""
     },
     "acquaintedSuitabilityBoost": {
       "Item1": "Int32",
@@ -23148,11 +23214,6 @@
   "Category": {},
   "ContextSource": {},
   "OccupationPreset": {
-    "collar": {
-      "Item1": "workCollar",
-      "Item2": false,
-      "Item3": "Collar colour"
-    },
     "work": {
       "Item1": "workType",
       "Item2": false,
@@ -23404,7 +23465,6 @@
       "Item3": ""
     }
   },
-  "workCollar": {},
   "workType": {},
   "ShiftType": {},
   "JobAI": {},
@@ -26743,11 +26803,6 @@
     },
     "m_CameraTargetRot": {
       "Item1": "Quaternion",
-      "Item2": false,
-      "Item3": ""
-    },
-    "controllerRemapCurve": {
-      "Item1": "AnimationCurve",
       "Item2": false,
       "Item3": ""
     },
