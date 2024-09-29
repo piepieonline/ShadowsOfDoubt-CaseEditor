@@ -28,7 +28,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     // Manifest Frame
     let DOMtarget = isManifestFile ? document.querySelector('#manifest_panel>div') : document.getElementById('trees');
 
-    let treeEle = addTreeElement(path, DOMtarget, { copySource, save });
+    let treeEle = addTreeElement(path, DOMtarget, { copySource, save, showSelectFieldsDialog });
 
     if(!treeEle) return;
 
@@ -90,6 +90,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     async function runTreeSetup() {
         // Nasty, but this code is shocking anyway
         tree.addNewArrayElement = addNewArrayElement;
+        tree.updateTree = updateTree;
 
         // If we are rebuilding the manifest tree, empty out the buttons from the visual manifest panel
         if(isManifestFile) {
@@ -376,6 +377,59 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         // console.log(getSaveSafeJSON());
         if (!window.savingEnabled && !force) return;
         writeFile(await tryGetFile(window.selectedMod.baseFolder, (path).split('/'), true), getSaveSafeJSON(), false);
+    }
+
+    async function showSelectFieldsDialog() {
+        let fieldList = document.querySelector('#select-fields-modal-field-list');
+        fieldList.replaceChildren();
+        document.querySelector('#select-fields-modal').setAttribute("open", null);
+
+        let hiddenFields = ['presetName', 'copyFrom', 'name', 'type'];
+        let dataToShow = Object.keys(window.templates[data.fileType]).filter(el => !hiddenFields.includes(el));
+        let currentFields = Object.keys(data).filter(el => !hiddenFields.includes(el));
+
+        dataToShow.forEach(key => {
+            let li = document.createElement('li');
+            let label = document.createElement('label');
+			let checkbox = document.createElement("input");
+			checkbox.type = 'checkbox';
+			checkbox.value = key;
+
+            if(currentFields.includes(key)) {
+                checkbox.setAttribute('checked', true);
+            }
+
+            label.appendChild(checkbox)
+            label.innerHTML += key;
+			li.appendChild(label);
+			fieldList.appendChild(li);
+		});
+
+        // We only want the one handler
+        document.querySelector('#select-fields-submit-button').onclick = () => {
+            let patches = [];
+
+            fieldList.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+                // If it's currently included, but unchecked, delete it
+                if(currentFields.includes(checkbox.value) && !checkbox.checked) {
+                    patches.push({
+                        op: 'remove',
+                        path: '/' + checkbox.value
+                    });
+                }
+                // If it's not currently included, but is now checked, add it with the default value
+                else if(!currentFields.includes(checkbox.value) && checkbox.checked) {
+                    patches.push({
+                        op: 'add',
+                        path: '/' + checkbox.value,
+                        value: window.templates[data.fileType][checkbox.value]
+                    });
+                }
+            });
+            
+            tree.updateTree(patches);
+            document.querySelector('#select-fields-modal').removeAttribute('open');
+        }
     }
 
     function getSaveSafeJSON() {

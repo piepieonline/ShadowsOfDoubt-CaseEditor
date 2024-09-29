@@ -109,9 +109,11 @@
                 </h5>
             </header>
             <h6>Working on mods comes with an inherit risk of spoilers.</h6>
-            <p>
-                Using this tool will almost certainly result in spoilers for how Shadows Of Doubt works. This is doubly true if you browse existing game assets with the Asset Explorer.
-            </p>
+            <small>
+                <p>
+                    Using this tool will almost certainly result in spoilers for how Shadows Of Doubt works. This is doubly true if you browse existing game assets with the Asset Explorer.
+                </p>
+            </small>
             <button onclick="dismissSpoilerWarning()" style="width: 100%">I accept the risk of spoilers</button>
         </article>
     </dialog>
@@ -170,6 +172,23 @@
                 </table>
             </small>
             <button onclick="loadExportedSOs()" style="width: 100%">Load exported ScriptableObjects</button>
+        </article>
+    </dialog>
+    <dialog id="select-fields-modal">
+        <article>
+            <header>
+                <button aria-label="Close" rel="prev" onclick="document.querySelector('#select-fields-modal').removeAttribute('open')"></button>
+                <h5>
+                    <strong>Select fields to override</strong>
+                </h5>
+            </header>
+            <small>
+                <p>Fields selected here will be overridden from the copyFrom base. Warning: Unselecting a field will reset it's value to the default.</p>
+                <ul id="select-fields-modal-field-list">
+                    <li>field 1</li>
+                </ul>
+            </small>
+            <button id="select-fields-submit-button" style="width: 100%">Select Fields</button>
         </article>
     </dialog>
 

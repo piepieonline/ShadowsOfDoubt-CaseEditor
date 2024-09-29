@@ -96,6 +96,14 @@ ul li {
     text-overflow: ellipsis;
 }
 
+.jsontree-container .editor-bar .jsontree-editor-bar-button-group {
+    margin: 0;
+}
+
+.jsontree-editor-bar-field-select-button {
+    min-width: 300px;
+}
+
 /*3 SCROLLS*/
 ::-webkit-scrollbar {
     width: 10px;
@@ -112,6 +120,13 @@ ul li {
 }
 ::-webkit-scrollbar-track {
     background-color: transparent;
+}
+
+/* MODALS */
+#select-fields-modal-field-list {
+    display: block;
+    overflow-y: auto;
+    max-height: calc(100vh - (var(--pico-spacing) * 2) - 300px);
 }
 
 /*X UTIL CLASSES*/

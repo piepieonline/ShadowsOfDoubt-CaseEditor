@@ -51,8 +51,6 @@ async function updateSelectedMod() {
 	}
 }
 
-
-
 async function newMod() {
 	if (window.dirHandleModDir == null) {
 		alert('Please load a parent mod folder first');
