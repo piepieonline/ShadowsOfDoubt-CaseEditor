@@ -1,11 +1,11 @@
 // Autosaving INIT
 document.addEventListener("DOMContentLoaded", () => {
 	setSaving(JSON.parse(localStorage.getItem('SOD_MurderCaseBuilder_Autosave')) ?? true);
-	document.querySelector('#fileType').innerHTML = document.querySelector('#asset-model-type-list').innerHTML;
+	document.querySelector('#new-file-modal-file-type').innerHTML = document.querySelector('#asset-model-type-list').innerHTML;
 
 	if(!window.localStorage.getItem('SOD_MurderCaseBuilder_SpoilerWarningDismissed')) {
-		document.querySelector('#spoiler_warning').setAttribute("open", null);
-		document.querySelector('#load_popup').removeAttribute("open");
+		document.querySelector('#spoiler-warning-modal').setAttribute("open", null);
+		document.querySelector('#before-you-start-modal').removeAttribute("open");
 	}
 });
 
@@ -31,14 +31,14 @@ async function loadFromGUI() {
 	if(window.selectedMod != null) {
 		await initAndLoad('murdermanifest');
 	}
-	document.querySelector('#load_popup').removeAttribute("open");
+	document.querySelector('#before-you-start-modal').removeAttribute("open");
 	// updateFavButton();
 }
 
 function dismissSpoilerWarning() {
 	window.localStorage.setItem('SOD_MurderCaseBuilder_SpoilerWarningDismissed', true);
-	document.querySelector('#spoiler_warning').removeAttribute("open");
-	document.querySelector('#load_popup').setAttribute("open", null);
+	document.querySelector('#spoiler-warning-modal').removeAttribute("open");
+	document.querySelector('#before-you-start-modal').setAttribute("open", null);
 }
 
 // Murder loading
@@ -122,6 +122,17 @@ function updateAssetModel(firstRun) {
 		}
 		tr.appendChild(option)
 		assetList.appendChild(tr);
+	});
+}
+
+function updateNewFileCopyFrom() {
+	let type = document.querySelector('#new-file-modal-file-type').value;
+	let ele = document.querySelector('#new-file-modal-copy-from');
+	ele.replaceChildren();
+	['None', ...window.typeMap[type]?.sort()].forEach(SO => {
+		var option = document.createElement("option");
+		option.text = SO;
+		ele.appendChild(option);
 	});
 }
 

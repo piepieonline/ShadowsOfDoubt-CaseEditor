@@ -101,7 +101,7 @@
             </footer>
         </article>
     </main>
-    <dialog id="spoiler_warning">
+    <dialog id="spoiler-warning-modal">
         <article>
             <header>
                 <h5>
@@ -115,7 +115,7 @@
             <button onclick="dismissSpoilerWarning()" style="width: 100%">I accept the risk of spoilers</button>
         </article>
     </dialog>
-    <dialog open id="load_popup">
+    <dialog open id="before-you-start-modal">
         <article>
             <header>
                 <h5>
@@ -183,18 +183,24 @@
                     <strong>New File</strong>
                 </h5>
             </header>
-            <form onsubmit="event.preventDefault();newFilePromiseResolve(this.fileName.value,this.fileType.value)">
+            <form onsubmit="event.preventDefault();newFilePromiseResolve(this['new-file-modal-file-name'].value,this['new-file-modal-file-type'].value, this['new-file-modal-copy-from'].value)">
                 <label>
                     File Type
-                    <select id="fileType">
+                    <select id="new-file-modal-file-type" onchange="updateNewFileCopyFrom()">
                         <option value="MurderMO">File for new Murder Case</option>
                         <option value="InteractablePreset">File for new Interactable</option>
                         <option value="EvidencePreset">File for new Evidence</option>
                     </select>
                 </label>
                 <label>
+                    Copy From
+                    <select id="new-file-modal-copy-from">
+                        <option value="None">None</option>
+                    </select>
+                </label>
+                <label>
                     File Name
-                    <input id="fileName">
+                    <input id="new-file-modal-file-name">
                 </label>
                 <button type="submit" style="width: 100%">Create File</button>
             </form>

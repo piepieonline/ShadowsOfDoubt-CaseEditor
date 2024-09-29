@@ -401,9 +401,8 @@ async function getTemplateForItem(templateName) {
 
     if(templateName === "FileType")
     {
-        let { name, type } = await showPopup();
-
-        document.querySelector('#new-file-modal').toggleAttribute('open', false);
+        let { name, type, copyFrom } = await showNewFilePopup();
+        closeNewFilePopup();
 
         if(name == null || type == null)
         {
@@ -415,7 +414,7 @@ async function getTemplateForItem(templateName) {
             content.name = name;
             content.presetName = name;
             content.type = type;
-            content.copyFrom = null;
+            content.copyFrom = copyFrom;
             return content;
         });
 
@@ -427,15 +426,20 @@ async function getTemplateForItem(templateName) {
     return newTemplate;
 }
 
-async function showPopup() {
+async function showNewFilePopup() {
     let popupPromise = new Promise((resolve, reject) => {
-        window.newFilePromiseResolve = (name, type) => resolve({ name, type });
-        window.newFilePromiseReject = () => reject({ name: null, type: null });
+        window.newFilePromiseResolve = (name, type, copyFrom) => resolve({ name, type, copyFrom: (copyFrom === 'None' ? null : copyFrom) });
+        window.newFilePromiseReject = () => reject({ name: null, type: null, copyFrom: null });
     });
 
     document.querySelector('#new-file-modal').toggleAttribute('open', true);
 
     return popupPromise;
+}
+
+function closeNewFilePopup() {
+    document.querySelector('#new-file-modal').toggleAttribute('open', false);
+    document.querySelector('#new-file-modal-file-name').value = '';
 }
 
 function deepReplace (obj, keyName, replacer) {
