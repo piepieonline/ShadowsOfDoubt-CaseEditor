@@ -23,8 +23,10 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         return;
     }
 
+    const isManifestFile = path === 'murdermanifest.sodso.json';
+
     // Manifest Frame
-    let DOMtarget = path === 'murdermanifest.sodso.json' ? document.querySelector('#manifest_panel>div') : document.getElementById('trees');
+    let DOMtarget = isManifestFile ? document.querySelector('#manifest_panel>div') : document.getElementById('trees');
 
     let treeEle = addTreeElement(path, DOMtarget, { copySource, save });
 
@@ -50,6 +52,10 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     var tree = jsonTree.create(data, treeEle);
     runTreeSetup();
     markDefaultValues();
+
+    if(isManifestFile) {
+        document.querySelector('#manifest_add_item_button').onclick = () => { tree.addNewArrayElement(['Manifest', 'fileOrder'], '/fileOrder') };
+    }
 
     function createDummyKeys(data) {
         return data;
@@ -82,6 +88,14 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     }
 
     async function runTreeSetup() {
+        // Nasty, but this code is shocking anyway
+        tree.addNewArrayElement = addNewArrayElement;
+
+        // If we are rebuilding the manifest tree, empty out the buttons from the visual manifest panel
+        if(isManifestFile) {
+            document.querySelector('#manifest_panel .files-order ul').replaceChildren();
+        }
+
         // Set paths & titles
         tree.findAndHandle(item => {
             return true;
@@ -138,7 +152,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
                 }); 
             }
 
-            if (path === "murdermanifest.sodso.json" && !item.isComplex) {
+            if (isManifestFile && !item.isComplex) {
                 let ul = document.querySelector('#manifest_panel .files-order ul');
                 let li = fastElement("li");
                 let file_link = fastElement("button", "secondary");
@@ -277,32 +291,33 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
                 var ele = item.el.querySelector('.jsontree_label');
                 ele.addEventListener('contextmenu', async (e) => {
                     e.preventDefault();
-
-                    if (!window.selectedMod) {
-                        alert('Please select a mod to save in first');
-                        throw 'Please select a mod to save in first';
-                    }
-
-                    let splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
-                    let mappedType = mapSplitPath(splitPath);
-
-                    let newContent;
-                    if(window.typeMap[mappedType])
-                        newContent = `REF:${mappedType}|${window.typeMap[mappedType][0]}`;
-                    else
-                        newContent = await getTemplateForItem(mappedType);
-
-                    if (newContent === null) return;
-
-                    updateTree([
-                        {
-                            op: 'add',
-                            path: getJSONPointer(item) + '/-',
-                            value: newContent
-                        }
-                    ]);
+                    addNewArrayElement([fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')], getJSONPointer(item));
                 });
             });
+        }
+
+        async function addNewArrayElement(splitPath, addToPath) {
+            if (!window.selectedMod) {
+                alert('Please select a mod to save in first');
+                throw 'Please select a mod to save in first';
+            }
+            let mappedType = mapSplitPath(splitPath);
+
+            let newContent;
+            if(window.typeMap[mappedType])
+                newContent = `REF:${mappedType}|${window.typeMap[mappedType][0]}`;
+            else
+                newContent = await getTemplateForItem(mappedType);
+
+            if (newContent === null) return;
+
+            updateTree([
+                {
+                    op: 'add',
+                    path: addToPath + '/-',
+                    value: newContent
+                }
+            ]);
         }
 
         async function updateTree(patch)
