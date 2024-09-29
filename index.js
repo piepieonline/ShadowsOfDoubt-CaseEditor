@@ -36,7 +36,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     var data = JSON.parse(rawTextData);
     // Replace Unity references with string refs
     rawTextData = JSON.stringify(data).replaceAll(/({"m_FileID.*?(\d+).*?})/g, (rawMatch, fullMatch, id) => {
-        return `"${window.pathIdMap[id]}"`;
+        return window.pathIdMap[id] ? `"REF:${window.pathIdMap[id]}"` : null;
     });
     
     data = JSON.parse(rawTextData);

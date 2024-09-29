@@ -100,6 +100,20 @@
             </footer>
         </article>
     </main>
+    <dialog id="spoiler_warning">
+        <article>
+            <header>
+                <h5>
+                    <strong>SPOILER WARNING</strong>
+                </h5>
+            </header>
+            <h6>Working on mods comes with an inherit risk of spoilers.</h6>
+            <p>
+                Using this tool will almost certainly result in spoilers for how Shadows Of Doubt works. This is doubly true if you browse existing game assets with the Asset Explorer.
+            </p>
+            <button onclick="dismissSpoilerWarning()" style="width: 100%">I accept the risk of spoilers</button>
+        </article>
+    </dialog>
     <dialog open id="load_popup">
         <article>
             <header>
@@ -111,12 +125,12 @@
             <small>
                 <ol>
                     <li>Create your new mod folder under your BepInEx install directory.</li>
-                    <li>Select the created folder using the button below.</li>
+                    <li>Select the created folder using the button below. This folder can now contain multiple case types, one per subfolder.</li>
                     <li>Click 'New MurderMO', enter a name, and let the files be created.</li>
                     <li>Once the murdermanifest file has opened, open the linked file (The MurderMO) with the same name as you have just created.</li>
                 </ol>
             </small>
-            <button onclick="loadFromGUI()" style="width: 100%">Select folder for work</button>
+            <button onclick="loadFromGUI()" style="width: 100%">Select the parent folder</button>
         </article>
     </dialog>
     <dialog id="help-modal">
