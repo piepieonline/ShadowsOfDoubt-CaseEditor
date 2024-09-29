@@ -28,7 +28,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     // Manifest Frame
     let DOMtarget = isManifestFile ? document.querySelector('#manifest_panel>div') : document.getElementById('trees');
 
-    let treeEle = addTreeElement(path, DOMtarget, { copySource, save, showSelectFieldsDialog });
+    let treeEle = addTreeElement(path, DOMtarget, readOnly, { copySource, save, showSelectFieldsDialog });
 
     if(!treeEle) return;
 
