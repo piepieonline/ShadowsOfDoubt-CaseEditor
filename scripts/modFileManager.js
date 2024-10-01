@@ -43,7 +43,7 @@ function cloneTemplate(template) {
                 let childType = obj[keys[i]].Item1;
                 let isArray = obj[keys[i]].Item2;
 
-                let newVal = JSON.parse(JSON.stringify(window.basicTypes[childType] ?? childType));
+                let newVal = JSON.parse(JSON.stringify(window.basicTypeTemplates[childType] ?? childType));
                 
                 if(newVal === childType && !(childType in window.typeMap) && !(childType in window.enums))
                 {
@@ -56,6 +56,10 @@ function cloneTemplate(template) {
                 else if(childType in window.typeMap)
                 {
                     newVal = `REF:${childType}|${window.typeMap[childType][0]}`;
+                }
+                else if(childType in window.enums)
+                {
+                    newVal = 0;
                 }
 
                 obj[keys[i]] = newVal;

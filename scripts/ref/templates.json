@@ -28,19 +28,10 @@
     "openHoursDicatedByAdjoiningCompany": false,
     "needsPassword": false,
     "dictionaryPasswordSources": [],
-    "company": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "residence": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "company": null,
+    "residence": null,
     "playerKnowsPurpose": true,
-    "evidenceIconLarge": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "evidenceIconLarge": null,
     "chanceOfNameSignHorizontal": 1.0,
     "horizontalSignOffset": {
       "x": 0.0,
@@ -223,10 +214,7 @@
     "overrideGoalDoorRule": false,
     "doorRule": 0,
     "spawnTauntOnSuccess": false,
-    "onArrivalSound": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "onArrivalSound": null,
     "isLoop": false,
     "soundDelay": 0.0,
     "outdoorClothingCheck": true,
@@ -252,10 +240,7 @@
     "completeExpression": 0,
     "allowItems": true,
     "enableCustomItem": false,
-    "itemRight": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "itemRight": null,
     "itemRightLocalPos": {
       "x": 0.0,
       "y": 0.0,
@@ -266,10 +251,7 @@
       "y": 0.0,
       "z": 0.0
     },
-    "itemLeft": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "itemLeft": null,
     "itemLeftLocalPos": {
       "x": 0.0,
       "y": 0.0,
@@ -284,10 +266,7 @@
     "destroyCustomItemOn": 3,
     "requiresCarryAnimation": false,
     "overrideCarryAnimation": 1,
-    "dropItemOnEnd": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "dropItemOnEnd": null,
     "chanceOfOnTrigger": 0.5,
     "onTriggerBark": [],
     "chanceOfWhileJourney": 0.5,
@@ -395,10 +374,7 @@
   },
   "AmbientZone": {
     "presetName": "",
-    "mainEvent": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "mainEvent": null,
     "useOcclusion": true,
     "maxRange": 10.0,
     "canPenetrateClosedDoors": true,
@@ -420,14 +396,8 @@
   "ArtPreset": {
     "presetName": "",
     "disable": false,
-    "texturePreview": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "material": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "texturePreview": null,
+    "material": null,
     "orientationCompatibility": [],
     "pixelScaleMultiplier": 0.02500000037252903,
     "allowInResidential": true,
@@ -448,10 +418,7 @@
     "traitModifiers": [],
     "useDynamicText": false,
     "dynamicTextSource": 0,
-    "textFont": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "textFont": null,
     "textColour": {
       "r": 1.0,
       "g": 1.0,
@@ -560,29 +527,17 @@
     "baseChance": 0.0,
     "pickRules": [],
     "spawnRule": 0,
-    "bookMesh": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "bookMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "bookMesh": null,
+    "bookMaterial": null,
     "ddsMessage": ""
   },
   "BroadcastPreset": {
     "presetName": "",
-    "audioEvent": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "audioEvent": null,
     "changeImageEvery": 2.0,
     "order": 0,
     "endOfShowTrigger": 0,
-    "spriteSheet": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "spriteSheet": null,
     "spriteResolution": {
       "x": 32.0,
       "y": 32.0
@@ -600,18 +555,9 @@
   "BuildingPreset": {
     "presetName": "",
     "disable": false,
-    "prefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "emissionMapUnlit": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "emissionMapLit": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "prefab": null,
+    "emissionMapUnlit": null,
+    "emissionMapLit": null,
     "buildingHeight": 0.0,
     "lightningRodLocalPos": {
       "x": 0.0,
@@ -620,10 +566,7 @@
     },
     "defaultExteriorWallMaterial": [],
     "exteriorKey": {
-      "baseMaterial": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "baseMaterial": null,
       "mainColour": {
         "r": 0.0,
         "g": 0.0,
@@ -673,14 +616,8 @@
       "y": 0.0
     },
     "forceBuildingDesignStyles": [],
-    "stairwellRegular": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "stairwellLarge": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "stairwellRegular": null,
+    "stairwellLarge": null,
     "buildingFeaturesEchelonFloors": false,
     "echelonFloorStart": 10,
     "overrideGrubiness": false,
@@ -697,32 +634,17 @@
     "hardLimit": 99,
     "desiredRatio": 0.05000000074505806,
     "modernity": 5,
-    "lobbyPreset": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "lobbyPreset": null,
     "nonEnterable": false,
     "boundary": false,
     "boundaryCorner": false,
     "overrideNaming": false,
     "possibleNames": [],
     "customDrawOnMap": false,
-    "tex": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "captureMesh": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "windowMap": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "addonMap": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "tex": null,
+    "captureMesh": null,
+    "windowMap": null,
+    "addonMap": null,
     "sortedWindows": [],
     "floorCount": 1,
     "meshHeight": 0.0,
@@ -771,10 +693,7 @@
       "x": 0.10000000149011612,
       "y": 0.33000001311302185
     },
-    "spritePrefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "spritePrefab": null,
     "spawnOffset": {
       "x": 0.0,
       "y": 0.0,
@@ -784,10 +703,7 @@
   "ChapterPreset": {
     "presetName": "",
     "chapterNumber": 0,
-    "scriptObject": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "scriptObject": null,
     "dictionary": "chapter.1",
     "askToEnableTutorial": false,
     "startingHour": 2.559999942779541,
@@ -1107,24 +1023,15 @@
     "enableSellingOfIllegalItems": false,
     "sellValueMultiplier": 0.5,
     "possibleUniformColours": [],
-    "workHours": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "structure": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "workHours": null,
+    "structure": null,
     "controlsBuildingSurveillance": false,
     "isHotel": false
   },
   "CompanyStructurePreset": {
     "presetName": "",
     "companyStructure": {
-      "occupation": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "occupation": null,
       "positionsMinimum": 1,
       "positionsMaximum": 1,
       "payGrade": 0.5,
@@ -1137,39 +1044,24 @@
     "canBeAgent": false,
     "canHaveJob": true,
     "suggestedRank": 0,
-    "boss": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "boss": null,
     "positionsMin": 1,
     "positionsMax": 1,
     "desiredCrimePerDay": 1.5
   },
   "CruncherAppPreset": {
     "presetName": "",
-    "loadBackground": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "loadedBackground": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "loadBackground": null,
+    "loadedBackground": null,
     "useCursor": true,
-    "cursorSprite": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "cursorSprite": null,
     "useTimer": false,
     "timerLength": 3.0,
     "loadTime": 1.0,
     "loadDemand": 0.33000001311302185,
     "alwaysLoad": false,
     "alwaysLoadDemand": 0.33000001311302185,
-    "desktopIcon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "desktopIcon": null,
     "screenLightColourOnLoad": {
       "r": 1.0,
       "g": 1.0,
@@ -1191,22 +1083,10 @@
     "onlyInAddresses": [],
     "onlyIfResidential": false,
     "appContent": [],
-    "onStartSound": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "onExitSound": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "onFinishedLoadingSound": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "openOnEnd": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "onStartSound": null,
+    "onExitSound": null,
+    "onFinishedLoadingSound": null,
+    "openOnEnd": null
   },
   "CutScenePreset": {
     "presetName": "",
@@ -1215,10 +1095,7 @@
     "fadeInTime": 2.0,
     "fadeOut": true,
     "fadeOutTime": 2.0,
-    "displayImage": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "displayImage": null,
     "imageFadeIn": 0.0,
     "imageFadeInSpeed": 1.0,
     "imageFadeOut": 0.0,
@@ -1317,10 +1194,7 @@
     "lightOperation": 0,
     "lightAmount": 1.0,
     "brightnessModifier": 0.0,
-    "copyFrom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "copyFrom": null
   },
   "DoorMovementPreset": {
     "presetName": "",
@@ -1366,26 +1240,11 @@
     "collisionBehaviour": 0,
     "behaviourAppliesWhenOpening": true,
     "behaviourAppliesWhenClosing": true,
-    "openAction": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "closeAction": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "openFinished": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "closeFinished": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "objectImpact": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "openAction": null,
+    "closeAction": null,
+    "openFinished": null,
+    "closeFinished": null,
+    "objectImpact": null,
     "ignoreOcclusion": false,
     "switchState1AnimationSync": false
   },
@@ -1412,49 +1271,22 @@
     },
     "sectionClass": 0,
     "ignoreCullingRaycasts": false,
-    "raisedFloorOverride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "materialOverride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "raisedFloorOverride": null,
+    "materialOverride": null,
     "mapOverride": [],
     "overrideWallNormal": false,
-    "wallNormalOverrride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "wallNormalOverrride": null,
     "overrideDuctLower": false,
-    "ductLowerOverrride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "ductLowerOverrride": null,
     "overrideDuctUpper": false,
-    "ductUpperOverrride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "ductUpperOverrride": null
   },
   "DoorPreset": {
     "presetName": "",
-    "doorModel": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "objectPreset": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "handleModel": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "handlePreset": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "doorModel": null,
+    "objectPreset": null,
+    "handleModel": null,
+    "handlePreset": null,
     "handleOffset": {
       "x": -1.25,
       "y": 1.0499999523162842,
@@ -1475,10 +1307,7 @@
     "canPeakUnderneath": false,
     "closeBehaviour": 0,
     "lockType": 1,
-    "lockInteractable": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "lockInteractable": null,
     "lockOffsetFront": {
       "x": -1.25,
       "y": 1.5,
@@ -1498,50 +1327,17 @@
       "x": 0.10000000149011612,
       "y": 0.20000000298023224
     },
-    "audioOpen": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "audioClose": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "audioCloseAction": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "audioLock": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "audioUnlock": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "audioLockedEntryAttempt": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "audioKnockLight": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "audioKnockMed": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "audioKnockHeavy": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "doorBargeContact": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "doorBargeBreak": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "audioOpen": null,
+    "audioClose": null,
+    "audioCloseAction": null,
+    "audioLock": null,
+    "audioUnlock": null,
+    "audioLockedEntryAttempt": null,
+    "audioKnockLight": null,
+    "audioKnockMed": null,
+    "audioKnockHeavy": null,
+    "doorBargeContact": null,
+    "doorBargeBreak": null
   },
   "EffectPreset": {
     "presetName": "",
@@ -1553,22 +1349,13 @@
     "stairWellPrefabs": [],
     "stairsPrefabs": [],
     "rotationOffset": 0.0,
-    "bottomMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "topMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "bottomMaterial": null,
+    "topMaterial": null
   },
   "EvidencePreset": {
     "presetName": "",
     "subClass": "",
-    "windowStyle": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "windowStyle": null,
     "useDataKeys": false,
     "validKeys": [],
     "passiveTies": [],
@@ -1580,14 +1367,8 @@
     "markAsDiscoveredOnAnyInteraction": false,
     "forceWorldInteraction": false,
     "useWindowFocusMode": false,
-    "iconSpriteLarge": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "defaultNullImage": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "iconSpriteLarge": null,
+    "defaultNullImage": null,
     "useInGamePhoto": false,
     "useWriter": false,
     "relativeCamPhotoPos": {
@@ -1629,10 +1410,7 @@
   },
   "FactPreset": {
     "presetName": "",
-    "iconSpriteLarge": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "iconSpriteLarge": null,
     "subClass": "",
     "allowDuplicates": true,
     "allowReverseDuplicates": true,
@@ -1649,27 +1427,15 @@
     "presetName": "",
     "slotPriority": 0,
     "modelActive": true,
-    "idleClip": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "selectionIcon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "idleClip": null,
+    "selectionIcon": null,
     "summaryMsgID": "",
     "triggerTutorial": "",
     "disableBracketDisplayName": false,
     "drawSpeed": 2.0,
     "holsterSpeed": 2.5,
-    "leftHandObject": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "rightHandObject": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "leftHandObject": null,
+    "rightHandObject": null,
     "spawnScale": {
       "x": 1.0,
       "y": 1.0,
@@ -1677,14 +1443,8 @@
     },
     "useFoodSlotItem": false,
     "useAlternateTrashObjects": false,
-    "leftHandObjectTrash": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "rightHandObjectTrash": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "leftHandObjectTrash": null,
+    "rightHandObjectTrash": null,
     "actions": [],
     "drawnNerveModifier": 0.0,
     "barkTriggerChance": 0.0,
@@ -1692,19 +1452,10 @@
     "compatibleWithLockedIn": true,
     "compatibleWithHidden": true,
     "equipSoundDelay": 0.0,
-    "equipEvent": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "equipEvent": null,
     "holsterSoundDelay": 0.0,
-    "holsterEvent": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "activeLoop": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "holsterEvent": null,
+    "activeLoop": null,
     "passRainParamsToActiveLoop": false
   },
   "FogPreset": {
@@ -2050,10 +1801,7 @@
     "assignHomelessOwners": false,
     "assignMailbox": false,
     "discourageMissionPhotos": false,
-    "copyFrom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "copyFrom": null
   },
   "FurnitureCluster": {
     "presetName": "",
@@ -2120,10 +1868,7 @@
   "FurniturePreset": {
     "presetName": "",
     "classes": [],
-    "prefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "prefab": null,
     "allowStaticBatching": false,
     "spawnRange": 3,
     "allowWeatherAffectedMaterials": false,
@@ -2165,26 +1910,11 @@
     "subObjects": [],
     "testForModifiers": 0,
     "forcePublicIllegal": false,
-    "hidingEnterTransition": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "hidingExitTransition": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "hidingEnterTransition2": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "hidingExitTransition2": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "map": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "hidingEnterTransition": null,
+    "hidingExitTransition": null,
+    "hidingEnterTransition2": null,
+    "hidingExitTransition2": null,
+    "map": null,
     "drawUnderWalls": false,
     "ignoreDirection": false,
     "fingerprintsEnabled": true,
@@ -2199,10 +1929,7 @@
     "disableFromDecorMenu": false,
     "cost": 100,
     "decorClass": 6,
-    "staticImage": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "staticImage": null,
     "imagePos": {
       "x": 0.0,
       "y": 0.0,
@@ -2214,10 +1941,7 @@
       "z": 0.0
     },
     "imageScale": 1.0,
-    "imagePrefabOverride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "imagePrefabOverride": null,
     "isJobBoard": false,
     "isWorkPosition": false,
     "isPlant": false,
@@ -2225,10 +1949,7 @@
     "isSecurityCamera": false,
     "onLoadAdjacentPlayerTeleport": false,
     "artOrientation": 0,
-    "createSelfEmployed": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "createSelfEmployed": null,
     "workPositionID": 0,
     "spawnObjectOnChance": 1.0,
     "spawnObjectsOnPlacement": []
@@ -2249,10 +1970,7 @@
     },
     "meetUpLength": 1.5,
     "meetUpLocations": [],
-    "meetUpGoal": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "meetUpGoal": null,
     "reserveSeats": true,
     "useDistanceMultiplierModifier": 0.0,
     "clues": [],
@@ -2260,10 +1978,7 @@
   },
   "HandwritingPreset": {
     "presetName": "",
-    "fontAsset": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "fontAsset": null,
     "baseChance": 0.10000000149011612,
     "characterTraits": []
   },
@@ -2284,10 +1999,7 @@
   "InteractablePreset": {
     "presetName": "",
     "spawnable": true,
-    "prefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "prefab": null,
     "prefabLocalEuler": {
       "x": 0.0,
       "y": 0.0,
@@ -2320,18 +2032,12 @@
     "includeBelongsTo": false,
     "useNameShorthand": false,
     "useApartmentName": false,
-    "isLight": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "isLight": null,
     "lightswitch": 0,
     "allowUnscrewed": true,
     "isMainLight": false,
     "forceIncludeOnStreetLightLayer": false,
-    "staticImage": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "staticImage": null,
     "imagePos": {
       "x": 0.0,
       "y": 0.0,
@@ -2343,14 +2049,8 @@
       "z": 0.0
     },
     "imageScale": 1.0,
-    "imagePrefabOverride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "iconOverride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "imagePrefabOverride": null,
+    "iconOverride": null,
     "itemClass": 4,
     "allowInApartmentStorage": true,
     "allowInApartmentShop": false,
@@ -2371,19 +2071,13 @@
     "actionsPreset": [],
     "onlyIllegalIfInNonPublic": true,
     "rangeModifier": 0.0,
-    "physicsProfile": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "physicsProfile": null,
     "overrideMass": false,
     "forcePhysicsAlwaysOn": false,
     "reactWithExternalStimuli": false,
     "mass": 1.0,
     "breakable": false,
-    "particleProfile": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "particleProfile": null,
     "overrideShatterSettings": false,
     "shardSize": {
       "x": 0.02500000037252903,
@@ -2392,28 +2086,13 @@
     },
     "shardEveryXPixels": 64,
     "overrideSpatterSettings": false,
-    "spatterSimulation": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "spatterSimulation": null,
     "spatterCountMultiplier": 1.0,
     "overrideFurnitureSetting": false,
-    "enterTransition": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "exitTransition": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "enterTransition2": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "exitTransition2": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "enterTransition": null,
+    "exitTransition": null,
+    "enterTransition2": null,
+    "exitTransition2": null,
     "switchSFX": [],
     "startingSwitchState": false,
     "startingCustomState1": false,
@@ -2488,10 +2167,7 @@
     "onlyInRooms": [],
     "limitToCertainBuildings": false,
     "onlyInBuildings": [],
-    "attemptToStoreInFolder": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "attemptToStoreInFolder": null,
     "folderPlacementChance": 1.0,
     "dontPlaceIfNoFolder": false,
     "folderOwnershipMustMatch": false,
@@ -2499,24 +2175,15 @@
     "securityLevel": 0,
     "ownedRule": 4,
     "overrideWithOnlyOwnedSpawnAtWork": false,
-    "subSpawnClass": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "subSpawnClass": null,
     "subSpawnPositions": [],
     "relocationAuthority": 0,
     "relocateIfPlacedInPlayersHome": true,
     "AIWillCorrectPosition": true,
     "useEvidence": false,
-    "useSingleton": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "useSingleton": null,
     "findEvidence": 0,
-    "spawnEvidence": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "spawnEvidence": null,
     "locationIsParent": true,
     "summaryMessageSource": "",
     "overrideEvidencePhotoSettings": false,
@@ -2530,20 +2197,14 @@
       "y": 155.0,
       "z": 0.0
     },
-    "includeLock": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "includeLock": null,
     "lockOffset": {
       "x": 0.0,
       "y": 0.0,
       "z": 0.0
     },
     "passwordSource": 0,
-    "attemptedOpenSound": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "attemptedOpenSound": null,
     "armLockOnClose": true,
     "lockStrength": {
       "x": 0.10000000149011612,
@@ -2551,27 +2212,12 @@
     },
     "isSelfLock": false,
     "useMaterialChanges": false,
-    "lockOffMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "lockOnMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "lockOffMaterial": null,
+    "lockOnMaterial": null,
     "isComputer": false,
-    "bootApp": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "logInApp": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "desktopApp": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "bootApp": null,
+    "logInApp": null,
+    "desktopApp": null,
     "additionalApps": [],
     "fingerprintsEnabled": true,
     "printsSource": 11,
@@ -2580,10 +2226,7 @@
     "disableDynamicFingerprintsFromStaticPrintsSources": false,
     "overrideMaxDynamicFingerprints": false,
     "maxDynamicFingerprints": 8,
-    "fpsItem": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "fpsItem": null,
     "isInventoryItem": false,
     "fpsItemOffset": {
       "x": 0.0,
@@ -2603,25 +2246,13 @@
     "consumableAmount": 0.0,
     "destroyWhenAllConsumed": false,
     "useSameModelAsTrash": true,
-    "trashItem": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "playerConsumeLoop": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "takeOneEvent": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "trashItem": null,
+    "playerConsumeLoop": null,
+    "takeOneEvent": null,
     "disposal": 0,
     "chanceOfDroppedAngle": 0.0,
     "droppedAngleHeightBoost": 0.10000000149011612,
-    "weapon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "weapon": null,
     "inventoryCarryItem": false,
     "requiredCarryAnimation": true,
     "aiCarryAnimation": 1,
@@ -2657,37 +2288,19 @@
     "dontLoadSwitchStates": false,
     "recordCreationTime": false,
     "musicTracks": [],
-    "retailItem": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "menuOverride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "hourlyChime": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "retailItem": null,
+    "menuOverride": null,
+    "hourlyChime": null,
     "chimeEqualToHour": false,
     "chimeDelay": 1.5,
-    "searchLoop": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "copyFrom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "searchLoop": null,
+    "copyFrom": null
   },
   "JobPreset": {
     "presetName": "",
     "disabled": false,
     "caseName": "",
-    "jobPosting": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "jobPosting": null,
     "subClass": "",
     "allowSyncDiskRewards": true,
     "allowBlackMarketSyncDiskRewards": true,
@@ -2719,27 +2332,18 @@
     "additional": [],
     "compatibleHandIns": [],
     "dialogReferences": [],
-    "debugCopyFrom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "debugCopyFrom": null
   },
   "LayoutConfiguration": {
     "presetName": "",
     "assignPurpose": true,
-    "addressPreset": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "addressPreset": null,
     "publicFacing": true,
     "isOutside": false,
     "isLobby": false,
     "roomLayout": [],
     "requiresHallway": true,
-    "hallway": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "hallway": null,
     "hallwayDistanceThreshold": 6,
     "useBuildingDesignStyle": false,
     "overrideEvidencePhotoSettings": false,
@@ -2775,26 +2379,14 @@
     "onByDefault": true,
     "fadeDistance": 40.0,
     "useBroadcastMaterial": false,
-    "useOnMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "useOnMaterial": null,
     "useInstancedEmissive": false,
     "emissionMultiplier": 1.0,
     "isAtriumLight": false,
     "minimumFloors": 2,
-    "cablePrefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "bulbPrefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "endBulbPrefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "cablePrefab": null,
+    "bulbPrefab": null,
+    "endBulbPrefab": null,
     "heightInterval": 8.0,
     "allowCeilingFans": false,
     "enableVolumetrics": true,
@@ -2827,19 +2419,13 @@
     "matchConditions": [],
     "onlyMatchWithMatchParents": false,
     "canMatchWithItself": false,
-    "onlyMatchWithThis": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "onlyMatchWithThis": null,
     "linkFromKeys": [],
     "linkToKeys": []
   },
   "MaterialGroupPreset": {
     "presetName": "",
-    "material": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "material": null,
     "variations": [],
     "concrete": 1.0,
     "plaster": 0.0,
@@ -2849,10 +2435,7 @@
     "metal": 0.0,
     "glass": 0.0,
     "fabric": 0.0,
-    "noFloorReplacement": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "noFloorReplacement": null,
     "allowFootprints": false,
     "affectFootprintDirt": 0.0,
     "grubFootprintDirtMultiplier": 0.05000000074505806,
@@ -2862,19 +2445,13 @@
     "allowedRoomFilters": [],
     "purchasable": true,
     "price": 10,
-    "decorSprite": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "decorSprite": null
   },
   "MenuPreset": {
     "presetName": "",
     "itemsSold": [],
     "createReceipt": true,
-    "purchaseAudio": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "purchaseAudio": null,
     "syncDiskSlots": 0,
     "fromManufacturers": [],
     "syncDisks": []
@@ -3037,10 +2614,7 @@
     "leads": [],
     "useCustomResolveQuestions": false,
     "customResolveQuestions": [],
-    "copyFrom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "copyFrom": null
   },
   "MurderWeaponPreset": {
     "presetName": "",
@@ -3057,10 +2631,7 @@
       "y": 0.0,
       "z": 0.0
     },
-    "itemRightOverride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "itemRightOverride": null,
     "itemRightLocalPos": {
       "x": 0.0,
       "y": 0.0,
@@ -3071,10 +2642,7 @@
       "y": 0.0,
       "z": 0.0
     },
-    "itemLeftOverride": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "itemLeftOverride": null,
     "itemLeftLocalPos": {
       "x": 0.0,
       "y": 0.0,
@@ -3128,60 +2696,21 @@
     },
     "attackDamageLerpSource": 1,
     "applyPoison": 0.0,
-    "shellCasing": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "shellCasing": null,
     "ejectBrassSetting": 1,
-    "bulletHole": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "glassBulletHole": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "entryWound": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "bulletRicochet": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "bulletImpactSpray": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "muzzleFlash": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "bulletHole": null,
+    "glassBulletHole": null,
+    "entryWound": null,
+    "bulletRicochet": null,
+    "bulletImpactSpray": null,
+    "muzzleFlash": null,
     "bloodPoolAmount": 0.0,
-    "forwardSpatter": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "backSpatter": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "fireEvent": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "impactEvent": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "impactEventBody": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "impactEventPlayer": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "forwardSpatter": null,
+    "backSpatter": null,
+    "fireEvent": null,
+    "impactEvent": null,
+    "impactEventBody": null,
+    "impactEventPlayer": null
   },
   "MurderWeaponsPool": {
     "presetName": "",
@@ -3265,19 +2794,13 @@
     "inventoryItems": [],
     "joinGroups": [],
     "addDialog": [],
-    "selectedPreset": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "selectedPreset": null
   },
   "ParticleEffect": {
     "presetName": "",
     "damageBreakPoint": 0.10000000149011612,
     "deleteObject": true,
-    "effectPrefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "effectPrefab": null,
     "shatter": true,
     "shardSize": {
       "x": 0.02500000037252903,
@@ -3288,10 +2811,7 @@
     "shatterForceMultiplier": 2.4000000953674316,
     "isGlass": false,
     "spatterTrigger": 0,
-    "spatter": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "spatter": null,
     "countMultiplier": 1.0,
     "stickToActors": true,
     "spatterIsVandalism": false,
@@ -3324,15 +2844,9 @@
     "treatAsCausedByPlayer": false,
     "collisionMode": 0,
     "removeOnReset": false,
-    "physicsCollisionAudio": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "physicsCollisionAudio": null,
     "useDifferentSoundForWallImpacts": false,
-    "wallCollisionAudio": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "wallCollisionAudio": null
   },
   "PlayerTransitionPreset": {
     "presetName": "",
@@ -3408,10 +2922,7 @@
     "invertYPositionBasedOnRelativePlayerY": false,
     "invertZPositionBasedOnRelativePlayerZ": false,
     "raycastCheck": false,
-    "onFailUse": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "onFailUse": null,
     "allowMovementOnEnd": false,
     "restoreNormalMovementSpeed": false,
     "customMovementSpeed": 1.0,
@@ -3519,10 +3030,7 @@
   },
   "RetailItemPreset": {
     "presetName": "",
-    "itemPreset": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "itemPreset": null,
     "canBeFavourite": true,
     "isHot": false,
     "isConsumable": true,
@@ -3598,19 +3106,10 @@
   },
   "RoomConfiguration": {
     "presetName": "",
-    "roomType": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "roomClass": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "roomType": null,
+    "roomClass": null,
     "canBeOpenPlan": false,
-    "openPlanRoom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "openPlanRoom": null,
     "securityDoors": 0,
     "limitSecurityCameras": false,
     "securityCameraLimit": 1,
@@ -3675,38 +3174,17 @@
     "assignBelongsToOwners": 0,
     "preferCouples": false,
     "belongsToJob": [],
-    "exteriorDoor": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "addressDoor": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "internalDoor": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "exteriorDoor": null,
+    "addressDoor": null,
+    "internalDoor": null,
     "passwordPriority": 1,
     "preferredPassword": 1,
     "placeKey": [],
     "keyOwnershipPlacement": 4,
-    "steps": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "replaceWindows": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "replaceWalls": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "replaceEntrance": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "steps": null,
+    "replaceWindows": null,
+    "replaceWalls": null,
+    "replaceEntrance": null,
     "replaceInsideAlso": false,
     "replaceOnlyIfOtherIs": false,
     "onlyReplaceIf": [],
@@ -3727,10 +3205,7 @@
     "sceneDirty": 2,
     "baseRoomAtmosphere": 0.5,
     "forceOutside": 0,
-    "ambientZone": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "ambientZone": null,
     "fingerprintsEnabled": true,
     "footprintsEnabled": true,
     "printsSource": 1,
@@ -3752,19 +3227,13 @@
     "shadinessValue": 0,
     "allowMuggings": false,
     "muggingAwakenRoom": false,
-    "debugRoom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "debugRoom": null
   },
   "RoomLightingPreset": {
     "presetName": "",
     "disable": false,
     "lightObjects": [],
-    "lightingPreset": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "lightingPreset": null,
     "roomCompatibility": [],
     "minimumRoomSize": 1,
     "maximumRoomSize": 9999,
@@ -3781,10 +3250,7 @@
   },
   "RoomTypePreset": {
     "presetName": "",
-    "forceConfiguration": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "forceConfiguration": null,
     "chance": 1.0,
     "minimumAddressSize": 18,
     "maximumRoomTypesPerAddress": 1,
@@ -3828,10 +3294,7 @@
     "allowCorridorReplacement": false,
     "overrideFloorHeight": false,
     "floorHeight": 0,
-    "copyFrom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "copyFrom": null
   },
   "ScriptableObjectIDSystem": {
     "id": ""
@@ -3867,38 +3330,17 @@
       "m_PostInfinity": 2,
       "m_RotationOrder": 4
     },
-    "heavyMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "mediumMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "lightMaterial": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "heavyMaterial": null,
+    "mediumMaterial": null,
+    "lightMaterial": null
   },
   "StairwellPreset": {
     "presetName": "",
-    "spawnObject": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "objectTop": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "centralSteps": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "spawnObject": null,
+    "objectTop": null,
+    "centralSteps": null,
     "featuresElevator": true,
-    "elevatorObject": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "elevatorObject": null,
     "elevatorMaxSpeed": 2.0,
     "elevatorAcceleration": 0.25,
     "accelerateWhileThisFarAway": 10.0,
@@ -3919,14 +3361,8 @@
       "b": 1.0,
       "a": 1.0
     },
-    "icon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "alternateIcon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "icon": null,
+    "alternateIcon": null,
     "minimizeToIcon": true,
     "pulseBackground": false,
     "pulseIcon": true,
@@ -3944,14 +3380,8 @@
     "enableProgressBar": true,
     "barTracking": 0,
     "useCustomMethod": false,
-    "onAcquire": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "onRemove": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "onAcquire": null,
+    "onRemove": null,
     "countType": 0,
     "overrrideColorWithCount": false,
     "displayCountCountsInMainText": true,
@@ -4021,10 +3451,7 @@
     "presetName": "",
     "disabled": false,
     "syncDiskNumber": 1,
-    "interactable": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "interactable": null,
     "rarity": 1,
     "manufacturer": 0,
     "canBeSideJobReward": true,
@@ -4032,26 +3459,17 @@
     "mainEffect1Description": "",
     "mainEffect1": 0,
     "mainEffect1Value": 0.20000000298023224,
-    "mainEffect1Icon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "mainEffect1Icon": null,
     "mainEffect2Name": "",
     "mainEffect2Description": "",
     "mainEffect2": 0,
     "mainEffect2Value": 0.20000000298023224,
-    "mainEffect2Icon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "mainEffect2Icon": null,
     "mainEffect3Name": "",
     "mainEffect3Description": "",
     "mainEffect3": 0,
     "mainEffect3Value": 0.20000000298023224,
-    "mainEffect3Icon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "mainEffect3Icon": null,
     "option1UpgradeNameReferences": [],
     "option1UpgradeEffects": [],
     "option1UpgradeValues": [],
@@ -4071,30 +3489,18 @@
     "traits": [],
     "occupationWeight": 0,
     "occupation": [],
-    "copyFrom": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    }
+    "copyFrom": null
   },
   "WallFrontageClass": {
     "presetName": ""
   },
   "WallFrontagePreset": {
     "presetName": "",
-    "gameObject": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "gameObject": null,
     "allowStaticBatching": true,
     "isRainyWindow": false,
-    "regularGlass": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
-    "rainyGlass": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "regularGlass": null,
+    "rainyGlass": null,
     "universalDesignStyle": false,
     "designStyles": [],
     "inheritColouringFromDecor": false,
@@ -4126,10 +3532,7 @@
       "x": 172.0,
       "y": 176.0
     },
-    "overrideIcon": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "overrideIcon": null,
     "tabs": []
   },
   "WindowTabPreset": {
@@ -4141,10 +3544,7 @@
       "b": 1.0,
       "a": 1.0
     },
-    "contentPrefab": {
-      "m_FileID": 0,
-      "m_PathID": 0
-    },
+    "contentPrefab": null,
     "contentType": 0,
     "scalableContent": true,
     "fitToScaleX": true,
@@ -4228,14 +3628,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4251,14 +3645,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4274,14 +3662,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4333,26 +3715,11 @@
         }
       },
       "_spriteState": {
-        "m_DisabledSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_HighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_PressedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_SelectedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_DisabledHighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        }
+        "m_DisabledSprite": null,
+        "m_HighlightedSprite": null,
+        "m_PressedSprite": null,
+        "m_SelectedSprite": null,
+        "m_DisabledHighlightedSprite": null
       },
       "_animationTriggers": {
         "m_DisabledTrigger": "",
@@ -4369,14 +3736,8 @@
           "b": 1.0,
           "a": 1.0
         },
-        "_sprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "_materal": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
+        "_sprite": null,
+        "_materal": null,
         "_type": 0,
         "_preserveAspect": false,
         "_fillCenter": false,
@@ -4429,26 +3790,11 @@
         }
       },
       "_spriteState": {
-        "m_DisabledSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_HighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_PressedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_SelectedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_DisabledHighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        }
+        "m_DisabledSprite": null,
+        "m_HighlightedSprite": null,
+        "m_PressedSprite": null,
+        "m_SelectedSprite": null,
+        "m_DisabledHighlightedSprite": null
       },
       "_animationTriggers": {
         "m_DisabledTrigger": "",
@@ -4465,14 +3811,8 @@
           "b": 1.0,
           "a": 1.0
         },
-        "_sprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "_materal": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
+        "_sprite": null,
+        "_materal": null,
         "_type": 0,
         "_preserveAspect": false,
         "_fillCenter": false,
@@ -4525,26 +3865,11 @@
         }
       },
       "_spriteState": {
-        "m_DisabledSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_HighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_PressedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_SelectedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_DisabledHighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        }
+        "m_DisabledSprite": null,
+        "m_HighlightedSprite": null,
+        "m_PressedSprite": null,
+        "m_SelectedSprite": null,
+        "m_DisabledHighlightedSprite": null
       },
       "_animationTriggers": {
         "m_DisabledTrigger": "",
@@ -4561,14 +3886,8 @@
           "b": 1.0,
           "a": 1.0
         },
-        "_sprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "_materal": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
+        "_sprite": null,
+        "_materal": null,
         "_type": 0,
         "_preserveAspect": false,
         "_fillCenter": false,
@@ -4621,26 +3940,11 @@
         }
       },
       "_spriteState": {
-        "m_DisabledSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_HighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_PressedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_SelectedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_DisabledHighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        }
+        "m_DisabledSprite": null,
+        "m_HighlightedSprite": null,
+        "m_PressedSprite": null,
+        "m_SelectedSprite": null,
+        "m_DisabledHighlightedSprite": null
       },
       "_animationTriggers": {
         "m_DisabledTrigger": "",
@@ -4657,14 +3961,8 @@
           "b": 1.0,
           "a": 1.0
         },
-        "_sprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "_materal": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
+        "_sprite": null,
+        "_materal": null,
         "_type": 0,
         "_preserveAspect": false,
         "_fillCenter": false,
@@ -4680,14 +3978,8 @@
           "b": 1.0,
           "a": 1.0
         },
-        "_sprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "_materal": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
+        "_sprite": null,
+        "_materal": null,
         "_type": 0,
         "_preserveAspect": false,
         "_fillCenter": false,
@@ -4740,26 +4032,11 @@
         }
       },
       "_spriteState": {
-        "m_DisabledSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_HighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_PressedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_SelectedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "m_DisabledHighlightedSprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        }
+        "m_DisabledSprite": null,
+        "m_HighlightedSprite": null,
+        "m_PressedSprite": null,
+        "m_SelectedSprite": null,
+        "m_DisabledHighlightedSprite": null
       },
       "_animationTriggers": {
         "m_DisabledTrigger": "",
@@ -4776,14 +4053,8 @@
           "b": 1.0,
           "a": 1.0
         },
-        "_sprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "_materal": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
+        "_sprite": null,
+        "_materal": null,
         "_type": 0,
         "_preserveAspect": false,
         "_fillCenter": false,
@@ -4799,14 +4070,8 @@
           "b": 1.0,
           "a": 1.0
         },
-        "_sprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "_materal": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
+        "_sprite": null,
+        "_materal": null,
         "_type": 0,
         "_preserveAspect": false,
         "_fillCenter": false,
@@ -4822,14 +4087,8 @@
           "b": 1.0,
           "a": 1.0
         },
-        "_sprite": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
-        "_materal": {
-          "m_FileID": 0,
-          "m_PathID": 0
-        },
+        "_sprite": null,
+        "_materal": null,
         "_type": 0,
         "_preserveAspect": false,
         "_fillCenter": false,
@@ -4846,14 +4105,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4875,14 +4128,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4898,14 +4145,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4921,14 +4162,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4944,14 +4179,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4967,14 +4196,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -4990,14 +4213,8 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_sprite": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
-      "_materal": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_sprite": null,
+      "_materal": null,
       "_type": 0,
       "_preserveAspect": false,
       "_fillCenter": false,
@@ -5013,10 +4230,7 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_font": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_font": null,
       "_style": 0,
       "_sizeMultiplier": 1.0,
       "_lineSpacing": 1.0,
@@ -5030,10 +4244,7 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_font": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_font": null,
       "_style": 0,
       "_sizeMultiplier": 1.0,
       "_lineSpacing": 1.0,
@@ -5047,10 +4258,7 @@
         "b": 1.0,
         "a": 1.0
       },
-      "_font": {
-        "m_FileID": 0,
-        "m_PathID": 0
-      },
+      "_font": null,
       "_style": 0,
       "_sizeMultiplier": 1.0,
       "_lineSpacing": 1.0,

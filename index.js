@@ -468,7 +468,7 @@ async function getTemplateForItem(templateName) {
             content.name = name;
             content.presetName = name;
             content.type = type;
-            content.copyFrom = copyFrom;
+            content.copyFrom = copyFrom ? `REF:${type}|${copyFrom}` : null;
             return content;
         });
 
@@ -476,7 +476,6 @@ async function getTemplateForItem(templateName) {
     }
 
     newTemplate = cloneTemplate(templateName);
-    newTemplate.copyFrom = null;
     return newTemplate;
 }
 

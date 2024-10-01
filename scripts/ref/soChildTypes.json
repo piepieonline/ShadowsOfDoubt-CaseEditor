@@ -11215,6 +11215,24 @@
   },
   "NavRectPoint": {},
   "ButtonAudioType": {},
+  "PreferNav": {
+    "button": {
+      "Item1": "ButtonController",
+      "Item2": false,
+      "Item3": ""
+    },
+    "score": {
+      "Item1": "Single",
+      "Item2": false,
+      "Item3": ""
+    },
+    "dir": {
+      "Item1": "NavDir",
+      "Item2": false,
+      "Item3": ""
+    }
+  },
+  "NavDir": {},
   "RecallAccuracy": {},
   "TimelineEvent": {
     "name": {
