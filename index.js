@@ -101,10 +101,10 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         tree.findAndHandle(item => {
             return true;
         }, item => {
-            calculatepathToItemGeneric(item);
+            calculatePathToItemGeneric(item);
 
             // Add tooltip text
-            var splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
+            var splitPath = [fileType, ...item.pathToItemSplit];
 
             try
             {
@@ -174,7 +174,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         }, item => {
             var ele = item.el.querySelector('.jsontree_value');
             
-            var splitPath = [fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')];
+            var splitPath = [fileType, ...item.pathToItemSplit];
 
             var mappedType = mapSplitPath(splitPath);
             
@@ -292,7 +292,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
                 var ele = item.el.querySelector('.jsontree_label');
                 ele.addEventListener('contextmenu', async (e) => {
                     e.preventDefault();
-                    addNewArrayElement([fileType, ...item.pathToItemGeneric.replace(/\/-$/, '').split('/-/')], getJSONPointer(item));
+                    addNewArrayElement([fileType, ...item.pathToItemSplit], getJSONPointer(item));
                 });
             });
         }
@@ -351,14 +351,25 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         }
     }
 
-    function calculatepathToItemGeneric(actualItem) {
+    function calculatePathToItemGeneric(actualItem) {
         if(actualItem.pathToItemGeneric === undefined) {
             actualItem.pathToItem = actualItem.label.toString();
             actualItem.pathToItemGeneric = actualItem.label.toString().replace(/\d+/, '-');
+            actualItem.pathToItemSplit = []
+
+            if(actualItem.label.toString().replace(/\d+/, '') !== '') {
+                actualItem.pathToItemSplit.splice(0, 0, actualItem.label.toString());
+            }
+
             let item = actualItem.parent;
             while(item.label != null) {
                 actualItem.pathToItem = item.label.toString() + '/' + actualItem.pathToItem;
                 actualItem.pathToItemGeneric = item.label.toString().replace(/\d+/, '-') + '/' + actualItem.pathToItemGeneric;
+
+                if(item.label.toString().replace(/\d+/, '') !== '') {
+                    actualItem.pathToItemSplit.splice(0, 0, item.label.toString());
+                }
+
                 item = item.parent;
             }
         }

@@ -4,54 +4,6 @@ import soMap from './ref/soMap.json' with { type: 'json' };
 
 import soCustomDescriptions from './soCustomDescriptions.json' with { type: 'json' };
 
-window.templates = {
-    MurderManifest: {
-        enabled: true,
-        fileOrder: [],
-        version: 1
-    },
-    "AnimationCurve.Keyframe": {
-        inTangent: 0,
-        inWeight: 0,
-        outTangents: 0,
-        outWeight: 0,
-        time: 0,
-        value: 0,
-        weightedMode: 0
-    },
-    ...templates
-};
-
-window.typeMap = {
-    ...soMap["ScriptableObject"]
-};
-
-window.enums = {
-    Boolean: [
-        'false',
-        'true'
-    ],
-    WeightedMode: [
-        'None',
-        'In',
-        'Out',
-        'Both'
-    ],
-    ...soMap["Enum"]
-};
-
-window.typeLayout = {
-    Manifest: {
-        fileOrder: {
-            "Item1": "FileType", // Type of the field
-            "Item2": true, // Is it an array?
-            "Item3": "" // Description
-        }
-    },
-    ...window.basicTypeLayouts,
-    ...soChildTypes
-};
-
 window.basicTypeLayouts = {
     Vector2: {
         x: {
@@ -175,6 +127,54 @@ window.basicTypeLayouts = {
             "Item3": ""
         },
     }
+};
+
+window.templates = {
+    MurderManifest: {
+        enabled: true,
+        fileOrder: [],
+        version: 1
+    },
+    "AnimationCurve.Keyframe": {
+        inTangent: 0,
+        inWeight: 0,
+        outTangents: 0,
+        outWeight: 0,
+        time: 0,
+        value: 0,
+        weightedMode: 0
+    },
+    ...templates
+};
+
+window.typeMap = {
+    ...soMap["ScriptableObject"]
+};
+
+window.enums = {
+    Boolean: [
+        'false',
+        'true'
+    ],
+    WeightedMode: [
+        'None',
+        'In',
+        'Out',
+        'Both'
+    ],
+    ...soMap["Enum"]
+};
+
+window.typeLayout = {
+    Manifest: {
+        fileOrder: {
+            "Item1": "FileType", // Type of the field
+            "Item2": true, // Is it an array?
+            "Item3": "" // Description
+        }
+    },
+    ...window.basicTypeLayouts,
+    ...soChildTypes
 };
 
 window.basicTypeTemplates = {
