@@ -212,7 +212,11 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
                     readOnly,
                     async (selectedIndex, customValue) => {
                         let replacementValue = item.el.querySelector('.jsontree_value');
-                        if(selectedIndex >= 0)
+                        if(selectedIndex == -1)
+                        {
+                            replacementValue = null;
+                        }
+                        else if(selectedIndex >= 0)
                         {
                             replacementValue = `REF:${mappedType}|${window.typeMap[mappedType][selectedIndex]}`;
                         }

@@ -8,6 +8,7 @@ main>article>section:first-of-type {
     /*grid-template-columns:300px 2fr 1fr;*/
     grid-template-columns:300px 1fr;
     grid-gap: 10px;
+    min-height: max(60vh, 300px);
 }
 ul {
     padding-left: 0;
