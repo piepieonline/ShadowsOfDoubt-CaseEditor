@@ -23,7 +23,7 @@ async function openModFolder(modName, create) {
             return content;
         });
         await createFileIfNotExisting('murdermanifest', 'MurderManifest', modFolders.baseFolder, (content) => {
-            content.fileOrder.push(`REF:${modName.toLowerCase()}`);
+            content.fileOrder.splice(0, 0, `REF:${modName.toLowerCase()}`);
             return content;
         });
     }

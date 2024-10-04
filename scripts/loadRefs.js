@@ -133,6 +133,7 @@ window.templates = {
     MurderManifest: {
         enabled: true,
         fileOrder: [],
+        loadBefore: "",
         version: 1
     },
     "AnimationCurve.Keyframe": {
@@ -170,7 +171,12 @@ window.typeLayout = {
         fileOrder: {
             "Item1": "FileType", // Type of the field
             "Item2": true, // Is it an array?
-            "Item3": "" // Description
+            "Item3": "Files need to be loaded before they are used, so your MurderMO should generally be the last file in the list" // Description
+        },
+        loadBefore: {
+            "Item1": "String", 
+            "Item2": false,
+            "Item3": "Should we wait for this manifest to have loaded before we start loading?"
         }
     },
     ...window.basicTypeLayouts,
