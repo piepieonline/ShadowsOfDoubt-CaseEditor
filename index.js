@@ -403,6 +403,9 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
         let dataToShow = Object.keys(window.templates[data.fileType]).filter(el => !hiddenFields.includes(el));
         let currentFields = Object.keys(data).filter(el => !hiddenFields.includes(el));
 
+        let isSelectAllChecked = false;
+        let isSelectAllIndeterminate  = false;
+
         dataToShow.forEach(key => {
             let li = document.createElement('li');
             let label = document.createElement('label');
@@ -412,13 +415,33 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 
             if(currentFields.includes(key)) {
                 checkbox.setAttribute('checked', true);
+                isSelectAllChecked = true;
+            } else {
+                if(isSelectAllChecked) isSelectAllIndeterminate = true;
             }
 
             label.appendChild(checkbox)
             label.innerHTML += key;
 			li.appendChild(label);
 			fieldList.appendChild(li);
+
+            // TODO: Not working?
+            /*
+            checkbox.addEventListener('change', () => {
+                document.querySelector('#select-fields-modal-select-all').indeterminate = true;
+                console.log('asd')
+            });
+            */
 		});
+
+        // Setup the Select all option
+        if(isSelectAllIndeterminate) {
+            document.querySelector('#select-fields-modal-select-all').indeterminate = true;
+            document.querySelector('#select-fields-modal-select-all').checked = false;
+        } else {
+            document.querySelector('#select-fields-modal-select-all').indeterminate = false;
+            document.querySelector('#select-fields-modal-select-all').checked = isSelectAllChecked;
+        }
 
         // We only want the one handler
         document.querySelector('#select-fields-submit-button').onclick = () => {

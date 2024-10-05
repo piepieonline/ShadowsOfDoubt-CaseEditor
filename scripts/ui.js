@@ -134,6 +134,16 @@ function updateNewFileCopyFrom() {
 	});
 }
 
+function updateSelectAllCopyFrom() {
+	let checked = document.querySelector('#select-fields-modal-select-all').checked;
+	document
+		.querySelector('#select-fields-modal-field-list')
+		.querySelectorAll('input[type="checkbox"]')
+		.forEach((checkbox) => {
+			checkbox.checked = checked;
+		});
+}
+
 async function loadExportedSOs() {
 	let exportedSOPath = await idbKeyval.get('ExportedSOPath');
 	let options = exportedSOPath ? { startIn: exportedSOPath, mode: 'read' } : { mode: 'read' };
