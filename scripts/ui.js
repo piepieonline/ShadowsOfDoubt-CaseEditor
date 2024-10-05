@@ -57,12 +57,13 @@ async function newMod() {
 		throw 'Please load a parent mod folder first';
 	}
 
-	let modName = prompt('Enter a new mod name');
+	let {modName, type, createDDSFolders } = await showNewCasePopup();
+	closeNewCasePopup();
 
 	if (modName == null)
 		return;
 
-	await openModFolder(modName, true);
+	await openModFolder(modName, true, type, createDDSFolders);
 
 	window.loadedMods = await refreshModList();
 	updateSelect('select-loaded-mod', ['None', ...window.loadedMods.map(mod => mod.modName)]);

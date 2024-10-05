@@ -2,28 +2,46 @@ async function refreshModList() {
     let mods = [];
     for await (const entry of window.dirHandleModDir.values()) {
         if (entry.kind === "directory" && entry.name !== '.git') {
-            mods.push(await openModFolder(entry.name, false));
+            mods.push(await openModFolder(entry.name));
         }
     }
     return mods;
 }
 
-async function openModFolder(modName, create) {
+async function openModFolder(modName, create = false, type = null, createDDS = false) {
     let modFolders = { modName };
 
     modFolders.baseFolder = await tryGetFolder(window.dirHandleModDir, [modName], create)
 
     if(create)
     {
-        await createFileIfNotExisting(modName, 'MurderMO', modFolders.baseFolder, (content) => {
-            content.name = modName;
-            content.presetName = modName;
-            content.notes = modName;
-            content.copyFrom = null;
-            return content;
-        });
+        // If we are creating the DDS folders, touch them all. Makes it work better with the DDS Editor
+        if(createDDS) {
+            await tryGetFolder(modFolders.baseFolder, ['DDSContent', 'DDS', 'Trees'], true);
+            await tryGetFolder(modFolders.baseFolder, ['DDSContent', 'DDS', 'Messages'], true);
+            await tryGetFolder(modFolders.baseFolder, ['DDSContent', 'DDS', 'Blocks'], true);
+            await tryGetFolder(modFolders.baseFolder, ['DDSContent', 'Strings', 'English', 'DDS'], true);
+            await tryGetFolder(modFolders.baseFolder, ['DDSContent', 'Strings', 'English', 'Evidence'], true);
+        }
+
+        let didCreateBaseFile = false;
+        if(type === 'MurderMO' || type === 'JobPreset')
+        {
+            await createFileIfNotExisting(modName, type, modFolders.baseFolder, (content) => {
+                content.name = modName;
+                content.presetName = modName;
+                content.notes = modName;
+                content.copyFrom = null;
+                return content;
+            });
+
+            didCreateBaseFile = true;
+        }
+
         await createFileIfNotExisting('murdermanifest', 'MurderManifest', modFolders.baseFolder, (content) => {
-            content.fileOrder.splice(0, 0, `REF:${modName.toLowerCase()}`);
+            if(didCreateBaseFile) {
+                content.fileOrder.splice(0, 0, `REF:${modName.toLowerCase()}`);
+            }
             return content;
         });
     }

@@ -517,6 +517,24 @@ async function getTemplateForItem(templateName) {
     return newTemplate;
 }
 
+// Creates a promise that is pending while the new case model is open
+async function showNewCasePopup() {
+    let popupPromise = new Promise((resolve, reject) => {
+        window.newCasePromiseResolve = (modName, type, createDDSFolders) => resolve({ modName, type, createDDSFolders });
+        window.newCasePromiseReject = () => reject({ modName: null, type: null, createDDSFolders: null });
+    });
+
+    document.querySelector('#new-case-modal').toggleAttribute('open', true);
+
+    return popupPromise;
+}
+
+function closeNewCasePopup() {
+    document.querySelector('#new-case-modal').toggleAttribute('open', false);
+    document.querySelector('#new-case-modal-case-name').value = '';
+}
+
+// Creates a promise that is pending while the new file model is open
 async function showNewFilePopup() {
     let popupPromise = new Promise((resolve, reject) => {
         window.newFilePromiseResolve = (name, type, copyFrom) => resolve({ name, type, copyFrom: (copyFrom === 'None' ? null : copyFrom) });

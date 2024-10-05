@@ -101,6 +101,10 @@
             </footer>
         </article>
     </main>
+
+    <!-- Modals -->
+
+    <!-- Spoiler warning, dev requested, do not remove -->
     <dialog id="spoiler-warning-modal">
         <article>
             <header>
@@ -117,6 +121,8 @@
             <button onclick="dismissSpoilerWarning()" style="width: 100%">I accept the risk of spoilers</button>
         </article>
     </dialog>
+
+    <!-- Open folder dialog -->
     <dialog open id="before-you-start-modal">
         <article>
             <header>
@@ -157,6 +163,8 @@
             </small>
         </article>
     </dialog>
+
+    <!-- Asset explorer. Right now everyone can browse the names, hopefully can add extracts one day -->
     <dialog id="asset-explorer-modal">
         <article>
             <header>
@@ -174,6 +182,8 @@
             <button onclick="loadExportedSOs()" style="width: 100%">Load exported ScriptableObjects</button>
         </article>
     </dialog>
+    
+    <!-- Select overrides modal -->
     <dialog id="select-fields-modal">
         <article>
             <header>
@@ -193,8 +203,7 @@
         </article>
     </dialog>
 
-    <!--NEW FILE FORM-->
-    <!--Use `document.querySelector('#new-file-modal').toggleAttribute('open')` for open it-->
+    <!-- New file, includes type, copyFrom and name -->
     <dialog id="new-file-modal">
         <article>
             <header>
@@ -223,6 +232,37 @@
                     <input id="new-file-modal-file-name">
                 </label>
                 <button type="submit" style="width: 100%">Create File</button>
+            </form>
+        </article>
+    </dialog>
+
+    <!-- New case dialog. Select between Murder/Side Job/Other. Also should we prep the DDS folders -->
+    <dialog id="new-case-modal">
+        <article>
+            <header>
+                <button aria-label="Close" rel="prev" onclick="document.querySelector('#new-case-modal').toggleAttribute('open')"></button>
+                <h5>
+                    <strong>New Case</strong>
+                </h5>
+            </header>
+            <form onsubmit="event.preventDefault();newCasePromiseResolve(this['new-case-modal-case-name'].value,this['new-case-modal-case-type'].value, this['new-case-modal-dds-folders'].checked)">
+                <label>
+                    File Type
+                    <select id="new-case-modal-case-type">
+                        <option value="MurderMO">Murder</option>
+                        <option value="JobPreset">Side Job</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="checkbox" id="new-case-modal-dds-folders" checked />
+                    Create empty DDS folders
+                </label>
+                <label>
+                    Case Name
+                    <input id="new-case-modal-case-name">
+                </label>
+                <button type="submit" style="width: 100%">Create Case</button>
             </form>
         </article>
     </dialog>
