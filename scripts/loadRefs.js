@@ -1,6 +1,7 @@
 import templates from './ref/templates.json' with { type: 'json' };
 import soChildTypes from './ref/soChildTypes.json' with { type: 'json' };
 import soMap from './ref/soMap.json' with { type: 'json' };
+import ddsMap from  './ref/ddsMap.json' with { type: 'json' };
 
 import soCustomDescriptions from './soCustomDescriptions.json' with { type: 'json' };
 
@@ -221,5 +222,11 @@ window.pathIdMap = Object.keys(soMap["IDMap"]).reduce((map, val) => {
 }, {});
 
 window.soCustomDescriptions = soCustomDescriptions;
+
+window.ddsMap = {
+    trees: ddsMap.Trees,
+    messages: ddsMap.Messages,
+    blocks: ddsMap.Blocks
+};
 
 window.updateAssetModel(true);

@@ -12085,7 +12085,7 @@
     "nameFeaturesTypeCount": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Number the name of this based on how many of these types there are per floor"
     },
     "overrideBuildingName": {
       "Item1": "Boolean",
@@ -12130,12 +12130,12 @@
     "disableSniperTargetSite": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "A sniper victim won't get shot here if true"
     },
     "allowPublicToiletUse": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Allow public toilet use"
     },
     "disableThis": {
       "Item1": "Boolean",
@@ -12204,7 +12204,7 @@
     "allowInteractionAtRecognitionRange": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Interaction is allowed at recognition distance range"
     },
     "actionLocation": {
       "Item1": "ActionLocation",
@@ -12329,7 +12329,7 @@
     "enableImmediateCompletionWhenFarAway": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "AI will immediately teleport & complete this action if culled and out of the vicinity"
     },
     "dontUpdateGoalPriorityWhileActive": {
       "Item1": "Boolean",
@@ -12844,7 +12844,7 @@
     "spawnTauntOnSuccess": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Spawn a player taunt at the successful competion of this action"
     },
     "onArrivalSound": {
       "Item1": "AudioEvent",
@@ -13524,7 +13524,7 @@
     "useToiletSettings": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "AI will avoid certain marked locations if true"
     },
     "desireCategory": {
       "Item1": "CompanyCategory",
@@ -13990,7 +13990,7 @@
     "pauseWhenGameIsPaused": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Do we want this to pause when the game pauses?"
     },
     "disabled": {
       "Item1": "Boolean",
@@ -14120,7 +14120,7 @@
     "suspiciousIfCantSeeSoundMaker": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "This event is only considered suspicious if the AI can't see the player"
     },
     "onlySuspiciousIfEmptyAddress": {
       "Item1": "Boolean",
@@ -14255,7 +14255,7 @@
     "disableForPS5": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "You might want to disable this if we have haptics in-place instead..."
     },
     "vibrationSetup": {
       "Item1": "ControllerVibration",
@@ -19224,7 +19224,7 @@
     "disableFromDecorMenu": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "If true this will not appear in the current room list in the decor menu"
     },
     "cost": {
       "Item1": "Int32",
@@ -20396,7 +20396,7 @@
     "fpsItemScaleModifier": {
       "Item1": "Vector3",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Added to the FPS item scale (default usually 4100 in all dimensions)"
     },
     "consumableAmount": {
       "Item1": "Single",
@@ -20546,12 +20546,12 @@
     "isMovableChair": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Used for detecting work positions/animations mostly"
     },
     "bedRightSide": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "This is the right side of a double bed"
     },
     "resetSwitchStates": {
       "Item1": "Boolean",
@@ -22399,7 +22399,7 @@
     "killerMeetsVicim": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "If true this will set up a situation where the killer and victim meet at an eatery"
     },
     "researchPassInteractable": {
       "Item1": "Boolean",
@@ -22652,17 +22652,17 @@
     "writer": {
       "Item1": "LeadCitizen",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Writer is valid for objects and V-mails (person A)"
     },
     "receiver": {
       "Item1": "LeadCitizen",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Writer is valid for objects and V-mails (person B)"
     },
     "vmailOtherParticipants": {
       "Item1": "LeadCitizen",
       "Item2": true,
-      "Item3": ""
+      "Item3": "Only valid for v-mails (persons C & D)"
     },
     "where": {
       "Item1": "LeadSpawnWhere",
@@ -23235,7 +23235,7 @@
     "work": {
       "Item1": "workType",
       "Item2": false,
-      "Item3": "Type of work"
+      "Item3": "Collar colour"
     },
     "tags": {
       "Item1": "workTags",
@@ -23655,7 +23655,7 @@
     "useDifferentSoundForWallImpacts": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
+      "Item3": "Pass the surface parameters to the collision audio event"
     },
     "wallCollisionAudio": {
       "Item1": "AudioEvent",
