@@ -63,6 +63,28 @@ window.basicTypeLayouts = {
             "Item3": ""
         }
     },
+    Color: {
+        r: {
+            "Item1": "Single",
+            "Item2": false,
+            "Item3": ""
+        },
+        g: {
+            "Item1": "Single",
+            "Item2": false,
+            "Item3": ""
+        },
+        b: {
+            "Item1": "Single",
+            "Item2": false,
+            "Item3": ""
+        },
+        a: {
+            "Item1": "Single",
+            "Item2": false,
+            "Item3": ""
+        }
+    },
     AnimationCurve: {
         serializedVersion: {
             "Item1": "Single",
@@ -189,7 +211,8 @@ window.basicTypeTemplates = {
     Boolean: false,
     String: "",
     Vector2: { x: 0, y: 0 },
-    Vector3: { x: 0, y: 0, z: 0 }
+    Vector3: { x: 0, y: 0, z: 0 },
+    Color: { r: 0, g: 0, b: 0, a: 0 }
 };
 
 window.pathIdMap = Object.keys(soMap["IDMap"]).reduce((map, val) => {
