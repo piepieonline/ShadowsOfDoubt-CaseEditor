@@ -2,6 +2,7 @@ import templates from './ref/templates.json' with { type: 'json' };
 import soChildTypes from './ref/soChildTypes.json' with { type: 'json' };
 import soMap from './ref/soMap.json' with { type: 'json' };
 import ddsMap from  './ref/ddsMap.json' with { type: 'json' };
+import soIDMap from './ref/soIdMap.json' with { type: 'json' };
 
 import soCustomDescriptions from './soCustomDescriptions.json' with { type: 'json' };
 
@@ -216,8 +217,8 @@ window.basicTypeTemplates = {
     Color: { r: 0, g: 0, b: 0, a: 0 }
 };
 
-window.pathIdMap = Object.keys(soMap["IDMap"]).reduce((map, val) => {
-    map[val] = soMap["IDMap"][val][0];
+window.pathIdMap = Object.keys(soIDMap).reduce((map, val) => {
+    map[val] = soIDMap[val][0];
     return map;
 }, {});
 

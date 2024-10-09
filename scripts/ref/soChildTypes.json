@@ -16643,6 +16643,16 @@
     }
   },
   "DialogPreset": {
+    "removeDialogOnSuccess": {
+      "Item1": "DialogPreset",
+      "Item2": true,
+      "Item3": ""
+    },
+    "removeDialog": {
+      "Item1": "DialogPreset",
+      "Item2": true,
+      "Item3": "Remove these other options"
+    },
     "msgID": {
       "Item1": "String",
       "Item2": false,
@@ -16774,16 +16784,6 @@
       "Item3": "Add these as player responses following..."
     },
     "followUpDialogFail": {
-      "Item1": "DialogPreset",
-      "Item2": true,
-      "Item3": ""
-    },
-    "removeDialog": {
-      "Item1": "DialogPreset",
-      "Item2": true,
-      "Item3": "Remove these other options"
-    },
-    "removeDialogOnSuccess": {
       "Item1": "DialogPreset",
       "Item2": true,
       "Item3": ""
@@ -18448,6 +18448,11 @@
     }
   },
   "FurnitureNodeRule": {
+    "furnitureClass": {
+      "Item1": "FurnitureClass",
+      "Item2": false,
+      "Item3": "What should be found at this node?"
+    },
     "offset": {
       "Item1": "Vector2",
       "Item2": false,
@@ -18462,11 +18467,6 @@
       "Item1": "Boolean",
       "Item2": false,
       "Item3": ""
-    },
-    "furnitureClass": {
-      "Item1": "FurnitureClass",
-      "Item2": false,
-      "Item3": "What should be found at this node?"
     },
     "addScore": {
       "Item1": "Int32",
@@ -22559,6 +22559,11 @@
     }
   },
   "MurderLeadItem": {
+    "compatibleWithMotives": {
+      "Item1": "MurderMO",
+      "Item2": true,
+      "Item3": ""
+    },
     "name": {
       "Item1": "String",
       "Item2": false,
@@ -22567,11 +22572,6 @@
     "compatibleWithAllMotives": {
       "Item1": "Boolean",
       "Item2": false,
-      "Item3": ""
-    },
-    "compatibleWithMotives": {
-      "Item1": "MurderMO",
-      "Item2": true,
       "Item3": ""
     },
     "spawnOnPhase": {
