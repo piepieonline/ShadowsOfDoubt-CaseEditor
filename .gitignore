@@ -3,6 +3,7 @@ key.pem
 .idea
 
 data/*
+!data/onlineTypes.json
 !data/CharacterTrait
 !data/CompanyPreset
 !data/InteractablePreset
