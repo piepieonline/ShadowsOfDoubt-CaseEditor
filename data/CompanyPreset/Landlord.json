@@ -1,0 +1,82 @@
+{
+    "presetName": "Landlord",
+    "companyCategories": [],
+    "isIllegal": false,
+    "useBuildingName": false,
+    "useBuildingOverrideName": false,
+    "overrideSuffixList": [],
+    "useStreetNameChance": 0.0,
+    "useDistrictNameChance": 0.0,
+    "useOwnerFirstNameChance": 0.10000000149011612,
+    "useOwnerSurNameChance": 0.5289999842643738,
+    "useCompanyNameListChance": 0.42100000381469729,
+    "aliterationWeight": 0,
+    "prefixChance": 0.0,
+    "prefixList": [],
+    "mainChance": 1.0,
+    "mainNamingList": [
+        "corporate",
+        "animals",
+        "colours"
+    ],
+    "suffixList": [
+        "company.suffix.buildingmanagement"
+    ],
+    "theRules": [],
+    "minimumSalary": 8,
+    "topSalary": 8,
+    "payGradeCurve": {
+        "serializedVersion": "2",
+        "m_Curve": [
+            {
+                "serializedVersion": "3",
+                "time": 0.0,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 1.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            },
+            {
+                "serializedVersion": "3",
+                "time": 1.0,
+                "value": 1.0,
+                "inSlope": 1.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            }
+        ],
+        "m_PreInfinity": 2,
+        "m_PostInfinity": 2,
+        "m_RotationOrder": 4
+    },
+    "publicFacing": false,
+    "isSelfEmployed": true,
+    "autoCreate": true,
+    "priority": 10,
+    "cityPopRatio": 0.029999999329447748,
+    "minimumNumber": 1,
+    "maximumNumber": 2,
+    "enableLoiteringBehaviour": false,
+    "menus": [],
+    "recordSalesData": false,
+    "previousFakeSalesRecords": 5,
+    "requiredTraits": [],
+    "enableSelling": false,
+    "enableSellingOfIllegalItems": false,
+    "sellValueMultiplier": 0.5,
+    "possibleUniformColours": [],
+    "workHours": {
+        "m_FileID": 24782,
+        "m_PathID": 0
+    },
+    "structure": {
+        "m_FileID": 30358,
+        "m_PathID": 0
+    },
+    "controlsBuildingSurveillance": false,
+    "isHotel": false
+}

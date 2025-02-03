@@ -1,0 +1,48 @@
+{
+    "presetName": "Poison",
+    "murderWeaponPool": [
+        {
+            "weapon": {
+                "m_FileID": 27028,
+                "m_PathID": 0
+            },
+            "chanceOfDroppingAtScene": 0.800000011920929,
+            "randomScoreRange": {
+                "x": 0.0,
+                "y": 2.0
+            },
+            "traitModifiers": [
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 31888,
+                            "m_PathID": 0
+                        },
+                        {
+                            "m_FileID": 15512,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 5.0
+                },
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 15526,
+                            "m_PathID": 0
+                        },
+                        {
+                            "m_FileID": 15524,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 5.0
+                }
+            ]
+        }
+    ]
+}

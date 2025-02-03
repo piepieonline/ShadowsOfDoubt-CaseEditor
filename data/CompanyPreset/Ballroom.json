@@ -1,0 +1,122 @@
+{
+    "presetName": "Ballroom",
+    "companyCategories": [
+        6
+    ],
+    "isIllegal": false,
+    "useBuildingName": false,
+    "useBuildingOverrideName": false,
+    "overrideSuffixList": [],
+    "useStreetNameChance": 0.0,
+    "useDistrictNameChance": 0.13199999928474427,
+    "useOwnerFirstNameChance": 0.0,
+    "useOwnerSurNameChance": 0.18199999630451203,
+    "useCompanyNameListChance": 0.5870000123977661,
+    "aliterationWeight": 2,
+    "prefixChance": 0.20000000298023225,
+    "prefixList": [
+        "extravagant"
+    ],
+    "mainChance": 1.0,
+    "mainNamingList": [
+        "flowers",
+        "luxury"
+    ],
+    "suffixList": [
+        "company.suffix.hotel"
+    ],
+    "theRules": [
+        {
+            "component": 1,
+            "exists": true,
+            "chanceModifier": 1.0
+        }
+    ],
+    "minimumSalary": 3,
+    "topSalary": 6,
+    "payGradeCurve": {
+        "serializedVersion": "2",
+        "m_Curve": [
+            {
+                "serializedVersion": "3",
+                "time": 0.0,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 1.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            },
+            {
+                "serializedVersion": "3",
+                "time": 1.0,
+                "value": 1.0,
+                "inSlope": 1.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            }
+        ],
+        "m_PreInfinity": 2,
+        "m_PostInfinity": 2,
+        "m_RotationOrder": 4
+    },
+    "publicFacing": true,
+    "isSelfEmployed": false,
+    "autoCreate": false,
+    "priority": 5,
+    "cityPopRatio": 0.029999999329447748,
+    "minimumNumber": 2,
+    "maximumNumber": 10,
+    "enableLoiteringBehaviour": false,
+    "menus": [
+        {
+            "m_FileID": 27384,
+            "m_PathID": 0
+        }
+    ],
+    "recordSalesData": true,
+    "previousFakeSalesRecords": 5,
+    "requiredTraits": [
+        {
+            "m_FileID": 17338,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 27382,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 27070,
+            "m_PathID": 0
+        }
+    ],
+    "enableSelling": false,
+    "enableSellingOfIllegalItems": false,
+    "sellValueMultiplier": 0.5,
+    "possibleUniformColours": [
+        {
+            "r": 0.849056601524353,
+            "g": 0.27767881751060488,
+            "b": 0.27767881751060488,
+            "a": 1.0
+        },
+        {
+            "r": 0.32277199625968935,
+            "g": 0.5554384589195252,
+            "b": 0.801886796951294,
+            "a": 1.0
+        }
+    ],
+    "workHours": {
+        "m_FileID": 13980,
+        "m_PathID": 0
+    },
+    "structure": {
+        "m_FileID": 23150,
+        "m_PathID": 0
+    },
+    "controlsBuildingSurveillance": true,
+    "isHotel": true
+}

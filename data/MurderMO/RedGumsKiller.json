@@ -1,0 +1,380 @@
+{
+    "presetName": "RedGumsKiller",
+    "notes": "Ritual/cult-like killings of non-starch citizens. Leaves behind red gums propaganda and graffiti.",
+    "disabled": false,
+    "compatibleWith": [
+        {
+            "m_FileID": 14772,
+            "m_PathID": 0
+        }
+    ],
+    "baseDifficulty": 0,
+    "maximumPotentialScore": 65.0,
+    "updateThis": false,
+    "pickRandomScoreRange": {
+        "x": 0.0,
+        "y": 15.0
+    },
+    "murdererTraitModifiers": [
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 14046,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 30.0
+        }
+    ],
+    "murdererJobModifiers": [],
+    "murdererCompanyModifiers": [],
+    "useMurdererSocialClassRange": true,
+    "murdererClassRange": {
+        "x": 0.4000000059604645,
+        "y": 1.0
+    },
+    "murdererClassRangeBoost": 10,
+    "useHexaco": true,
+    "hexaco": {
+        "outputMin": 0,
+        "outputMax": 10,
+        "enableFeminineMasculine": false,
+        "feminineMasculine": 0,
+        "enableHumility": true,
+        "humility": 0,
+        "enableEmotionality": false,
+        "emotionality": 0,
+        "enableExtraversion": false,
+        "extraversion": 0,
+        "enableAgreeableness": false,
+        "agreeableness": 0,
+        "enableConscientiousness": false,
+        "conscientiousness": 0,
+        "enableCreativity": false,
+        "creativity": 0
+    },
+    "requiresSniperVantageAtHome": false,
+    "weaponsPool": [
+        {
+            "m_FileID": 14764,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 14756,
+            "m_PathID": 0
+        }
+    ],
+    "blockDroppingWeapons": false,
+    "allowAnywhere": false,
+    "allowHome": true,
+    "allowWork": false,
+    "allowPublic": false,
+    "allowStreets": true,
+    "allowDen": false,
+    "denFurniture": [],
+    "denStyleOverride": [],
+    "denItems": [],
+    "acquaintedSuitabilityBoost": 4,
+    "attractedToSuitabilityBoost": 0,
+    "likeSuitabilityBoost": 0,
+    "sameWorkplaceBoost": 0,
+    "murdererIsTenantBoost": 0,
+    "victimRandomScoreRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "victimTraitModifiers": [
+        {
+            "rule": 2,
+            "traitList": [
+                {
+                    "m_FileID": 14046,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 14744,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 20.0
+        },
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 18246,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 3.0
+        }
+    ],
+    "victimJobModifiers": [],
+    "victimCompanyModifiers": [],
+    "useVictimSocialClassRange": true,
+    "victimClassRange": {
+        "x": 0.0,
+        "y": 0.5
+    },
+    "victimClassRangeBoost": 5,
+    "monkierDDSMessageList": "c8ed1e57-6090-4d36-90b8-51a515c58c8e",
+    "confessionalDDSResponses": [
+        "bdf0fea0-2e82-4b01-8e21-f1c80574745c"
+    ],
+    "MOleads": [
+        {
+            "name": "(A) Red gum propaganda 1",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 1.0,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 18248,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 2,
+            "vmailOtherParticipants": [],
+            "where": 2,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 0
+        },
+        {
+            "name": "(B) Red gum propaganda 2",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 1.0,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 1,
+            "spawnItem": {
+                "m_FileID": 18250,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 2,
+            "vmailOtherParticipants": [],
+            "where": 3,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 0
+        },
+        {
+            "name": "(C) Red gum killer diary",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 1.0,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 2,
+            "spawnItem": {
+                "m_FileID": 18252,
+                "m_PathID": 0
+            },
+            "vmailThread": "43243b33-ee1a-44d1-9815-030ca90656bb",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 2,
+            "vmailOtherParticipants": [],
+            "where": 2,
+            "security": 1,
+            "priority": 2,
+            "ownershipRule": 3
+        },
+        {
+            "name": "VMAIL: Starch order vmail",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 0.8790000081062317,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "43243b33-ee1a-44d1-9815-030ca90656bb",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 0,
+            "vmailOtherParticipants": [],
+            "where": 1,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 0
+        },
+        {
+            "name": "VMAIL: Message",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 0.8790000081062317,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "6e683dc4-6110-498d-9af1-d0017be5f527",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 4,
+            "vmailOtherParticipants": [],
+            "where": 1,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 0
+        }
+    ],
+    "graffiti": [
+        {
+            "preset": {
+                "m_FileID": 14782,
+                "m_PathID": 0
+            },
+            "pos": 0,
+            "artImage": {
+                "m_FileID": 18244,
+                "m_PathID": 0
+            },
+            "ddsMessageTextList": "",
+            "color": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "size": 0.0
+        },
+        {
+            "preset": {
+                "m_FileID": 14768,
+                "m_PathID": 0
+            },
+            "pos": 1,
+            "artImage": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "ddsMessageTextList": "e1a21acd-8507-453b-a8fd-e2277a4b783c",
+            "color": {
+                "r": 0.801886796951294,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "size": 30.0
+        }
+    ],
+    "callingCardPool": [
+        {
+            "item": {
+                "m_FileID": 13778,
+                "m_PathID": 0
+            },
+            "origin": 0,
+            "randomScoreRange": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "traitModifiers": []
+        }
+    ],
+    "playerTaunts": [
+        {
+            "m_FileID": 18256,
+            "m_PathID": 0
+        }
+    ]
+}

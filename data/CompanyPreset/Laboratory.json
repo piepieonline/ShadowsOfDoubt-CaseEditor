@@ -1,0 +1,108 @@
+{
+    "presetName": "Laboratory",
+    "companyCategories": [],
+    "isIllegal": false,
+    "useBuildingName": false,
+    "useBuildingOverrideName": false,
+    "overrideSuffixList": [],
+    "useStreetNameChance": 0.0430000014603138,
+    "useDistrictNameChance": 0.039000000804662707,
+    "useOwnerFirstNameChance": 0.0,
+    "useOwnerSurNameChance": 0.0,
+    "useCompanyNameListChance": 1.0,
+    "aliterationWeight": 0,
+    "prefixChance": 0.0,
+    "prefixList": [],
+    "mainChance": 1.0,
+    "mainNamingList": [
+        "colours",
+        "corporate",
+        "health",
+        "greekalphabet"
+    ],
+    "suffixList": [
+        "company.suffix.lab"
+    ],
+    "theRules": [],
+    "minimumSalary": 4,
+    "topSalary": 8,
+    "payGradeCurve": {
+        "serializedVersion": "2",
+        "m_Curve": [
+            {
+                "serializedVersion": "3",
+                "time": 0.0,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 1.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            },
+            {
+                "serializedVersion": "3",
+                "time": 1.0,
+                "value": 1.0,
+                "inSlope": 1.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            }
+        ],
+        "m_PreInfinity": 2,
+        "m_PostInfinity": 2,
+        "m_RotationOrder": 4
+    },
+    "publicFacing": false,
+    "isSelfEmployed": false,
+    "autoCreate": false,
+    "priority": 5,
+    "cityPopRatio": 0.029999999329447748,
+    "minimumNumber": 2,
+    "maximumNumber": 10,
+    "enableLoiteringBehaviour": false,
+    "menus": [],
+    "recordSalesData": false,
+    "previousFakeSalesRecords": 5,
+    "requiredTraits": [],
+    "enableSelling": false,
+    "enableSellingOfIllegalItems": false,
+    "sellValueMultiplier": 0.5,
+    "possibleUniformColours": [
+        {
+            "r": 0.501960813999176,
+            "g": 0.27843138575553896,
+            "b": 0.3686274588108063,
+            "a": 1.0
+        },
+        {
+            "r": 0.16687433421611787,
+            "g": 0.30702322721481326,
+            "b": 0.4716981053352356,
+            "a": 1.0
+        },
+        {
+            "r": 0.8584905862808228,
+            "g": 0.47493767738342287,
+            "b": 0.1498309075832367,
+            "a": 1.0
+        },
+        {
+            "r": 0.9245283007621765,
+            "g": 0.3619615435600281,
+            "b": 0.46424630284309389,
+            "a": 1.0
+        }
+    ],
+    "workHours": {
+        "m_FileID": 22330,
+        "m_PathID": 0
+    },
+    "structure": {
+        "m_FileID": 55990,
+        "m_PathID": 0
+    },
+    "controlsBuildingSurveillance": false,
+    "isHotel": false
+}

@@ -1,0 +1,252 @@
+{
+    "presetName": "TheCoporateKiller",
+    "notes": "Kills people above them in their company they do not respect",
+    "disabled": false,
+    "compatibleWith": [
+        {
+            "m_FileID": 14772,
+            "m_PathID": 0
+        }
+    ],
+    "baseDifficulty": 0,
+    "maximumPotentialScore": 65.0,
+    "updateThis": false,
+    "pickRandomScoreRange": {
+        "x": 0.0,
+        "y": 15.0
+    },
+    "murdererTraitModifiers": [
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 15388,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 10.0
+        },
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 16502,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 33356,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 15.0
+        },
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 41496,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 5.0
+        }
+    ],
+    "murdererJobModifiers": [],
+    "murdererCompanyModifiers": [
+        {
+            "companies": [
+                {
+                    "m_FileID": 30398,
+                    "m_PathID": 0
+                }
+            ],
+            "mininumEmployees": 4,
+            "companyBoost": 20,
+            "boostPerEmployeeOverMinimum": 0
+        }
+    ],
+    "useMurdererSocialClassRange": false,
+    "murdererClassRange": {
+        "x": 0.0,
+        "y": 0.6000000238418579
+    },
+    "murdererClassRangeBoost": 10,
+    "useHexaco": false,
+    "hexaco": {
+        "outputMin": 0,
+        "outputMax": 10,
+        "enableFeminineMasculine": false,
+        "feminineMasculine": 0,
+        "enableHumility": false,
+        "humility": 0,
+        "enableEmotionality": true,
+        "emotionality": 0,
+        "enableExtraversion": false,
+        "extraversion": 0,
+        "enableAgreeableness": false,
+        "agreeableness": 0,
+        "enableConscientiousness": true,
+        "conscientiousness": 10,
+        "enableCreativity": false,
+        "creativity": 0
+    },
+    "requiresSniperVantageAtHome": false,
+    "weaponsPool": [
+        {
+            "m_FileID": 14764,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 14756,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 14780,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 14774,
+            "m_PathID": 0
+        }
+    ],
+    "blockDroppingWeapons": false,
+    "allowAnywhere": false,
+    "allowHome": true,
+    "allowWork": true,
+    "allowPublic": false,
+    "allowStreets": false,
+    "allowDen": false,
+    "denFurniture": [],
+    "denStyleOverride": [],
+    "denItems": [],
+    "acquaintedSuitabilityBoost": 0,
+    "attractedToSuitabilityBoost": 0,
+    "likeSuitabilityBoost": -3,
+    "sameWorkplaceBoost": 20,
+    "murdererIsTenantBoost": 0,
+    "victimRandomScoreRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "victimTraitModifiers": [
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 15110,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 21982,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 25616,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 14052,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 10.0
+        }
+    ],
+    "victimJobModifiers": [],
+    "victimCompanyModifiers": [],
+    "useVictimSocialClassRange": true,
+    "victimClassRange": {
+        "x": 0.6000000238418579,
+        "y": 1.0
+    },
+    "victimClassRangeBoost": 10,
+    "monkierDDSMessageList": "6d1fcbd9-38aa-4a77-a2b5-657bcdbb00af",
+    "confessionalDDSResponses": [
+        "5e0c53d5-8808-4a8f-86b5-447b358e27db"
+    ],
+    "MOleads": [
+        {
+            "name": "(A) Crumpled note",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 1.0,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 45022,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 2,
+            "vmailOtherParticipants": [],
+            "where": 2,
+            "security": 0,
+            "priority": 3,
+            "ownershipRule": 3
+        }
+    ],
+    "graffiti": [
+        {
+            "preset": {
+                "m_FileID": 14768,
+                "m_PathID": 0
+            },
+            "pos": 1,
+            "artImage": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "ddsMessageTextList": "e69c9985-f9fe-4091-86ee-96aa445c0833",
+            "color": {
+                "r": 0.801886796951294,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "size": 26.0
+        }
+    ],
+    "callingCardPool": [
+        {
+            "item": {
+                "m_FileID": 33696,
+                "m_PathID": 0
+            },
+            "origin": 0,
+            "randomScoreRange": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "traitModifiers": []
+        }
+    ],
+    "playerTaunts": [
+        {
+            "m_FileID": 30330,
+            "m_PathID": 0
+        }
+    ]
+}

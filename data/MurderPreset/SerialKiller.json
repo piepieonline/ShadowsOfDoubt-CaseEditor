@@ -1,0 +1,949 @@
+{
+    "presetName": "SerialKiller",
+    "caseType": 0,
+    "disabled": false,
+    "frequency": 6,
+    "murdererRandomScoreRange": {
+        "x": 0.0,
+        "y": 2.0
+    },
+    "murdererTraitModifiers": [
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 28514,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 6.0
+        },
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 16502,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28508,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 2.0
+        }
+    ],
+    "useHexaco": false,
+    "hexaco": {
+        "outputMin": 0,
+        "outputMax": 10,
+        "enableFeminineMasculine": false,
+        "feminineMasculine": 5,
+        "enableHumility": false,
+        "humility": 5,
+        "enableEmotionality": false,
+        "emotionality": 5,
+        "enableExtraversion": false,
+        "extraversion": 5,
+        "enableAgreeableness": false,
+        "agreeableness": 5,
+        "enableConscientiousness": false,
+        "conscientiousness": 5,
+        "enableCreativity": false,
+        "creativity": 5
+    },
+    "pickDen": false,
+    "kidnapperTimeUntilKill": 5.0,
+    "minimumTimeBetweenMurders": 12.0,
+    "nonHomeMaximumOccupantsTrigger": 3,
+    "nonHomeMaximumOccupantsCancel": 6,
+    "requiresAcquirePhase": true,
+    "acquirePassInteractable": false,
+    "acquirePassRoom": true,
+    "acquireActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28524,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 10,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 18784,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "requiresResearchPhase": false,
+    "killerMeetsVicim": false,
+    "researchPassInteractable": true,
+    "researchPassRoom": true,
+    "researchActionSetup": [],
+    "blockVictimFromLeavingLocation": true,
+    "travelSuccessTrigger": 0,
+    "travelPassInteractable": false,
+    "travelPassRoom": true,
+    "travelActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28520,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "executePassInteractable": false,
+    "executePassRoom": false,
+    "executionActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28518,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 28522,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "postPassInteractable": false,
+    "postPassRoom": true,
+    "postActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28526,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 28526,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 28526,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 28526,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 22908,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 22908,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "escapePassInteractable": false,
+    "escapePassRoom": false,
+    "escapeActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28516,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "leads": [
+        {
+            "name": "VMAIL: Enforcer Report VMail",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.20000000298023225,
+            "useTraits": true,
+            "traitModifiers": [
+                {
+                    "who": 1,
+                    "rule": 2,
+                    "traitList": [
+                        {
+                            "m_FileID": 24784,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.20000000298023225
+                },
+                {
+                    "who": 1,
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 17040,
+                            "m_PathID": 0
+                        },
+                        {
+                            "m_FileID": 14124,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.800000011920929
+                }
+            ],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "ed6084d8-5d10-43f3-ae64-12ae02b32567",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 1,
+            "receiver": 0,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 0
+        },
+        {
+            "name": "VMAIL: Doctor VMail",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.30000001192092898,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": true,
+            "orGroup": 0,
+            "chanceRatio": 2,
+            "itemTag": 6,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "ccbfc406-2bf4-409f-b030-8ab072434442",
+            "vmailProgressThreshold": {
+                "x": 999.0,
+                "y": 999.0
+            },
+            "writer": 1,
+            "receiver": 5,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 2
+        },
+        {
+            "name": "VMAIL: Coworker VMail",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.20000000298023225,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 2,
+            "itemTag": 8,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "fb52e467-54ef-4a98-863d-993efea532ad",
+            "vmailProgressThreshold": {
+                "x": 999.0,
+                "y": 999.0
+            },
+            "writer": 1,
+            "receiver": 3,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 3
+        },
+        {
+            "name": "VMAIL: VMail to friend",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.20000000298023225,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 2,
+            "itemTag": 9,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "19f8de77-fe7c-441c-a6a4-2ed5782bce3a",
+            "vmailProgressThreshold": {
+                "x": 999.0,
+                "y": 999.0
+            },
+            "writer": 1,
+            "receiver": 3,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 3
+        },
+        {
+            "name": "VMAIL: VMail to friend romantic",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.20000000298023225,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 2,
+            "itemTag": 10,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "bbff9f58-6542-4431-9d7c-63ca45c2d761",
+            "vmailProgressThreshold": {
+                "x": 999.0,
+                "y": 999.0
+            },
+            "writer": 1,
+            "receiver": 3,
+            "vmailOtherParticipants": [
+                2
+            ],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 3
+        },
+        {
+            "name": "(O) Half Writen Letter",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.20000000298023225,
+            "useTraits": true,
+            "traitModifiers": [
+                {
+                    "who": 1,
+                    "rule": 2,
+                    "traitList": [
+                        {
+                            "m_FileID": 15118,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": true,
+                    "chanceModifier": 0.0
+                }
+            ],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 14,
+            "spawnItem": {
+                "m_FileID": 28510,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 1,
+            "receiver": 1,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 2
+        },
+        {
+            "name": "(P) Journal",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.28200000524520876,
+            "useTraits": false,
+            "traitModifiers": [
+                {
+                    "who": 1,
+                    "rule": 2,
+                    "traitList": [
+                        {
+                            "m_FileID": 15118,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": true,
+                    "chanceModifier": 0.0
+                }
+            ],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": true,
+            "orGroup": 0,
+            "chanceRatio": 2,
+            "itemTag": 15,
+            "spawnItem": {
+                "m_FileID": 28500,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 1,
+            "receiver": 1,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 3
+        },
+        {
+            "name": "(Q) Note from supervisor",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.20000000298023225,
+            "useTraits": true,
+            "traitModifiers": [
+                {
+                    "who": 1,
+                    "rule": 2,
+                    "traitList": [
+                        {
+                            "m_FileID": 24784,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.20000000298023225
+                },
+                {
+                    "who": 1,
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 17040,
+                            "m_PathID": 0
+                        },
+                        {
+                            "m_FileID": 14124,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.800000011920929
+                }
+            ],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 16,
+            "spawnItem": {
+                "m_FileID": 28504,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 8,
+            "receiver": 1,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 3
+        },
+        {
+            "name": "(R) Note on board",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.13699999451637269,
+            "useTraits": true,
+            "traitModifiers": [
+                {
+                    "who": 1,
+                    "rule": 2,
+                    "traitList": [
+                        {
+                            "m_FileID": 24784,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.20000000298023225
+                },
+                {
+                    "who": 1,
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 17040,
+                            "m_PathID": 0
+                        },
+                        {
+                            "m_FileID": 14124,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.800000011920929
+                }
+            ],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 17,
+            "spawnItem": {
+                "m_FileID": 24488,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 1,
+            "receiver": 1,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 2
+        },
+        {
+            "name": "(S) Note to self",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.20000000298023225,
+            "useTraits": true,
+            "traitModifiers": [
+                {
+                    "who": 1,
+                    "rule": 2,
+                    "traitList": [
+                        {
+                            "m_FileID": 24784,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.20000000298023225
+                },
+                {
+                    "who": 1,
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 17040,
+                            "m_PathID": 0
+                        },
+                        {
+                            "m_FileID": 14124,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.800000011920929
+                }
+            ],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 18,
+            "spawnItem": {
+                "m_FileID": 28502,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 1,
+            "receiver": 1,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 2
+        },
+        {
+            "name": "(T) Sighting Log",
+            "compatibleWithAllMotives": true,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28512,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 18254,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.15000000596046449,
+            "useTraits": true,
+            "traitModifiers": [
+                {
+                    "who": 1,
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 14124,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "chanceModifier": 0.800000011920929
+                }
+            ],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": true,
+            "orGroup": 0,
+            "chanceRatio": 2,
+            "itemTag": 19,
+            "spawnItem": {
+                "m_FileID": 25516,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 999.0,
+                "y": 999.0
+            },
+            "writer": 1,
+            "receiver": 1,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 3
+        }
+    ],
+    "useCustomResolveQuestions": false,
+    "customResolveQuestions": [],
+    "copyFrom": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    }
+}

@@ -1,0 +1,189 @@
+{
+    "presetName": "Hitman",
+    "caseType": 0,
+    "disabled": false,
+    "frequency": 0,
+    "murdererRandomScoreRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "murdererTraitModifiers": [],
+    "useHexaco": false,
+    "hexaco": {
+        "outputMin": 0,
+        "outputMax": 10,
+        "enableFeminineMasculine": false,
+        "feminineMasculine": 5,
+        "enableHumility": false,
+        "humility": 5,
+        "enableEmotionality": false,
+        "emotionality": 5,
+        "enableExtraversion": false,
+        "extraversion": 5,
+        "enableAgreeableness": false,
+        "agreeableness": 5,
+        "enableConscientiousness": false,
+        "conscientiousness": 5,
+        "enableCreativity": false,
+        "creativity": 5
+    },
+    "pickDen": false,
+    "kidnapperTimeUntilKill": 5.0,
+    "minimumTimeBetweenMurders": 5.0,
+    "nonHomeMaximumOccupantsTrigger": 3,
+    "nonHomeMaximumOccupantsCancel": 4,
+    "requiresAcquirePhase": false,
+    "acquirePassInteractable": false,
+    "acquirePassRoom": true,
+    "acquireActionSetup": [],
+    "requiresResearchPhase": false,
+    "killerMeetsVicim": false,
+    "researchPassInteractable": true,
+    "researchPassRoom": true,
+    "researchActionSetup": [],
+    "blockVictimFromLeavingLocation": true,
+    "travelSuccessTrigger": 0,
+    "travelPassInteractable": false,
+    "travelPassRoom": true,
+    "travelActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28520,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "executePassInteractable": false,
+    "executePassRoom": false,
+    "executionActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28518,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 28522,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "postPassInteractable": false,
+    "postPassRoom": true,
+    "postActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28526,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 28526,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 28526,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 28526,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 22908,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        },
+        {
+            "actions": [
+                {
+                    "m_FileID": 22908,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "escapePassInteractable": false,
+    "escapePassRoom": false,
+    "escapeActionSetup": [
+        {
+            "actions": [
+                {
+                    "m_FileID": 28516,
+                    "m_PathID": 0
+                }
+            ],
+            "condition": 0,
+            "chance": 1.0,
+            "traitModifiers": [],
+            "statusModifiers": []
+        }
+    ],
+    "leads": [],
+    "useCustomResolveQuestions": false,
+    "customResolveQuestions": [],
+    "copyFrom": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    }
+}

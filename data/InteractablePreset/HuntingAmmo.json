@@ -1,0 +1,451 @@
+{
+    "presetName": "HuntingAmmo",
+    "spawnable": true,
+    "prefab": {
+        "m_FileID": 36122,
+        "m_PathID": 0
+    },
+    "prefabLocalEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "prefabLocalScale": {
+        "x": 0.75,
+        "y": 0.75,
+        "z": 0.75
+    },
+    "dontSaveWithSaveGames": false,
+    "onlySaveWithSaveGamesIfWorldObject": false,
+    "excludeFromObjectPooling": false,
+    "excludeFromVisibilityRangeChecks": false,
+    "spawnRange": 1,
+    "showWorldObjectInSceneCapture": false,
+    "captureStateInSceneCapture": false,
+    "createProxy": true,
+    "onlyCreateProxyInDetailedCapture": true,
+    "createProxyAtRange": 0,
+    "inheritColouringFromDecor": false,
+    "shareColoursWithFurniture": 0,
+    "useOwnColourSettings": false,
+    "mainColour": 0,
+    "customColour1": 0,
+    "customColour2": 0,
+    "customColour3": 0,
+    "inheritGrubValue": false,
+    "autoName": true,
+    "includeBelongsTo": false,
+    "useNameShorthand": false,
+    "useApartmentName": false,
+    "isLight": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "lightswitch": 0,
+    "allowUnscrewed": true,
+    "isMainLight": false,
+    "forceIncludeOnStreetLightLayer": false,
+    "staticImage": {
+        "m_FileID": 36142,
+        "m_PathID": 0
+    },
+    "imagePos": {
+        "x": 0.0,
+        "y": -0.03500000014901161,
+        "z": 0.0
+    },
+    "imageRot": {
+        "x": 0.0,
+        "y": 110.24887084960938,
+        "z": 0.0
+    },
+    "imageScale": 1.2106000185012818,
+    "imagePrefabOverride": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "iconOverride": {
+        "m_FileID": 16700,
+        "m_PathID": 0
+    },
+    "itemClass": 4,
+    "allowInApartmentStorage": true,
+    "allowInApartmentShop": false,
+    "disableMoveToStorage": false,
+    "apartmentPlacementMode": 0,
+    "mustTouchFurniture": [],
+    "useMaterialOverride": false,
+    "materialOverride": {
+        "concrete": 0.0,
+        "wood": 0.0,
+        "carpet": 0.0,
+        "tile": 0.0,
+        "plaster": 0.0,
+        "fabric": 0.0,
+        "metal": 0.0,
+        "glass": 0.0
+    },
+    "actionsPreset": [
+        {
+            "m_FileID": 12752,
+            "m_PathID": 0
+        }
+    ],
+    "onlyIllegalIfInNonPublic": true,
+    "rangeModifier": 0.0,
+    "physicsProfile": {
+        "m_FileID": 13292,
+        "m_PathID": 0
+    },
+    "overrideMass": false,
+    "forcePhysicsAlwaysOn": false,
+    "reactWithExternalStimuli": true,
+    "mass": 1.0,
+    "breakable": false,
+    "particleProfile": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "overrideShatterSettings": false,
+    "shardSize": {
+        "x": 0.02500000037252903,
+        "y": 0.02500000037252903,
+        "z": 0.02500000037252903
+    },
+    "shardEveryXPixels": 64,
+    "overrideSpatterSettings": false,
+    "spatterSimulation": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "spatterCountMultiplier": 1.0,
+    "overrideFurnitureSetting": false,
+    "enterTransition": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "exitTransition": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "enterTransition2": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "exitTransition2": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "switchSFX": [],
+    "startingSwitchState": true,
+    "startingCustomState1": false,
+    "startingCustomState2": false,
+    "startingCustomState3": false,
+    "startingLockState": false,
+    "value": {
+        "x": 100.0,
+        "y": 100.0
+    },
+    "AIPriority": 5,
+    "disableForSocialGroups": false,
+    "pickDistanceMultiplier": 1.0,
+    "perActionPrioritySettings": [],
+    "tamperEnabled": true,
+    "resetBehaviour": [],
+    "useSetting": {
+        "usageOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.3499999940395355
+        },
+        "facingOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "useNodeFloorPosition": true,
+        "useDoorBehaviour": false,
+        "useSittingOffset": false,
+        "useArmsStandingOffset": false
+    },
+    "readingEnabled": false,
+    "readyingEnabledOnlyWithSwitchIsTue": false,
+    "readingEnabledOnlyWithKaizenSkill": false,
+    "readingSource": 0,
+    "discoverOnRead": false,
+    "pageTurnReadingDelay": 0.0,
+    "distanceRecognitionEnabled": false,
+    "distanceRecognitionOnly": false,
+    "recognitionRange": 5.0,
+    "subObjectClasses": [
+        {
+            "m_FileID": 12586,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 12636,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 13368,
+            "m_PathID": 0
+        }
+    ],
+    "backupClasses": [
+        {
+            "m_FileID": 13282,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 12774,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 13452,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 13362,
+            "m_PathID": 0
+        }
+    ],
+    "autoPlacement": 0,
+    "alwaysPlaceAtGameLocation": false,
+    "frequencyPerGamelocationMin": 0,
+    "frequencyPerGameLocationMax": 0,
+    "perGameLocationObjectPriority": 0,
+    "placeIfFiltersPresentInOwner": true,
+    "placeAtHome": true,
+    "placeAtWork": true,
+    "traitModifiers": [
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 14124,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 14126,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "appliedFrequencyMin": 0,
+            "appliedFrequencyMax": 1
+        }
+    ],
+    "frequencyPerOwnerMin": 0,
+    "frequencyPerOwnerMax": 0,
+    "multiplyByMessiness": false,
+    "perOwnerObjectPriority": 4,
+    "writerIs": 0,
+    "receiverIs": 0,
+    "canBeFromSelf": false,
+    "limitPerObject": true,
+    "perObjectLimit": 1,
+    "limitPerRoom": false,
+    "perRoomLimit": 99,
+    "limitPerAddress": false,
+    "perAddressLimit": 99,
+    "limitInResidential": false,
+    "perResidentialLimit": 1,
+    "limitInCommercial": false,
+    "perCommercialLimit": 1,
+    "banFromRooms": [],
+    "limitToCertainRooms": false,
+    "onlyInRooms": [],
+    "limitToCertainBuildings": false,
+    "onlyInBuildings": [],
+    "attemptToStoreInFolder": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "folderPlacementChance": 1.0,
+    "dontPlaceIfNoFolder": false,
+    "folderOwnershipMustMatch": false,
+    "useSubSpawning": false,
+    "securityLevel": 3,
+    "ownedRule": 3,
+    "overrideWithOnlyOwnedSpawnAtWork": true,
+    "subSpawnClass": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "subSpawnPositions": [],
+    "relocationAuthority": 0,
+    "relocateIfPlacedInPlayersHome": true,
+    "AIWillCorrectPosition": true,
+    "useEvidence": true,
+    "useSingleton": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "findEvidence": 0,
+    "spawnEvidence": {
+        "m_FileID": 13302,
+        "m_PathID": 0
+    },
+    "locationIsParent": true,
+    "summaryMessageSource": "d1d0232c-df95-4ecf-8838-e780725a5986",
+    "overrideEvidencePhotoSettings": false,
+    "relativeCamPhotoPos": {
+        "x": -0.07500000298023224,
+        "y": 0.25,
+        "z": 0.20000000298023225
+    },
+    "relativeCamPhotoEuler": {
+        "x": 45.0,
+        "y": 155.0,
+        "z": 0.0
+    },
+    "includeLock": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "lockOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "passwordSource": 0,
+    "attemptedOpenSound": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "armLockOnClose": true,
+    "lockStrength": {
+        "x": 0.10000000149011612,
+        "y": 0.4000000059604645
+    },
+    "isSelfLock": false,
+    "useMaterialChanges": false,
+    "lockOffMaterial": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "lockOnMaterial": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "isComputer": false,
+    "bootApp": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "logInApp": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "desktopApp": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "additionalApps": [],
+    "fingerprintsEnabled": true,
+    "printsSource": 11,
+    "fingerprintDensity": 3.0,
+    "enableDynamicFingerprints": true,
+    "disableDynamicFingerprintsFromStaticPrintsSources": false,
+    "overrideMaxDynamicFingerprints": false,
+    "maxDynamicFingerprints": 8,
+    "fpsItem": {
+        "m_FileID": 13470,
+        "m_PathID": 0
+    },
+    "isInventoryItem": true,
+    "fpsItemOffset": {
+        "x": -22.0,
+        "y": 102.0,
+        "z": 147.0
+    },
+    "fpsItemRotation": {
+        "x": 0.000017075473806471564,
+        "y": 261.41058349609377,
+        "z": 34.27385711669922
+    },
+    "fpsItemScaleModifier": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "consumableAmount": 0.0,
+    "destroyWhenAllConsumed": true,
+    "useSameModelAsTrash": true,
+    "trashItem": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "playerConsumeLoop": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "takeOneEvent": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "disposal": 0,
+    "chanceOfDroppedAngle": 0.0,
+    "droppedAngleHeightBoost": 0.10000000149011612,
+    "weapon": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "inventoryCarryItem": false,
+    "requiredCarryAnimation": true,
+    "aiCarryAnimation": 1,
+    "aiHeldObjectPosition": {
+        "x": -0.05000000074505806,
+        "y": -0.10000000149011612,
+        "z": -0.019999999552965165
+    },
+    "aiHeldObjectRotation": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "putDownAtHome": false,
+    "takeWith": false,
+    "putDownPositions": [],
+    "backupPutDownPositions": [],
+    "specialCaseFlag": 0,
+    "affectRoomSteamLevel": false,
+    "isPayphone": false,
+    "isClock": false,
+    "isMoney": false,
+    "entertainmentSource": false,
+    "isHeatSource": false,
+    "markAsTrashOnCreate": false,
+    "isLitter": false,
+    "isDecal": false,
+    "isMovableChair": false,
+    "bedRightSide": false,
+    "resetSwitchStates": false,
+    "resetTimer": 0.009999999776482582,
+    "dontSaveSwitchStates": false,
+    "dontLoadSwitchStates": false,
+    "recordCreationTime": false,
+    "musicTracks": [],
+    "retailItem": {
+        "m_FileID": 36118,
+        "m_PathID": 0
+    },
+    "menuOverride": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "hourlyChime": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "chimeEqualToHour": false,
+    "chimeDelay": 1.5,
+    "searchLoop": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "copyFrom": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    }
+}

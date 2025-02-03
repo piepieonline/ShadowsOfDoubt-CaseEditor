@@ -1,0 +1,385 @@
+{
+    "presetName": "TheDoveKiller",
+    "notes": "Kills people who matched them on dove",
+    "disabled": false,
+    "compatibleWith": [
+        {
+            "m_FileID": 14772,
+            "m_PathID": 0
+        }
+    ],
+    "baseDifficulty": 1,
+    "maximumPotentialScore": 65.0,
+    "updateThis": false,
+    "pickRandomScoreRange": {
+        "x": 0.0,
+        "y": 15.0
+    },
+    "murdererTraitModifiers": [
+        {
+            "rule": 2,
+            "traitList": [
+                {
+                    "m_FileID": 14778,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 20.0
+        },
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 14776,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 5.0
+        },
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 14766,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 5.0
+        }
+    ],
+    "murdererJobModifiers": [],
+    "murdererCompanyModifiers": [],
+    "useMurdererSocialClassRange": false,
+    "murdererClassRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "murdererClassRangeBoost": 0,
+    "useHexaco": true,
+    "hexaco": {
+        "outputMin": 0,
+        "outputMax": 20,
+        "enableFeminineMasculine": false,
+        "feminineMasculine": 0,
+        "enableHumility": false,
+        "humility": 0,
+        "enableEmotionality": true,
+        "emotionality": 10,
+        "enableExtraversion": false,
+        "extraversion": 0,
+        "enableAgreeableness": true,
+        "agreeableness": 0,
+        "enableConscientiousness": false,
+        "conscientiousness": 0,
+        "enableCreativity": false,
+        "creativity": 0
+    },
+    "requiresSniperVantageAtHome": false,
+    "weaponsPool": [
+        {
+            "m_FileID": 14764,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 14756,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 14780,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 14774,
+            "m_PathID": 0
+        }
+    ],
+    "blockDroppingWeapons": false,
+    "allowAnywhere": false,
+    "allowHome": true,
+    "allowWork": true,
+    "allowPublic": false,
+    "allowStreets": false,
+    "allowDen": false,
+    "denFurniture": [],
+    "denStyleOverride": [],
+    "denItems": [],
+    "acquaintedSuitabilityBoost": 20,
+    "attractedToSuitabilityBoost": 20,
+    "likeSuitabilityBoost": 0,
+    "sameWorkplaceBoost": 0,
+    "murdererIsTenantBoost": 0,
+    "victimRandomScoreRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "victimTraitModifiers": [],
+    "victimJobModifiers": [],
+    "victimCompanyModifiers": [],
+    "useVictimSocialClassRange": false,
+    "victimClassRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "victimClassRangeBoost": 0,
+    "monkierDDSMessageList": "e7c4b1c6-ccb8-4b5b-8cf4-346ca9410be5",
+    "confessionalDDSResponses": [
+        "f3c26ccf-814a-4f47-a922-99b4f5b11b19"
+    ],
+    "MOleads": [
+        {
+            "name": "VMAIL: Dove cancel vmail",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.16699999570846559,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "4c2c647f-163f-43fa-9b00-243f10f10863",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 0,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 0
+        },
+        {
+            "name": "VMAIL: Dove match vmail",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 2,
+            "chance": 1.0,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "7134d7ef-00df-4625-af2b-ab2f98f6cbc9",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 1,
+            "vmailOtherParticipants": [
+                0
+            ],
+            "where": 0,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 0
+        },
+        {
+            "name": "(A) Fan Letter",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 0.699999988079071,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 14786,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 2,
+            "vmailOtherParticipants": [],
+            "where": 2,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 2
+        },
+        {
+            "name": "(B) Burned Note",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 1,
+            "chance": 0.699999988079071,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 1,
+            "spawnItem": {
+                "m_FileID": 14784,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 1,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 1,
+            "ownershipRule": 3
+        },
+        {
+            "name": "VMAIL: Credits",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 14762,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 1,
+            "chance": 0.8939999938011169,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 1,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "47896fdd-6e0c-46cc-a64a-546a1e9f26ba",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 0,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 1,
+            "ownershipRule": 3
+        }
+    ],
+    "graffiti": [
+        {
+            "preset": {
+                "m_FileID": 14782,
+                "m_PathID": 0
+            },
+            "pos": 0,
+            "artImage": {
+                "m_FileID": 14758,
+                "m_PathID": 0
+            },
+            "ddsMessageTextList": "",
+            "color": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "size": 0.0
+        },
+        {
+            "preset": {
+                "m_FileID": 14768,
+                "m_PathID": 0
+            },
+            "pos": 1,
+            "artImage": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "ddsMessageTextList": "7f173c4c-fcc1-43df-a427-3bcde810014a",
+            "color": {
+                "r": 0.801886796951294,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "size": 28.0
+        }
+    ],
+    "callingCardPool": [
+        {
+            "item": {
+                "m_FileID": 14770,
+                "m_PathID": 0
+            },
+            "origin": 0,
+            "randomScoreRange": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "traitModifiers": []
+        }
+    ],
+    "playerTaunts": [
+        {
+            "m_FileID": 14760,
+            "m_PathID": 0
+        }
+    ]
+}

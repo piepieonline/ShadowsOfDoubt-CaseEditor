@@ -1,0 +1,168 @@
+{
+    "presetName": "Blades",
+    "murderWeaponPool": [
+        {
+            "weapon": {
+                "m_FileID": 49426,
+                "m_PathID": 0
+            },
+            "chanceOfDroppingAtScene": 0.0689999982714653,
+            "randomScoreRange": {
+                "x": 0.0,
+                "y": 2.0
+            },
+            "traitModifiers": [
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 19010,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 3.0
+                }
+            ]
+        },
+        {
+            "weapon": {
+                "m_FileID": 31506,
+                "m_PathID": 0
+            },
+            "chanceOfDroppingAtScene": 0.4230000078678131,
+            "randomScoreRange": {
+                "x": 0.0,
+                "y": 1.0
+            },
+            "traitModifiers": [
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 24682,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 5.0
+                }
+            ]
+        },
+        {
+            "weapon": {
+                "m_FileID": 31390,
+                "m_PathID": 0
+            },
+            "chanceOfDroppingAtScene": 0.7390000224113464,
+            "randomScoreRange": {
+                "x": 0.0,
+                "y": 1.0
+            },
+            "traitModifiers": [
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 24682,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 5.0
+                }
+            ]
+        },
+        {
+            "weapon": {
+                "m_FileID": 17600,
+                "m_PathID": 0
+            },
+            "chanceOfDroppingAtScene": 0.7179999947547913,
+            "randomScoreRange": {
+                "x": 0.0,
+                "y": 1.0
+            },
+            "traitModifiers": [
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 13380,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 5.0
+                }
+            ]
+        },
+        {
+            "weapon": {
+                "m_FileID": 39476,
+                "m_PathID": 0
+            },
+            "chanceOfDroppingAtScene": 0.7559999823570252,
+            "randomScoreRange": {
+                "x": 0.0,
+                "y": 1.0
+            },
+            "traitModifiers": [
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 17130,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 5.0
+                }
+            ]
+        },
+        {
+            "weapon": {
+                "m_FileID": 17290,
+                "m_PathID": 0
+            },
+            "chanceOfDroppingAtScene": 0.0,
+            "randomScoreRange": {
+                "x": 0.0,
+                "y": 0.20000000298023225
+            },
+            "traitModifiers": [
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 14662,
+                            "m_PathID": 0
+                        },
+                        {
+                            "m_FileID": 30098,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 4.0
+                },
+                {
+                    "rule": 0,
+                    "traitList": [
+                        {
+                            "m_FileID": 14916,
+                            "m_PathID": 0
+                        },
+                        {
+                            "m_FileID": 65836,
+                            "m_PathID": 0
+                        }
+                    ],
+                    "mustPassForApplication": false,
+                    "scoreModifier": 3.0
+                }
+            ]
+        }
+    ]
+}

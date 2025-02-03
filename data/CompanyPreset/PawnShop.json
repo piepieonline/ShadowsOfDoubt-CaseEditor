@@ -1,0 +1,111 @@
+{
+    "presetName": "PawnShop",
+    "companyCategories": [
+        7
+    ],
+    "isIllegal": false,
+    "useBuildingName": false,
+    "useBuildingOverrideName": false,
+    "overrideSuffixList": [],
+    "useStreetNameChance": 0.1899999976158142,
+    "useDistrictNameChance": 0.0,
+    "useOwnerFirstNameChance": 0.10000000149011612,
+    "useOwnerSurNameChance": 0.0,
+    "useCompanyNameListChance": 0.9449999928474426,
+    "aliterationWeight": 6,
+    "prefixChance": 0.47099998593330386,
+    "prefixList": [
+        "colours",
+        "adjectives"
+    ],
+    "mainChance": 1.0,
+    "mainNamingList": [
+        "nightlife",
+        "people"
+    ],
+    "suffixList": [
+        "company.suffix.pawn"
+    ],
+    "theRules": [
+        {
+            "component": 0,
+            "exists": false,
+            "chanceModifier": 1.0
+        },
+        {
+            "component": 0,
+            "exists": true,
+            "chanceModifier": 0.800000011920929
+        }
+    ],
+    "minimumSalary": 0,
+    "topSalary": 3,
+    "payGradeCurve": {
+        "serializedVersion": "2",
+        "m_Curve": [
+            {
+                "serializedVersion": "3",
+                "time": 0.0,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 1.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            },
+            {
+                "serializedVersion": "3",
+                "time": 1.0,
+                "value": 1.0,
+                "inSlope": 1.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            }
+        ],
+        "m_PreInfinity": 2,
+        "m_PostInfinity": 2,
+        "m_RotationOrder": 4
+    },
+    "publicFacing": true,
+    "isSelfEmployed": false,
+    "autoCreate": false,
+    "priority": 5,
+    "cityPopRatio": 0.029999999329447748,
+    "minimumNumber": 2,
+    "maximumNumber": 10,
+    "enableLoiteringBehaviour": true,
+    "menus": [
+        {
+            "m_FileID": 23110,
+            "m_PathID": 0
+        }
+    ],
+    "recordSalesData": true,
+    "previousFakeSalesRecords": 10,
+    "requiredTraits": [
+        {
+            "m_FileID": 13380,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 15374,
+            "m_PathID": 0
+        }
+    ],
+    "enableSelling": true,
+    "enableSellingOfIllegalItems": false,
+    "sellValueMultiplier": 0.5,
+    "possibleUniformColours": [],
+    "workHours": {
+        "m_FileID": 13568,
+        "m_PathID": 0
+    },
+    "structure": {
+        "m_FileID": 23108,
+        "m_PathID": 0
+    },
+    "controlsBuildingSurveillance": false,
+    "isHotel": false
+}

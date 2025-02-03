@@ -1,0 +1,87 @@
+{
+    "presetName": "Hitman",
+    "notes": "Chapter killer",
+    "disabled": false,
+    "compatibleWith": [
+        {
+            "m_FileID": 37782,
+            "m_PathID": 0
+        }
+    ],
+    "baseDifficulty": 0,
+    "maximumPotentialScore": 0.0,
+    "updateThis": false,
+    "pickRandomScoreRange": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "murdererTraitModifiers": [],
+    "murdererJobModifiers": [],
+    "murdererCompanyModifiers": [],
+    "useMurdererSocialClassRange": false,
+    "murdererClassRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "murdererClassRangeBoost": 0,
+    "useHexaco": false,
+    "hexaco": {
+        "outputMin": 0,
+        "outputMax": 10,
+        "enableFeminineMasculine": false,
+        "feminineMasculine": 5,
+        "enableHumility": false,
+        "humility": 5,
+        "enableEmotionality": false,
+        "emotionality": 5,
+        "enableExtraversion": false,
+        "extraversion": 5,
+        "enableAgreeableness": false,
+        "agreeableness": 5,
+        "enableConscientiousness": false,
+        "conscientiousness": 5,
+        "enableCreativity": false,
+        "creativity": 5
+    },
+    "requiresSniperVantageAtHome": false,
+    "weaponsPool": [
+        {
+            "m_FileID": 30070,
+            "m_PathID": 0
+        }
+    ],
+    "blockDroppingWeapons": false,
+    "allowAnywhere": false,
+    "allowHome": true,
+    "allowWork": false,
+    "allowPublic": false,
+    "allowStreets": false,
+    "allowDen": false,
+    "denFurniture": [],
+    "denStyleOverride": [],
+    "denItems": [],
+    "acquaintedSuitabilityBoost": 0,
+    "attractedToSuitabilityBoost": 0,
+    "likeSuitabilityBoost": 0,
+    "sameWorkplaceBoost": 0,
+    "murdererIsTenantBoost": 0,
+    "victimRandomScoreRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "victimTraitModifiers": [],
+    "victimJobModifiers": [],
+    "victimCompanyModifiers": [],
+    "useVictimSocialClassRange": false,
+    "victimClassRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "victimClassRangeBoost": 0,
+    "monkierDDSMessageList": "",
+    "confessionalDDSResponses": [],
+    "MOleads": [],
+    "graffiti": [],
+    "callingCardPool": [],
+    "playerTaunts": []
+}

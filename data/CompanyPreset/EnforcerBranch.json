@@ -1,0 +1,87 @@
+{
+    "presetName": "EnforcerBranch",
+    "companyCategories": [],
+    "isIllegal": false,
+    "useBuildingName": false,
+    "useBuildingOverrideName": false,
+    "overrideSuffixList": [],
+    "useStreetNameChance": 0.0,
+    "useDistrictNameChance": 0.0,
+    "useOwnerFirstNameChance": 0.0,
+    "useOwnerSurNameChance": 0.0,
+    "useCompanyNameListChance": 1.0,
+    "aliterationWeight": 0,
+    "prefixChance": 0.0,
+    "prefixList": [],
+    "mainChance": 1.0,
+    "mainNamingList": [
+        "greekalphabet"
+    ],
+    "suffixList": [
+        "company.suffix.enforcers"
+    ],
+    "theRules": [],
+    "minimumSalary": 1,
+    "topSalary": 5,
+    "payGradeCurve": {
+        "serializedVersion": "2",
+        "m_Curve": [
+            {
+                "serializedVersion": "3",
+                "time": 0.0,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 1.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            },
+            {
+                "serializedVersion": "3",
+                "time": 1.0,
+                "value": 1.0,
+                "inSlope": 1.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            }
+        ],
+        "m_PreInfinity": 2,
+        "m_PostInfinity": 2,
+        "m_RotationOrder": 4
+    },
+    "publicFacing": false,
+    "isSelfEmployed": false,
+    "autoCreate": false,
+    "priority": 5,
+    "cityPopRatio": 0.029999999329447748,
+    "minimumNumber": 2,
+    "maximumNumber": 10,
+    "enableLoiteringBehaviour": false,
+    "menus": [],
+    "recordSalesData": false,
+    "previousFakeSalesRecords": 5,
+    "requiredTraits": [],
+    "enableSelling": false,
+    "enableSellingOfIllegalItems": false,
+    "sellValueMultiplier": 0.5,
+    "possibleUniformColours": [
+        {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0,
+            "a": 1.0
+        }
+    ],
+    "workHours": {
+        "m_FileID": 118598,
+        "m_PathID": 0
+    },
+    "structure": {
+        "m_FileID": 118608,
+        "m_PathID": 0
+    },
+    "controlsBuildingSurveillance": false,
+    "isHotel": false
+}

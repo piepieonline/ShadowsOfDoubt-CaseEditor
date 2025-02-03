@@ -1,0 +1,339 @@
+{
+    "presetName": "TheRetiredKiller",
+    "notes": "Is retired or older and kills working citizens in fear of overpopulation",
+    "disabled": false,
+    "compatibleWith": [
+        {
+            "m_FileID": 14772,
+            "m_PathID": 0
+        }
+    ],
+    "baseDifficulty": 2,
+    "maximumPotentialScore": 65.0,
+    "updateThis": false,
+    "pickRandomScoreRange": {
+        "x": 0.0,
+        "y": 15.0
+    },
+    "murdererTraitModifiers": [
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 28812,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 33356,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 16498,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 20.0
+        },
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 14776,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "scoreModifier": 10.0
+        }
+    ],
+    "murdererJobModifiers": [
+        {
+            "jobs": [
+                {
+                    "m_FileID": 36340,
+                    "m_PathID": 0
+                }
+            ],
+            "jobBoost": 20
+        }
+    ],
+    "murdererCompanyModifiers": [],
+    "useMurdererSocialClassRange": false,
+    "murdererClassRange": {
+        "x": 0.5,
+        "y": 1.0
+    },
+    "murdererClassRangeBoost": 10,
+    "useHexaco": false,
+    "hexaco": {
+        "outputMin": 0,
+        "outputMax": 10,
+        "enableFeminineMasculine": false,
+        "feminineMasculine": 0,
+        "enableHumility": false,
+        "humility": 0,
+        "enableEmotionality": true,
+        "emotionality": 10,
+        "enableExtraversion": false,
+        "extraversion": 0,
+        "enableAgreeableness": true,
+        "agreeableness": 0,
+        "enableConscientiousness": false,
+        "conscientiousness": 0,
+        "enableCreativity": false,
+        "creativity": 0
+    },
+    "requiresSniperVantageAtHome": false,
+    "weaponsPool": [
+        {
+            "m_FileID": 14764,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": 14774,
+            "m_PathID": 0
+        }
+    ],
+    "blockDroppingWeapons": false,
+    "allowAnywhere": false,
+    "allowHome": true,
+    "allowWork": true,
+    "allowPublic": true,
+    "allowStreets": true,
+    "allowDen": false,
+    "denFurniture": [],
+    "denStyleOverride": [],
+    "denItems": [],
+    "acquaintedSuitabilityBoost": 0,
+    "attractedToSuitabilityBoost": 0,
+    "likeSuitabilityBoost": 0,
+    "sameWorkplaceBoost": 0,
+    "murdererIsTenantBoost": 0,
+    "victimRandomScoreRange": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "victimTraitModifiers": [],
+    "victimJobModifiers": [
+        {
+            "jobs": [
+                {
+                    "m_FileID": 17556,
+                    "m_PathID": 0
+                },
+                {
+                    "m_FileID": 36340,
+                    "m_PathID": 0
+                }
+            ],
+            "jobBoost": -20
+        }
+    ],
+    "victimCompanyModifiers": [],
+    "useVictimSocialClassRange": true,
+    "victimClassRange": {
+        "x": 0.0,
+        "y": 0.5
+    },
+    "victimClassRangeBoost": 5,
+    "monkierDDSMessageList": "b195cdc8-d209-4876-9467-e74ddab245a6",
+    "confessionalDDSResponses": [
+        "47964dfe-951a-4ec4-b253-07308a85c401"
+    ],
+    "MOleads": [
+        {
+            "name": "(A) Bitter note",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 1.0,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 0,
+            "spawnItem": {
+                "m_FileID": 38486,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 2,
+            "vmailOtherParticipants": [],
+            "where": 2,
+            "security": 0,
+            "priority": 2,
+            "ownershipRule": 2
+        },
+        {
+            "name": "(B) Quip note",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 6,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 2,
+            "chance": 1.0,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 1,
+            "spawnItem": {
+                "m_FileID": 38484,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 1,
+            "vmailOtherParticipants": [],
+            "where": 0,
+            "security": 0,
+            "priority": 2,
+            "ownershipRule": 2
+        },
+        {
+            "name": "(C) Fields Application",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 6,
+            "tryToSpawnWithEachNewMurder": true,
+            "belongsTo": 2,
+            "chance": 0.6710000038146973,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 2,
+            "spawnItem": {
+                "m_FileID": 37432,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 2,
+            "vmailOtherParticipants": [],
+            "where": 2,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 2
+        },
+        {
+            "name": "VMAIL: Programme",
+            "compatibleWithAllMotives": false,
+            "compatibleWithMotives": [
+                {
+                    "m_FileID": 28506,
+                    "m_PathID": 0
+                }
+            ],
+            "spawnOnPhase": 1,
+            "tryToSpawnWithEachNewMurder": false,
+            "belongsTo": 2,
+            "chance": 0.8270000219345093,
+            "useTraits": false,
+            "traitModifiers": [],
+            "useIf": false,
+            "ifTag": 0,
+            "useOrGroup": false,
+            "orGroup": 0,
+            "chanceRatio": 0,
+            "itemTag": 2,
+            "spawnItem": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "vmailThread": "",
+            "vmailProgressThreshold": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "writer": 2,
+            "receiver": 0,
+            "vmailOtherParticipants": [],
+            "where": 2,
+            "security": 0,
+            "priority": 0,
+            "ownershipRule": 2
+        }
+    ],
+    "graffiti": [
+        {
+            "preset": {
+                "m_FileID": 14768,
+                "m_PathID": 0
+            },
+            "pos": 1,
+            "artImage": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            },
+            "ddsMessageTextList": "42e81e4e-452b-4d70-93d8-2590ab12612d",
+            "color": {
+                "r": 0.800000011920929,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "size": 26.0
+        }
+    ],
+    "callingCardPool": [
+        {
+            "item": {
+                "m_FileID": 31826,
+                "m_PathID": 0
+            },
+            "origin": 0,
+            "randomScoreRange": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "traitModifiers": []
+        }
+    ],
+    "playerTaunts": [
+        {
+            "m_FileID": 18256,
+            "m_PathID": 0
+        }
+    ]
+}

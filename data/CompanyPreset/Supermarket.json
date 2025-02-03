@@ -1,0 +1,88 @@
+{
+    "presetName": "Supermarket",
+    "companyCategories": [
+        3
+    ],
+    "isIllegal": false,
+    "useBuildingName": false,
+    "useBuildingOverrideName": false,
+    "overrideSuffixList": [],
+    "useStreetNameChance": 0.28200000524520876,
+    "useDistrictNameChance": 0.07599999755620957,
+    "useOwnerFirstNameChance": 0.3580000102519989,
+    "useOwnerSurNameChance": 0.42800000309944155,
+    "useCompanyNameListChance": 0.7599999904632568,
+    "aliterationWeight": 4,
+    "prefixChance": 0.0,
+    "prefixList": [],
+    "mainChance": 1.0,
+    "mainNamingList": [
+        "colours",
+        "helpful"
+    ],
+    "suffixList": [
+        "company.suffix.groceries"
+    ],
+    "theRules": [],
+    "minimumSalary": 1,
+    "topSalary": 6,
+    "payGradeCurve": {
+        "serializedVersion": "2",
+        "m_Curve": [
+            {
+                "serializedVersion": "3",
+                "time": 0.0,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 1.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            },
+            {
+                "serializedVersion": "3",
+                "time": 1.0,
+                "value": 1.0,
+                "inSlope": 1.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            }
+        ],
+        "m_PreInfinity": 2,
+        "m_PostInfinity": 2,
+        "m_RotationOrder": 4
+    },
+    "publicFacing": true,
+    "isSelfEmployed": false,
+    "autoCreate": false,
+    "priority": 5,
+    "cityPopRatio": 0.029999999329447748,
+    "minimumNumber": 2,
+    "maximumNumber": 10,
+    "enableLoiteringBehaviour": true,
+    "menus": [
+        {
+            "m_FileID": 35934,
+            "m_PathID": 0
+        }
+    ],
+    "recordSalesData": true,
+    "previousFakeSalesRecords": 10,
+    "requiredTraits": [],
+    "enableSelling": false,
+    "enableSellingOfIllegalItems": false,
+    "sellValueMultiplier": 0.5,
+    "possibleUniformColours": [],
+    "workHours": {
+        "m_FileID": 13980,
+        "m_PathID": 0
+    },
+    "structure": {
+        "m_FileID": 23108,
+        "m_PathID": 0
+    },
+    "controlsBuildingSurveillance": false,
+    "isHotel": false
+}

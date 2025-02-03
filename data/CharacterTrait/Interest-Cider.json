@@ -1,0 +1,97 @@
+{
+    "presetName": "Interest-Cider",
+    "isTrait": true,
+    "needsReson": false,
+    "requiresPartner": false,
+    "requiresSingle": false,
+    "requiresHome": false,
+    "requiresEmployment": false,
+    "needsDate": false,
+    "featureInInterestPool": false,
+    "featureInAfflictionPool": false,
+    "ageDateRange": {
+        "x": 5.0,
+        "y": 10.0
+    },
+    "useCouplesAnniversary": false,
+    "isPassword": false,
+    "disabled": false,
+    "postiveNegative": 1,
+    "pickStage": 0,
+    "primeBaseChance": 0.009999999776482582,
+    "pickRules": [
+        {
+            "rule": 0,
+            "traitList": [
+                {
+                    "m_FileID": 120864,
+                    "m_PathID": 0
+                }
+            ],
+            "mustPassForApplication": false,
+            "baseChance": 0.029999999329447748,
+            "reasonChance": 0
+        }
+    ],
+    "matchChance": 0.0,
+    "useHumilityMatch": false,
+    "matchHumility": 1.0,
+    "useEmotionalityMatch": false,
+    "matchEmotionality": 0.0,
+    "useExtraversionMatch": false,
+    "matchExtraversion": 0.0,
+    "useAgreeablenessMatch": false,
+    "matchAgreeableness": 1.0,
+    "useConscientiousnessMatch": false,
+    "matchConscientiousness": 1.0,
+    "useCreativityMatch": false,
+    "matchCreativity": 1.0,
+    "useSocietalClassMatch": false,
+    "matchSocietalClass": 1.0,
+    "effectHumility": 0.0,
+    "effectEmotionality": 0.0,
+    "effectExtraversion": 0.0,
+    "effectAgreeableness": 0.0,
+    "effectConscientiousness": 0.0,
+    "effectCreativity": 0.0,
+    "maxHealthModifier": 0.0,
+    "recoveryRateModifier": 0.0,
+    "combatSkillModifier": 0.0,
+    "combatHeftModifier": 0.0,
+    "maxNerveModifier": 0.0,
+    "breathRecoveryModifier": 0.0,
+    "limitHumility": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "limitEmotionality": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "limitExtraversion": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "limitAgreeableness": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "limitConscientiousness": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "limitCreativity": {
+        "x": 0.0,
+        "y": 1.0
+    },
+    "slangUsageModifier": 0.0,
+    "slangGreetingDefault": [],
+    "slangGreetingMale": [],
+    "slangGreetingFemale": [],
+    "slangGreetingLover": [],
+    "slangCurse": [],
+    "slangCurseNoun": [],
+    "slangPraiseNoun": [],
+    "preferredBookCountModifier": 0,
+    "sightingLimitMemoryModifier": 0
+}

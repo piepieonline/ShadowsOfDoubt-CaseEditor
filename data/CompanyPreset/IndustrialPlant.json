@@ -1,0 +1,103 @@
+{
+    "presetName": "IndustrialPlant",
+    "companyCategories": [],
+    "isIllegal": false,
+    "useBuildingName": false,
+    "useBuildingOverrideName": true,
+    "overrideSuffixList": [
+        "company.suffix.industrialalt"
+    ],
+    "useStreetNameChance": 0.0,
+    "useDistrictNameChance": 0.1080000028014183,
+    "useOwnerFirstNameChance": 0.0,
+    "useOwnerSurNameChance": 0.36800000071525576,
+    "useCompanyNameListChance": 0.9279999732971191,
+    "aliterationWeight": 1,
+    "prefixChance": 0.0,
+    "prefixList": [],
+    "mainChance": 1.0,
+    "mainNamingList": [
+        "colours",
+        "greekalphabet",
+        "industrial"
+    ],
+    "suffixList": [
+        "company.suffix.industrial"
+    ],
+    "theRules": [],
+    "minimumSalary": 1,
+    "topSalary": 4,
+    "payGradeCurve": {
+        "serializedVersion": "2",
+        "m_Curve": [
+            {
+                "serializedVersion": "3",
+                "time": 0.0,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 1.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            },
+            {
+                "serializedVersion": "3",
+                "time": 1.0,
+                "value": 1.0,
+                "inSlope": 1.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            }
+        ],
+        "m_PreInfinity": 2,
+        "m_PostInfinity": 2,
+        "m_RotationOrder": 4
+    },
+    "publicFacing": false,
+    "isSelfEmployed": false,
+    "autoCreate": false,
+    "priority": 5,
+    "cityPopRatio": 0.029999999329447748,
+    "minimumNumber": 2,
+    "maximumNumber": 10,
+    "enableLoiteringBehaviour": false,
+    "menus": [],
+    "recordSalesData": false,
+    "previousFakeSalesRecords": 5,
+    "requiredTraits": [],
+    "enableSelling": false,
+    "enableSellingOfIllegalItems": false,
+    "sellValueMultiplier": 0.5,
+    "possibleUniformColours": [
+        {
+            "r": 0.8962264060974121,
+            "g": 0.4856516420841217,
+            "b": 0.19023676216602326,
+            "a": 1.0
+        },
+        {
+            "r": 0.17150230705738069,
+            "g": 0.5001682043075562,
+            "b": 0.7735849022865295,
+            "a": 1.0
+        },
+        {
+            "r": 0.8773584961891174,
+            "g": 0.806013286113739,
+            "b": 0.16967780888080598,
+            "a": 1.0
+        }
+    ],
+    "workHours": {
+        "m_FileID": 45086,
+        "m_PathID": 0
+    },
+    "structure": {
+        "m_FileID": 45084,
+        "m_PathID": 0
+    },
+    "controlsBuildingSurveillance": false,
+    "isHotel": false
+}
