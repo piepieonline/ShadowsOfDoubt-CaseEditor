@@ -22,7 +22,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 }
 
 async function loadFileFromOnlineRepo(path, type) {
-    fetch(`../data/${path}`)
+    fetch(`./../data/${path}`)
     .then(res => res.text())
     .then(text => {
         loadFileContent(path, text, true, type);
