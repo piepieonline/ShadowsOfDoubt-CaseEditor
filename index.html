@@ -45,7 +45,7 @@
                     </hgroup>
                 </li>
             </ul>
-            <ul>
+            <ul id="editing-mode-control-group">
                 <li>
                     <div role="group">
                         <select id="select-loaded-mod" onchange="updateSelectedMod()"></select>
@@ -65,11 +65,16 @@
                     </fieldset>
                 </li>
             </ul>
+            <ul id="viewing-mode-control-group">
+                <li>
+                    <button onclick="loadFromGUI()">Enable Editing Mode</button>
+                </li>
+            </ul>
         </nav>
 
         <article class="files-article-container" data-theme="light">
             <div class="container-expand-button" onclick="document.getElementById('main-container').classList.toggle('container-expanded')"></div>
-            <section>
+            <section id="files-section-container">
                 <article id="manifest_panel">
                     <header>
                         <label>
@@ -140,7 +145,8 @@
                     <li>Once the murdermanifest file has opened, open the linked file (The MurderMO) with the same name as you have just created.</li>
                 </ol>
             </small>
-            <button onclick="loadFromGUI()" style="width: 100%">Select the parent folder</button>
+            <button onclick="loadFromGUI()" style="width: 100%; margin-bottom: 10px;">Select the parent folder</button>
+            <button onclick="enableAssetOnlyMode()" class="secondary" style="width: 100%">Browse game assets only</button>
         </article>
     </dialog>
     <dialog id="help-modal">
@@ -174,13 +180,13 @@
                     <strong>Shadows Of Doubt: ScriptableObjects</strong>
                 </h5>
             </header>
-            <select id="asset-model-type-list" onchange="updateAssetModel()"></select>
+            <select id="asset-model-type-list" onchange="updateAssetModel(false)"></select>
             <small style="overflow: auto; height: 50vh">
                 <table>
                     <tbody id="asset-model-asset-list"></tbody>
                 </table>
             </small>
-            <button onclick="loadExportedSOs()" style="width: 100%">Load exported ScriptableObjects</button>
+            <button onclick="loadExportedSOs()" class="secondary" style="width: 100%">Load local exported ScriptableObjects</button>
         </article>
     </dialog>
     

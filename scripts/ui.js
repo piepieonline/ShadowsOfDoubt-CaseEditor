@@ -31,8 +31,24 @@ async function loadFromGUI() {
 	if(window.selectedMod != null) {
 		await initAndLoad('murdermanifest');
 	}
+
+	toggleEditMode(true);
+
 	document.querySelector('#before-you-start-modal').removeAttribute("open");
 	// updateFavButton();
+}
+
+async function enableAssetOnlyMode() {
+	toggleEditMode(false);
+	document.querySelector('#before-you-start-modal').removeAttribute("open");
+	document.querySelector('#asset-explorer-modal').toggleAttribute('open')
+}
+
+async function toggleEditMode(editingMode) {
+	document.getElementById('manifest_panel').classList.toggle('hidden', !editingMode)
+	document.getElementById('files-section-container').classList.toggle('file-section-edit-mode', editingMode)
+	document.getElementById('editing-mode-control-group').classList.toggle('hidden', !editingMode)
+	document.getElementById('viewing-mode-control-group').classList.toggle('hidden', editingMode)
 }
 
 function dismissSpoilerWarning() {
@@ -93,22 +109,33 @@ function toggleDefaultValues() {
 	});
 }
 
-function updateAssetModel(firstRun) {
-	let typeList = document.getElementById('asset-model-type-list');
-
-	if(firstRun)
+function updateAssetModel(rebuildList, hasLocalFiles) {
+	let typeListEle = document.getElementById('asset-model-type-list');
+	
+	if(rebuildList)
 	{
-		Object.keys(window.typeMap).sort().forEach(type => {
+		typeListEle.innerHTML = '';
+		let typeList = Object.keys(window.typeMap).sort();
+
+		if(!hasLocalFiles) {
+			typeList = [
+				...window.onlineTypes,
+				'------',
+				...typeList.filter(type => !window.onlineTypes.includes(type))
+			];
+		}
+
+		typeList.forEach(type => {
 			var option = document.createElement("option");
 			option.text = type;
-			typeList.appendChild(option);
+			typeListEle.appendChild(option);
 		});
 	}
 
 	let assetList = document.getElementById('asset-model-asset-list');
 	assetList.innerHTML = '';
 
-	window.typeMap[typeList.value]?.sort().forEach(SO => {
+	window.typeMap[typeListEle.value]?.sort().forEach(SO => {
 		let tr = document.createElement('tr');
 		var option = document.createElement("td");
 		option.innerText = SO;
@@ -116,12 +143,19 @@ function updateAssetModel(firstRun) {
 		if(window.dirHandleExportedSOPath) {
 			option.classList.add('link-element');
 			option.addEventListener('click', (e) => {
-				loadFileFromFolder(typeList.value + '/' + SO + ".json", window.dirHandleExportedSOPath, true, typeList.value);
+				loadFileFromFolder(typeListEle.value + '/' + SO + ".json", window.dirHandleExportedSOPath, true, typeListEle.value);
+			});
+		} else if(window.onlineTypes.includes(typeListEle.value)) {
+			option.classList.add('link-element');
+			option.addEventListener('click', (e) => {
+				loadFileFromOnlineRepo(typeListEle.value + '/' + SO + ".json", typeListEle.value);
 			});
 		}
 		tr.appendChild(option)
 		assetList.appendChild(tr);
 	});
+
+	assetList.classList.toggle('asset-loaded-link', window.dirHandleExportedSOPath || window.onlineTypes.includes(typeListEle.value))
 }
 
 function updateNewFileCopyFrom() {
@@ -150,5 +184,5 @@ async function loadExportedSOs() {
 	let options = exportedSOPath ? { startIn: exportedSOPath, mode: 'read' } : { mode: 'read' };
 	window.dirHandleExportedSOPath = await window.showDirectoryPicker(options);
 	await idbKeyval.set('ExportedSOPath', window.dirHandleExportedSOPath);
-	updateAssetModel(false);
+	updateAssetModel(true, true);
 }

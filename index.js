@@ -17,7 +17,19 @@ async function loadFile(path, readOnly, type) {
 
 async function loadFileFromFolder(path, folderHandle, readOnly, type) {
     let loadedFile = await tryGetFile(folderHandle, path.split('/'));
+    let loadedFileContent = await (await (loadedFile)?.getFile())?.text();
+    loadFileContent(path, loadedFileContent, readOnly, type);
+}
 
+async function loadFileFromOnlineRepo(path, type) {
+    fetch(`../data/${path}`)
+    .then(res => res.text())
+    .then(text => {
+        loadFileContent(path, text, true, type);
+  });
+}
+
+async function loadFileContent(path, loadedFile, readOnly, type) {
     if(!loadedFile) {
         alert(`${path} doesn't exist or is a vanilla asset - create it in the manifest first`);
         return;
@@ -32,7 +44,7 @@ async function loadFileFromFolder(path, folderHandle, readOnly, type) {
 
     if(!treeEle) return;
 
-    var rawTextData = await (await (loadedFile)?.getFile())?.text();
+    var rawTextData = loadedFile;
     
     // Strip whitespace
     var data = JSON.parse(rawTextData);

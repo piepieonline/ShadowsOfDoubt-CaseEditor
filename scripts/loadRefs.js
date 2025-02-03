@@ -6,6 +6,9 @@ import soIDMap from './ref/soIdMap.json' with { type: 'json' };
 
 import soCustomDescriptions from './soCustomDescriptions.json' with { type: 'json' };
 
+import onlineTypes from '../data/onlineTypes.json' with { type: 'json' };
+window.onlineTypes = onlineTypes;
+
 window.basicTypeLayouts = {
     Vector2: {
         x: {
@@ -230,4 +233,4 @@ window.ddsMap = {
     blocks: ddsMap.Blocks
 };
 
-window.updateAssetModel(true);
+window.updateAssetModel(true, false);

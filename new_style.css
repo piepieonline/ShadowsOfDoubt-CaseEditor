@@ -6,10 +6,15 @@ main>article>section:first-of-type {
     display: grid;
     /*Back when i do preview*/
     /*grid-template-columns:300px 2fr 1fr;*/
-    grid-template-columns:300px 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 10px;
     min-height: max(60vh, 300px);
+
+    &.file-section-edit-mode {
+        grid-template-columns:300px 1fr;
+    }
 }
+
 ul {
     padding-left: 0;
 }
@@ -243,3 +248,18 @@ ul li {
     margin-left: 0;
 }
 
+#asset-model-asset-list {
+    height: 100%;
+    overflow-y: scroll;
+
+    &.asset-loaded-link {
+        .link-element {
+            color: lightblue;
+            text-decoration: underline;
+    
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
