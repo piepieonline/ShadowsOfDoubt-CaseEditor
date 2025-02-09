@@ -7,12 +7,38 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelector('#spoiler-warning-modal').setAttribute("open", null);
 		document.querySelector('#before-you-start-modal').removeAttribute("open");
 	}
+
+	if(window.queryParams.viewOnly) {
+		enableAssetOnlyMode(window.queryParams.openDefaultFiles);
+	}
+
+	if(window.queryParams.openDefaultFiles) {
+		let openDefaultFiles;
+		try
+		{
+			JSON.parse(window.queryParams.openDefaultFiles).forEach(file => {
+				loadFileFromOnlineRepo(file.type + '/' + file.name + ".json", file.type);
+			});
+		}
+		catch {}
+	}
 });
 
 //Manifest Panel
 function toggleManifestPanel() {
 	document.querySelector('#manifest_panel .jsontree-container').classList.toggle("hidden");
 	document.querySelector('#manifest_panel .files-order').classList.toggle("hidden");
+}
+
+function shareOpen() {
+	let openFiles = [...document.querySelectorAll('.file-window')].map(el => el.getAttribute('path').split('.')[0]).map(file => ({
+		type: file.split('/')[0],
+		name: file.split('/')[1]
+	}));
+
+	navigator.clipboard.writeText(`${location.href.replace('/' + location.search, '')}/?viewOnly=true&openDefaultFiles=${JSON.stringify(openFiles)}`).then(() => {
+		alert('Link copied to clipboard');
+	})
 }
 
 // Assets loading
@@ -38,10 +64,11 @@ async function loadFromGUI() {
 	// updateFavButton();
 }
 
-async function enableAssetOnlyMode() {
+async function enableAssetOnlyMode(skipAssetModel) {
 	toggleEditMode(false);
 	document.querySelector('#before-you-start-modal').removeAttribute("open");
-	document.querySelector('#asset-explorer-modal').toggleAttribute('open')
+	if(!skipAssetModel)
+		document.querySelector('#asset-explorer-modal').toggleAttribute('open')
 }
 
 async function toggleEditMode(editingMode) {

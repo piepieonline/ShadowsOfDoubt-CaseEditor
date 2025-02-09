@@ -3,6 +3,11 @@
 <head>
     <title>SoD Case Editor</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    <script>
+        window.queryParams = Object.fromEntries(new URLSearchParams(location.search));
+    </script>
+
     <!-- Searching in select -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -67,6 +72,7 @@
             </ul>
             <ul id="viewing-mode-control-group">
                 <li>
+                    <button class="secondary" onclick="shareOpen()">Share Open Files</button>
                     <button onclick="loadFromGUI()">Enable Editing Mode</button>
                 </li>
             </ul>
