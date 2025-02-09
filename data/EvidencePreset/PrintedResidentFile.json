@@ -1,0 +1,94 @@
+{
+    "presetName": "PrintedResidentFile",
+    "subClass": "",
+    "windowStyle": {
+        "m_FileID": 121136,
+        "m_PathID": 0
+    },
+    "useDataKeys": false,
+    "validKeys": [],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": true,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": true,
+    "markAsDiscoveredOnAnyInteraction": false,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 93184,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 90424,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": true,
+    "useWriter": true,
+    "relativeCamPhotoPos": {
+        "x": -0.07500000298023224,
+        "y": 0.25,
+        "z": 0.20000000298023225
+    },
+    "relativeCamPhotoEuler": {
+        "x": 45.0,
+        "y": 155.0,
+        "z": 0.0
+    },
+    "captureRules": 2,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 9.5,
+    "useCaptureLight": true,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [
+        {
+            "preset": {
+                "m_FileID": 119668,
+                "m_PathID": 0
+            },
+            "link": 1,
+            "onlyIfInOwnedPosition": false,
+            "createOnDiscovery": true,
+            "forceDiscoveryOnCreation": true,
+            "switchFindingFactToFrom": false
+        }
+    ],
+    "addFactLinks": [
+        {
+            "subject": 0,
+            "factDictionary": "LivesAt",
+            "key": 0,
+            "discovery": false
+        }
+    ],
+    "discoverOnCreate": false,
+    "keyMergeOnDiscovery": [
+        {
+            "link": 1,
+            "mergeKeys": [
+                0,
+                14,
+                1,
+                20
+            ]
+        }
+    ],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "eff78e82-97db-4a8c-9012-425a0cd82b09",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

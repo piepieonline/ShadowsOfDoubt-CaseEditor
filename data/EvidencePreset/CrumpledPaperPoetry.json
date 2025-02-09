@@ -1,0 +1,82 @@
+{
+    "presetName": "CrumpledPaperPoetry",
+    "subClass": "",
+    "windowStyle": {
+        "m_FileID": 12690,
+        "m_PathID": 0
+    },
+    "useDataKeys": false,
+    "validKeys": [],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": true,
+    "markAsDiscoveredOnAnyInteraction": false,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 12682,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 12684,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": false,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": -0.07500000298023224,
+        "y": 0.25,
+        "z": 0.20000000298023225
+    },
+    "relativeCamPhotoEuler": {
+        "x": 45.0,
+        "y": 155.0,
+        "z": 0.0
+    },
+    "captureRules": 2,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 9.5,
+    "useCaptureLight": true,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [
+        {
+            "preset": {
+                "m_FileID": 12688,
+                "m_PathID": 0
+            },
+            "link": 5,
+            "onlyIfInOwnedPosition": false,
+            "createOnDiscovery": true,
+            "forceDiscoveryOnCreation": true,
+            "switchFindingFactToFrom": false
+        }
+    ],
+    "addFactLinks": [],
+    "discoverOnCreate": false,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [
+        {
+            "link": 0,
+            "applyDiscoveryTrigger": 16
+        }
+    ],
+    "ddsDocumentID": "7e5242f2-6aa2-44bf-914c-452a7c48e961",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

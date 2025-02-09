@@ -1,0 +1,65 @@
+{
+    "presetName": "TelephoneNumber",
+    "subClass": "Telephone",
+    "windowStyle": {
+        "m_FileID": 12690,
+        "m_PathID": 0
+    },
+    "useDataKeys": false,
+    "validKeys": [],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": false,
+    "markAsDiscoveredOnAnyInteraction": true,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 13808,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 45412,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": false,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "relativeCamPhotoEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "captureRules": 0,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 12.0,
+    "useCaptureLight": false,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [],
+    "addFactLinks": [],
+    "discoverOnCreate": false,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "d614aa7f-28ee-44f1-9221-2fe5710e7057",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

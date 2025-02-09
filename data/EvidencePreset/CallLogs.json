@@ -1,0 +1,65 @@
+{
+    "presetName": "CallLogs",
+    "subClass": "",
+    "windowStyle": {
+        "m_FileID": 121132,
+        "m_PathID": 0
+    },
+    "useDataKeys": false,
+    "validKeys": [],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": true,
+    "allowCustomNames": false,
+    "markAsDiscoveredOnAnyInteraction": false,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 94018,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 90424,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": false,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": -0.07500000298023224,
+        "y": 0.25,
+        "z": 0.20000000298023225
+    },
+    "relativeCamPhotoEuler": {
+        "x": 45.0,
+        "y": 155.0,
+        "z": 0.0
+    },
+    "captureRules": 2,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 9.5,
+    "useCaptureLight": false,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [],
+    "addFactLinks": [],
+    "discoverOnCreate": false,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "70c84f51-93f7-4f27-a336-6e2f199fb7bc",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": false,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

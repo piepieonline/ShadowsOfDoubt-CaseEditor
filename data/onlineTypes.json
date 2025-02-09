@@ -1,6 +1,7 @@
 [
     "CharacterTrait",
     "CompanyPreset",
+    "EvidencePreset"
     "InteractablePreset",
     "MurderMO",
     "MurderPreset",

@@ -6,6 +6,7 @@ data/*
 !data/onlineTypes.json
 !data/CharacterTrait
 !data/CompanyPreset
+!data/EvidencePreset
 !data/InteractablePreset
 !data/MurderMO
 !data/MurderPreset

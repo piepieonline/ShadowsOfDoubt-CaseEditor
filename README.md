@@ -5,3 +5,6 @@ This is a basic tool to build scriptable objects for the game, with a particular
 Instructions for use found on the wiki.
 
 http-server -c-1 -S
+
+To add a new data type for online reference:
+Modify both `.gitignore` and `data/onlineTypes.json` to include it

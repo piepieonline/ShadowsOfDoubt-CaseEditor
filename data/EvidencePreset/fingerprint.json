@@ -1,0 +1,113 @@
+{
+    "presetName": "fingerprint",
+    "subClass": "Fingerprint",
+    "windowStyle": {
+        "m_FileID": 121136,
+        "m_PathID": 0
+    },
+    "useDataKeys": true,
+    "validKeys": [
+        {
+            "key": 0,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 2,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 1,
+            "uniqueKey": true,
+            "countTowardsProfile": false
+        }
+    ],
+    "passiveTies": [
+        {
+            "mainKey": 1,
+            "mergeAtStart": [
+                1,
+                2
+            ]
+        },
+        {
+            "mainKey": 2,
+            "mergeAtStart": [
+                1,
+                2
+            ]
+        }
+    ],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": true,
+    "markAsDiscoveredOnAnyInteraction": false,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 93036,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 89390,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": false,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": 0.0,
+        "y": -0.10000000149011612,
+        "z": 0.5
+    },
+    "relativeCamPhotoEuler": {
+        "x": 0.0,
+        "y": 180.0,
+        "z": 0.0
+    },
+    "captureRules": 3,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 9.5,
+    "useCaptureLight": false,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [
+        {
+            "preset": {
+                "m_FileID": 119670,
+                "m_PathID": 0
+            },
+            "link": 1,
+            "onlyIfInOwnedPosition": false,
+            "createOnDiscovery": true,
+            "forceDiscoveryOnCreation": false,
+            "switchFindingFactToFrom": false
+        }
+    ],
+    "addFactLinks": [],
+    "discoverOnCreate": true,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "a178c7d9-4ec2-4991-b5f9-cd917a0f7549",
+    "isMatchParent": false,
+    "matchTypes": [
+        {
+            "m_FileID": 119776,
+            "m_PathID": 0
+        }
+    ],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

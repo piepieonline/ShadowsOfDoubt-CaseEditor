@@ -1,0 +1,296 @@
+{
+    "presetName": "citizen",
+    "subClass": "Citizen",
+    "windowStyle": {
+        "m_FileID": 12690,
+        "m_PathID": 0
+    },
+    "useDataKeys": true,
+    "validKeys": [
+        {
+            "key": 0,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 1,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 2,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 3,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 4,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 5,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 6,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 7,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 8,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 9,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 10,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 11,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 12,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 13,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 14,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 15,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 16,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 17,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 18,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 19,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 20,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 21,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 22,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 23,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 24,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 25,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 26,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 27,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 28,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 29,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 30,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 31,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 32,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 33,
+            "uniqueKey": false,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 34,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 35,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 38,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 39,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 40,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 41,
+            "uniqueKey": false,
+            "countTowardsProfile": false
+        }
+    ],
+    "passiveTies": [
+        {
+            "mainKey": 0,
+            "mergeAtStart": [
+                38,
+                39,
+                40,
+                41
+            ]
+        },
+        {
+            "mainKey": 1,
+            "mergeAtStart": [
+                6,
+                8,
+                9,
+                10,
+                13,
+                18,
+                19,
+                24,
+                30
+            ]
+        },
+        {
+            "mainKey": 20,
+            "mergeAtStart": [
+                7
+            ]
+        }
+    ],
+    "notifyOfTies": true,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": false,
+    "markAsDiscoveredOnAnyInteraction": true,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 36086,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 36084,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": true,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": 0.0,
+        "y": 0.10999999940395355,
+        "z": 0.5400000214576721
+    },
+    "relativeCamPhotoEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "captureRules": 3,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 9.5,
+    "useCaptureLight": false,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [],
+    "addFactLinks": [],
+    "discoverOnCreate": true,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "b7d1f246-3ade-473d-ae9a-d409edab945a",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

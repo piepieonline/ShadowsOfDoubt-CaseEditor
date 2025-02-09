@@ -1,0 +1,77 @@
+{
+    "presetName": "SalesRecords",
+    "subClass": "",
+    "windowStyle": {
+        "m_FileID": 31640,
+        "m_PathID": 0
+    },
+    "useDataKeys": false,
+    "validKeys": [],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": true,
+    "allowCustomNames": true,
+    "markAsDiscoveredOnAnyInteraction": false,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 14980,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 12684,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": false,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "relativeCamPhotoEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "captureRules": 0,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 12.0,
+    "useCaptureLight": true,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [
+        {
+            "preset": {
+                "m_FileID": 12688,
+                "m_PathID": 0
+            },
+            "link": 5,
+            "onlyIfInOwnedPosition": false,
+            "createOnDiscovery": true,
+            "forceDiscoveryOnCreation": true,
+            "switchFindingFactToFrom": false
+        }
+    ],
+    "addFactLinks": [],
+    "discoverOnCreate": false,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "0260fc7b-fc1f-411f-ae93-dfc45e42c447",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

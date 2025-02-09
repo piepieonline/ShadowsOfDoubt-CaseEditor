@@ -1,0 +1,114 @@
+{
+    "presetName": "BirthdayCard",
+    "subClass": "BirthdayCard",
+    "windowStyle": {
+        "m_FileID": 121136,
+        "m_PathID": 0
+    },
+    "useDataKeys": false,
+    "validKeys": [],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": true,
+    "markAsDiscoveredOnAnyInteraction": false,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 93184,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 90424,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": false,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": -0.07500000298023224,
+        "y": 0.25,
+        "z": 0.20000000298023225
+    },
+    "relativeCamPhotoEuler": {
+        "x": 45.0,
+        "y": 155.0,
+        "z": 0.0
+    },
+    "captureRules": 2,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 9.5,
+    "useCaptureLight": true,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [
+        {
+            "preset": {
+                "m_FileID": 119672,
+                "m_PathID": 0
+            },
+            "link": 5,
+            "onlyIfInOwnedPosition": false,
+            "createOnDiscovery": true,
+            "forceDiscoveryOnCreation": true,
+            "switchFindingFactToFrom": false
+        },
+        {
+            "preset": {
+                "m_FileID": 119668,
+                "m_PathID": 0
+            },
+            "link": 2,
+            "onlyIfInOwnedPosition": false,
+            "createOnDiscovery": true,
+            "forceDiscoveryOnCreation": true,
+            "switchFindingFactToFrom": false
+        },
+        {
+            "preset": {
+                "m_FileID": 119676,
+                "m_PathID": 0
+            },
+            "link": 1,
+            "onlyIfInOwnedPosition": false,
+            "createOnDiscovery": true,
+            "forceDiscoveryOnCreation": true,
+            "switchFindingFactToFrom": false
+        }
+    ],
+    "addFactLinks": [],
+    "discoverOnCreate": false,
+    "keyMergeOnDiscovery": [
+        {
+            "link": 1,
+            "mergeKeys": [
+                38,
+                31
+            ]
+        },
+        {
+            "link": 2,
+            "mergeKeys": [
+                38,
+                20
+            ]
+        }
+    ],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "715b743b-ee3e-4d93-99c5-fc5b1882b2f0",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

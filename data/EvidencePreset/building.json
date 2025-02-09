@@ -1,0 +1,81 @@
+{
+    "presetName": "building",
+    "subClass": "Building",
+    "windowStyle": {
+        "m_FileID": 12690,
+        "m_PathID": 0
+    },
+    "useDataKeys": false,
+    "validKeys": [
+        {
+            "key": 0,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 36,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 1,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        }
+    ],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": false,
+    "markAsDiscoveredOnAnyInteraction": true,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 40468,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 46280,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": false,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": -5.0,
+        "y": 3.0,
+        "z": 19.0
+    },
+    "relativeCamPhotoEuler": {
+        "x": -43.0,
+        "y": 158.0,
+        "z": 0.0
+    },
+    "captureRules": 0,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 12.0,
+    "useCaptureLight": true,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [],
+    "addFactLinks": [],
+    "discoverOnCreate": true,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "9b6b5a2e-c874-4561-933b-2e519ca355ab",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}

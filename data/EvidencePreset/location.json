@@ -1,0 +1,103 @@
+{
+    "presetName": "location",
+    "subClass": "Location",
+    "windowStyle": {
+        "m_FileID": 12690,
+        "m_PathID": 0
+    },
+    "useDataKeys": true,
+    "validKeys": [
+        {
+            "key": 0,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 36,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 1,
+            "uniqueKey": true,
+            "countTowardsProfile": false
+        },
+        {
+            "key": 37,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        },
+        {
+            "key": 42,
+            "uniqueKey": true,
+            "countTowardsProfile": true
+        }
+    ],
+    "passiveTies": [],
+    "notifyOfTies": false,
+    "useBelongsToInName": false,
+    "isSingleton": false,
+    "disableHistory": false,
+    "allowCustomNames": false,
+    "markAsDiscoveredOnAnyInteraction": true,
+    "forceWorldInteraction": false,
+    "useWindowFocusMode": false,
+    "iconSpriteLarge": {
+        "m_FileID": 37574,
+        "m_PathID": 0
+    },
+    "defaultNullImage": {
+        "m_FileID": 46280,
+        "m_PathID": 0
+    },
+    "useInGamePhoto": true,
+    "useWriter": false,
+    "relativeCamPhotoPos": {
+        "x": 0.20000000298023225,
+        "y": 1.7999999523162842,
+        "z": -2.5
+    },
+    "relativeCamPhotoEuler": {
+        "x": 7.0,
+        "y": -5.0,
+        "z": 0.0
+    },
+    "captureRules": 1,
+    "changeTimeOfDay": false,
+    "captureTimeOfDay": 9.5,
+    "useCaptureLight": true,
+    "useSurveillanceCapture": false,
+    "itemOwner": 0,
+    "itemWriter": 0,
+    "itemReceiver": 0,
+    "factSetup": [
+        {
+            "preset": {
+                "m_FileID": 31662,
+                "m_PathID": 0
+            },
+            "link": 3,
+            "onlyIfInOwnedPosition": false,
+            "createOnDiscovery": true,
+            "forceDiscoveryOnCreation": true,
+            "switchFindingFactToFrom": false
+        }
+    ],
+    "addFactLinks": [],
+    "discoverOnCreate": true,
+    "keyMergeOnDiscovery": [],
+    "discoveryTriggers": [],
+    "applicationOnDiscover": [],
+    "ddsDocumentID": "02956363-e984-4b5b-a4b7-cefd0db00f0b",
+    "isMatchParent": false,
+    "matchTypes": [],
+    "enableSummary": true,
+    "enableFacts": true,
+    "pinnedStyle": 0,
+    "pinnedBackgroundColour": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    }
+}
